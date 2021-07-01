@@ -216,6 +216,8 @@ namespace Avaxi
                     {
                         scanType = 4;
                         ShowPanel(pnlFormScan);
+                        this.BackgroundImage = null;
+                        this.BackgroundImage = null;
                         toolStrip1.Visible = false;
                         loc_to_search = e.Disk.Name;
                         this.Show();
@@ -460,6 +462,7 @@ namespace Avaxi
             scanType = 1;
             loc_to_search = System.IO.Path.GetPathRoot(Environment.SystemDirectory);
             ShowPanel(pnlFormScan);
+            this.BackgroundImage = null;
             toolStrip1.Visible = false;
             search = new Thread(new ThreadStart(ScanFolder));
             search.Start();
@@ -476,6 +479,8 @@ namespace Avaxi
             pnlFormScan.Visible = false;
             pnlDelete.Visible = false;
             label35.Visible = false;
+            this.BackgroundImage = global::Avaxi.Properties.Resources.background;
+            hopeProgressBar1.ValueNumber = 0;
 
             panel.Visible = true;
         }
@@ -752,6 +757,7 @@ namespace Avaxi
             {
                 loc_to_search = folderBrowserDialog1.SelectedPath;
                 ShowPanel(pnlFormScan);
+                this.BackgroundImage = null;
                 toolStrip1.Visible = false;
                 search = new Thread(new ThreadStart(ScanFolder));
                 search.Start();
@@ -762,6 +768,7 @@ namespace Avaxi
         {
             scanType = 3;
             ShowPanel(pnlFormScan);
+            this.BackgroundImage = null;
             toolStrip1.Visible = false;
             search = new Thread(new ThreadStart(ScanFolder));
             search.Start();
@@ -908,9 +915,9 @@ namespace Avaxi
         private void btnTuneUp_Click(object sender, EventArgs e)
         {
             Computer regedit = new Computer();
-
+        
             this.progressIndicatorTuneUp.Visible = true;
-
+        
             if (switchAutomaticUpdates.Checked == true)
             {
                 OptimizeSpeedUp.DisableAutomaticUpdates();
@@ -919,7 +926,7 @@ namespace Avaxi
             {
                 OptimizeSpeedUp.EnableAutomaticUpdates();
             }
-
+        
             if (switchDesktopCleanUpWizard.Checked == true)
             {
                 MainMethods.FixedInvalidRegistryKey(regedit.Registry.CurrentUser, @"Software\Microsoft\Windows\CurrentVersion\Explorer\Desktop\CleanupWiz");
@@ -928,7 +935,7 @@ namespace Avaxi
             else
             {
             }
-
+        
             if (switchSpeedUpMenuShowDelay.Checked == true)
             {
                 MainMethods.FixedInvalidRegistryKey(regedit.Registry.CurrentUser, @"Control Panel\Desktop");
@@ -939,7 +946,7 @@ namespace Avaxi
             else
             {
             }
-
+        
             if (switchAppearanceInPerformance.Checked == true)
             {
                 OptimizeSpeedUp.EnableDarkTheme();
@@ -948,7 +955,7 @@ namespace Avaxi
             {
                 OptimizeSpeedUp.EnableLightTheme();
             }
-
+        
             if (switchQuickAccessHistory.Checked == true)
             {
                 OptimizeSpeedUp.DisableQuickAccessHistory();
@@ -957,7 +964,7 @@ namespace Avaxi
             {
                 OptimizeSpeedUp.EnableQuickAccessHistory();
             }
-
+        
             if (switchStartMenuAds.Checked == true)
             {
                 OptimizeSpeedUp.DisableStartMenuAds();
@@ -966,7 +973,7 @@ namespace Avaxi
             {
                 OptimizeSpeedUp.EnableStartMenuAds();
             }
-
+        
             if (switchSensorService.Checked == true)
             {
                 OptimizeSpeedUp.DisableSensorServices();
@@ -975,7 +982,7 @@ namespace Avaxi
             {
                 OptimizeSpeedUp.EnableSensorServices();
             }
-
+        
             if (switchFeatureUpdates.Checked == true)
             {
                 OptimizeSpeedUp.DisableForcedFeatureUpdates();
@@ -984,7 +991,7 @@ namespace Avaxi
             {
                 OptimizeSpeedUp.EnableForcedFeatureUpdates();
             }
-
+        
             DialogResult result = System.Windows.Forms.MessageBox.Show("Restart you computer?", "SpeedUp", System.Windows.Forms.MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {
@@ -1236,7 +1243,10 @@ namespace Avaxi
                     this.label41.Visible = false;
                     if(infected == 0)
                     {
-                        curr_File.Text = "Scan finished!\nYour computer is now safer";
+                        //curr_File.Text = "Scan finished!\nYour computer is now safer";
+                        curr_File.Visible = false;
+                        label49.Visible = true;
+                        label50.Visible = true;
                         btnStopScan.Text = "           DONE           ";
                         flagScanStatus = 1;
                     }
@@ -1259,6 +1269,9 @@ namespace Avaxi
             label42.Visible = true;
             label43.Visible = false;
             label44.Visible = false;
+            label49.Visible = false;
+            label50.Visible = false;
+            curr_File.Visible = true;
         }
 
         private void btnStopScan_Click(object sender, EventArgs e)
@@ -1291,6 +1304,7 @@ namespace Avaxi
                     flagScanStatus = 0;
                     toolStrip1.Visible = false;
                     ShowPanel(pnlDelete);
+                    this.BackgroundImage = null;
                     break;
                 case 3: //ok
                     FormatScan();
@@ -1362,6 +1376,7 @@ namespace Avaxi
         {
             scanType = 0;
             ShowPanel(pnlFormScan);
+            this.BackgroundImage = null;
             toolStrip1.Visible = false;
             search = new Thread(new ThreadStart(ScanFolder));
             search.Start();
@@ -1500,17 +1515,18 @@ namespace Avaxi
         {
             if(switchRealTimeProtection.Checked)
             {
+                launcherIcon.ShowBalloonTip(5, "Avaxi", "The live protection is enabled", ToolTipIcon.Info);
                 label6.Image = global::Avaxi.Properties.Resources.check;
                 label13.Text = "The live protection is enabled";
                 label13.ForeColor = Color.DeepSkyBlue;
             }
             else
             {
+                launcherIcon.ShowBalloonTip(5, "Avaxi", "The live protection is disabled", ToolTipIcon.Info);
                 label6.Image = global::Avaxi.Properties.Resources.cross;
                 label13.Text = "The live protection is disabled";
                 label13.ForeColor = Color.Gray;
             }
         }
-
     }
 }

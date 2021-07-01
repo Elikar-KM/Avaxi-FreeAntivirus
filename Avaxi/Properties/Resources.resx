@@ -133,8 +133,8 @@
   <data name="AntiPhishing" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AntiPhishing.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="check" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\check.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="AntiPhishing_grey" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AntiPhishing_grey.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="tuneUp" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tuneUp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -175,14 +175,17 @@
   <data name="crypto_menu" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\crypto_menu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="AntiAffiliate_grey" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AntiAffiliate_grey.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="CustomScan" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\CustomScan.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="avaxi Logo-F1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\avaxi Logo-F1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="AntiPhishing_grey" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\AntiPhishing_grey.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="check" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\check.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="notice" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\notice.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -202,7 +205,7 @@
   <data name="AntiCryptojacking" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AntiCryptojacking.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="AntiAffiliate_grey" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\AntiAffiliate_grey.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
