@@ -1,0 +1,238 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{06F33033-44F6-4F7A-B5CA-F491AF397534}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Avaxi</RootNamespace>
+    <AssemblyName>Avaxi</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>com.aiofast.cleaner-logo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CircularProgressBar, Version=2.8.0.16, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
+      <HintPath>..\packages\CircularProgressBar.2.8.0.16\lib\net40\CircularProgressBar.dll</HintPath>
+    </Reference>
+    <Reference Include="ListViewPrinter, Version=2.7.1.31255, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ObjectListView.2.7.1.5\lib\ListViewPrinter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="nClam, Version=2.0.6.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\nClam.dll</HintPath>
+    </Reference>
+    <Reference Include="ObjectListView, Version=2.7.1.31255, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4, processorArchitecture=MSIL">
+      <HintPath>..\packages\ObjectListView.2.7.1.5\lib\ObjectListView.dll</HintPath>
+    </Reference>
+    <Reference Include="ReaLTaiizor, Version=3.7.8.4, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ReaLTaiizor.3.7.8.4\lib\net472\ReaLTaiizor.dll</HintPath>
+    </Reference>
+    <Reference Include="SparkleLibrary, Version=2.7.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ObjectListView.2.7.1.5\lib\SparkleLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Management.Automation, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\assembly\GAC_MSIL\System.Management.Automation\1.0.0.0__31bf3856ad364e35\System.Management.Automation.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WinFormAnimation, Version=1.6.0.4, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
+      <HintPath>..\packages\WinFormAnimation.1.6.0.4\lib\net40\WinFormAnimation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CommandShell.cs" />
+    <Compile Include="ConsoleSetups.cs" />
+    <Compile Include="Exclusion.cs" />
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSysInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSysInfo.Designer.cs">
+      <DependentUpon>frmSysInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUSB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUSB.Designer.cs">
+      <DependentUpon>frmUSB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FW.cs" />
+    <Compile Include="InfectionObject.cs" />
+    <Compile Include="Ini.cs" />
+    <Compile Include="Models.cs" />
+    <Compile Include="NativeMethods.cs" />
+    <Compile Include="Optimize.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RAM\RamController.cs" />
+    <Compile Include="RAM\RamOptimizer.cs" />
+    <Compile Include="RAM\RamUsage.cs" />
+    <Compile Include="SpeedUp\CleanHelper.cs" />
+    <Compile Include="SpeedUp\Enums.cs" />
+    <Compile Include="SpeedUp\OptimizeSpeedUp.cs" />
+    <Compile Include="SpeedUp\Required.cs" />
+    <Compile Include="SpeedUp\StartupItem.cs" />
+    <Compile Include="SpeedUp\Utilities.cs" />
+    <Compile Include="USB\UsbDisk.cs" />
+    <Compile Include="USB\UsbDiskCollection.cs" />
+    <Compile Include="USB\UsbManager.cs" />
+    <Compile Include="USB\UsbStateChange.cs" />
+    <Compile Include="USB\UsbStateChangedEventArgs.cs" />
+    <Compile Include="USB\WmiExtensions.cs" />
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSysInfo.resx">
+      <DependentUpon>frmSysInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUSB.resx">
+      <DependentUpon>frmUSB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.manifest" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="com.aiofast.cleaner-logo.ico" />
+    <None Include="Resources\cross.png" />
+    <None Include="Resources\notice.png" />
+    <None Include="Resources\AntiAffiliate.png" />
+    <None Include="Resources\AntiRansomware.png" />
+    <None Include="Resources\AntiCryptojacking.png" />
+    <None Include="Resources\AntiPhishing.png" />
+    <None Include="Resources\FullScan.png" />
+    <None Include="Resources\CustomScan.png" />
+    <None Include="Resources\QuickScan.png" />
+    <None Include="Resources\check_tick.png" />
+    <None Include="Resources\websec_status.png" />
+    <None Include="Resources\shield_status.png" />
+    <None Include="Resources\check.png" />
+    <None Include="Resources\setting.png" />
+    <None Include="Resources\avaxi Logo-F1.png" />
+    <None Include="Resources\tuneUp.png" />
+    <None Include="Resources\optimize.png" />
+    <None Include="Resources\scan.png" />
+    <None Include="Resources\crypto_menu.png" />
+    <None Include="Resources\shield.png" />
+    <None Include="Resources\crypto.png" />
+    <None Include="Resources\information-clipart-information-icon_2.png" />
+    <None Include="Resources\Alert.png" />
+    <None Include="Resources\unhidee.png" />
+    <None Include="Resources\remove.png" />
+    <None Include="Resources\password.png" />
+    <None Include="Resources\hide.png" />
+    <None Include="Resources\exir.png" />
+    <None Include="Resources\add.png" />
+    <None Include="Resources\scan Icon - Copy.png" />
+    <None Include="Resources\604a0cadf94914c7ee6c6e552e9b4487-curved-check-mark-circle-icon-by-vexels.png" />
+    <None Include="Resources\loadingdd.gif" />
+    <None Include="Resources\d9933c4e2c272f33b74ef18cdf11a7d5.gif" />
+    <None Include="Resources\load.gif" />
+    <None Include="Resources\loading-icon-big.gif" />
+    <None Include="Resources\48a49de6b47774854b8964dd2c3c8056.gif" />
+    <None Include="Resources\scan Icon.png" />
+    <None Include="Resources\com.aiofast.cleaner-logo1.png" />
+    <None Include="Resources\com.aiofast.cleaner-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="IWshRuntimeLibrary">
+      <Guid>{F935DC20-1CF0-11D0-ADB9-00C04FD58A0B}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="NetFwTypeLib">
+      <Guid>{58FBCF7C-E7A9-467C-80B3-FC65E8FCCA08}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Shell32">
+      <Guid>{50A7E9B0-70EF-11D1-B75A-00A0C90564FE}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
