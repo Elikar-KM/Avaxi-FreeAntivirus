@@ -253,21 +253,27 @@ namespace Avaxi
             {
                 btnPhishing.ForeColor = Color.LimeGreen;
                 btnPhishing.Text = "Enabled";
-                label10.Visible = true;
-                label14.ForeColor = Color.DeepSkyBlue;
+                label9.Image = global::Avaxi.Properties.Resources.websec_status;
+                label27.Image = global::Avaxi.Properties.Resources.AntiPhishing;
+                label16.Visible = true;
+                label15.ForeColor = Color.DeepSkyBlue;
             }
             else
             {
                 btnPhishing.ForeColor = Color.Gray;
                 btnPhishing.Text = "Disabled";
-                label10.Visible = false;
-                label14.ForeColor = Color.Gray;
+                label9.Image = global::Avaxi.Properties.Resources.websec_status_grey;
+                label27.Image = global::Avaxi.Properties.Resources.AntiPhishing_grey;
+                label16.Visible = false;
+                label15.ForeColor = Color.Gray;
             }
 
             if (flagCryptojacking)
             {
                 btnCryptojacking.ForeColor = Color.LimeGreen;
                 btnCryptojacking.Text = "Enabled";
+                label8.Image = global::Avaxi.Properties.Resources.crypto;
+                label28.Image = global::Avaxi.Properties.Resources.AntiCryptojacking;
                 label12.Visible = true;
                 label11.ForeColor = Color.DeepSkyBlue;
             }
@@ -275,6 +281,8 @@ namespace Avaxi
             {
                 btnCryptojacking.ForeColor = Color.Gray;
                 btnCryptojacking.Text = "Disabled";
+                label8.Image = global::Avaxi.Properties.Resources.crypto_grey;
+                label28.Image = global::Avaxi.Properties.Resources.AntiCryptojacking_grey;
                 label12.Visible = false;
                 label11.ForeColor = Color.Gray;
             }
@@ -282,26 +290,32 @@ namespace Avaxi
             {
                 btnRansomware.ForeColor = Color.LimeGreen;
                 btnRansomware.Text = "Enabled";
-                label16.Visible = true;
-                label15.ForeColor = Color.DeepSkyBlue;
+                label7.Image = global::Avaxi.Properties.Resources.shield_status;
+                label29.Image = global::Avaxi.Properties.Resources.AntiRansomware;
+                label10.Visible = true;
+                label14.ForeColor = Color.DeepSkyBlue;
             }
             else
             {
                 btnRansomware.ForeColor = Color.Gray;
                 btnRansomware.Text = "Disabled";
-                label16.Visible = false;
-                label15.ForeColor = Color.Gray;
+                label7.Image = global::Avaxi.Properties.Resources.shield_status_grey;
+                label29.Image = global::Avaxi.Properties.Resources.AntiRansomware_grey;
+                label10.Visible = false;
+                label14.ForeColor = Color.Gray;
             }
 
             if (flagAffiliateOffers)
             {
                 btnAffiliateOffers.ForeColor = Color.LimeGreen;
                 btnAffiliateOffers.Text = "Enabled";
+                label30.Image = global::Avaxi.Properties.Resources.AntiAffiliate;
             }
             else
             {
                 btnAffiliateOffers.ForeColor = Color.Gray;
                 btnAffiliateOffers.Text = "Disabled";
+                label30.Image = global::Avaxi.Properties.Resources.AntiAffiliate_grey;
             }
 
             // RealTime status view
@@ -362,6 +376,7 @@ namespace Avaxi
             }
 
             ShowPanel(pnlShield);
+            label35.Visible = true;
             StripButtonColor(toolStripButton1);
 
             Task.Run(delegate ()
@@ -460,6 +475,7 @@ namespace Avaxi
             pnlSetting.Visible = false;
             pnlFormScan.Visible = false;
             pnlDelete.Visible = false;
+            label35.Visible = false;
 
             panel.Visible = true;
         }
@@ -488,6 +504,7 @@ namespace Avaxi
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
             ShowPanel(pnlShield);
+            label35.Visible = true;
             ToolStripButton tb = (ToolStripButton)sender;
             StripButtonColor(tb);
         }
@@ -1374,8 +1391,10 @@ namespace Avaxi
                 // Status page view
                 btnPhishing.ForeColor = Color.Gray;
                 btnPhishing.Text = "Disabled";
-                label10.Visible = false;
-                label14.ForeColor = Color.Gray;
+                label9.Image = global::Avaxi.Properties.Resources.websec_status_grey;
+                label27.Image = global::Avaxi.Properties.Resources.AntiPhishing_grey;
+                label16.Visible = false;
+                label15.ForeColor = Color.Gray;
                 flagPhishing = false;
             }
             else
@@ -1385,8 +1404,10 @@ namespace Avaxi
                 // Status page view
                 btnPhishing.ForeColor = Color.LimeGreen;
                 btnPhishing.Text = "Enabled";
-                label10.Visible = true;
-                label14.ForeColor = Color.DeepSkyBlue;
+                label9.Image = global::Avaxi.Properties.Resources.websec_status;
+                label27.Image = global::Avaxi.Properties.Resources.AntiPhishing;
+                label16.Visible = true;
+                label15.ForeColor = Color.DeepSkyBlue;
                 flagPhishing = true;
             }
         }
@@ -1400,6 +1421,8 @@ namespace Avaxi
                 // Status page view
                 btnCryptojacking.ForeColor = Color.Gray;
                 btnCryptojacking.Text = "Disabled";
+                label8.Image = global::Avaxi.Properties.Resources.crypto_grey;
+                label28.Image = global::Avaxi.Properties.Resources.AntiCryptojacking_grey;
                 label12.Visible = false;
                 label11.ForeColor = Color.Gray;
                 flagCryptojacking = false;
@@ -1411,6 +1434,8 @@ namespace Avaxi
                 // Status page view
                 btnCryptojacking.ForeColor = Color.LimeGreen;
                 btnCryptojacking.Text = "Enabled";
+                label8.Image = global::Avaxi.Properties.Resources.crypto;
+                label28.Image = global::Avaxi.Properties.Resources.AntiCryptojacking;
                 label12.Visible = true;
                 label11.ForeColor = Color.DeepSkyBlue;
                 flagCryptojacking = true;
@@ -1426,8 +1451,10 @@ namespace Avaxi
                 // Status page view
                 btnRansomware.ForeColor = Color.Gray;
                 btnRansomware.Text = "Disabled";
-                label16.Visible = false;
-                label15.ForeColor = Color.Gray;
+                label7.Image = global::Avaxi.Properties.Resources.shield_status_grey;
+                label29.Image = global::Avaxi.Properties.Resources.AntiRansomware_grey;
+                label10.Visible = false;
+                label14.ForeColor = Color.Gray;
                 flagRansomware = false;
             }
             else
@@ -1437,8 +1464,10 @@ namespace Avaxi
                 // Status page view
                 btnRansomware.ForeColor = Color.LimeGreen;
                 btnRansomware.Text = "Enabled";
-                label16.Visible = true;
-                label15.ForeColor = Color.DeepSkyBlue;
+                label7.Image = global::Avaxi.Properties.Resources.shield_status;
+                label29.Image = global::Avaxi.Properties.Resources.AntiRansomware;
+                label10.Visible = true;
+                label14.ForeColor = Color.DeepSkyBlue;
                 flagRansomware = true;
             }
         }
@@ -1452,6 +1481,7 @@ namespace Avaxi
                 // status view
                 btnAffiliateOffers.ForeColor = Color.Gray;
                 btnAffiliateOffers.Text = "Disabled";
+                label30.Image = global::Avaxi.Properties.Resources.AntiAffiliate_grey;
                 flagAffiliateOffers = false;
             }
             else
@@ -1461,6 +1491,7 @@ namespace Avaxi
                 // status view
                 btnAffiliateOffers.ForeColor = Color.LimeGreen;
                 btnAffiliateOffers.Text = "Enabled";
+                label30.Image = global::Avaxi.Properties.Resources.AntiAffiliate;
                 flagAffiliateOffers = true;
             }
         }

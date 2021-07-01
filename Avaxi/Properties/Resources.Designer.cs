@@ -83,9 +83,29 @@ namespace Avaxi.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap AntiAffiliate_grey {
+            get {
+                object obj = ResourceManager.GetObject("AntiAffiliate_grey", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap AntiCryptojacking {
             get {
                 object obj = ResourceManager.GetObject("AntiCryptojacking", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap AntiCryptojacking_grey {
+            get {
+                object obj = ResourceManager.GetObject("AntiCryptojacking_grey", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,9 +123,29 @@ namespace Avaxi.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap AntiPhishing_grey {
+            get {
+                object obj = ResourceManager.GetObject("AntiPhishing_grey", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap AntiRansomware {
             get {
                 object obj = ResourceManager.GetObject("AntiRansomware", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap AntiRansomware_grey {
+            get {
+                object obj = ResourceManager.GetObject("AntiRansomware_grey", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -156,6 +196,16 @@ namespace Avaxi.Properties {
         internal static System.Drawing.Bitmap crypto {
             get {
                 object obj = ResourceManager.GetObject("crypto", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap crypto_grey {
+            get {
+                object obj = ResourceManager.GetObject("crypto_grey", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -263,6 +313,16 @@ namespace Avaxi.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap shield_status_grey {
+            get {
+                object obj = ResourceManager.GetObject("shield_status_grey", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap tuneUp {
             get {
                 object obj = ResourceManager.GetObject("tuneUp", resourceCulture);
@@ -276,6 +336,16 @@ namespace Avaxi.Properties {
         internal static System.Drawing.Bitmap websec_status {
             get {
                 object obj = ResourceManager.GetObject("websec_status", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap websec_status_grey {
+            get {
+                object obj = ResourceManager.GetObject("websec_status_grey", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

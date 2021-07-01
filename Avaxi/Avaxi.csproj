@@ -162,6 +162,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="com.aiofast.cleaner-logo.ico" />
+    <None Include="Resources\AntiAffiliate_grey.png" />
+    <None Include="Resources\AntiRansomware_grey.png" />
+    <None Include="Resources\AntiCryptojacking_grey.png" />
+    <None Include="Resources\AntiPhishing_grey.png" />
+    <None Include="Resources\websec_status_grey.png" />
+    <None Include="Resources\crypto_grey.png" />
+    <None Include="Resources\shield_status_grey.png" />
     <None Include="Resources\cross.png" />
     <None Include="Resources\notice.png" />
     <None Include="Resources\AntiAffiliate.png" />
