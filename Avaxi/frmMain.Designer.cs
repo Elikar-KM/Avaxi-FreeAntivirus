@@ -127,8 +127,8 @@ namespace Avaxi
             this.pnlSetting = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
             this.btnUSBVaccination = new ReaLTaiizor.Controls.FoxButton();
-            this.btnSystemInfo = new ReaLTaiizor.Controls.FoxButton();
             this.switchFireWall = new ReaLTaiizor.Controls.MaterialSwitch();
+            this.btnSystemInfo = new ReaLTaiizor.Controls.FoxButton();
             this.switchAutoScanUSB = new ReaLTaiizor.Controls.MaterialSwitch();
             this.switchRealTimeProtection = new ReaLTaiizor.Controls.MaterialSwitch();
             this.label39 = new System.Windows.Forms.Label();
@@ -332,13 +332,14 @@ namespace Avaxi
             this.toolStripButton1.AutoSize = false;
             this.toolStripButton1.AutoToolTip = false;
             this.toolStripButton1.BackColor = System.Drawing.Color.DimGray;
+            this.toolStripButton1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripButton1.ForeColor = System.Drawing.Color.White;
             this.toolStripButton1.Image = global::Avaxi.Properties.Resources.shield;
             this.toolStripButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Transparent;
             this.toolStripButton1.Name = "toolStripButton1";
             this.toolStripButton1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.toolStripButton1.Size = new System.Drawing.Size(170, 110);
+            this.toolStripButton1.Size = new System.Drawing.Size(170, 100);
             this.toolStripButton1.Text = "Shield";
             this.toolStripButton1.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal;
             this.toolStripButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -351,11 +352,12 @@ namespace Avaxi
             // 
             this.toolStripButton4.AutoSize = false;
             this.toolStripButton4.AutoToolTip = false;
+            this.toolStripButton4.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripButton4.Image = global::Avaxi.Properties.Resources.crypto_menu;
             this.toolStripButton4.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Transparent;
             this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Size = new System.Drawing.Size(170, 110);
+            this.toolStripButton4.Size = new System.Drawing.Size(170, 100);
             this.toolStripButton4.Text = "Crypto";
             this.toolStripButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
@@ -367,11 +369,12 @@ namespace Avaxi
             // 
             this.toolStripButton3.AutoSize = false;
             this.toolStripButton3.AutoToolTip = false;
+            this.toolStripButton3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripButton3.Image = global::Avaxi.Properties.Resources.scan;
             this.toolStripButton3.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(170, 110);
+            this.toolStripButton3.Size = new System.Drawing.Size(170, 100);
             this.toolStripButton3.Text = "Scan";
             this.toolStripButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
@@ -383,11 +386,12 @@ namespace Avaxi
             // 
             this.toolStripButton5.AutoSize = false;
             this.toolStripButton5.AutoToolTip = false;
+            this.toolStripButton5.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripButton5.Image = global::Avaxi.Properties.Resources.optimize;
             this.toolStripButton5.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton5.Name = "toolStripButton5";
-            this.toolStripButton5.Size = new System.Drawing.Size(170, 110);
+            this.toolStripButton5.Size = new System.Drawing.Size(170, 100);
             this.toolStripButton5.Text = "Optimize";
             this.toolStripButton5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolStripButton5.Click += new System.EventHandler(this.toolStripButton5_Click);
@@ -400,11 +404,12 @@ namespace Avaxi
             this.toolStripButton6.AutoSize = false;
             this.toolStripButton6.AutoToolTip = false;
             this.toolStripButton6.BackColor = System.Drawing.Color.DimGray;
+            this.toolStripButton6.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripButton6.Image = global::Avaxi.Properties.Resources.tuneUp;
             this.toolStripButton6.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton6.Name = "toolStripButton6";
-            this.toolStripButton6.Size = new System.Drawing.Size(170, 110);
+            this.toolStripButton6.Size = new System.Drawing.Size(170, 100);
             this.toolStripButton6.Text = "Tune Up";
             this.toolStripButton6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolStripButton6.Click += new System.EventHandler(this.toolStripButton6_Click);
@@ -447,7 +452,7 @@ namespace Avaxi
             this.pnlShield.Controls.Add(this.label8);
             this.pnlShield.Controls.Add(this.label7);
             this.pnlShield.Controls.Add(this.label6);
-            this.pnlShield.Location = new System.Drawing.Point(207, 136);
+            this.pnlShield.Location = new System.Drawing.Point(225, 118);
             this.pnlShield.Margin = new System.Windows.Forms.Padding(4);
             this.pnlShield.Name = "pnlShield";
             this.pnlShield.Size = new System.Drawing.Size(1070, 620);
@@ -667,7 +672,7 @@ namespace Avaxi
             this.pnlScan.Controls.Add(this.label18);
             this.pnlScan.Controls.Add(this.label17);
             this.pnlScan.Controls.Add(this.btnQuickScan);
-            this.pnlScan.Location = new System.Drawing.Point(218, 139);
+            this.pnlScan.Location = new System.Drawing.Point(216, 129);
             this.pnlScan.Name = "pnlScan";
             this.pnlScan.Size = new System.Drawing.Size(1091, 597);
             this.pnlScan.TabIndex = 15;
@@ -678,7 +683,7 @@ namespace Avaxi
             this.panel10.Controls.Add(this.button2);
             this.panel10.Location = new System.Drawing.Point(391, 196);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(343, 56);
+            this.panel10.Size = new System.Drawing.Size(343, 54);
             this.panel10.TabIndex = 28;
             // 
             // button2
@@ -898,7 +903,7 @@ namespace Avaxi
             this.pnlCrypto.Controls.Add(this.label28);
             this.pnlCrypto.Controls.Add(this.label27);
             this.pnlCrypto.Controls.Add(this.label26);
-            this.pnlCrypto.Location = new System.Drawing.Point(221, 130);
+            this.pnlCrypto.Location = new System.Drawing.Point(219, 118);
             this.pnlCrypto.Name = "pnlCrypto";
             this.pnlCrypto.Size = new System.Drawing.Size(1100, 603);
             this.pnlCrypto.TabIndex = 16;
@@ -940,9 +945,9 @@ namespace Avaxi
             this.panel4.Controls.Add(this.btnAffiliateOffers);
             this.panel4.Controls.Add(this.btnPhishing);
             this.panel4.Controls.Add(this.btnCryptojacking);
-            this.panel4.Location = new System.Drawing.Point(54, 349);
+            this.panel4.Location = new System.Drawing.Point(62, 351);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(959, 41);
+            this.panel4.Size = new System.Drawing.Size(933, 29);
             this.panel4.TabIndex = 27;
             // 
             // btnRansomware
@@ -957,7 +962,7 @@ namespace Avaxi
             this.btnRansomware.EnabledCalc = true;
             this.btnRansomware.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRansomware.ForeColor = System.Drawing.Color.LimeGreen;
-            this.btnRansomware.Location = new System.Drawing.Point(571, 3);
+            this.btnRansomware.Location = new System.Drawing.Point(564, 0);
             this.btnRansomware.Name = "btnRansomware";
             this.btnRansomware.OverColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnRansomware.Size = new System.Drawing.Size(95, 29);
@@ -977,7 +982,7 @@ namespace Avaxi
             this.btnAffiliateOffers.EnabledCalc = true;
             this.btnAffiliateOffers.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAffiliateOffers.ForeColor = System.Drawing.Color.LimeGreen;
-            this.btnAffiliateOffers.Location = new System.Drawing.Point(844, 3);
+            this.btnAffiliateOffers.Location = new System.Drawing.Point(838, 0);
             this.btnAffiliateOffers.Name = "btnAffiliateOffers";
             this.btnAffiliateOffers.OverColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnAffiliateOffers.Size = new System.Drawing.Size(95, 29);
@@ -998,7 +1003,7 @@ namespace Avaxi
             this.btnPhishing.EnabledCalc = true;
             this.btnPhishing.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPhishing.ForeColor = System.Drawing.Color.LimeGreen;
-            this.btnPhishing.Location = new System.Drawing.Point(31, 3);
+            this.btnPhishing.Location = new System.Drawing.Point(24, 0);
             this.btnPhishing.Name = "btnPhishing";
             this.btnPhishing.OverColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnPhishing.Size = new System.Drawing.Size(95, 29);
@@ -1018,7 +1023,7 @@ namespace Avaxi
             this.btnCryptojacking.EnabledCalc = true;
             this.btnCryptojacking.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCryptojacking.ForeColor = System.Drawing.Color.LimeGreen;
-            this.btnCryptojacking.Location = new System.Drawing.Point(294, 3);
+            this.btnCryptojacking.Location = new System.Drawing.Point(287, 0);
             this.btnCryptojacking.Name = "btnCryptojacking";
             this.btnCryptojacking.OverColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnCryptojacking.Size = new System.Drawing.Size(95, 29);
@@ -1164,7 +1169,7 @@ namespace Avaxi
             this.pnlOptimize.Controls.Add(this.checkClearCache);
             this.pnlOptimize.Controls.Add(this.checkClearMemory);
             this.pnlOptimize.Controls.Add(this.label36);
-            this.pnlOptimize.Location = new System.Drawing.Point(204, 144);
+            this.pnlOptimize.Location = new System.Drawing.Point(204, 133);
             this.pnlOptimize.Name = "pnlOptimize";
             this.pnlOptimize.Size = new System.Drawing.Size(1131, 622);
             this.pnlOptimize.TabIndex = 0;
@@ -1173,7 +1178,7 @@ namespace Avaxi
             // 
             this.panel7.BackColor = System.Drawing.Color.White;
             this.panel7.Controls.Add(this.btnOptimize);
-            this.panel7.Location = new System.Drawing.Point(7, 532);
+            this.panel7.Location = new System.Drawing.Point(7, 510);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(418, 77);
             this.panel7.TabIndex = 36;
@@ -1205,9 +1210,9 @@ namespace Avaxi
             this.panel6.Controls.Add(this.btnCleaner);
             this.panel6.Controls.Add(this.btnTemporary);
             this.panel6.Controls.Add(this.btnRegistry);
-            this.panel6.Location = new System.Drawing.Point(421, 436);
+            this.panel6.Location = new System.Drawing.Point(425, 434);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(691, 72);
+            this.panel6.Size = new System.Drawing.Size(683, 68);
             this.panel6.TabIndex = 35;
             // 
             // btnCleaner
@@ -1223,7 +1228,7 @@ namespace Avaxi
             this.btnCleaner.EnabledCalc = true;
             this.btnCleaner.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCleaner.ForeColor = System.Drawing.Color.Black;
-            this.btnCleaner.Location = new System.Drawing.Point(27, 2);
+            this.btnCleaner.Location = new System.Drawing.Point(27, 0);
             this.btnCleaner.Name = "btnCleaner";
             this.btnCleaner.OverColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
             this.btnCleaner.Size = new System.Drawing.Size(221, 68);
@@ -1244,7 +1249,7 @@ namespace Avaxi
             this.btnTemporary.EnabledCalc = true;
             this.btnTemporary.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTemporary.ForeColor = System.Drawing.Color.Black;
-            this.btnTemporary.Location = new System.Drawing.Point(254, 2);
+            this.btnTemporary.Location = new System.Drawing.Point(250, 0);
             this.btnTemporary.Name = "btnTemporary";
             this.btnTemporary.OverColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
             this.btnTemporary.Size = new System.Drawing.Size(212, 68);
@@ -1265,7 +1270,7 @@ namespace Avaxi
             this.btnRegistry.EnabledCalc = true;
             this.btnRegistry.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistry.ForeColor = System.Drawing.Color.Black;
-            this.btnRegistry.Location = new System.Drawing.Point(472, 2);
+            this.btnRegistry.Location = new System.Drawing.Point(464, 0);
             this.btnRegistry.Name = "btnRegistry";
             this.btnRegistry.OverColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
             this.btnRegistry.Size = new System.Drawing.Size(218, 68);
@@ -1277,7 +1282,7 @@ namespace Avaxi
             // 
             this.panel5.BackColor = System.Drawing.Color.White;
             this.panel5.Controls.Add(this.btnClearMemory);
-            this.panel5.Location = new System.Drawing.Point(449, 236);
+            this.panel5.Location = new System.Drawing.Point(450, 231);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(228, 72);
             this.panel5.TabIndex = 34;
@@ -1313,7 +1318,7 @@ namespace Avaxi
             this.lstPrograms.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lstPrograms.FullRowSelect = true;
             this.lstPrograms.HideSelection = false;
-            this.lstPrograms.Location = new System.Drawing.Point(31, 79);
+            this.lstPrograms.Location = new System.Drawing.Point(31, 74);
             this.lstPrograms.MultiSelect = false;
             this.lstPrograms.Name = "lstPrograms";
             this.lstPrograms.ShowGroups = false;
@@ -1338,7 +1343,7 @@ namespace Avaxi
             this.circularProgressBar1.InnerColor = System.Drawing.Color.Transparent;
             this.circularProgressBar1.InnerMargin = 2;
             this.circularProgressBar1.InnerWidth = -1;
-            this.circularProgressBar1.Location = new System.Drawing.Point(780, 109);
+            this.circularProgressBar1.Location = new System.Drawing.Point(781, 104);
             this.circularProgressBar1.MarqueeAnimationSpeed = 2000;
             this.circularProgressBar1.Name = "circularProgressBar1";
             this.circularProgressBar1.OuterColor = System.Drawing.Color.WhiteSmoke;
@@ -1368,7 +1373,7 @@ namespace Avaxi
             this.label37.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label37.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label37.ForeColor = System.Drawing.Color.Black;
-            this.label37.Location = new System.Drawing.Point(447, 396);
+            this.label37.Location = new System.Drawing.Point(447, 391);
             this.label37.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(162, 40);
@@ -1383,7 +1388,7 @@ namespace Avaxi
             this.checkClearCache.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkClearCache.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkClearCache.ForeColor = System.Drawing.Color.Black;
-            this.checkClearCache.Location = new System.Drawing.Point(447, 153);
+            this.checkClearCache.Location = new System.Drawing.Point(452, 148);
             this.checkClearCache.Name = "checkClearCache";
             this.checkClearCache.Size = new System.Drawing.Size(133, 29);
             this.checkClearCache.TabIndex = 23;
@@ -1397,7 +1402,7 @@ namespace Avaxi
             this.checkClearMemory.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkClearMemory.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkClearMemory.ForeColor = System.Drawing.Color.Black;
-            this.checkClearMemory.Location = new System.Drawing.Point(447, 109);
+            this.checkClearMemory.Location = new System.Drawing.Point(452, 104);
             this.checkClearMemory.Name = "checkClearMemory";
             this.checkClearMemory.Size = new System.Drawing.Size(159, 29);
             this.checkClearMemory.TabIndex = 22;
@@ -1410,7 +1415,7 @@ namespace Avaxi
             this.label36.Cursor = System.Windows.Forms.Cursors.Default;
             this.label36.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label36.ForeColor = System.Drawing.Color.Black;
-            this.label36.Location = new System.Drawing.Point(33, 12);
+            this.label36.Location = new System.Drawing.Point(33, 7);
             this.label36.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(162, 40);
@@ -1424,7 +1429,7 @@ namespace Avaxi
             this.pnlTuneUp.Controls.Add(this.panel13);
             this.pnlTuneUp.Controls.Add(this.panel11);
             this.pnlTuneUp.Controls.Add(this.label38);
-            this.pnlTuneUp.Location = new System.Drawing.Point(186, 124);
+            this.pnlTuneUp.Location = new System.Drawing.Point(187, 117);
             this.pnlTuneUp.Name = "pnlTuneUp";
             this.pnlTuneUp.Size = new System.Drawing.Size(1135, 609);
             this.pnlTuneUp.TabIndex = 0;
@@ -1433,9 +1438,9 @@ namespace Avaxi
             // 
             this.panel13.BackColor = System.Drawing.Color.White;
             this.panel13.Controls.Add(this.btnTuneUp);
-            this.panel13.Location = new System.Drawing.Point(442, 493);
+            this.panel13.Location = new System.Drawing.Point(354, 478);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(295, 64);
+            this.panel13.Size = new System.Drawing.Size(340, 55);
             this.panel13.TabIndex = 16;
             // 
             // btnTuneUp
@@ -1450,7 +1455,7 @@ namespace Avaxi
             this.btnTuneUp.EnabledCalc = true;
             this.btnTuneUp.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTuneUp.ForeColor = System.Drawing.Color.White;
-            this.btnTuneUp.Location = new System.Drawing.Point(5, 6);
+            this.btnTuneUp.Location = new System.Drawing.Point(56, 0);
             this.btnTuneUp.Name = "btnTuneUp";
             this.btnTuneUp.OverColor = System.Drawing.Color.Gray;
             this.btnTuneUp.Size = new System.Drawing.Size(284, 55);
@@ -1473,7 +1478,7 @@ namespace Avaxi
             this.panel11.Controls.Add(this.switchQuickAccessHistory);
             this.panel11.Location = new System.Drawing.Point(62, 121);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(1043, 308);
+            this.panel11.Size = new System.Drawing.Size(1058, 308);
             this.panel11.TabIndex = 15;
             // 
             // switchAutomaticUpdates
@@ -1482,7 +1487,7 @@ namespace Avaxi
             this.switchAutomaticUpdates.Depth = 0;
             this.switchAutomaticUpdates.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.switchAutomaticUpdates.ForeColor = System.Drawing.Color.White;
-            this.switchAutomaticUpdates.Location = new System.Drawing.Point(123, 36);
+            this.switchAutomaticUpdates.Location = new System.Drawing.Point(87, 32);
             this.switchAutomaticUpdates.Margin = new System.Windows.Forms.Padding(0);
             this.switchAutomaticUpdates.MouseLocation = new System.Drawing.Point(-1, -1);
             this.switchAutomaticUpdates.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
@@ -1496,7 +1501,7 @@ namespace Avaxi
             // 
             // progressIndicatorTuneUp
             // 
-            this.progressIndicatorTuneUp.Location = new System.Drawing.Point(485, 113);
+            this.progressIndicatorTuneUp.Location = new System.Drawing.Point(449, 109);
             this.progressIndicatorTuneUp.MinimumSize = new System.Drawing.Size(50, 50);
             this.progressIndicatorTuneUp.Name = "progressIndicatorTuneUp";
             this.progressIndicatorTuneUp.P_AnimationColor = System.Drawing.Color.DimGray;
@@ -1510,7 +1515,7 @@ namespace Avaxi
             // 
             this.switchDesktopCleanUpWizard.AutoSize = true;
             this.switchDesktopCleanUpWizard.Depth = 0;
-            this.switchDesktopCleanUpWizard.Location = new System.Drawing.Point(123, 102);
+            this.switchDesktopCleanUpWizard.Location = new System.Drawing.Point(87, 98);
             this.switchDesktopCleanUpWizard.Margin = new System.Windows.Forms.Padding(0);
             this.switchDesktopCleanUpWizard.MouseLocation = new System.Drawing.Point(-1, -1);
             this.switchDesktopCleanUpWizard.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
@@ -1526,7 +1531,7 @@ namespace Avaxi
             // 
             this.switchFeatureUpdates.AutoSize = true;
             this.switchFeatureUpdates.Depth = 0;
-            this.switchFeatureUpdates.Location = new System.Drawing.Point(650, 234);
+            this.switchFeatureUpdates.Location = new System.Drawing.Point(614, 230);
             this.switchFeatureUpdates.Margin = new System.Windows.Forms.Padding(0);
             this.switchFeatureUpdates.MouseLocation = new System.Drawing.Point(-1, -1);
             this.switchFeatureUpdates.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
@@ -1542,7 +1547,7 @@ namespace Avaxi
             // 
             this.switchSpeedUpMenuShowDelay.AutoSize = true;
             this.switchSpeedUpMenuShowDelay.Depth = 0;
-            this.switchSpeedUpMenuShowDelay.Location = new System.Drawing.Point(123, 167);
+            this.switchSpeedUpMenuShowDelay.Location = new System.Drawing.Point(87, 163);
             this.switchSpeedUpMenuShowDelay.Margin = new System.Windows.Forms.Padding(0);
             this.switchSpeedUpMenuShowDelay.MouseLocation = new System.Drawing.Point(-1, -1);
             this.switchSpeedUpMenuShowDelay.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
@@ -1558,7 +1563,7 @@ namespace Avaxi
             // 
             this.switchSensorService.AutoSize = true;
             this.switchSensorService.Depth = 0;
-            this.switchSensorService.Location = new System.Drawing.Point(650, 166);
+            this.switchSensorService.Location = new System.Drawing.Point(614, 162);
             this.switchSensorService.Margin = new System.Windows.Forms.Padding(0);
             this.switchSensorService.MouseLocation = new System.Drawing.Point(-1, -1);
             this.switchSensorService.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
@@ -1574,7 +1579,7 @@ namespace Avaxi
             // 
             this.switchAppearanceInPerformance.AutoSize = true;
             this.switchAppearanceInPerformance.Depth = 0;
-            this.switchAppearanceInPerformance.Location = new System.Drawing.Point(123, 235);
+            this.switchAppearanceInPerformance.Location = new System.Drawing.Point(87, 231);
             this.switchAppearanceInPerformance.Margin = new System.Windows.Forms.Padding(0);
             this.switchAppearanceInPerformance.MouseLocation = new System.Drawing.Point(-1, -1);
             this.switchAppearanceInPerformance.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
@@ -1590,7 +1595,7 @@ namespace Avaxi
             // 
             this.switchStartMenuAds.AutoSize = true;
             this.switchStartMenuAds.Depth = 0;
-            this.switchStartMenuAds.Location = new System.Drawing.Point(650, 101);
+            this.switchStartMenuAds.Location = new System.Drawing.Point(614, 97);
             this.switchStartMenuAds.Margin = new System.Windows.Forms.Padding(0);
             this.switchStartMenuAds.MouseLocation = new System.Drawing.Point(-1, -1);
             this.switchStartMenuAds.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
@@ -1606,7 +1611,7 @@ namespace Avaxi
             // 
             this.switchQuickAccessHistory.AutoSize = true;
             this.switchQuickAccessHistory.Depth = 0;
-            this.switchQuickAccessHistory.Location = new System.Drawing.Point(650, 35);
+            this.switchQuickAccessHistory.Location = new System.Drawing.Point(614, 31);
             this.switchQuickAccessHistory.Margin = new System.Windows.Forms.Padding(0);
             this.switchQuickAccessHistory.MouseLocation = new System.Drawing.Point(-1, -1);
             this.switchQuickAccessHistory.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
@@ -1637,7 +1642,7 @@ namespace Avaxi
             this.pnlSetting.BackColor = System.Drawing.Color.Transparent;
             this.pnlSetting.Controls.Add(this.panel12);
             this.pnlSetting.Controls.Add(this.label39);
-            this.pnlSetting.Location = new System.Drawing.Point(207, 111);
+            this.pnlSetting.Location = new System.Drawing.Point(202, 107);
             this.pnlSetting.Name = "pnlSetting";
             this.pnlSetting.Size = new System.Drawing.Size(1090, 581);
             this.pnlSetting.TabIndex = 0;
@@ -1677,6 +1682,23 @@ namespace Avaxi
             this.btnUSBVaccination.Text = "USB Vaccination";
             this.btnUSBVaccination.Click += new ReaLTaiizor.Util.FoxBase.ButtonFoxBase.ClickEventHandler(this.btnUSBVaccination_Click);
             // 
+            // switchFireWall
+            // 
+            this.switchFireWall.AutoSize = true;
+            this.switchFireWall.Depth = 0;
+            this.switchFireWall.Location = new System.Drawing.Point(26, 155);
+            this.switchFireWall.Margin = new System.Windows.Forms.Padding(0);
+            this.switchFireWall.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.switchFireWall.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
+            this.switchFireWall.Name = "switchFireWall";
+            this.switchFireWall.Ripple = true;
+            this.switchFireWall.Size = new System.Drawing.Size(115, 37);
+            this.switchFireWall.TabIndex = 13;
+            this.switchFireWall.Text = "FireWall";
+            this.switchFireWall.UseAccentColor = false;
+            this.switchFireWall.UseVisualStyleBackColor = true;
+            this.switchFireWall.CheckedChanged += new System.EventHandler(this.switchFireWall_CheckedChanged);
+            // 
             // btnSystemInfo
             // 
             this.btnSystemInfo.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -1696,23 +1718,6 @@ namespace Avaxi
             this.btnSystemInfo.TabIndex = 19;
             this.btnSystemInfo.Text = "SystemInfo";
             this.btnSystemInfo.Click += new ReaLTaiizor.Util.FoxBase.ButtonFoxBase.ClickEventHandler(this.btnSystemInfo_Click);
-            // 
-            // switchFireWall
-            // 
-            this.switchFireWall.AutoSize = true;
-            this.switchFireWall.Depth = 0;
-            this.switchFireWall.Location = new System.Drawing.Point(26, 155);
-            this.switchFireWall.Margin = new System.Windows.Forms.Padding(0);
-            this.switchFireWall.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.switchFireWall.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
-            this.switchFireWall.Name = "switchFireWall";
-            this.switchFireWall.Ripple = true;
-            this.switchFireWall.Size = new System.Drawing.Size(115, 37);
-            this.switchFireWall.TabIndex = 13;
-            this.switchFireWall.Text = "FireWall";
-            this.switchFireWall.UseAccentColor = false;
-            this.switchFireWall.UseVisualStyleBackColor = true;
-            this.switchFireWall.CheckedChanged += new System.EventHandler(this.switchFireWall_CheckedChanged);
             // 
             // switchAutoScanUSB
             // 
@@ -1795,6 +1800,7 @@ namespace Avaxi
             this.quickScanItem.Size = new System.Drawing.Size(271, 32);
             this.quickScanItem.Text = "Quick Scan";
             this.quickScanItem.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal;
+            this.quickScanItem.Click += new System.EventHandler(this.quickScanItem_Click);
             // 
             // updateDatabaseItem
             // 
@@ -1804,6 +1810,7 @@ namespace Avaxi
             this.updateDatabaseItem.Size = new System.Drawing.Size(271, 32);
             this.updateDatabaseItem.Text = "Update Database";
             this.updateDatabaseItem.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal;
+            this.updateDatabaseItem.Click += new System.EventHandler(this.updateDatabaseItem_Click);
             // 
             // silentModeItem
             // 
@@ -1813,6 +1820,7 @@ namespace Avaxi
             this.silentModeItem.Size = new System.Drawing.Size(271, 32);
             this.silentModeItem.Text = "Enable Silent Mode";
             this.silentModeItem.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal;
+            this.silentModeItem.Click += new System.EventHandler(this.silentModeItem_Click);
             // 
             // closeItem
             // 
@@ -1844,7 +1852,7 @@ namespace Avaxi
             this.pnlFormScan.Controls.Add(this.label41);
             this.pnlFormScan.Controls.Add(this.hopeProgressBar1);
             this.pnlFormScan.Controls.Add(this.label40);
-            this.pnlFormScan.Location = new System.Drawing.Point(201, 111);
+            this.pnlFormScan.Location = new System.Drawing.Point(216, 98);
             this.pnlFormScan.Name = "pnlFormScan";
             this.pnlFormScan.Size = new System.Drawing.Size(1117, 598);
             this.pnlFormScan.TabIndex = 17;
@@ -2013,7 +2021,7 @@ namespace Avaxi
             this.pnlDelete.Controls.Add(this.btnCancel);
             this.pnlDelete.Controls.Add(this.btnDelete);
             this.pnlDelete.Controls.Add(this.objectListView1);
-            this.pnlDelete.Location = new System.Drawing.Point(177, 91);
+            this.pnlDelete.Location = new System.Drawing.Point(192, 88);
             this.pnlDelete.Name = "pnlDelete";
             this.pnlDelete.Size = new System.Drawing.Size(1150, 659);
             this.pnlDelete.TabIndex = 18;

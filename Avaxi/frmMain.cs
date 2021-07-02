@@ -49,6 +49,8 @@ namespace Avaxi
         private bool flagRansomware = true;
         private bool flagAffiliateOffers = true;
 
+        private bool flagSilent = false;
+
         public frmMain()
         {
             //_log.AppendFormat("Free Antivirus internal log:\n\n");
@@ -1526,6 +1528,52 @@ namespace Avaxi
                 label6.Image = global::Avaxi.Properties.Resources.cross;
                 label13.Text = "The live protection is disabled";
                 label13.ForeColor = Color.Gray;
+            }
+        }
+
+        private void quickScanItem_Click(object sender, EventArgs e)    // launcher menu quick scan
+        {
+            this.Show();
+            scanType = 1;
+            loc_to_search = System.IO.Path.GetPathRoot(Environment.SystemDirectory);
+            ShowPanel(pnlFormScan);
+            this.BackgroundImage = null;
+            toolStrip1.Visible = false;
+            search = new Thread(new ThreadStart(ScanFolder));
+            search.Start();
+        }
+
+        private void updateDatabaseItem_Click(object sender, EventArgs e)   // launcher menu update database
+        {
+
+        }
+
+        private void silentModeItem_Click(object sender, EventArgs e)
+        {
+            if (!flagSilent)
+            {
+                label6.Image = global::Avaxi.Properties.Resources.check;
+                    label13.Text = "Silent mode is enabled. Enjoy!";
+                label13.ForeColor = Color.DeepSkyBlue;
+                flagSilent = true;
+                silentModeItem.Text = "Disable Silent Mode";
+            }
+            else
+            {
+                if (switchRealTimeProtection.Checked)
+                {
+                    label6.Image = global::Avaxi.Properties.Resources.check;
+                    label13.Text = "The live protection is enabled";
+                    label13.ForeColor = Color.DeepSkyBlue;
+                }
+                else
+                {
+                    label6.Image = global::Avaxi.Properties.Resources.cross;
+                    label13.Text = "The live protection is disabled";
+                    label13.ForeColor = Color.Gray;
+                }
+                flagSilent = false;
+                silentModeItem.Text = "Enable Silent Mode";
             }
         }
     }
