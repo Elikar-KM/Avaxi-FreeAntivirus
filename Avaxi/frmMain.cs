@@ -83,7 +83,6 @@ namespace Avaxi
         private void label2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            //Application.Exit();
         }
 
         private void label4_MouseHover(object sender, EventArgs e)
@@ -102,6 +101,21 @@ namespace Avaxi
         {
             Label l = (Label)sender;
             l.BackColor = Color.Transparent;
+        }
+
+        // start up code
+        public static void AddToRegistry()
+        {
+            try
+            {
+                RegistryKey localMachine64 = RegistryKey.OpenBaseKey(RegistryHive.LocalMachine, RegistryView.Registry64);
+                RegistryKey RegStartUp = localMachine64.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
+                RegStartUp.SetValue("Avaxi", System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location) + "\\Avaxi.exe");
+
+                //RegistryKey RegStartUp32 = Microsoft.Win32.Registry.LocalMachine.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
+                //RegStartUp32.SetValue("Avaxi", System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location) + "\\Avaxi.exe");
+            }
+            catch { }
         }
 
         //setup the scanner engine
@@ -196,7 +210,7 @@ namespace Avaxi
                 else
                 {
                     if (!silent)
-                        System.Windows.Forms.MessageBox.Show(this, "Invalid file to scan", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(this, "Invalid file to scan", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     ret = 3;
                     return ret;
                 }
@@ -249,6 +263,7 @@ namespace Avaxi
         Settings ProgramSettings = new Settings() { MonitorStartup=false,TotalSaved = 0, AutoClean = false, CloseAfterClean = false, ShutdownAfterClean = false, LaunchInStartup = false, LastScan = null };
         private void frmMain_Load(object sender, EventArgs e)
         {
+            AddToRegistry();
             this.switchAppearanceInPerformance.Checked = Program.tuneAppearanceInPerformance;
             this.switchAutomaticUpdates.Checked = Program.tuneAutomaticUpdates;
             this.switchDesktopCleanUpWizard.Checked = Program.tuneDesktopCleanUpWizard;
@@ -265,7 +280,7 @@ namespace Avaxi
             this.flagRansomware = Program.flagRansomware;
             this.flagAffiliateOffers = Program.flagAffiliateOffers;
 
-            // Protection Status 
+            // Protection Status view (anti-phishing, anti-cryptojacking, anti-ransomware, anti-affiliate offers)
             if (flagPhishing)
             {
                 btnPhishing.ForeColor = Color.LimeGreen;
@@ -404,43 +419,6 @@ namespace Avaxi
 
         }
 
-        void GetStartupItems(List<StartupManager> Results)
-        {
-            Computer str = new Computer();
-            foreach (string name in str.Registry.CurrentUser.OpenSubKey(@"Software\Microsoft\Windows\CurrentVersion\Run").GetValueNames())
-            {
-                StartupManager item = new StartupManager()
-                {
-                    Key = "HCU:Run",
-                    Name = name,
-                    File = str.Registry.CurrentUser.OpenSubKey(@"Software\Microsoft\Windows\CurrentVersion\Run").GetValue(name).ToString()
-                };
-                Results.Add(item);
-            }
-
-            foreach (string name in str.Registry.LocalMachine.OpenSubKey(@"SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Run").GetValueNames())
-            {
-                StartupManager item = new StartupManager()
-                {
-                    Key = "HLM:WOW6432Node:Run",
-                    Name = name,
-                    File = str.Registry.LocalMachine.OpenSubKey(@"SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Run").GetValue(name).ToString()
-                };
-                Results.Add(item);
-
-            }
-
-            foreach (string name in RegistryKey.OpenBaseKey(RegistryHive.LocalMachine, RegistryView.Registry64).OpenSubKey(@"SOFTWARE\Microsoft\Windows\CurrentVersion\Run").GetValueNames())
-            {
-                StartupManager item = new StartupManager()
-                {
-                    Key = "HLM:Run",
-                    Name = name,
-                    File = RegistryKey.OpenBaseKey(RegistryHive.LocalMachine, RegistryView.Registry64).OpenSubKey(@"SOFTWARE\Microsoft\Windows\CurrentVersion\Run").GetValue(name).ToString()
-                };
-                Results.Add(item);
-            }
-        }
         private void frmMain_Paint(object sender, PaintEventArgs e)
         {
             //Gradient.FillGradient(this.Width, this.Height, e);
@@ -722,13 +700,6 @@ namespace Avaxi
                 timer1.Enabled = false;
         }
 
-        private void button11_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void button12_Click(object sender, EventArgs e)
-        {
-        }
         bool IsMoving = false;
         Point LastPos = new Point();
         private void panel1_MouseMove(object sender, MouseEventArgs e)
@@ -1440,7 +1411,7 @@ namespace Avaxi
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine("Error: {0}", ex.Message);
+                    frmMain.PushLog("Error: " + ex.Message);
                 }
                 Thread.Sleep(0);
             }
@@ -1457,7 +1428,7 @@ namespace Avaxi
             }
             if (pnProcInfoNeeded == 0)
                 return;
-            Console.WriteLine("Detected {0} proces(s)", pnProcInfoNeeded);
+            frmMain.PushLog("Detected" + pnProcInfoNeeded.ToString());
             if (processInfo == null || processInfo.Length != pnProcInfoNeeded)
                 processInfo = new RmProcesInfo[pnProcInfoNeeded];
             hResult = RestartManager.RmGetList(handle, out pnProcInfoNeeded, ref pnProcInfo, processInfo, ref lpdwRebootReasons);
@@ -1470,8 +1441,7 @@ namespace Avaxi
                 {
                     using (Process proc = Process.GetProcessById(procInfo.process.dwProcessId))
                     {
-                        Console.WriteLine("Detected process {0} ({1}) is playing with one of your file!",
-                            proc.ProcessName, procInfo.process.dwProcessId);
+                        frmMain.PushLog("Detected process" + proc.ProcessName + " is playing with one of your file!");
                         bool filter = true;
                         if (!procIds.Contains(procInfo.process.dwProcessId))
                             if (ProcessFilter != null)
@@ -1485,7 +1455,7 @@ namespace Avaxi
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine("Error: {0}", ex.Message);
+                    frmMain.PushLog("Error: " + ex.Message);
                 }
             }
             HashSet<int> temp = procIds;
