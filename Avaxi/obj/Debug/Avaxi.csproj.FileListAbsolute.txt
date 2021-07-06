@@ -71,3 +71,4 @@ E:\workstatation\AnitVirus\Workstaion\Phase2\Avaxi-FreeAntivirus\Avaxi\obj\Debug
 E:\workstatation\AnitVirus\Workstaion\Phase2\Avaxi-FreeAntivirus\Avaxi\obj\Debug\Avaxi.csproj.CopyComplete
 E:\workstatation\AnitVirus\Workstaion\Phase2\Avaxi-FreeAntivirus\Avaxi\obj\Debug\Avaxi.exe
 E:\workstatation\AnitVirus\Workstaion\Phase2\Avaxi-FreeAntivirus\Avaxi\obj\Debug\Avaxi.pdb
+E:\workstatation\AnitVirus\Workstaion\Phase2\Avaxi-FreeAntivirus\Avaxi\obj\Debug\Avaxi.csprojAssemblyReference.cache

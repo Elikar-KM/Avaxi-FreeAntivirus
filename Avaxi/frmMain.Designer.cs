@@ -211,7 +211,7 @@ namespace Avaxi
             this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.LightGray;
-            this.label3.Location = new System.Drawing.Point(867, 20);
+            this.label3.Location = new System.Drawing.Point(964, 20);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(119, 40);
@@ -653,7 +653,7 @@ namespace Avaxi
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(633, 32);
             this.label35.TabIndex = 23;
-            this.label35.Text = "The last update was at 02/07/2021";
+            this.label35.Text = "The last update was at 06/07/2021";
             this.label35.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // pnlScan
@@ -1879,10 +1879,10 @@ namespace Avaxi
             this.label49.Cursor = System.Windows.Forms.Cursors.Default;
             this.label49.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label49.ForeColor = System.Drawing.Color.Black;
-            this.label49.Location = new System.Drawing.Point(383, 302);
+            this.label49.Location = new System.Drawing.Point(265, 303);
             this.label49.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(233, 40);
+            this.label49.Size = new System.Drawing.Size(478, 40);
             this.label49.TabIndex = 14;
             this.label49.Text = "Scan finished!";
             this.label49.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1909,10 +1909,10 @@ namespace Avaxi
             this.label43.Cursor = System.Windows.Forms.Cursors.Default;
             this.label43.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label43.ForeColor = System.Drawing.Color.Black;
-            this.label43.Location = new System.Drawing.Point(383, 259);
+            this.label43.Location = new System.Drawing.Point(283, 254);
             this.label43.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(233, 40);
+            this.label43.Size = new System.Drawing.Size(445, 40);
             this.label43.TabIndex = 12;
             this.label43.Text = "Scan stopped!";
             this.label43.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2022,7 +2022,7 @@ namespace Avaxi
             this.pnlDelete.Controls.Add(this.btnCancel);
             this.pnlDelete.Controls.Add(this.btnDelete);
             this.pnlDelete.Controls.Add(this.objectListView1);
-            this.pnlDelete.Location = new System.Drawing.Point(190, 91);
+            this.pnlDelete.Location = new System.Drawing.Point(188, 88);
             this.pnlDelete.Name = "pnlDelete";
             this.pnlDelete.Size = new System.Drawing.Size(1150, 659);
             this.pnlDelete.TabIndex = 18;

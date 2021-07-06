@@ -1315,6 +1315,7 @@ namespace Avaxi
                     toolStrip1.Visible = false;
                     ShowPanel(pnlDelete);
                     this.BackgroundImage = null;
+                    infected = 0;
                     break;
                 case 3: //ok
                     FormatScan();

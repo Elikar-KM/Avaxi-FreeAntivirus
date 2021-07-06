@@ -72,9 +72,9 @@ namespace Avaxi
             this.label3.Location = new System.Drawing.Point(13, 0);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(191, 36);
+            this.label3.Size = new System.Drawing.Size(352, 36);
             this.label3.TabIndex = 5;
-            this.label3.Text = "Ransomware";
+            this.label3.Text = "Ransomware Protection";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // panel2
