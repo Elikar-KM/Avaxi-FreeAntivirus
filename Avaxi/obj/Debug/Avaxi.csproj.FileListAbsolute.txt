@@ -62,6 +62,7 @@ E:\workstatation\AnitVirus\Workstaion\Phase2\Avaxi-FreeAntivirus\Avaxi\obj\Debug
 E:\workstatation\AnitVirus\Workstaion\Phase2\Avaxi-FreeAntivirus\Avaxi\obj\Debug\Interop.Shell32.dll
 E:\workstatation\AnitVirus\Workstaion\Phase2\Avaxi-FreeAntivirus\Avaxi\obj\Debug\Avaxi.csproj.ResolveComReference.cache
 E:\workstatation\AnitVirus\Workstaion\Phase2\Avaxi-FreeAntivirus\Avaxi\obj\Debug\Avaxi.frmMain.resources
+E:\workstatation\AnitVirus\Workstaion\Phase2\Avaxi-FreeAntivirus\Avaxi\obj\Debug\Avaxi.frmRansomware.resources
 E:\workstatation\AnitVirus\Workstaion\Phase2\Avaxi-FreeAntivirus\Avaxi\obj\Debug\Avaxi.frmSysInfo.resources
 E:\workstatation\AnitVirus\Workstaion\Phase2\Avaxi-FreeAntivirus\Avaxi\obj\Debug\Avaxi.frmUSB.resources
 E:\workstatation\AnitVirus\Workstaion\Phase2\Avaxi-FreeAntivirus\Avaxi\obj\Debug\Avaxi.Properties.Resources.resources
@@ -70,4 +71,3 @@ E:\workstatation\AnitVirus\Workstaion\Phase2\Avaxi-FreeAntivirus\Avaxi\obj\Debug
 E:\workstatation\AnitVirus\Workstaion\Phase2\Avaxi-FreeAntivirus\Avaxi\obj\Debug\Avaxi.csproj.CopyComplete
 E:\workstatation\AnitVirus\Workstaion\Phase2\Avaxi-FreeAntivirus\Avaxi\obj\Debug\Avaxi.exe
 E:\workstatation\AnitVirus\Workstaion\Phase2\Avaxi-FreeAntivirus\Avaxi\obj\Debug\Avaxi.pdb
-E:\workstatation\AnitVirus\Workstaion\Phase2\Avaxi-FreeAntivirus\Avaxi\obj\Debug\Avaxi.csprojAssemblyReference.cache

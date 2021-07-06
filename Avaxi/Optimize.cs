@@ -67,12 +67,12 @@ namespace Avaxi
             if (ramSavings < 0)
             {
                 ramSavings = Math.Abs(ramSavings);
-                //FormFreeAntivirus.PushLog("RAM usage increase: " + ramSavings.ToString("F2") + " MB");
+                frmMain.PushLog("RAM usage increase: " + ramSavings.ToString("F2") + " MB");
                 message = string.Format("RamUsageIncreased: {0}MB", ramSavings.ToString("F2"));
             }
             else
             {
-                //FormFreeAntivirus.PushLog("RAM usage decrease: " + ramSavings.ToString("F2") + " MB");
+                frmMain.PushLog("RAM usage decrease: " + ramSavings.ToString("F2") + " MB");
                 message = string.Format("RamUsageSaved: {0}MB", ramSavings.ToString("F2"));
             }
 
@@ -146,7 +146,7 @@ namespace Avaxi
             catch (Exception ex)
             {
                 //get component again
-                //FormFreeAntivirus.PushLog(ex.Message);
+                frmMain.PushLog(ex.Message);
             }
         }
 
@@ -155,7 +155,7 @@ namespace Avaxi
             if (_clearingMemory) return;
             if (!_ramController.EmptyWorkingSets && !_ramController.ClearFileSystemCache && !_ramController.ClearClipboard && !_ramController.FillRam) return;
 
-            //FormFreeAntivirus.PushLog("Clearing RAM Memory");
+            frmMain.PushLog("Clearing RAM Memory");
             _clearingMemory = true;
 
             try
@@ -181,14 +181,14 @@ namespace Avaxi
             }
             catch (Exception ex)
             {
-                //FormFreeAntivirus.PushLog(ex.Message);
+                frmMain.PushLog(ex.Message);
                 //MessageBox.Show(ex.Message, "MemPlus", MessageBoxButton.OK, MessageBoxImage.Error);
             }
 
             //BtnClearMemory.IsEnabled = true;
             _clearingMemory = false;
 
-            //FormFreeAntivirus.PushLog("Done clearing RAM memory");
+            frmMain.PushLog("Done clearing RAM memory");
         }
 
         private static System.Windows.Forms.ListView pList;

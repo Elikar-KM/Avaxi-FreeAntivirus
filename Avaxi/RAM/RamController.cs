@@ -148,7 +148,7 @@ namespace Avaxi
         internal RamController(RamClearingCompleted ramClearingCompletedEvent, int ramUpdateTimerInterval, bool enableRamStatistics, int maxUsageHistory)
         {
             //_logController = logController ?? throw new ArgumentNullException(nameof(logController));
-            //FormFreeAntivirus.PushLog("Initializing RamController");
+            frmMain.PushLog("Initializing RamController");
 
             if (ramUpdateTimerInterval <= 0) throw new ArgumentException("Timer interval cannot be less than or equal to zero!");
             //RamUsageAddedEvent = ramUsageAddedEvent;
@@ -170,7 +170,7 @@ namespace Avaxi
             _ramTimer.Interval = ramUpdateTimerInterval;
             _ramTimer.Enabled = false;
 
-            //FormFreeAntivirus.PushLog("Done initializing RamController");
+            frmMain.PushLog("Done initializing RamController");
         }
 
         /// <summary>
@@ -244,10 +244,10 @@ namespace Avaxi
             }
             catch (Exception ex)
             {
-                //FormFreeAntivirus.PushLog(ex.Message);
+                frmMain.PushLog(ex.Message);
             }
 
-            //FormFreeAntivirus.PushLog("The RAM monitor has been enabled");
+            frmMain.PushLog("The RAM monitor has been enabled");
         }
 
         /// <summary>
@@ -258,7 +258,7 @@ namespace Avaxi
             _ramTimer.Enabled = false;
             RamMonitorEnabled = false;
 
-            //FormFreeAntivirus.PushLog("The RAM monitor has been disabled");
+            frmMain.PushLog("The RAM monitor has been disabled");
         }
 
         /// <summary>
@@ -268,7 +268,7 @@ namespace Avaxi
         /// <param name="e">The ElapsedEventArgs</param>
         private void OnTimedEvent(object source, ElapsedEventArgs e)
         {
-            //FormFreeAntivirus.PushLog("RAM monitor timer has been called");
+            frmMain.PushLog("RAM monitor timer has been called");
 
             try
             {
@@ -276,10 +276,10 @@ namespace Avaxi
             }
             catch (Exception ex)
             {
-                //FormFreeAntivirus.PushLog(ex.Message);
+                frmMain.PushLog(ex.Message);
             }
 
-            //FormFreeAntivirus.PushLog("Finished RAM monitor timer");
+            frmMain.PushLog("Finished RAM monitor timer");
         }
 
         /// <summary>
@@ -289,7 +289,7 @@ namespace Avaxi
         internal async Task ClearMemory()
         {
             _lastAutoOptimizeTime = DateTime.Now;
-            //FormFreeAntivirus.PushLog("Clearing RAM memory");
+            frmMain.PushLog("Clearing RAM memory");
 
             await Task.Run(async () =>
             {
@@ -329,7 +329,7 @@ namespace Avaxi
                 }
                 catch (Exception ex)
                 {
-                    //FormFreeAntivirus.PushLog(ex.Message);
+                    frmMain.PushLog(ex.Message);
                 }
             });
 
@@ -341,7 +341,7 @@ namespace Avaxi
             System.Windows.Forms.MessageBox.Show("Freed");
             RamClearingCompletedEvent?.Invoke();
 
-            //FormFreeAntivirus.PushLog("Done clearing RAM memory");
+            frmMain.PushLog("Done clearing RAM memory");
         }
 
         /// <summary>
@@ -350,7 +350,7 @@ namespace Avaxi
         /// <returns>A Task object</returns>
         internal async Task FillRamData()
         {
-            //FormFreeAntivirus.PushLog("Filling RAM");
+            frmMain.PushLog("Filling RAM");
 
             await Task.Run(() =>
             {
@@ -370,14 +370,14 @@ namespace Avaxi
                 }
                 catch (Exception ex)
                 {
-                    //FormFreeAntivirus.PushLog(ex.Message);
+                    frmMain.PushLog(ex.Message);
                 }
             });
 
             System.Windows.Forms.MessageBox.Show("Freed");
             RamClearingCompletedEvent?.Invoke();
 
-            //FormFreeAntivirus.PushLog("Done filling RAM");
+            frmMain.PushLog("Done filling RAM");
         }
 
         /// <summary>
@@ -386,7 +386,7 @@ namespace Avaxi
         /// <returns>A Task object</returns>
         internal async Task ClearWorkingSets()
         {
-            //FormFreeAntivirus.PushLog("Clearing process working sets");
+            frmMain.PushLog("Clearing process working sets");
 
             await Task.Run(async () =>
             {
@@ -408,13 +408,13 @@ namespace Avaxi
                 }
                 catch (Exception ex)
                 {
-                    //FormFreeAntivirus.PushLog(ex.Message);
+                    frmMain.PushLog(ex.Message);
                 }
             });
 
             RamClearingCompletedEvent?.Invoke();
 
-            //FormFreeAntivirus.PushLog("Done clearing process working sets");
+            frmMain.PushLog("Done clearing process working sets");
         }
 
         /// <summary>
@@ -423,7 +423,7 @@ namespace Avaxi
         /// <returns>A Task object</returns>
         internal async Task ClearFileSystemCaches()
         {
-            //FormFreeAntivirus.PushLog("Clearing FileSystem cache");
+            frmMain.PushLog("Clearing FileSystem cache");
 
             await Task.Run(() =>
             {
@@ -443,14 +443,14 @@ namespace Avaxi
                 }
                 catch (Exception ex)
                 {
-                    //FormFreeAntivirus.PushLog(ex.Message);
+                    frmMain.PushLog(ex.Message);
                 }
             });
 
             System.Windows.Forms.MessageBox.Show("Freed");
             RamClearingCompletedEvent?.Invoke();
 
-            //FormFreeAntivirus.PushLog("Done clearing FileSystem cache");
+            frmMain.PushLog("Done clearing FileSystem cache");
         }
 
         /// <summary>
@@ -458,7 +458,7 @@ namespace Avaxi
         /// </summary>
         public void UpdateRamUsage()
         {
-            //FormFreeAntivirus.PushLog("Updating RAM usage");
+            frmMain.PushLog("Updating RAM usage");
 
             double total = Convert.ToDouble(_info.TotalPhysicalMemory);
             double usage = total - Convert.ToDouble(_info.AvailablePhysicalMemory);
@@ -497,7 +497,7 @@ namespace Avaxi
                 }
             }
 
-            //FormFreeAntivirus.PushLog("Finished updating RAM usage");
+            frmMain.PushLog("Finished updating RAM usage");
         }
 
         /// <summary>

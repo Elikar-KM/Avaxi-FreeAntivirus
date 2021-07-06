@@ -153,7 +153,7 @@ namespace Avaxi.SpeedUp
             catch (Exception ex)
             {
                 current = DefaultEdgeDownloadFolder;
-                //FormFreeAntivirus.PushLog("Utilities.GetEdgeDownloadFolder" + ex.Message + ex.StackTrace);
+                frmMain.PushLog("Utilities.GetEdgeDownloadFolder" + ex.Message + ex.StackTrace);
             }
 
             return current;
@@ -181,7 +181,7 @@ namespace Avaxi.SpeedUp
             }
             catch (Exception ex)
             {
-                //FormFreeAntivirus.PushLog("Utilities.RunBatchFile" + ex.Message + ex.StackTrace);
+                frmMain.PushLog("Utilities.RunBatchFile" + ex.Message + ex.StackTrace);
             }
         }
 
@@ -202,7 +202,7 @@ namespace Avaxi.SpeedUp
             catch (Exception ex)
             {
                 p.Dispose();
-                //FormFreeAntivirus.PushLog("Utilities.ImportRegistryScript" + ex.Message + ex.StackTrace);
+                frmMain.PushLog("Utilities.ImportRegistryScript" + ex.Message + ex.StackTrace);
             }
             finally
             {
@@ -249,7 +249,7 @@ namespace Avaxi.SpeedUp
                 }
                 catch (Exception ex)
                 {
-                    //FormFreeAntivirus.PushLog("Utilities.StartService" + ex.Message + ex.StackTrace);
+                    frmMain.PushLog("Utilities.StartService" + ex.Message + ex.StackTrace);
                 }
             }
         }
@@ -324,14 +324,14 @@ namespace Avaxi.SpeedUp
                             }
                             catch (Exception ex)
                             {
-                                //FormFreeAntivirus.PushLog("Utilities.GetRegistryStartupItemsHelper" + ex.Message + ex.StackTrace);
+                                frmMain.PushLog("Utilities.GetRegistryStartupItemsHelper" + ex.Message + ex.StackTrace);
                             }
                         }
                     }
                 }
                 catch (Exception ex)
                 {
-                    //FormFreeAntivirus.PushLog("Utilities.GetRegistryStartupItemsHelper" + ex.Message + ex.StackTrace);
+                    frmMain.PushLog("Utilities.GetRegistryStartupItemsHelper" + ex.Message + ex.StackTrace);
                 }
             }
         }
@@ -352,7 +352,7 @@ namespace Avaxi.SpeedUp
                 }
                 catch (Exception ex)
                 {
-                    //FormFreeAntivirus.PushLog("Utilities.GetFolderStartupItemsHelper" + ex.Message + ex.StackTrace);
+                    frmMain.PushLog("Utilities.GetFolderStartupItemsHelper" + ex.Message + ex.StackTrace);
                 }
             }
 
@@ -370,7 +370,7 @@ namespace Avaxi.SpeedUp
                 }
                 catch (Exception ex)
                 {
-                    //FormFreeAntivirus.PushLog("Utilities.GetFolderStartupItemsHelper" + ex.Message + ex.StackTrace);
+                    frmMain.PushLog("Utilities.GetFolderStartupItemsHelper" + ex.Message + ex.StackTrace);
                 }
             }
         }
@@ -487,7 +487,7 @@ namespace Avaxi.SpeedUp
                 }
                 catch (Exception ex)
                 {
-                    //FormFreeAntivirus.PushLog("Utilities.RunCommand" + ex.Message + ex.StackTrace);
+                    frmMain.PushLog("Utilities.RunCommand" + ex.Message + ex.StackTrace);
                 }
             }
         }
@@ -534,7 +534,7 @@ namespace Avaxi.SpeedUp
                 }
                 catch (Exception ex)
                 {
-                    //FormFreeAntivirus.PushLog("Utilities.RestartExplorer" + ex.Message + ex.StackTrace);
+                    frmMain.PushLog("Utilities.RestartExplorer" + ex.Message + ex.StackTrace);
                 }
             }
 
@@ -550,7 +550,7 @@ namespace Avaxi.SpeedUp
             }
             catch (Exception ex)
             {
-                //FormFreeAntivirus.PushLog("Utilities.FindKeyInRegistry" + ex.Message + ex.StackTrace);
+                frmMain.PushLog("Utilities.FindKeyInRegistry" + ex.Message + ex.StackTrace);
             }
         }
 
@@ -606,7 +606,7 @@ namespace Avaxi.SpeedUp
             }
             catch (Exception ex)
             {
-                //FormFreeAntivirus.PushLog("Utilities.ResetConfiguration" + ex.Message + ex.StackTrace);
+                frmMain.PushLog("Utilities.ResetConfiguration" + ex.Message + ex.StackTrace);
             }
             finally
             {

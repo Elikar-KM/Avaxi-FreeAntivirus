@@ -37,7 +37,7 @@ namespace Avaxi.SpeedUp
             }
             catch (Exception ex)
             {
-                //FormFreeAntivirus.PushLog("FolderStartupItem.Remove" + ex.Message + ex.StackTrace);
+                frmMain.PushLog("FolderStartupItem.Remove" + ex.Message + ex.StackTrace);
             }
         }
 
@@ -49,7 +49,7 @@ namespace Avaxi.SpeedUp
             }
             catch (Exception ex)
             {
-                //FormFreeAntivirus.PushLog("FolderStartupItem.Remove" + ex.Message + ex.StackTrace);
+                frmMain.PushLog("FolderStartupItem.Remove" + ex.Message + ex.StackTrace);
             }
         }
     }
@@ -66,7 +66,7 @@ namespace Avaxi.SpeedUp
             }
             catch (Exception ex)
             {
-                //FormFreeAntivirus.PushLog("FolderStartupItem.Remove" + ex.Message + ex.StackTrace);
+                frmMain.PushLog("FolderStartupItem.Remove" + ex.Message + ex.StackTrace);
             }
         }
 
@@ -78,7 +78,7 @@ namespace Avaxi.SpeedUp
             }
             catch (Exception ex)
             {
-                //FormFreeAntivirus.PushLog("FolderStartupItem.Remove" + ex.Message + ex.StackTrace);
+                frmMain.PushLog("FolderStartupItem.Remove" + ex.Message + ex.StackTrace);
             }
         }
 
@@ -90,7 +90,7 @@ namespace Avaxi.SpeedUp
             }
             catch (Exception ex)
             {
-                //FormFreeAntivirus.PushLog("FolderStartupItem.Remove" + ex.Message + ex.StackTrace);
+                frmMain.PushLog("FolderStartupItem.Remove" + ex.Message + ex.StackTrace);
             }
         }
 

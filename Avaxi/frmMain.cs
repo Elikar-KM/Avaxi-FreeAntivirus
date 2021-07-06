@@ -44,6 +44,7 @@ namespace Avaxi
         private ArrayList watchers = new ArrayList();
         private Exclusion exclusion = new Exclusion();
         private UsbManager usb = new UsbManager();
+        
         private bool flagPhishing = true;
         private bool flagCryptojacking = true;
         private bool flagRansomware = true;
@@ -51,9 +52,21 @@ namespace Avaxi
 
         private bool flagSilent = false;
 
+        public static string[] strArray = null;
+
+        public Predicate<Process> ProcessFilter;
+
+        private Thread runThread;
+        private HashSet<int> procIds, newProcIds;
+
+        private uint handle;
+        private uint pnProcInfoNeeded;
+        private uint pnProcInfo;
+        private uint lpdwRebootReasons = RestartManager.RmRebootReasonNone;
+        private RmProcesInfo[] processInfo;
+
         public frmMain()
         {
-            //_log.AppendFormat("Free Antivirus internal log:\n\n");
             InitializeComponent();
             toolStrip1.Renderer = new MyRenderer();
         }
@@ -171,7 +184,7 @@ namespace Avaxi
                                     }
                                     catch (Exception ex)
                                     {
-                                        //FormFreeAntivirus.PushLog(ex.Message);
+                                        frmMain.PushLog(ex.Message);
                                     }
                                 //  }
                                 ret = 1;
@@ -190,7 +203,7 @@ namespace Avaxi
             }
             catch (Exception ex)
             {
-
+                frmMain.PushLog(ex.Message);
             }
             return ret;
         }
@@ -203,7 +216,7 @@ namespace Avaxi
 
             if (switchRealTimeProtection.Checked)
             {
-                //FormFreeAntivirus.PushLog("Real-time scan : " + e.FullPath);
+                frmMain.PushLog("Real-time scan : " + e.FullPath);
                 ScanFile(e.FullPath, true);
             }
         }
@@ -234,7 +247,7 @@ namespace Avaxi
         List<Registry> AllSectionsRegistry = new List<Registry>();
         List<StartupManager> MonitorStartup = new List<StartupManager>();
         Settings ProgramSettings = new Settings() { MonitorStartup=false,TotalSaved = 0, AutoClean = false, CloseAfterClean = false, ShutdownAfterClean = false, LaunchInStartup = false, LastScan = null };
-        private async void frmMain_Load(object sender, EventArgs e)
+        private void frmMain_Load(object sender, EventArgs e)
         {
             this.switchAppearanceInPerformance.Checked = Program.tuneAppearanceInPerformance;
             this.switchAutomaticUpdates.Checked = Program.tuneAutomaticUpdates;
@@ -295,7 +308,7 @@ namespace Avaxi
                 btnRansomware.ForeColor = Color.LimeGreen;
                 btnRansomware.Text = "Enabled";
                 label7.Image = global::Avaxi.Properties.Resources.shield_status;
-                label29.Image = global::Avaxi.Properties.Resources.AntiRansomware;
+                labelRansomware.Image = global::Avaxi.Properties.Resources.AntiRansomware;
                 label10.Visible = true;
                 label14.ForeColor = Color.DeepSkyBlue;
             }
@@ -304,7 +317,7 @@ namespace Avaxi
                 btnRansomware.ForeColor = Color.Gray;
                 btnRansomware.Text = "Disabled";
                 label7.Image = global::Avaxi.Properties.Resources.shield_status_grey;
-                label29.Image = global::Avaxi.Properties.Resources.AntiRansomware_grey;
+                labelRansomware.Image = global::Avaxi.Properties.Resources.AntiRansomware_grey;
                 label10.Visible = false;
                 label14.ForeColor = Color.Gray;
             }
@@ -842,9 +855,7 @@ namespace Avaxi
         //log manipuation
         public static void PushLog(string message)
         {
-            DateTime localDate = DateTime.Now;
-            string time = String.Format("{0}", localDate.ToString());
-            //_log.AppendFormat("{0} : {1}\n", time, message);
+            File.AppendAllText("log.txt", message);
         }
 
         private async void btnClearMemory_Click(object sender, EventArgs e)
@@ -895,7 +906,7 @@ namespace Avaxi
             }
             catch (Exception ex)
             {
-                //FormFreeAntivirus.PushLog("MainForm.CleanPC" + ex.Message + ex.StackTrace);
+                frmMain.PushLog("MainForm.CleanPC" + ex.Message + ex.StackTrace);
             }
             this.btnCleaner.Enabled = true;
         }
@@ -909,7 +920,7 @@ namespace Avaxi
             }
             catch (Exception ex)
             {
-                //FormFreeAntivirus.PushLog("MainForm.CleanPC" + ex.Message + ex.StackTrace);
+                frmMain.PushLog("MainForm.CleanPC" + ex.Message + ex.StackTrace);
             }
             this.btnTemporary.Enabled = true;
         }
@@ -1132,7 +1143,7 @@ namespace Avaxi
                         }
                         catch (Exception ex)
                         {
-                            //FormFreeAntivirus.PushLog(ex.Message);
+                            frmMain.PushLog(ex.Message);
                         }
                     }
                 }
@@ -1184,7 +1195,6 @@ namespace Avaxi
             foreach (string file in files)
             {
                 fileNum++;
-                bool detect = false;
 
                 if (System.IO.File.Exists(file))
                 {
@@ -1206,7 +1216,6 @@ namespace Avaxi
                         {
                             case ClamScanResults.VirusDetected:
                                 infected++;
-                                detect = true;
                                 AddToResult(file, scanResult.InfectedFiles.First().VirusName);
                                 break;
                         }
@@ -1214,8 +1223,7 @@ namespace Avaxi
                     }
                     catch (Exception ex)
                     {
-                        detect = false;
-                        //FormFreeAntivirus.PushLog(ex.Message);
+                        frmMain.PushLog(ex.Message);
                     }
 
                 }
@@ -1399,6 +1407,91 @@ namespace Avaxi
             RunSmartScan();
         }
 
+        // Ransomware protection
+        private void RunRansomwareProtection()
+        {
+            if (strArray != null)
+            {
+                if (RestartManager.RmStartSession(out handle, 0, Guid.NewGuid().ToString()) != 0)
+                {
+                    throw new Exception("Could not start session.");
+                }
+                
+                if (RestartManager.RmRegisterResources(handle, (uint)strArray.Length, strArray, 0, null, 0, null) != 0)
+                {
+                    throw new Exception("Could not register resources");
+                }
+            }
+            
+            procIds = new HashSet<int>();
+            newProcIds = new HashSet<int>();
+            runThread = new Thread(Loop);
+            runThread.Start();
+        }
+
+        private void Loop()
+        {
+            while (true)
+            {
+                try
+                {
+                    Step();
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Error: {0}", ex.Message);
+                }
+                Thread.Sleep(0);
+            }
+        }
+
+        private void Step()
+        {
+            int hResult = RestartManager.RmGetList(handle, out pnProcInfoNeeded, ref pnProcInfo, null, ref lpdwRebootReasons);
+            if (hResult != RestartManager.ERROR_MORE_DATA)
+            {
+                if (hResult != 0)
+                    throw new Exception(string.Format("Get List thrown {0}", hResult));
+                return;
+            }
+            if (pnProcInfoNeeded == 0)
+                return;
+            Console.WriteLine("Detected {0} proces(s)", pnProcInfoNeeded);
+            if (processInfo == null || processInfo.Length != pnProcInfoNeeded)
+                processInfo = new RmProcesInfo[pnProcInfoNeeded];
+            hResult = RestartManager.RmGetList(handle, out pnProcInfoNeeded, ref pnProcInfo, processInfo, ref lpdwRebootReasons);
+            if (hResult != RestartManager.ERROR_MORE_DATA && hResult != 0)
+                throw new Exception(string.Format("Get List thrown {0}", hResult));
+            newProcIds.Clear();
+            foreach (RmProcesInfo procInfo in processInfo)
+            {
+                try
+                {
+                    using (Process proc = Process.GetProcessById(procInfo.process.dwProcessId))
+                    {
+                        Console.WriteLine("Detected process {0} ({1}) is playing with one of your file!",
+                            proc.ProcessName, procInfo.process.dwProcessId);
+                        bool filter = true;
+                        if (!procIds.Contains(procInfo.process.dwProcessId))
+                            if (ProcessFilter != null)
+                                filter = ProcessFilter(proc);
+                        if (filter)
+                        {
+                            newProcIds.Add(procInfo.process.dwProcessId);
+                            proc.Kill();
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Error: {0}", ex.Message);
+                }
+            }
+            HashSet<int> temp = procIds;
+            procIds = newProcIds;
+            newProcIds = temp;
+        }
+
         private void btnPhishing_Click(object sender, EventArgs e)
         {
             if (flagPhishing)
@@ -1464,12 +1557,13 @@ namespace Avaxi
             if (flagRansomware)
             {
                 // Ransomware disable code
-
+                runThread.Abort();
+                
                 // Status page view
                 btnRansomware.ForeColor = Color.Gray;
                 btnRansomware.Text = "Disabled";
                 label7.Image = global::Avaxi.Properties.Resources.shield_status_grey;
-                label29.Image = global::Avaxi.Properties.Resources.AntiRansomware_grey;
+                labelRansomware.Image = global::Avaxi.Properties.Resources.AntiRansomware_grey;
                 label10.Visible = false;
                 label14.ForeColor = Color.Gray;
                 flagRansomware = false;
@@ -1477,12 +1571,12 @@ namespace Avaxi
             else
             {
                 // Ransomware enable code
-
+                RunRansomwareProtection();
                 // Status page view
                 btnRansomware.ForeColor = Color.LimeGreen;
                 btnRansomware.Text = "Enabled";
                 label7.Image = global::Avaxi.Properties.Resources.shield_status;
-                label29.Image = global::Avaxi.Properties.Resources.AntiRansomware;
+                labelRansomware.Image = global::Avaxi.Properties.Resources.AntiRansomware;
                 label10.Visible = true;
                 label14.ForeColor = Color.DeepSkyBlue;
                 flagRansomware = true;
@@ -1575,6 +1669,12 @@ namespace Avaxi
                 flagSilent = false;
                 silentModeItem.Text = "Enable Silent Mode";
             }
+        }
+
+        private void labelRansomware_Click(object sender, EventArgs e)
+        {
+            frmRansomware dlg = new frmRansomware();
+            dlg.Show();
         }
     }
 }

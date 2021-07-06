@@ -31,7 +31,7 @@ namespace Avaxi.SpeedUp
             }
             catch (Exception ex)
             {
-                //FormFreeAntivirus.PushLog("Optimize.DisableTelemetryRunner" + ex.Message + ex.StackTrace);
+                frmMain.PushLog("Optimize.DisableTelemetryRunner" + ex.Message + ex.StackTrace);
             }
         }
 
@@ -46,7 +46,7 @@ namespace Avaxi.SpeedUp
             }
             catch (Exception ex)
             {
-                //FormFreeAntivirus.PushLog("Optimize.EnableTelemetryRunner" + ex.Message + ex.StackTrace);
+                frmMain.PushLog("Optimize.EnableTelemetryRunner" + ex.Message + ex.StackTrace);
             }
         }
 
@@ -134,7 +134,7 @@ namespace Avaxi.SpeedUp
             }
             catch (Exception ex)
             {
-                //FormFreeAntivirus.PushLog("Optimize.DisablePerformanceTweaks" + ex.Message + ex.StackTrace);
+                frmMain.PushLog("Optimize.DisablePerformanceTweaks" + ex.Message + ex.StackTrace);
             }
         }
 
@@ -210,7 +210,7 @@ namespace Avaxi.SpeedUp
             }
             catch (Exception ex)
             {
-                //FormFreeAntivirus.PushLog("Optimize.EnableNetworkThrottling" + ex.Message + ex.StackTrace);
+                frmMain.PushLog("Optimize.EnableNetworkThrottling" + ex.Message + ex.StackTrace);
             }
         }
 
@@ -229,7 +229,7 @@ namespace Avaxi.SpeedUp
             }
             catch (Exception ex)
             {
-                //FormFreeAntivirus.PushLog("Optimize.EnableSkypeAds" + ex.Message + ex.StackTrace);
+                frmMain.PushLog("Optimize.EnableSkypeAds" + ex.Message + ex.StackTrace);
             }
         }
 
@@ -315,7 +315,7 @@ namespace Avaxi.SpeedUp
             }
             catch (Exception ex)
             {
-                //FormFreeAntivirus.PushLog("Optimize.DisableSystemRestore" + ex.Message + ex.StackTrace);
+                frmMain.PushLog("Optimize.DisableSystemRestore" + ex.Message + ex.StackTrace);
                 //MessageBox.Show(ex.Message, "Optimizer", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
@@ -465,7 +465,7 @@ namespace Avaxi.SpeedUp
                     }
                     catch (Exception ex)
                     {
-                        //FormFreeAntivirus.PushLog("Optimize.UninstallOneDrive" + ex.Message + ex.StackTrace);
+                        frmMain.PushLog("Optimize.UninstallOneDrive" + ex.Message + ex.StackTrace);
                     }
                 }
             }
@@ -523,7 +523,7 @@ namespace Avaxi.SpeedUp
             }
             catch (Exception ex)
             {
-                //FormFreeAntivirus.PushLog("Optimize.UninstallOneDrive" + ex.Message + ex.StackTrace);
+                frmMain.PushLog("Optimize.UninstallOneDrive" + ex.Message + ex.StackTrace);
             }
         }
 
@@ -546,7 +546,7 @@ namespace Avaxi.SpeedUp
             }
             catch (Exception ex)
             {
-                //FormFreeAntivirus.PushLog("Optimize.InstallOneDrive" + ex.Message + ex.StackTrace);
+                frmMain.PushLog("Optimize.InstallOneDrive" + ex.Message + ex.StackTrace);
             }
         }
 
@@ -615,7 +615,7 @@ namespace Avaxi.SpeedUp
             }
             catch (Exception ex)
             {
-                //FormFreeAntivirus.PushLog("Optimize.EnableXboxLive" + ex.Message + ex.StackTrace);
+                frmMain.PushLog("Optimize.EnableXboxLive" + ex.Message + ex.StackTrace);
             }
 
             Utilities.RunBatchFile(Required.ScriptsFolder + "EnableXboxTasks.bat");
@@ -717,7 +717,7 @@ namespace Avaxi.SpeedUp
             }
             catch (Exception ex)
             {
-                //FormFreeAntivirus.PushLog("Optimize.EnableTelemetryTasks" + ex.Message + ex.StackTrace);
+                frmMain.PushLog("Optimize.EnableTelemetryTasks" + ex.Message + ex.StackTrace);
             }
 
             Utilities.RunBatchFile(Required.ScriptsFolder + "EnableTelemetryTasks.bat");
@@ -745,7 +745,7 @@ namespace Avaxi.SpeedUp
             }
             catch (Exception ex)
             {
-                //FormFreeAntivirus.PushLog("Optimize.EnableOffice2016Telemetry" + ex.Message + ex.StackTrace);
+                frmMain.PushLog("Optimize.EnableOffice2016Telemetry" + ex.Message + ex.StackTrace);
             }
 
             Utilities.RunBatchFile(Required.ScriptsFolder + "EnableOfficeTelemetryTasks.bat");
@@ -819,7 +819,7 @@ namespace Avaxi.SpeedUp
             }
             catch (Exception ex)
             {
-                //FormFreeAntivirus.PushLog("Optimize.EnablePrivacyOptions" + ex.Message + ex.StackTrace);
+                frmMain.PushLog("Optimize.EnablePrivacyOptions" + ex.Message + ex.StackTrace);
             }
 
             // Turn off KMS Client Online AVS Validation
@@ -844,7 +844,7 @@ namespace Avaxi.SpeedUp
             }
             catch (Exception ex)
             {
-                //FormFreeAntivirus.PushLog("Optimize.EnablePrivacyOptions" + ex.Message + ex.StackTrace);
+                frmMain.PushLog("Optimize.EnablePrivacyOptions" + ex.Message + ex.StackTrace);
             }
 
             Microsoft.Win32.Registry.SetValue(@"HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DataCollection", "AllowTelemetry", "1", RegistryValueKind.DWord);
@@ -1048,7 +1048,7 @@ namespace Avaxi.SpeedUp
             }
             catch (Exception ex)
             {
-                //FormFreeAntivirus.PushLog("Optimize.DisableForcedFeatureUpdates" + ex.Message + ex.StackTrace);
+                frmMain.PushLog("Optimize.DisableForcedFeatureUpdates" + ex.Message + ex.StackTrace);
             }
         }
 
@@ -1067,7 +1067,7 @@ namespace Avaxi.SpeedUp
             }
             catch (Exception ex)
             {
-                //FormFreeAntivirus.PushLog("Optimize.EnableForcedFeatureUpdates" + ex.Message + ex.StackTrace);
+                frmMain.PushLog("Optimize.EnableForcedFeatureUpdates" + ex.Message + ex.StackTrace);
             }
         }
 
@@ -1147,7 +1147,7 @@ namespace Avaxi.SpeedUp
             }
             catch (Exception ex)
             {
-                //FormFreeAntivirus.PushLog("Optimize.RemoveCastToDevice" + ex.Message + ex.StackTrace);
+                frmMain.PushLog("Optimize.RemoveCastToDevice" + ex.Message + ex.StackTrace);
             }
         }
 
@@ -1160,7 +1160,7 @@ namespace Avaxi.SpeedUp
             }
             catch (Exception ex)
             {
-                //FormFreeAntivirus.PushLog("Optimize.AddCastToDevice" + ex.Message + ex.StackTrace);
+                frmMain.PushLog("Optimize.AddCastToDevice" + ex.Message + ex.StackTrace);
             }
         }
 

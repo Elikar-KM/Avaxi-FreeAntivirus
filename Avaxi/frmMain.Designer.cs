@@ -90,7 +90,7 @@ namespace Avaxi
             this.label32 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
+            this.labelRansomware = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
@@ -211,7 +211,7 @@ namespace Avaxi
             this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.LightGray;
-            this.label3.Location = new System.Drawing.Point(979, 20);
+            this.label3.Location = new System.Drawing.Point(867, 20);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(119, 40);
@@ -452,7 +452,7 @@ namespace Avaxi
             this.pnlShield.Controls.Add(this.label8);
             this.pnlShield.Controls.Add(this.label7);
             this.pnlShield.Controls.Add(this.label6);
-            this.pnlShield.Location = new System.Drawing.Point(225, 118);
+            this.pnlShield.Location = new System.Drawing.Point(247, 120);
             this.pnlShield.Margin = new System.Windows.Forms.Padding(4);
             this.pnlShield.Name = "pnlShield";
             this.pnlShield.Size = new System.Drawing.Size(1070, 620);
@@ -899,11 +899,11 @@ namespace Avaxi
             this.pnlCrypto.Controls.Add(this.label32);
             this.pnlCrypto.Controls.Add(this.label31);
             this.pnlCrypto.Controls.Add(this.label30);
-            this.pnlCrypto.Controls.Add(this.label29);
+            this.pnlCrypto.Controls.Add(this.labelRansomware);
             this.pnlCrypto.Controls.Add(this.label28);
             this.pnlCrypto.Controls.Add(this.label27);
             this.pnlCrypto.Controls.Add(this.label26);
-            this.pnlCrypto.Location = new System.Drawing.Point(219, 118);
+            this.pnlCrypto.Location = new System.Drawing.Point(219, 120);
             this.pnlCrypto.Name = "pnlCrypto";
             this.pnlCrypto.Size = new System.Drawing.Size(1100, 603);
             this.pnlCrypto.TabIndex = 16;
@@ -1101,19 +1101,20 @@ namespace Avaxi
             this.label30.TabIndex = 10;
             this.label30.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label29
+            // labelRansomware
             // 
-            this.label29.BackColor = System.Drawing.Color.Transparent;
-            this.label29.Cursor = System.Windows.Forms.Cursors.Default;
-            this.label29.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.ForeColor = System.Drawing.Color.LightGray;
-            this.label29.Image = global::Avaxi.Properties.Resources.AntiRansomware_grey;
-            this.label29.Location = new System.Drawing.Point(594, 148);
-            this.label29.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(161, 146);
-            this.label29.TabIndex = 9;
-            this.label29.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelRansomware.BackColor = System.Drawing.Color.Transparent;
+            this.labelRansomware.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.labelRansomware.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRansomware.ForeColor = System.Drawing.Color.LightGray;
+            this.labelRansomware.Image = global::Avaxi.Properties.Resources.AntiRansomware_grey;
+            this.labelRansomware.Location = new System.Drawing.Point(594, 148);
+            this.labelRansomware.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelRansomware.Name = "labelRansomware";
+            this.labelRansomware.Size = new System.Drawing.Size(161, 146);
+            this.labelRansomware.TabIndex = 9;
+            this.labelRansomware.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelRansomware.Click += new System.EventHandler(this.labelRansomware_Click);
             // 
             // label28
             // 
@@ -1169,7 +1170,7 @@ namespace Avaxi
             this.pnlOptimize.Controls.Add(this.checkClearCache);
             this.pnlOptimize.Controls.Add(this.checkClearMemory);
             this.pnlOptimize.Controls.Add(this.label36);
-            this.pnlOptimize.Location = new System.Drawing.Point(204, 133);
+            this.pnlOptimize.Location = new System.Drawing.Point(207, 144);
             this.pnlOptimize.Name = "pnlOptimize";
             this.pnlOptimize.Size = new System.Drawing.Size(1131, 622);
             this.pnlOptimize.TabIndex = 0;
@@ -1429,7 +1430,7 @@ namespace Avaxi
             this.pnlTuneUp.Controls.Add(this.panel13);
             this.pnlTuneUp.Controls.Add(this.panel11);
             this.pnlTuneUp.Controls.Add(this.label38);
-            this.pnlTuneUp.Location = new System.Drawing.Point(187, 117);
+            this.pnlTuneUp.Location = new System.Drawing.Point(187, 133);
             this.pnlTuneUp.Name = "pnlTuneUp";
             this.pnlTuneUp.Size = new System.Drawing.Size(1135, 609);
             this.pnlTuneUp.TabIndex = 0;
@@ -1642,7 +1643,7 @@ namespace Avaxi
             this.pnlSetting.BackColor = System.Drawing.Color.Transparent;
             this.pnlSetting.Controls.Add(this.panel12);
             this.pnlSetting.Controls.Add(this.label39);
-            this.pnlSetting.Location = new System.Drawing.Point(202, 107);
+            this.pnlSetting.Location = new System.Drawing.Point(207, 120);
             this.pnlSetting.Name = "pnlSetting";
             this.pnlSetting.Size = new System.Drawing.Size(1090, 581);
             this.pnlSetting.TabIndex = 0;
@@ -1852,7 +1853,7 @@ namespace Avaxi
             this.pnlFormScan.Controls.Add(this.label41);
             this.pnlFormScan.Controls.Add(this.hopeProgressBar1);
             this.pnlFormScan.Controls.Add(this.label40);
-            this.pnlFormScan.Location = new System.Drawing.Point(216, 98);
+            this.pnlFormScan.Location = new System.Drawing.Point(216, 103);
             this.pnlFormScan.Name = "pnlFormScan";
             this.pnlFormScan.Size = new System.Drawing.Size(1117, 598);
             this.pnlFormScan.TabIndex = 17;
@@ -2021,7 +2022,7 @@ namespace Avaxi
             this.pnlDelete.Controls.Add(this.btnCancel);
             this.pnlDelete.Controls.Add(this.btnDelete);
             this.pnlDelete.Controls.Add(this.objectListView1);
-            this.pnlDelete.Location = new System.Drawing.Point(192, 88);
+            this.pnlDelete.Location = new System.Drawing.Point(190, 91);
             this.pnlDelete.Name = "pnlDelete";
             this.pnlDelete.Size = new System.Drawing.Size(1150, 659);
             this.pnlDelete.TabIndex = 18;
@@ -2285,7 +2286,7 @@ namespace Avaxi
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label labelRansomware;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.Label label33;

@@ -57,7 +57,7 @@ namespace Avaxi
         }
 
         List<string> usbdrivers = new List<string>();
-        private async void frmUSB_Load(object sender, EventArgs e)
+        private void frmUSB_Load(object sender, EventArgs e)
         {
             usbdrivers.Clear();
             foreach (DriveInfo drv in DriveInfo.GetDrives())

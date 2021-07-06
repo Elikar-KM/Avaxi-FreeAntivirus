@@ -173,6 +173,7 @@ namespace Avaxi
             catch (IOException ex)
             {
                 Locked = true;
+                frmMain.PushLog(ex.Message);
             }
             return Locked;
         }

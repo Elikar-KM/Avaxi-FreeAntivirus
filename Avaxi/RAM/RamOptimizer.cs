@@ -106,7 +106,7 @@ namespace Avaxi
         /// <param name="processExceptions">A list of processes that should be excluded from memory optimization</param>
         internal void EmptyWorkingSetFunction(List<string> processExceptions)
         {
-            //FormFreeAntivirus.PushLog("Emptying working set");
+            frmMain.PushLog("Emptying working set");
 
             if (processExceptions != null && processExceptions.Count > 0)
             {
@@ -119,18 +119,18 @@ namespace Avaxi
                 {
                     if (processExceptions == null || processExceptions.Count == 0 || !processExceptions.Contains(process.MainModule.FileName.ToLower()))
                     {
-                        //FormFreeAntivirus.PushLog("Emptying working set for process: " + process.ProcessName);
+                        frmMain.PushLog("Emptying working set for process: " + process.ProcessName);
                         NativeMethods.EmptyWorkingSet(process.Handle);
-                        //FormFreeAntivirus.PushLog("Successfully emptied working set for process " + process.ProcessName);
+                        frmMain.PushLog("Successfully emptied working set for process " + process.ProcessName);
                     }
                     else
                     {
-                        //FormFreeAntivirus.PushLog("Excluded process: " + process.ProcessName);
+                        frmMain.PushLog("Excluded process: " + process.ProcessName);
                     }
                 }
                 catch (Exception ex)
                 {
-                    //FormFreeAntivirus.PushLog("Could not empty working set for process " + process.ProcessName + ": " + ex.Message);
+                    frmMain.PushLog("Could not empty working set for process " + process.ProcessName + ": " + ex.Message);
                 }
             }
 
@@ -142,7 +142,7 @@ namespace Avaxi
         /// </summary>
         internal void ClearClipboard()
         {
-            //FormFreeAntivirus.PushLog("Clearing clipboard");
+            frmMain.PushLog("Clearing clipboard");
             try
             {
                 // Attempt to open the clipboard first and set associate its handle to the current task
@@ -154,11 +154,11 @@ namespace Avaxi
                 NativeMethods.EmptyClipboard();
                 NativeMethods.CloseClipboard();
 
-                //FormFreeAntivirus.PushLog("Successfully cleared all clipboard data");
+                frmMain.PushLog("Successfully cleared all clipboard data");
             }
             catch (Exception ex)
             {
-                //FormFreeAntivirus.PushLog(ex.ToString());
+                frmMain.PushLog(ex.ToString());
             }
         }
 
@@ -168,9 +168,9 @@ namespace Avaxi
         /// <returns>A boolean to indicate whether or not the system is 64 bit</returns>
         private bool Is64BitMode()
         {
-            //FormFreeAntivirus.PushLog("Checking if 64 bit mode is enabled");
+            frmMain.PushLog("Checking if 64 bit mode is enabled");
             bool is64Bit = Marshal.SizeOf(typeof(IntPtr)) == 8;
-            //FormFreeAntivirus.PushLog(is64Bit ? "64 bit mode is enabled" : "64 bit mode is disabled");
+            frmMain.PushLog(is64Bit ? "64 bit mode is enabled" : "64 bit mode is disabled");
 
             return is64Bit;
         }
@@ -181,14 +181,14 @@ namespace Avaxi
         /// <param name="clearStandbyCache">Set whether or not to clear the standby cache</param>
         internal void ClearFileSystemCache(bool clearStandbyCache)
         {
-            //FormFreeAntivirus.PushLog("Clearing FileSystem cache");
+            frmMain.PushLog("Clearing FileSystem cache");
 
             try
             {
                 // Check if privilege can be increased
                 if (SetIncreasePrivilege(IncreaseQuotaName))
                 {
-                    //FormFreeAntivirus.PushLog("Privileges have successfully been increased");
+                    frmMain.PushLog("Privileges have successfully been increased");
 
                     uint ntSetSystemInformationRet;
                     int systemInfoLength;
@@ -196,7 +196,7 @@ namespace Avaxi
                     // Depending on the working set, call NtSetSystemInformation using the right parameters
                     if (!Is64BitMode())
                     {
-                        //FormFreeAntivirus.PushLog("Clearing 32 bit FileSystem cache information");
+                        frmMain.PushLog("Clearing 32 bit FileSystem cache information");
 
                         SystemCacheInformation cacheInformation =
                             new SystemCacheInformation
@@ -211,11 +211,11 @@ namespace Avaxi
                         if (ntSetSystemInformationRet != 0) throw new Exception("NtSetSystemInformation: ", new Win32Exception(Marshal.GetLastWin32Error()));
                         gcHandle.Free();
 
-                        //FormFreeAntivirus.PushLog("Done clearing 32 bit FileSystem cache information");
+                        frmMain.PushLog("Done clearing 32 bit FileSystem cache information");
                     }
                     else
                     {
-                        //FormFreeAntivirus.PushLog("Clearing 64 bit FileSystem cache information");
+                        frmMain.PushLog("Clearing 64 bit FileSystem cache information");
 
                         SystemCacheInformation64Bit information64Bit =
                             new SystemCacheInformation64Bit
@@ -230,7 +230,7 @@ namespace Avaxi
                         if (ntSetSystemInformationRet != 0) throw new Exception("NtSetSystemInformation: ", new Win32Exception(Marshal.GetLastWin32Error()));
                         gcHandle.Free();
 
-                        //FormFreeAntivirus.PushLog("Done clearing 64 bit FileSystem cache information");
+                        frmMain.PushLog("Done clearing 64 bit FileSystem cache information");
                     }
                 }
 
@@ -238,7 +238,7 @@ namespace Avaxi
                 // If we can't increase the privileges, it's pointless to even try
                 if (!clearStandbyCache || !SetIncreasePrivilege(ProfileSingleProcessName)) return;
                 {
-                    //FormFreeAntivirus.PushLog("Clearing standby cache");
+                    frmMain.PushLog("Clearing standby cache");
 
                     int systemInfoLength = Marshal.SizeOf(MemoryPurgeStandbyList);
                     GCHandle gcHandle = GCHandle.Alloc(MemoryPurgeStandbyList, GCHandleType.Pinned);
@@ -246,12 +246,12 @@ namespace Avaxi
                     if (ntSetSystemInformationRet != 0) throw new Exception("NtSetSystemInformation: ", new Win32Exception(Marshal.GetLastWin32Error()));
                     gcHandle.Free();
 
-                    //FormFreeAntivirus.PushLog("Done clearing standby cache");
+                    frmMain.PushLog("Done clearing standby cache");
                 }
             }
             catch (Exception ex)
             {
-                //FormFreeAntivirus.PushLog(ex.ToString());
+                frmMain.PushLog(ex.ToString());
             }
         }
 
@@ -262,7 +262,7 @@ namespace Avaxi
         /// <returns>A boolean value indicating whether or not the operation was successful</returns>
         private bool SetIncreasePrivilege(string privilegeName)
         {
-            //FormFreeAntivirus.PushLog("Increasing privilege: " + privilegeName);
+            frmMain.PushLog("Increasing privilege: " + privilegeName);
 
             using (WindowsIdentity current = WindowsIdentity.GetCurrent(TokenAccessLevels.Query | TokenAccessLevels.AdjustPrivileges))
             {
@@ -271,18 +271,18 @@ namespace Avaxi
                 tokenPrivileges.Luid = 0L;
                 tokenPrivileges.Attr = PrivilegeEnabled;
 
-                //FormFreeAntivirus.PushLog("Looking up privilege value");
+                frmMain.PushLog("Looking up privilege value");
                 // If we can't look up the privilege value, we can't function properly
                 if (!NativeMethods.LookupPrivilegeValue(null, privilegeName, ref tokenPrivileges.Luid)) throw new Exception("LookupPrivilegeValue: ", new Win32Exception(Marshal.GetLastWin32Error()));
-                //FormFreeAntivirus.PushLog("Done looking up privilege value");
+                frmMain.PushLog("Done looking up privilege value");
 
 
-                //FormFreeAntivirus.PushLog("Adjusting token privileges");
+                frmMain.PushLog("Adjusting token privileges");
                 // Enables or disables privileges in a specified access token
                 int adjustTokenPrivilegesRet = NativeMethods.AdjustTokenPrivileges(current.Token, false, ref tokenPrivileges, 0, IntPtr.Zero, IntPtr.Zero) ? 1 : 0;
                 // Return value of zero indicates an error
                 if (adjustTokenPrivilegesRet == 0) throw new Exception("AdjustTokenPrivileges: ", new Win32Exception(Marshal.GetLastWin32Error()));
-                //FormFreeAntivirus.PushLog("Done adjusting token privileges");
+                frmMain.PushLog("Done adjusting token privileges");
                 return adjustTokenPrivilegesRet != 0;
             }
         }
@@ -294,7 +294,7 @@ namespace Avaxi
         /// <param name="maxRuns">The amount of times the RAM should be filled</param>
         internal void FillRam(ComputerInfo info, int maxRuns)
         {
-            //FormFreeAntivirus.PushLog("Attempting to fill the available RAM");
+            frmMain.PushLog("Attempting to fill the available RAM");
             int runs = 0;
             while (runs < maxRuns)
             {
@@ -322,7 +322,7 @@ namespace Avaxi
                     }
                     catch (OutOfMemoryException ex)
                     {
-                        //FormFreeAntivirus.PushLog(ex.Message);
+                        frmMain.PushLog(ex.Message);
                         break;
                     }
                 }
@@ -336,12 +336,12 @@ namespace Avaxi
                     }
                     catch (Exception ex)
                     {
-                        //FormFreeAntivirus.PushLog(ex.Message);
+                        frmMain.PushLog(ex.Message);
                     }
                 }
                 runs++;
             }
-            //FormFreeAntivirus.PushLog("Done filling available RAM");
+            frmMain.PushLog("Done filling available RAM");
         }
     }
 }
