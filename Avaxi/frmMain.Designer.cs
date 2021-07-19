@@ -48,6 +48,7 @@ namespace Avaxi
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.pnlShield = new System.Windows.Forms.Panel();
+            this.btnRunSmartScan1 = new ReaLTaiizor.Controls.RibbonButtonLeft();
             this.label35 = new System.Windows.Forms.Label();
             this.roundPanel1 = new Avaxi.RoundPanel();
             this.panel16 = new System.Windows.Forms.Panel();
@@ -65,6 +66,7 @@ namespace Avaxi
             this.label13 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.pnlScan = new System.Windows.Forms.Panel();
+            this.btnRunSmartScan3 = new ReaLTaiizor.Controls.RibbonButtonLeft();
             this.roundPanel4 = new Avaxi.RoundPanel();
             this.panel19 = new System.Windows.Forms.Panel();
             this.btnFullScan = new System.Windows.Forms.Button();
@@ -79,11 +81,11 @@ namespace Avaxi
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
-            this.button2 = new ReaLTaiizor.Controls.FoxButton();
             this.roundPanel3 = new Avaxi.RoundPanel();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.pnlCrypto = new System.Windows.Forms.Panel();
+            this.btnRunSmartScan2 = new ReaLTaiizor.Controls.RibbonButtonLeft();
             this.roundPanel2 = new Avaxi.RoundPanel();
             this.panel18 = new System.Windows.Forms.Panel();
             this.btnAffiliateOffers = new ReaLTaiizor.Controls.FoxButton();
@@ -103,6 +105,7 @@ namespace Avaxi
             this.btnPhishing = new ReaLTaiizor.Controls.FoxButton();
             this.label26 = new System.Windows.Forms.Label();
             this.pnlOptimize = new System.Windows.Forms.Panel();
+            this.btnOptimizePC = new ReaLTaiizor.Controls.RibbonButtonLeft();
             this.roundPanel7 = new Avaxi.RoundPanel();
             this.label37 = new System.Windows.Forms.Label();
             this.btnTemporary = new ReaLTaiizor.Controls.FoxButton();
@@ -116,7 +119,6 @@ namespace Avaxi
             this.roundPanel5 = new Avaxi.RoundPanel();
             this.label29 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.btnOptimize = new ReaLTaiizor.Controls.FoxButton();
             this.pnlTuneUp = new System.Windows.Forms.Panel();
             this.btnTuneUp = new ReaLTaiizor.Controls.FoxButton();
             this.panel11 = new System.Windows.Forms.Panel();
@@ -169,8 +171,6 @@ namespace Avaxi
             this.olvColumn1 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.olvColumn2 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.launcherIcon = new System.Windows.Forms.NotifyIcon(this.components);
-            this.btnRunSmartScan1 = new ReaLTaiizor.Controls.RibbonButtonLeft();
-            this.btnRunSmartScan2 = new ReaLTaiizor.Controls.RibbonButtonLeft();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -471,6 +471,32 @@ namespace Avaxi
             this.pnlShield.TabIndex = 14;
             this.pnlShield.Visible = false;
             // 
+            // btnRunSmartScan1
+            // 
+            this.btnRunSmartScan1.BackColor = System.Drawing.Color.Transparent;
+            this.btnRunSmartScan1.BaseColorA = System.Drawing.Color.DodgerBlue;
+            this.btnRunSmartScan1.BaseColorB = System.Drawing.Color.LightSkyBlue;
+            this.btnRunSmartScan1.BorderColorA = System.Drawing.Color.Transparent;
+            this.btnRunSmartScan1.BorderColorB = System.Drawing.Color.Transparent;
+            this.btnRunSmartScan1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRunSmartScan1.DownBaseColorA = System.Drawing.Color.LightBlue;
+            this.btnRunSmartScan1.DownBaseColorB = System.Drawing.Color.AliceBlue;
+            this.btnRunSmartScan1.DownBorderColorA = System.Drawing.Color.Transparent;
+            this.btnRunSmartScan1.DownBorderColorB = System.Drawing.Color.Transparent;
+            this.btnRunSmartScan1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRunSmartScan1.ForeColor = System.Drawing.Color.White;
+            this.btnRunSmartScan1.HoverBaseColorA = System.Drawing.Color.DeepSkyBlue;
+            this.btnRunSmartScan1.HoverBaseColorB = System.Drawing.Color.AliceBlue;
+            this.btnRunSmartScan1.HoverBorderColorA = System.Drawing.Color.Transparent;
+            this.btnRunSmartScan1.HoverBorderColorB = System.Drawing.Color.Transparent;
+            this.btnRunSmartScan1.Location = new System.Drawing.Point(463, 486);
+            this.btnRunSmartScan1.Name = "btnRunSmartScan1";
+            this.btnRunSmartScan1.Size = new System.Drawing.Size(275, 54);
+            this.btnRunSmartScan1.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            this.btnRunSmartScan1.TabIndex = 31;
+            this.btnRunSmartScan1.Text = "Run a Smart Scan";
+            this.btnRunSmartScan1.Click += new System.EventHandler(this.btnRunSmartScan1_Click);
+            // 
             // label35
             // 
             this.label35.BackColor = System.Drawing.Color.Transparent;
@@ -695,13 +721,39 @@ namespace Avaxi
             // pnlScan
             // 
             this.pnlScan.BackColor = System.Drawing.Color.Transparent;
+            this.pnlScan.Controls.Add(this.btnRunSmartScan3);
             this.pnlScan.Controls.Add(this.roundPanel4);
-            this.pnlScan.Controls.Add(this.button2);
             this.pnlScan.Controls.Add(this.roundPanel3);
             this.pnlScan.Location = new System.Drawing.Point(173, 80);
             this.pnlScan.Name = "pnlScan";
             this.pnlScan.Size = new System.Drawing.Size(1196, 713);
             this.pnlScan.TabIndex = 15;
+            // 
+            // btnRunSmartScan3
+            // 
+            this.btnRunSmartScan3.BackColor = System.Drawing.Color.Transparent;
+            this.btnRunSmartScan3.BaseColorA = System.Drawing.Color.DodgerBlue;
+            this.btnRunSmartScan3.BaseColorB = System.Drawing.Color.LightSkyBlue;
+            this.btnRunSmartScan3.BorderColorA = System.Drawing.Color.Transparent;
+            this.btnRunSmartScan3.BorderColorB = System.Drawing.Color.Transparent;
+            this.btnRunSmartScan3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRunSmartScan3.DownBaseColorA = System.Drawing.Color.LightBlue;
+            this.btnRunSmartScan3.DownBaseColorB = System.Drawing.Color.AliceBlue;
+            this.btnRunSmartScan3.DownBorderColorA = System.Drawing.Color.Transparent;
+            this.btnRunSmartScan3.DownBorderColorB = System.Drawing.Color.Transparent;
+            this.btnRunSmartScan3.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRunSmartScan3.ForeColor = System.Drawing.Color.White;
+            this.btnRunSmartScan3.HoverBaseColorA = System.Drawing.Color.DeepSkyBlue;
+            this.btnRunSmartScan3.HoverBaseColorB = System.Drawing.Color.AliceBlue;
+            this.btnRunSmartScan3.HoverBorderColorA = System.Drawing.Color.Transparent;
+            this.btnRunSmartScan3.HoverBorderColorB = System.Drawing.Color.Transparent;
+            this.btnRunSmartScan3.Location = new System.Drawing.Point(40, 197);
+            this.btnRunSmartScan3.Name = "btnRunSmartScan3";
+            this.btnRunSmartScan3.Size = new System.Drawing.Size(275, 54);
+            this.btnRunSmartScan3.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            this.btnRunSmartScan3.TabIndex = 33;
+            this.btnRunSmartScan3.Text = "Run a Smart Scan";
+            this.btnRunSmartScan3.Click += new System.EventHandler(this.btnRunSmartScan3_Click);
             // 
             // roundPanel4
             // 
@@ -757,7 +809,7 @@ namespace Avaxi
             this.label25.Cursor = System.Windows.Forms.Cursors.Default;
             this.label25.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label25.Location = new System.Drawing.Point(84, 157);
+            this.label25.Location = new System.Drawing.Point(84, 164);
             this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(156, 40);
@@ -814,7 +866,7 @@ namespace Avaxi
             this.label23.Cursor = System.Windows.Forms.Cursors.Default;
             this.label23.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label23.Location = new System.Drawing.Point(48, 157);
+            this.label23.Location = new System.Drawing.Point(48, 164);
             this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(220, 40);
@@ -872,7 +924,7 @@ namespace Avaxi
             this.label20.Cursor = System.Windows.Forms.Cursors.Default;
             this.label20.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label20.Location = new System.Drawing.Point(75, 157);
+            this.label20.Location = new System.Drawing.Point(75, 164);
             this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(156, 40);
@@ -907,27 +959,6 @@ namespace Avaxi
             this.label19.TabIndex = 17;
             this.label19.Text = "Other scan";
             this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.White;
-            this.button2.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.button2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.DisabledBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
-            this.button2.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(209)))), ((int)(((byte)(209)))));
-            this.button2.DisabledTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(178)))), ((int)(((byte)(190)))));
-            this.button2.DownColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
-            this.button2.EnabledCalc = true;
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(41, 195);
-            this.button2.Name = "button2";
-            this.button2.OverColor = System.Drawing.Color.Lime;
-            this.button2.Size = new System.Drawing.Size(339, 54);
-            this.button2.TabIndex = 27;
-            this.button2.Text = "RUN SMART SCAN";
-            this.button2.Click += new ReaLTaiizor.Util.FoxBase.ButtonFoxBase.ClickEventHandler(this.button2_Click);
             // 
             // roundPanel3
             // 
@@ -983,6 +1014,32 @@ namespace Avaxi
             this.pnlCrypto.Name = "pnlCrypto";
             this.pnlCrypto.Size = new System.Drawing.Size(1196, 713);
             this.pnlCrypto.TabIndex = 16;
+            // 
+            // btnRunSmartScan2
+            // 
+            this.btnRunSmartScan2.BackColor = System.Drawing.Color.Transparent;
+            this.btnRunSmartScan2.BaseColorA = System.Drawing.Color.DodgerBlue;
+            this.btnRunSmartScan2.BaseColorB = System.Drawing.Color.LightSkyBlue;
+            this.btnRunSmartScan2.BorderColorA = System.Drawing.Color.Transparent;
+            this.btnRunSmartScan2.BorderColorB = System.Drawing.Color.Transparent;
+            this.btnRunSmartScan2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRunSmartScan2.DownBaseColorA = System.Drawing.Color.LightBlue;
+            this.btnRunSmartScan2.DownBaseColorB = System.Drawing.Color.AliceBlue;
+            this.btnRunSmartScan2.DownBorderColorA = System.Drawing.Color.Transparent;
+            this.btnRunSmartScan2.DownBorderColorB = System.Drawing.Color.Transparent;
+            this.btnRunSmartScan2.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRunSmartScan2.ForeColor = System.Drawing.Color.White;
+            this.btnRunSmartScan2.HoverBaseColorA = System.Drawing.Color.DeepSkyBlue;
+            this.btnRunSmartScan2.HoverBaseColorB = System.Drawing.Color.AliceBlue;
+            this.btnRunSmartScan2.HoverBorderColorA = System.Drawing.Color.Transparent;
+            this.btnRunSmartScan2.HoverBorderColorB = System.Drawing.Color.Transparent;
+            this.btnRunSmartScan2.Location = new System.Drawing.Point(457, 574);
+            this.btnRunSmartScan2.Name = "btnRunSmartScan2";
+            this.btnRunSmartScan2.Size = new System.Drawing.Size(275, 54);
+            this.btnRunSmartScan2.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            this.btnRunSmartScan2.TabIndex = 32;
+            this.btnRunSmartScan2.Text = "Run a Smart Scan";
+            this.btnRunSmartScan2.Click += new System.EventHandler(this.btnRunSmartScan2_Click);
             // 
             // roundPanel2
             // 
@@ -1267,6 +1324,32 @@ namespace Avaxi
             this.pnlOptimize.Size = new System.Drawing.Size(1196, 713);
             this.pnlOptimize.TabIndex = 0;
             // 
+            // btnOptimizePC
+            // 
+            this.btnOptimizePC.BackColor = System.Drawing.Color.Transparent;
+            this.btnOptimizePC.BaseColorA = System.Drawing.Color.DodgerBlue;
+            this.btnOptimizePC.BaseColorB = System.Drawing.Color.LightSkyBlue;
+            this.btnOptimizePC.BorderColorA = System.Drawing.Color.Transparent;
+            this.btnOptimizePC.BorderColorB = System.Drawing.Color.Transparent;
+            this.btnOptimizePC.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnOptimizePC.DownBaseColorA = System.Drawing.Color.LightBlue;
+            this.btnOptimizePC.DownBaseColorB = System.Drawing.Color.AliceBlue;
+            this.btnOptimizePC.DownBorderColorA = System.Drawing.Color.Transparent;
+            this.btnOptimizePC.DownBorderColorB = System.Drawing.Color.Transparent;
+            this.btnOptimizePC.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOptimizePC.ForeColor = System.Drawing.Color.White;
+            this.btnOptimizePC.HoverBaseColorA = System.Drawing.Color.DeepSkyBlue;
+            this.btnOptimizePC.HoverBaseColorB = System.Drawing.Color.AliceBlue;
+            this.btnOptimizePC.HoverBorderColorA = System.Drawing.Color.Transparent;
+            this.btnOptimizePC.HoverBorderColorB = System.Drawing.Color.Transparent;
+            this.btnOptimizePC.Location = new System.Drawing.Point(30, 457);
+            this.btnOptimizePC.Name = "btnOptimizePC";
+            this.btnOptimizePC.Size = new System.Drawing.Size(300, 68);
+            this.btnOptimizePC.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            this.btnOptimizePC.TabIndex = 38;
+            this.btnOptimizePC.Text = "Optimize PC";
+            this.btnOptimizePC.Click += new System.EventHandler(this.btnOptimizePC_Click);
+            // 
             // roundPanel7
             // 
             this.roundPanel7.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -1389,7 +1472,7 @@ namespace Avaxi
             this.checkClearMemory.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkClearMemory.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkClearMemory.ForeColor = System.Drawing.Color.Black;
-            this.checkClearMemory.Location = new System.Drawing.Point(36, 32);
+            this.checkClearMemory.Location = new System.Drawing.Point(31, 27);
             this.checkClearMemory.Name = "checkClearMemory";
             this.checkClearMemory.Size = new System.Drawing.Size(159, 29);
             this.checkClearMemory.TabIndex = 22;
@@ -1403,7 +1486,7 @@ namespace Avaxi
             this.checkClearCache.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkClearCache.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkClearCache.ForeColor = System.Drawing.Color.Black;
-            this.checkClearCache.Location = new System.Drawing.Point(36, 76);
+            this.checkClearCache.Location = new System.Drawing.Point(31, 71);
             this.checkClearCache.Name = "checkClearCache";
             this.checkClearCache.Size = new System.Drawing.Size(133, 29);
             this.checkClearCache.TabIndex = 23;
@@ -1423,7 +1506,7 @@ namespace Avaxi
             this.btnClearMemory.EnabledCalc = true;
             this.btnClearMemory.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClearMemory.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.btnClearMemory.Location = new System.Drawing.Point(36, 230);
+            this.btnClearMemory.Location = new System.Drawing.Point(28, 230);
             this.btnClearMemory.Name = "btnClearMemory";
             this.btnClearMemory.OverColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
             this.btnClearMemory.Size = new System.Drawing.Size(221, 66);
@@ -1468,9 +1551,9 @@ namespace Avaxi
             // roundPanel5
             // 
             this.roundPanel5.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.roundPanel5.Controls.Add(this.btnOptimizePC);
             this.roundPanel5.Controls.Add(this.label29);
             this.roundPanel5.Controls.Add(this.panel5);
-            this.roundPanel5.Controls.Add(this.btnOptimize);
             this.roundPanel5.Location = new System.Drawing.Point(39, 30);
             this.roundPanel5.Name = "roundPanel5";
             this.roundPanel5.Radious = 25;
@@ -1504,27 +1587,6 @@ namespace Avaxi
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(299, 311);
             this.panel5.TabIndex = 0;
-            // 
-            // btnOptimize
-            // 
-            this.btnOptimize.BackColor = System.Drawing.Color.White;
-            this.btnOptimize.BaseColor = System.Drawing.Color.Transparent;
-            this.btnOptimize.BorderColor = System.Drawing.Color.Silver;
-            this.btnOptimize.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnOptimize.DisabledBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
-            this.btnOptimize.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(209)))), ((int)(((byte)(209)))));
-            this.btnOptimize.DisabledTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(178)))), ((int)(((byte)(190)))));
-            this.btnOptimize.DownColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
-            this.btnOptimize.EnabledCalc = true;
-            this.btnOptimize.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOptimize.ForeColor = System.Drawing.Color.LightGray;
-            this.btnOptimize.Location = new System.Drawing.Point(31, 462);
-            this.btnOptimize.Name = "btnOptimize";
-            this.btnOptimize.OverColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.btnOptimize.Size = new System.Drawing.Size(299, 63);
-            this.btnOptimize.TabIndex = 33;
-            this.btnOptimize.Text = "Optimize PC";
-            this.btnOptimize.Click += new ReaLTaiizor.Util.FoxBase.ButtonFoxBase.ClickEventHandler(this.btnOptimize_Click);
             // 
             // pnlTuneUp
             // 
@@ -2289,58 +2351,6 @@ namespace Avaxi
             this.launcherIcon.Visible = true;
             this.launcherIcon.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.launcherIcon_MouseDoubleClick);
             // 
-            // btnRunSmartScan1
-            // 
-            this.btnRunSmartScan1.BackColor = System.Drawing.Color.Transparent;
-            this.btnRunSmartScan1.BaseColorA = System.Drawing.Color.DodgerBlue;
-            this.btnRunSmartScan1.BaseColorB = System.Drawing.Color.LightSkyBlue;
-            this.btnRunSmartScan1.BorderColorA = System.Drawing.Color.Transparent;
-            this.btnRunSmartScan1.BorderColorB = System.Drawing.Color.Transparent;
-            this.btnRunSmartScan1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRunSmartScan1.DownBaseColorA = System.Drawing.Color.LightBlue;
-            this.btnRunSmartScan1.DownBaseColorB = System.Drawing.Color.AliceBlue;
-            this.btnRunSmartScan1.DownBorderColorA = System.Drawing.Color.Transparent;
-            this.btnRunSmartScan1.DownBorderColorB = System.Drawing.Color.Transparent;
-            this.btnRunSmartScan1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRunSmartScan1.ForeColor = System.Drawing.Color.White;
-            this.btnRunSmartScan1.HoverBaseColorA = System.Drawing.Color.DeepSkyBlue;
-            this.btnRunSmartScan1.HoverBaseColorB = System.Drawing.Color.AliceBlue;
-            this.btnRunSmartScan1.HoverBorderColorA = System.Drawing.Color.Transparent;
-            this.btnRunSmartScan1.HoverBorderColorB = System.Drawing.Color.Transparent;
-            this.btnRunSmartScan1.Location = new System.Drawing.Point(463, 486);
-            this.btnRunSmartScan1.Name = "btnRunSmartScan1";
-            this.btnRunSmartScan1.Size = new System.Drawing.Size(275, 54);
-            this.btnRunSmartScan1.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-            this.btnRunSmartScan1.TabIndex = 31;
-            this.btnRunSmartScan1.Text = "Run a Smart Scan";
-            this.btnRunSmartScan1.Click += new System.EventHandler(this.btnRunSmartScan1_Click);
-            // 
-            // btnRunSmartScan2
-            // 
-            this.btnRunSmartScan2.BackColor = System.Drawing.Color.Transparent;
-            this.btnRunSmartScan2.BaseColorA = System.Drawing.Color.DodgerBlue;
-            this.btnRunSmartScan2.BaseColorB = System.Drawing.Color.LightSkyBlue;
-            this.btnRunSmartScan2.BorderColorA = System.Drawing.Color.Transparent;
-            this.btnRunSmartScan2.BorderColorB = System.Drawing.Color.Transparent;
-            this.btnRunSmartScan2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRunSmartScan2.DownBaseColorA = System.Drawing.Color.LightBlue;
-            this.btnRunSmartScan2.DownBaseColorB = System.Drawing.Color.AliceBlue;
-            this.btnRunSmartScan2.DownBorderColorA = System.Drawing.Color.Transparent;
-            this.btnRunSmartScan2.DownBorderColorB = System.Drawing.Color.Transparent;
-            this.btnRunSmartScan2.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRunSmartScan2.ForeColor = System.Drawing.Color.White;
-            this.btnRunSmartScan2.HoverBaseColorA = System.Drawing.Color.DeepSkyBlue;
-            this.btnRunSmartScan2.HoverBaseColorB = System.Drawing.Color.AliceBlue;
-            this.btnRunSmartScan2.HoverBorderColorA = System.Drawing.Color.Transparent;
-            this.btnRunSmartScan2.HoverBorderColorB = System.Drawing.Color.Transparent;
-            this.btnRunSmartScan2.Location = new System.Drawing.Point(457, 574);
-            this.btnRunSmartScan2.Name = "btnRunSmartScan2";
-            this.btnRunSmartScan2.Size = new System.Drawing.Size(275, 54);
-            this.btnRunSmartScan2.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-            this.btnRunSmartScan2.TabIndex = 32;
-            this.btnRunSmartScan2.Text = "Run a Smart Scan";
-            this.btnRunSmartScan2.Click += new System.EventHandler(this.btnRunSmartScan2_Click);
-            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -2348,14 +2358,14 @@ namespace Avaxi
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(1369, 793);
             this.ControlBox = false;
+            this.Controls.Add(this.pnlOptimize);
+            this.Controls.Add(this.pnlScan);
             this.Controls.Add(this.pnlCrypto);
             this.Controls.Add(this.pnlShield);
             this.Controls.Add(this.pnlDelete);
             this.Controls.Add(this.pnlFormScan);
             this.Controls.Add(this.pnlSetting);
             this.Controls.Add(this.pnlTuneUp);
-            this.Controls.Add(this.pnlOptimize);
-            this.Controls.Add(this.pnlScan);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.Color.White;
@@ -2511,12 +2521,10 @@ namespace Avaxi
         private ReaLTaiizor.Controls.FoxButton btnUSBVaccination;
         private ReaLTaiizor.Controls.FoxButton btnSystemInfo;
         private System.Windows.Forms.NotifyIcon launcherIcon;
-        private ReaLTaiizor.Controls.FoxButton button2;
         private ReaLTaiizor.Controls.FoxButton btnClearMemory;
         private ReaLTaiizor.Controls.FoxButton btnRegistry;
         private ReaLTaiizor.Controls.FoxButton btnTemporary;
         private ReaLTaiizor.Controls.FoxButton btnCleaner;
-        private ReaLTaiizor.Controls.FoxButton btnOptimize;
         private ReaLTaiizor.Controls.ProgressIndicator progressIndicatorTuneUp;
         private ReaLTaiizor.Controls.MaterialSwitch switchFeatureUpdates;
         private ReaLTaiizor.Controls.MaterialSwitch switchAppearanceInPerformance;
@@ -2557,6 +2565,8 @@ namespace Avaxi
         private RoundPanel roundPanel8;
         private ReaLTaiizor.Controls.RibbonButtonLeft btnRunSmartScan1;
         private ReaLTaiizor.Controls.RibbonButtonLeft btnRunSmartScan2;
+        private ReaLTaiizor.Controls.RibbonButtonLeft btnRunSmartScan3;
+        private ReaLTaiizor.Controls.RibbonButtonLeft btnOptimizePC;
         //private System.Windows.Forms.NotifyIcon notifyIcon1;
     }
 }

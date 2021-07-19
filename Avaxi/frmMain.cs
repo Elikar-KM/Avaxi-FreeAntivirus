@@ -848,20 +848,6 @@ namespace Avaxi
             this.btnClearMemory.Enabled = true;
         }
 
-        private async void btnOptimize_Click(object sender, EventArgs e)
-        {
-            this.btnOptimize.Enabled = false;
-            if (checkClearMemory.Checked)
-            {
-                await Optimize.ClearMemory(1);
-            }
-            if(checkClearCache.Checked)
-            {
-                await Optimize.ClearMemory(2);
-            }
-            this.btnOptimize.Enabled = true;
-        }
-
         private void btnRegistry_Click(object sender, EventArgs e)
         {
             this.btnRegistry.Enabled = false;
@@ -1384,11 +1370,6 @@ namespace Avaxi
             search.Start();
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            RunSmartScan();
-        }
-
         // Ransomware protection
         private void RunRansomwareProtection()
         {
@@ -1669,6 +1650,25 @@ namespace Avaxi
         private void btnRunSmartScan2_Click(object sender, EventArgs e)
         {
             RunSmartScan();
+        }
+
+        private void btnRunSmartScan3_Click(object sender, EventArgs e)
+        {
+            RunSmartScan();
+        }
+
+        private async void btnOptimizePC_Click(object sender, EventArgs e)
+        {
+            this.btnOptimizePC.Enabled = false;
+            if (checkClearMemory.Checked)
+            {
+                await Optimize.ClearMemory(1);
+            }
+            if (checkClearCache.Checked)
+            {
+                await Optimize.ClearMemory(2);
+            }
+            this.btnOptimizePC.Enabled = true;
         }
 
         private void labelRansomware_Click(object sender, EventArgs e)
