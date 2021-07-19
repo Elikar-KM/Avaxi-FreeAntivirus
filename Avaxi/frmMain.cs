@@ -283,8 +283,9 @@ namespace Avaxi
             // Protection Status view (anti-phishing, anti-cryptojacking, anti-ransomware, anti-affiliate offers)
             if (flagPhishing)
             {
-                btnPhishing.ForeColor = Color.LimeGreen;
+                btnPhishing.ForeColor = Color.White;
                 btnPhishing.Text = "Enabled";
+                btnPhishing.BaseColor = Color.FromArgb(15, 220, 200);
                 label9.Image = global::Avaxi.Properties.Resources.websec_status;
                 label27.Image = global::Avaxi.Properties.Resources.AntiPhishing;
                 label16.Visible = true;
@@ -294,6 +295,7 @@ namespace Avaxi
             {
                 btnPhishing.ForeColor = Color.Gray;
                 btnPhishing.Text = "Disabled";
+                btnPhishing.BaseColor = Color.FromArgb(209, 209, 209);
                 label9.Image = global::Avaxi.Properties.Resources.websec_status_grey;
                 label27.Image = global::Avaxi.Properties.Resources.AntiPhishing_grey;
                 label16.Visible = false;
@@ -302,8 +304,9 @@ namespace Avaxi
 
             if (flagCryptojacking)
             {
-                btnCryptojacking.ForeColor = Color.LimeGreen;
+                btnCryptojacking.ForeColor = Color.White;
                 btnCryptojacking.Text = "Enabled";
+                btnCryptojacking.BaseColor = Color.FromArgb(15, 220, 200);
                 label8.Image = global::Avaxi.Properties.Resources.crypto;
                 label28.Image = global::Avaxi.Properties.Resources.AntiCryptojacking;
                 label12.Visible = true;
@@ -313,6 +316,8 @@ namespace Avaxi
             {
                 btnCryptojacking.ForeColor = Color.Gray;
                 btnCryptojacking.Text = "Disabled";
+                btnRansomware.BaseColor = Color.FromArgb(209, 209, 209);
+                btnCryptojacking.BaseColor = Color.FromArgb(209, 209, 209);
                 label8.Image = global::Avaxi.Properties.Resources.crypto_grey;
                 label28.Image = global::Avaxi.Properties.Resources.AntiCryptojacking_grey;
                 label12.Visible = false;
@@ -320,8 +325,9 @@ namespace Avaxi
             }
             if (flagRansomware)
             {
-                btnRansomware.ForeColor = Color.LimeGreen;
+                btnRansomware.ForeColor = Color.White;
                 btnRansomware.Text = "Enabled";
+                btnRansomware.BaseColor = Color.FromArgb(15, 220, 200);
                 label7.Image = global::Avaxi.Properties.Resources.shield_status;
                 labelRansomware.Image = global::Avaxi.Properties.Resources.AntiRansomware;
                 label10.Visible = true;
@@ -339,14 +345,16 @@ namespace Avaxi
 
             if (flagAffiliateOffers)
             {
-                btnAffiliateOffers.ForeColor = Color.LimeGreen;
+                btnAffiliateOffers.ForeColor = Color.White;
                 btnAffiliateOffers.Text = "Enabled";
+                btnAffiliateOffers.BaseColor = Color.FromArgb(15, 220, 200);
                 label30.Image = global::Avaxi.Properties.Resources.AntiAffiliate;
             }
             else
             {
                 btnAffiliateOffers.ForeColor = Color.Gray;
                 btnAffiliateOffers.Text = "Disabled";
+                btnAffiliateOffers.BaseColor = Color.FromArgb(209, 209, 209);
                 label30.Image = global::Avaxi.Properties.Resources.AntiAffiliate_grey;
             }
 
@@ -1381,16 +1389,6 @@ namespace Avaxi
             RunSmartScan();
         }
 
-        private void foxButton1_Click(object sender, EventArgs e)
-        {
-            RunSmartScan();
-        }
-
-        private void foxButton2_Click(object sender, EventArgs e)
-        {
-            RunSmartScan();
-        }
-
         // Ransomware protection
         private void RunRansomwareProtection()
         {
@@ -1484,6 +1482,7 @@ namespace Avaxi
                 // Status page view
                 btnPhishing.ForeColor = Color.Gray;
                 btnPhishing.Text = "Disabled";
+                btnPhishing.BaseColor = Color.FromArgb(209, 209, 209);
                 label9.Image = global::Avaxi.Properties.Resources.websec_status_grey;
                 label27.Image = global::Avaxi.Properties.Resources.AntiPhishing_grey;
                 label16.Visible = false;
@@ -1495,8 +1494,9 @@ namespace Avaxi
                 // Phishing enable code
 
                 // Status page view
-                btnPhishing.ForeColor = Color.LimeGreen;
+                btnPhishing.ForeColor = Color.White;
                 btnPhishing.Text = "Enabled";
+                btnPhishing.BaseColor = Color.FromArgb(15, 220, 200);
                 label9.Image = global::Avaxi.Properties.Resources.websec_status;
                 label27.Image = global::Avaxi.Properties.Resources.AntiPhishing;
                 label16.Visible = true;
@@ -1514,6 +1514,7 @@ namespace Avaxi
                 // Status page view
                 btnCryptojacking.ForeColor = Color.Gray;
                 btnCryptojacking.Text = "Disabled";
+                btnCryptojacking.BaseColor = Color.FromArgb(209, 209, 209);
                 label8.Image = global::Avaxi.Properties.Resources.crypto_grey;
                 label28.Image = global::Avaxi.Properties.Resources.AntiCryptojacking_grey;
                 label12.Visible = false;
@@ -1525,8 +1526,9 @@ namespace Avaxi
                 // Crytojacking enable code
 
                 // Status page view
-                btnCryptojacking.ForeColor = Color.LimeGreen;
+                btnCryptojacking.ForeColor = Color.White;
                 btnCryptojacking.Text = "Enabled";
+                btnCryptojacking.BaseColor = Color.FromArgb(15, 220, 200);
                 label8.Image = global::Avaxi.Properties.Resources.crypto;
                 label28.Image = global::Avaxi.Properties.Resources.AntiCryptojacking;
                 label12.Visible = true;
@@ -1545,6 +1547,7 @@ namespace Avaxi
                 // Status page view
                 btnRansomware.ForeColor = Color.Gray;
                 btnRansomware.Text = "Disabled";
+                btnRansomware.BaseColor = Color.FromArgb(209, 209, 209);
                 label7.Image = global::Avaxi.Properties.Resources.shield_status_grey;
                 labelRansomware.Image = global::Avaxi.Properties.Resources.AntiRansomware_grey;
                 label10.Visible = false;
@@ -1556,8 +1559,9 @@ namespace Avaxi
                 // Ransomware enable code
                 RunRansomwareProtection();
                 // Status page view
-                btnRansomware.ForeColor = Color.LimeGreen;
+                btnRansomware.ForeColor = Color.White;
                 btnRansomware.Text = "Enabled";
+                btnRansomware.BaseColor = Color.FromArgb(15, 220, 200);
                 label7.Image = global::Avaxi.Properties.Resources.shield_status;
                 labelRansomware.Image = global::Avaxi.Properties.Resources.AntiRansomware;
                 label10.Visible = true;
@@ -1575,6 +1579,7 @@ namespace Avaxi
                 // status view
                 btnAffiliateOffers.ForeColor = Color.Gray;
                 btnAffiliateOffers.Text = "Disabled";
+                btnAffiliateOffers.BaseColor = Color.FromArgb(209, 209, 209);
                 label30.Image = global::Avaxi.Properties.Resources.AntiAffiliate_grey;
                 flagAffiliateOffers = false;
             }
@@ -1583,8 +1588,9 @@ namespace Avaxi
                 // Affiliate Offers enable code
 
                 // status view
-                btnAffiliateOffers.ForeColor = Color.LimeGreen;
+                btnAffiliateOffers.ForeColor = Color.White;
                 btnAffiliateOffers.Text = "Enabled";
+                btnAffiliateOffers.BaseColor = Color.FromArgb(15, 220, 200);
                 label30.Image = global::Avaxi.Properties.Resources.AntiAffiliate;
                 flagAffiliateOffers = true;
             }
@@ -1653,6 +1659,16 @@ namespace Avaxi
                 flagSilent = false;
                 silentModeItem.Text = "Enable Silent Mode";
             }
+        }
+
+        private void btnRunSmartScan1_Click(object sender, EventArgs e)
+        {
+            RunSmartScan();
+        }
+
+        private void btnRunSmartScan2_Click(object sender, EventArgs e)
+        {
+            RunSmartScan();
         }
 
         private void labelRansomware_Click(object sender, EventArgs e)
