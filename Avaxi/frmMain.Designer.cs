@@ -48,71 +48,74 @@ namespace Avaxi
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.pnlShield = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
             this.foxButton1 = new ReaLTaiizor.Controls.FoxButton();
+            this.roundPanel1 = new Avaxi.RoundPanel();
+            this.panel16 = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.panel14 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
             this.pnlScan = new System.Windows.Forms.Panel();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.button2 = new ReaLTaiizor.Controls.FoxButton();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
+            this.roundPanel4 = new Avaxi.RoundPanel();
+            this.panel19 = new System.Windows.Forms.Panel();
             this.btnFullScan = new System.Windows.Forms.Button();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.panel10 = new System.Windows.Forms.Panel();
             this.btnTargetedScan = new System.Windows.Forms.Button();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.btnQuickScan = new System.Windows.Forms.Button();
-            this.pnlCrypto = new System.Windows.Forms.Panel();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.foxButton2 = new ReaLTaiizor.Controls.FoxButton();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.btnRansomware = new ReaLTaiizor.Controls.FoxButton();
+            this.btnQuickScan = new System.Windows.Forms.Button();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.button2 = new ReaLTaiizor.Controls.FoxButton();
+            this.roundPanel3 = new Avaxi.RoundPanel();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.pnlCrypto = new System.Windows.Forms.Panel();
+            this.roundPanel2 = new Avaxi.RoundPanel();
+            this.panel18 = new System.Windows.Forms.Panel();
             this.btnAffiliateOffers = new ReaLTaiizor.Controls.FoxButton();
-            this.btnPhishing = new ReaLTaiizor.Controls.FoxButton();
-            this.btnCryptojacking = new ReaLTaiizor.Controls.FoxButton();
-            this.label34 = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.panel17 = new System.Windows.Forms.Panel();
+            this.btnRansomware = new ReaLTaiizor.Controls.FoxButton();
             this.labelRansomware = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.panel9 = new System.Windows.Forms.Panel();
             this.label28 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.btnCryptojacking = new ReaLTaiizor.Controls.FoxButton();
+            this.panel8 = new System.Windows.Forms.Panel();
             this.label27 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.btnPhishing = new ReaLTaiizor.Controls.FoxButton();
             this.label26 = new System.Windows.Forms.Label();
+            this.foxButton2 = new ReaLTaiizor.Controls.FoxButton();
             this.pnlOptimize = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.btnOptimize = new ReaLTaiizor.Controls.FoxButton();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.btnCleaner = new ReaLTaiizor.Controls.FoxButton();
-            this.btnTemporary = new ReaLTaiizor.Controls.FoxButton();
-            this.btnRegistry = new ReaLTaiizor.Controls.FoxButton();
-            this.panel5 = new System.Windows.Forms.Panel();
+            this.roundPanel5 = new Avaxi.RoundPanel();
             this.btnClearMemory = new ReaLTaiizor.Controls.FoxButton();
-            this.lstPrograms = new System.Windows.Forms.ListView();
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btnRegistry = new ReaLTaiizor.Controls.FoxButton();
+            this.btnTemporary = new ReaLTaiizor.Controls.FoxButton();
+            this.btnCleaner = new ReaLTaiizor.Controls.FoxButton();
+            this.btnOptimize = new ReaLTaiizor.Controls.FoxButton();
             this.circularProgressBar1 = new CircularProgressBar.CircularProgressBar();
             this.label37 = new System.Windows.Forms.Label();
             this.checkClearCache = new System.Windows.Forms.CheckBox();
             this.checkClearMemory = new System.Windows.Forms.CheckBox();
-            this.label36 = new System.Windows.Forms.Label();
             this.pnlTuneUp = new System.Windows.Forms.Panel();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.btnTuneUp = new ReaLTaiizor.Controls.FoxButton();
             this.panel11 = new System.Windows.Forms.Panel();
             this.switchAutomaticUpdates = new ReaLTaiizor.Controls.MaterialSwitch();
             this.progressIndicatorTuneUp = new ReaLTaiizor.Controls.ProgressIndicator();
@@ -125,7 +128,6 @@ namespace Avaxi
             this.switchQuickAccessHistory = new ReaLTaiizor.Controls.MaterialSwitch();
             this.label38 = new System.Windows.Forms.Label();
             this.pnlSetting = new System.Windows.Forms.Panel();
-            this.panel12 = new System.Windows.Forms.Panel();
             this.btnUSBVaccination = new ReaLTaiizor.Controls.FoxButton();
             this.switchFireWall = new ReaLTaiizor.Controls.MaterialSwitch();
             this.btnSystemInfo = new ReaLTaiizor.Controls.FoxButton();
@@ -162,35 +164,52 @@ namespace Avaxi
             this.olvColumn1 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.olvColumn2 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.launcherIcon = new System.Windows.Forms.NotifyIcon(this.components);
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label29 = new System.Windows.Forms.Label();
+            this.roundPanel6 = new Avaxi.RoundPanel();
+            this.roundPanel7 = new Avaxi.RoundPanel();
+            this.btnTuneUp = new ReaLTaiizor.Controls.FoxButton();
+            this.roundPanel8 = new Avaxi.RoundPanel();
+            this.roundPanel9 = new Avaxi.RoundPanel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.pnlShield.SuspendLayout();
-            this.panel9.SuspendLayout();
+            this.roundPanel1.SuspendLayout();
+            this.panel16.SuspendLayout();
+            this.panel15.SuspendLayout();
+            this.panel14.SuspendLayout();
             this.pnlScan.SuspendLayout();
+            this.roundPanel4.SuspendLayout();
+            this.panel19.SuspendLayout();
             this.panel10.SuspendLayout();
-            this.pnlCrypto.SuspendLayout();
-            this.panel8.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.roundPanel3.SuspendLayout();
+            this.pnlCrypto.SuspendLayout();
+            this.roundPanel2.SuspendLayout();
+            this.panel18.SuspendLayout();
+            this.panel17.SuspendLayout();
+            this.panel9.SuspendLayout();
+            this.panel8.SuspendLayout();
             this.pnlOptimize.SuspendLayout();
-            this.panel7.SuspendLayout();
-            this.panel6.SuspendLayout();
-            this.panel5.SuspendLayout();
+            this.roundPanel5.SuspendLayout();
             this.pnlTuneUp.SuspendLayout();
-            this.panel13.SuspendLayout();
             this.panel11.SuspendLayout();
             this.pnlSetting.SuspendLayout();
-            this.panel12.SuspendLayout();
             this.launcherMenu.SuspendLayout();
             this.pnlFormScan.SuspendLayout();
             this.pnlDelete.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.objectListView1)).BeginInit();
+            this.roundPanel6.SuspendLayout();
+            this.roundPanel7.SuspendLayout();
+            this.roundPanel8.SuspendLayout();
+            this.roundPanel9.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.label1);
@@ -207,10 +226,9 @@ namespace Avaxi
             // label3
             // 
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.LightGray;
+            this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(964, 20);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
@@ -243,7 +261,7 @@ namespace Avaxi
             this.label5.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Image = global::Avaxi.Properties.Resources.setting;
-            this.label5.Location = new System.Drawing.Point(15, 20);
+            this.label5.Location = new System.Drawing.Point(55, 21);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(57, 40);
@@ -260,7 +278,7 @@ namespace Avaxi
             this.label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label4.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.LightGray;
+            this.label4.ForeColor = System.Drawing.Color.Gray;
             this.label4.Location = new System.Drawing.Point(118, 21);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
@@ -279,7 +297,7 @@ namespace Avaxi
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label2.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.LightGray;
+            this.label2.ForeColor = System.Drawing.Color.Gray;
             this.label2.Location = new System.Drawing.Point(183, 21);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
@@ -302,14 +320,13 @@ namespace Avaxi
             this.label1.Location = new System.Drawing.Point(11, 4);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(434, 73);
+            this.label1.Size = new System.Drawing.Size(220, 73);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Free Antivirus";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // toolStrip1
             // 
-            this.toolStrip1.BackColor = System.Drawing.Color.DimGray;
+            this.toolStrip1.BackColor = System.Drawing.Color.White;
             this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.toolStrip1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
@@ -331,15 +348,15 @@ namespace Avaxi
             // 
             this.toolStripButton1.AutoSize = false;
             this.toolStripButton1.AutoToolTip = false;
-            this.toolStripButton1.BackColor = System.Drawing.Color.DimGray;
+            this.toolStripButton1.BackColor = System.Drawing.Color.White;
             this.toolStripButton1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripButton1.ForeColor = System.Drawing.Color.White;
+            this.toolStripButton1.ForeColor = System.Drawing.Color.Gray;
             this.toolStripButton1.Image = global::Avaxi.Properties.Resources.shield;
             this.toolStripButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Transparent;
             this.toolStripButton1.Name = "toolStripButton1";
             this.toolStripButton1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.toolStripButton1.Size = new System.Drawing.Size(170, 100);
+            this.toolStripButton1.Size = new System.Drawing.Size(170, 120);
             this.toolStripButton1.Text = "Shield";
             this.toolStripButton1.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal;
             this.toolStripButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -353,11 +370,12 @@ namespace Avaxi
             this.toolStripButton4.AutoSize = false;
             this.toolStripButton4.AutoToolTip = false;
             this.toolStripButton4.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripButton4.ForeColor = System.Drawing.Color.Gray;
             this.toolStripButton4.Image = global::Avaxi.Properties.Resources.crypto_menu;
             this.toolStripButton4.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Transparent;
             this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Size = new System.Drawing.Size(170, 100);
+            this.toolStripButton4.Size = new System.Drawing.Size(170, 120);
             this.toolStripButton4.Text = "Crypto";
             this.toolStripButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
@@ -370,11 +388,12 @@ namespace Avaxi
             this.toolStripButton3.AutoSize = false;
             this.toolStripButton3.AutoToolTip = false;
             this.toolStripButton3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripButton3.ForeColor = System.Drawing.Color.Gray;
             this.toolStripButton3.Image = global::Avaxi.Properties.Resources.scan;
             this.toolStripButton3.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(170, 100);
+            this.toolStripButton3.Size = new System.Drawing.Size(170, 120);
             this.toolStripButton3.Text = "Scan";
             this.toolStripButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
@@ -387,11 +406,12 @@ namespace Avaxi
             this.toolStripButton5.AutoSize = false;
             this.toolStripButton5.AutoToolTip = false;
             this.toolStripButton5.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripButton5.ForeColor = System.Drawing.Color.Gray;
             this.toolStripButton5.Image = global::Avaxi.Properties.Resources.optimize;
             this.toolStripButton5.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton5.Name = "toolStripButton5";
-            this.toolStripButton5.Size = new System.Drawing.Size(170, 100);
+            this.toolStripButton5.Size = new System.Drawing.Size(170, 120);
             this.toolStripButton5.Text = "Optimize";
             this.toolStripButton5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolStripButton5.Click += new System.EventHandler(this.toolStripButton5_Click);
@@ -403,13 +423,14 @@ namespace Avaxi
             // 
             this.toolStripButton6.AutoSize = false;
             this.toolStripButton6.AutoToolTip = false;
-            this.toolStripButton6.BackColor = System.Drawing.Color.DimGray;
+            this.toolStripButton6.BackColor = System.Drawing.Color.White;
             this.toolStripButton6.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripButton6.ForeColor = System.Drawing.Color.Gray;
             this.toolStripButton6.Image = global::Avaxi.Properties.Resources.tuneUp;
             this.toolStripButton6.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton6.Name = "toolStripButton6";
-            this.toolStripButton6.Size = new System.Drawing.Size(170, 100);
+            this.toolStripButton6.Size = new System.Drawing.Size(170, 120);
             this.toolStripButton6.Text = "Tune Up";
             this.toolStripButton6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolStripButton6.Click += new System.EventHandler(this.toolStripButton6_Click);
@@ -440,33 +461,14 @@ namespace Avaxi
             // pnlShield
             // 
             this.pnlShield.BackColor = System.Drawing.Color.Transparent;
-            this.pnlShield.Controls.Add(this.panel9);
-            this.pnlShield.Controls.Add(this.label15);
-            this.pnlShield.Controls.Add(this.label16);
-            this.pnlShield.Controls.Add(this.label11);
-            this.pnlShield.Controls.Add(this.label12);
-            this.pnlShield.Controls.Add(this.label14);
-            this.pnlShield.Controls.Add(this.label13);
-            this.pnlShield.Controls.Add(this.label10);
-            this.pnlShield.Controls.Add(this.label9);
-            this.pnlShield.Controls.Add(this.label8);
-            this.pnlShield.Controls.Add(this.label7);
-            this.pnlShield.Controls.Add(this.label6);
-            this.pnlShield.Location = new System.Drawing.Point(247, 120);
+            this.pnlShield.Controls.Add(this.foxButton1);
+            this.pnlShield.Controls.Add(this.roundPanel1);
+            this.pnlShield.Location = new System.Drawing.Point(174, 81);
             this.pnlShield.Margin = new System.Windows.Forms.Padding(4);
             this.pnlShield.Name = "pnlShield";
-            this.pnlShield.Size = new System.Drawing.Size(1070, 620);
+            this.pnlShield.Size = new System.Drawing.Size(1195, 712);
             this.pnlShield.TabIndex = 14;
             this.pnlShield.Visible = false;
-            // 
-            // panel9
-            // 
-            this.panel9.BackColor = System.Drawing.Color.White;
-            this.panel9.Controls.Add(this.foxButton1);
-            this.panel9.Location = new System.Drawing.Point(392, 467);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(337, 61);
-            this.panel9.TabIndex = 25;
             // 
             // foxButton1
             // 
@@ -481,13 +483,59 @@ namespace Avaxi
             this.foxButton1.EnabledCalc = true;
             this.foxButton1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.foxButton1.ForeColor = System.Drawing.Color.White;
-            this.foxButton1.Location = new System.Drawing.Point(1, 1);
+            this.foxButton1.Location = new System.Drawing.Point(460, 486);
             this.foxButton1.Name = "foxButton1";
             this.foxButton1.OverColor = System.Drawing.Color.Lime;
-            this.foxButton1.Size = new System.Drawing.Size(334, 54);
+            this.foxButton1.Size = new System.Drawing.Size(281, 54);
             this.foxButton1.TabIndex = 24;
             this.foxButton1.Text = "RUN SMART SCAN";
             this.foxButton1.Click += new ReaLTaiizor.Util.FoxBase.ButtonFoxBase.ClickEventHandler(this.foxButton1_Click);
+            // 
+            // roundPanel1
+            // 
+            this.roundPanel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.roundPanel1.Controls.Add(this.panel16);
+            this.roundPanel1.Controls.Add(this.panel15);
+            this.roundPanel1.Controls.Add(this.panel14);
+            this.roundPanel1.Controls.Add(this.label13);
+            this.roundPanel1.Controls.Add(this.label6);
+            this.roundPanel1.Location = new System.Drawing.Point(27, 13);
+            this.roundPanel1.Name = "roundPanel1";
+            this.roundPanel1.Padding = new System.Windows.Forms.Padding(3, 15, 3, 15);
+            this.roundPanel1.Radious = 15;
+            this.roundPanel1.Size = new System.Drawing.Size(1141, 438);
+            this.roundPanel1.TabIndex = 26;
+            this.roundPanel1.TabStop = false;
+            this.roundPanel1.Text = "The live protection is enabled";
+            this.roundPanel1.TitleBackColor = System.Drawing.Color.ForestGreen;
+            this.roundPanel1.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 15.8F, System.Drawing.FontStyle.Bold);
+            this.roundPanel1.TitleForeColor = System.Drawing.Color.Black;
+            this.roundPanel1.TitleHatchStyle = System.Drawing.Drawing2D.HatchStyle.Percent90;
+            // 
+            // panel16
+            // 
+            this.panel16.BackColor = System.Drawing.Color.White;
+            this.panel16.Controls.Add(this.label9);
+            this.panel16.Controls.Add(this.label15);
+            this.panel16.Controls.Add(this.label16);
+            this.panel16.Location = new System.Drawing.Point(768, 85);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(340, 326);
+            this.panel16.TabIndex = 7;
+            // 
+            // label9
+            // 
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Cursor = System.Windows.Forms.Cursors.Default;
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.LightGray;
+            this.label9.Image = global::Avaxi.Properties.Resources.websec_status_grey;
+            this.label9.Location = new System.Drawing.Point(55, 16);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(231, 224);
+            this.label9.TabIndex = 8;
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label15
             // 
@@ -495,7 +543,7 @@ namespace Avaxi
             this.label15.Cursor = System.Windows.Forms.Cursors.Default;
             this.label15.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.label15.Location = new System.Drawing.Point(865, 328);
+            this.label15.Location = new System.Drawing.Point(98, 244);
             this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(169, 40);
@@ -510,12 +558,37 @@ namespace Avaxi
             this.label16.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.LightGray;
             this.label16.Image = global::Avaxi.Properties.Resources.check_tick;
-            this.label16.Location = new System.Drawing.Point(819, 323);
+            this.label16.Location = new System.Drawing.Point(52, 239);
             this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(46, 47);
             this.label16.TabIndex = 20;
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel15
+            // 
+            this.panel15.BackColor = System.Drawing.Color.White;
+            this.panel15.Controls.Add(this.label8);
+            this.panel15.Controls.Add(this.label11);
+            this.panel15.Controls.Add(this.label12);
+            this.panel15.Location = new System.Drawing.Point(400, 84);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(340, 326);
+            this.panel15.TabIndex = 7;
+            // 
+            // label8
+            // 
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Cursor = System.Windows.Forms.Cursors.Default;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.LightGray;
+            this.label8.Image = global::Avaxi.Properties.Resources.crypto_grey;
+            this.label8.Location = new System.Drawing.Point(58, 6);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(221, 224);
+            this.label8.TabIndex = 7;
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label11
             // 
@@ -523,7 +596,7 @@ namespace Avaxi
             this.label11.Cursor = System.Windows.Forms.Cursors.Default;
             this.label11.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.label11.Location = new System.Drawing.Point(475, 328);
+            this.label11.Location = new System.Drawing.Point(87, 248);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(179, 40);
@@ -538,81 +611,23 @@ namespace Avaxi
             this.label12.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.LightGray;
             this.label12.Image = global::Avaxi.Properties.Resources.check_tick;
-            this.label12.Location = new System.Drawing.Point(439, 323);
+            this.label12.Location = new System.Drawing.Point(51, 243);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(46, 47);
             this.label12.TabIndex = 18;
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label14
+            // panel14
             // 
-            this.label14.BackColor = System.Drawing.Color.Transparent;
-            this.label14.Cursor = System.Windows.Forms.Cursors.Default;
-            this.label14.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.label14.Location = new System.Drawing.Point(98, 328);
-            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(179, 40);
-            this.label14.TabIndex = 17;
-            this.label14.Text = "Shield protection";
-            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label13
-            // 
-            this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Cursor = System.Windows.Forms.Cursors.Default;
-            this.label13.Font = new System.Drawing.Font("Segoe UI", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.label13.Location = new System.Drawing.Point(324, 13);
-            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(660, 70);
-            this.label13.TabIndex = 5;
-            this.label13.Text = "The live protection is enabled";
-            // 
-            // label10
-            // 
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Cursor = System.Windows.Forms.Cursors.Default;
-            this.label10.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.LightGray;
-            this.label10.Image = global::Avaxi.Properties.Resources.check_tick;
-            this.label10.Location = new System.Drawing.Point(62, 323);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(46, 47);
-            this.label10.TabIndex = 12;
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label9
-            // 
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Cursor = System.Windows.Forms.Cursors.Default;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.LightGray;
-            this.label9.Image = global::Avaxi.Properties.Resources.websec_status_grey;
-            this.label9.Location = new System.Drawing.Point(830, 93);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(231, 224);
-            this.label9.TabIndex = 8;
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label8
-            // 
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Cursor = System.Windows.Forms.Cursors.Default;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.LightGray;
-            this.label8.Image = global::Avaxi.Properties.Resources.crypto_grey;
-            this.label8.Location = new System.Drawing.Point(451, 93);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(221, 224);
-            this.label8.TabIndex = 7;
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.panel14.BackColor = System.Drawing.Color.White;
+            this.panel14.Controls.Add(this.label7);
+            this.panel14.Controls.Add(this.label14);
+            this.panel14.Controls.Add(this.label10);
+            this.panel14.Location = new System.Drawing.Point(32, 85);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(340, 326);
+            this.panel14.TabIndex = 6;
             // 
             // label7
             // 
@@ -621,12 +636,53 @@ namespace Avaxi
             this.label7.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.LightGray;
             this.label7.Image = global::Avaxi.Properties.Resources.shield_status_grey;
-            this.label7.Location = new System.Drawing.Point(78, 93);
+            this.label7.Location = new System.Drawing.Point(59, 5);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(221, 224);
             this.label7.TabIndex = 6;
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label14
+            // 
+            this.label14.BackColor = System.Drawing.Color.Transparent;
+            this.label14.Cursor = System.Windows.Forms.Cursors.Default;
+            this.label14.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.label14.Location = new System.Drawing.Point(92, 247);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(179, 40);
+            this.label14.TabIndex = 17;
+            this.label14.Text = "Shield protection";
+            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label10
+            // 
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Cursor = System.Windows.Forms.Cursors.Default;
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.LightGray;
+            this.label10.Image = global::Avaxi.Properties.Resources.check_tick;
+            this.label10.Location = new System.Drawing.Point(56, 242);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(46, 47);
+            this.label10.TabIndex = 12;
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label13
+            // 
+            this.label13.BackColor = System.Drawing.Color.Transparent;
+            this.label13.Cursor = System.Windows.Forms.Cursors.Default;
+            this.label13.Font = new System.Drawing.Font("Segoe UI", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.label13.Location = new System.Drawing.Point(296, 0);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(660, 53);
+            this.label13.TabIndex = 5;
+            this.label13.Text = "The live protection is enabled";
             // 
             // label6
             // 
@@ -634,8 +690,8 @@ namespace Avaxi
             this.label6.Cursor = System.Windows.Forms.Cursors.Default;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.LightGray;
-            this.label6.Image = global::Avaxi.Properties.Resources.cross;
-            this.label6.Location = new System.Drawing.Point(261, 17);
+            this.label6.Image = global::Avaxi.Properties.Resources.check;
+            this.label6.Location = new System.Drawing.Point(233, 4);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(58, 47);
@@ -659,32 +715,218 @@ namespace Avaxi
             // pnlScan
             // 
             this.pnlScan.BackColor = System.Drawing.Color.Transparent;
-            this.pnlScan.Controls.Add(this.panel10);
-            this.pnlScan.Controls.Add(this.label24);
-            this.pnlScan.Controls.Add(this.label25);
-            this.pnlScan.Controls.Add(this.btnFullScan);
-            this.pnlScan.Controls.Add(this.label22);
-            this.pnlScan.Controls.Add(this.label23);
-            this.pnlScan.Controls.Add(this.btnTargetedScan);
-            this.pnlScan.Controls.Add(this.label21);
-            this.pnlScan.Controls.Add(this.label20);
-            this.pnlScan.Controls.Add(this.label19);
-            this.pnlScan.Controls.Add(this.label18);
-            this.pnlScan.Controls.Add(this.label17);
-            this.pnlScan.Controls.Add(this.btnQuickScan);
-            this.pnlScan.Location = new System.Drawing.Point(216, 129);
+            this.pnlScan.Controls.Add(this.roundPanel4);
+            this.pnlScan.Controls.Add(this.button2);
+            this.pnlScan.Controls.Add(this.roundPanel3);
+            this.pnlScan.Location = new System.Drawing.Point(173, 80);
             this.pnlScan.Name = "pnlScan";
-            this.pnlScan.Size = new System.Drawing.Size(1091, 597);
+            this.pnlScan.Size = new System.Drawing.Size(1196, 713);
             this.pnlScan.TabIndex = 15;
+            // 
+            // roundPanel4
+            // 
+            this.roundPanel4.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.roundPanel4.Controls.Add(this.panel19);
+            this.roundPanel4.Controls.Add(this.panel10);
+            this.roundPanel4.Controls.Add(this.panel4);
+            this.roundPanel4.Controls.Add(this.label19);
+            this.roundPanel4.Location = new System.Drawing.Point(40, 282);
+            this.roundPanel4.Name = "roundPanel4";
+            this.roundPanel4.Radious = 25;
+            this.roundPanel4.Size = new System.Drawing.Size(1115, 400);
+            this.roundPanel4.TabIndex = 30;
+            this.roundPanel4.TabStop = false;
+            this.roundPanel4.Text = "roundPanel4";
+            this.roundPanel4.TitleBackColor = System.Drawing.Color.WhiteSmoke;
+            this.roundPanel4.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 15.8F, System.Drawing.FontStyle.Bold);
+            this.roundPanel4.TitleForeColor = System.Drawing.Color.White;
+            this.roundPanel4.TitleHatchStyle = System.Drawing.Drawing2D.HatchStyle.Horizontal;
+            // 
+            // panel19
+            // 
+            this.panel19.BackColor = System.Drawing.Color.White;
+            this.panel19.Controls.Add(this.btnFullScan);
+            this.panel19.Controls.Add(this.label25);
+            this.panel19.Controls.Add(this.label24);
+            this.panel19.Location = new System.Drawing.Point(769, 72);
+            this.panel19.Name = "panel19";
+            this.panel19.Size = new System.Drawing.Size(315, 300);
+            this.panel19.TabIndex = 19;
+            // 
+            // btnFullScan
+            // 
+            this.btnFullScan.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFullScan.FlatAppearance.BorderSize = 0;
+            this.btnFullScan.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(56)))), ((int)(((byte)(77)))));
+            this.btnFullScan.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.btnFullScan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFullScan.Font = new System.Drawing.Font("Trebuchet MS", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFullScan.Image = global::Avaxi.Properties.Resources.FullScan;
+            this.btnFullScan.Location = new System.Drawing.Point(83, 12);
+            this.btnFullScan.Margin = new System.Windows.Forms.Padding(4);
+            this.btnFullScan.Name = "btnFullScan";
+            this.btnFullScan.Size = new System.Drawing.Size(148, 148);
+            this.btnFullScan.TabIndex = 23;
+            this.btnFullScan.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.btnFullScan.UseVisualStyleBackColor = true;
+            this.btnFullScan.Click += new System.EventHandler(this.btnFullScan_Click);
+            // 
+            // label25
+            // 
+            this.label25.BackColor = System.Drawing.Color.Transparent;
+            this.label25.Cursor = System.Windows.Forms.Cursors.Default;
+            this.label25.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label25.Location = new System.Drawing.Point(84, 157);
+            this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(156, 40);
+            this.label25.TabIndex = 24;
+            this.label25.Text = "Full Scan";
+            this.label25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label24
+            // 
+            this.label24.BackColor = System.Drawing.Color.Transparent;
+            this.label24.Cursor = System.Windows.Forms.Cursors.Default;
+            this.label24.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label24.Location = new System.Drawing.Point(49, 220);
+            this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(223, 40);
+            this.label24.TabIndex = 25;
+            this.label24.Text = "Scan entire PC";
+            this.label24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel10
             // 
             this.panel10.BackColor = System.Drawing.Color.White;
-            this.panel10.Controls.Add(this.button2);
-            this.panel10.Location = new System.Drawing.Point(391, 196);
+            this.panel10.Controls.Add(this.btnTargetedScan);
+            this.panel10.Controls.Add(this.label23);
+            this.panel10.Controls.Add(this.label22);
+            this.panel10.Location = new System.Drawing.Point(399, 72);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(343, 54);
-            this.panel10.TabIndex = 28;
+            this.panel10.Size = new System.Drawing.Size(315, 300);
+            this.panel10.TabIndex = 19;
+            // 
+            // btnTargetedScan
+            // 
+            this.btnTargetedScan.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTargetedScan.FlatAppearance.BorderSize = 0;
+            this.btnTargetedScan.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(56)))), ((int)(((byte)(77)))));
+            this.btnTargetedScan.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.btnTargetedScan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTargetedScan.Font = new System.Drawing.Font("Trebuchet MS", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTargetedScan.Image = global::Avaxi.Properties.Resources.CustomScan;
+            this.btnTargetedScan.Location = new System.Drawing.Point(81, 12);
+            this.btnTargetedScan.Margin = new System.Windows.Forms.Padding(4);
+            this.btnTargetedScan.Name = "btnTargetedScan";
+            this.btnTargetedScan.Size = new System.Drawing.Size(148, 148);
+            this.btnTargetedScan.TabIndex = 20;
+            this.btnTargetedScan.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.btnTargetedScan.UseVisualStyleBackColor = true;
+            this.btnTargetedScan.Click += new System.EventHandler(this.btnTargetedScan_Click);
+            // 
+            // label23
+            // 
+            this.label23.BackColor = System.Drawing.Color.Transparent;
+            this.label23.Cursor = System.Windows.Forms.Cursors.Default;
+            this.label23.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label23.Location = new System.Drawing.Point(48, 157);
+            this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(220, 40);
+            this.label23.TabIndex = 21;
+            this.label23.Text = "Targeted Scan";
+            this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label22
+            // 
+            this.label22.BackColor = System.Drawing.Color.Transparent;
+            this.label22.Cursor = System.Windows.Forms.Cursors.Default;
+            this.label22.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label22.Location = new System.Drawing.Point(47, 208);
+            this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(223, 80);
+            this.label22.TabIndex = 22;
+            this.label22.Text = "Scan specific or external drivers";
+            this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.Controls.Add(this.btnQuickScan);
+            this.panel4.Controls.Add(this.label20);
+            this.panel4.Controls.Add(this.label21);
+            this.panel4.Location = new System.Drawing.Point(29, 72);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(315, 300);
+            this.panel4.TabIndex = 18;
+            // 
+            // btnQuickScan
+            // 
+            this.btnQuickScan.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnQuickScan.FlatAppearance.BorderSize = 0;
+            this.btnQuickScan.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(56)))), ((int)(((byte)(77)))));
+            this.btnQuickScan.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.btnQuickScan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnQuickScan.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuickScan.ForeColor = System.Drawing.Color.Black;
+            this.btnQuickScan.Image = global::Avaxi.Properties.Resources.QuickScan;
+            this.btnQuickScan.Location = new System.Drawing.Point(83, 12);
+            this.btnQuickScan.Margin = new System.Windows.Forms.Padding(4);
+            this.btnQuickScan.Name = "btnQuickScan";
+            this.btnQuickScan.Size = new System.Drawing.Size(148, 148);
+            this.btnQuickScan.TabIndex = 3;
+            this.btnQuickScan.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnQuickScan.UseVisualStyleBackColor = true;
+            this.btnQuickScan.Click += new System.EventHandler(this.btnScan_Click);
+            // 
+            // label20
+            // 
+            this.label20.BackColor = System.Drawing.Color.Transparent;
+            this.label20.Cursor = System.Windows.Forms.Cursors.Default;
+            this.label20.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label20.Location = new System.Drawing.Point(75, 157);
+            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(156, 40);
+            this.label20.TabIndex = 18;
+            this.label20.Text = "Quick Scan";
+            this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label21
+            // 
+            this.label21.BackColor = System.Drawing.Color.Transparent;
+            this.label21.Cursor = System.Windows.Forms.Cursors.Default;
+            this.label21.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label21.Location = new System.Drawing.Point(47, 220);
+            this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(223, 40);
+            this.label21.TabIndex = 19;
+            this.label21.Text = "Scan system driver";
+            this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label19
+            // 
+            this.label19.BackColor = System.Drawing.Color.Transparent;
+            this.label19.Cursor = System.Windows.Forms.Cursors.Default;
+            this.label19.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.ForeColor = System.Drawing.Color.Black;
+            this.label19.Location = new System.Drawing.Point(20, 13);
+            this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(156, 40);
+            this.label19.TabIndex = 17;
+            this.label19.Text = "Other scan";
+            this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // button2
             // 
@@ -699,7 +941,7 @@ namespace Avaxi
             this.button2.EnabledCalc = true;
             this.button2.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(0, 0);
+            this.button2.Location = new System.Drawing.Point(41, 195);
             this.button2.Name = "button2";
             this.button2.OverColor = System.Drawing.Color.Lime;
             this.button2.Size = new System.Drawing.Size(339, 54);
@@ -707,154 +949,22 @@ namespace Avaxi
             this.button2.Text = "RUN SMART SCAN";
             this.button2.Click += new ReaLTaiizor.Util.FoxBase.ButtonFoxBase.ClickEventHandler(this.button2_Click);
             // 
-            // label24
+            // roundPanel3
             // 
-            this.label24.BackColor = System.Drawing.Color.Transparent;
-            this.label24.Cursor = System.Windows.Forms.Cursors.Default;
-            this.label24.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label24.Location = new System.Drawing.Point(806, 501);
-            this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(223, 40);
-            this.label24.TabIndex = 25;
-            this.label24.Text = "Scan entire PC";
-            this.label24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label25
-            // 
-            this.label25.BackColor = System.Drawing.Color.Transparent;
-            this.label25.Cursor = System.Windows.Forms.Cursors.Default;
-            this.label25.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label25.Location = new System.Drawing.Point(840, 461);
-            this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(156, 40);
-            this.label25.TabIndex = 24;
-            this.label25.Text = "Full Scan";
-            this.label25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnFullScan
-            // 
-            this.btnFullScan.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnFullScan.FlatAppearance.BorderSize = 0;
-            this.btnFullScan.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(56)))), ((int)(((byte)(77)))));
-            this.btnFullScan.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.btnFullScan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFullScan.Font = new System.Drawing.Font("Trebuchet MS", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFullScan.Image = global::Avaxi.Properties.Resources.FullScan;
-            this.btnFullScan.Location = new System.Drawing.Point(852, 338);
-            this.btnFullScan.Margin = new System.Windows.Forms.Padding(4);
-            this.btnFullScan.Name = "btnFullScan";
-            this.btnFullScan.Size = new System.Drawing.Size(127, 125);
-            this.btnFullScan.TabIndex = 23;
-            this.btnFullScan.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.btnFullScan.UseVisualStyleBackColor = true;
-            this.btnFullScan.Click += new System.EventHandler(this.btnFullScan_Click);
-            // 
-            // label22
-            // 
-            this.label22.BackColor = System.Drawing.Color.Transparent;
-            this.label22.Cursor = System.Windows.Forms.Cursors.Default;
-            this.label22.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label22.Location = new System.Drawing.Point(452, 501);
-            this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(223, 80);
-            this.label22.TabIndex = 22;
-            this.label22.Text = "Scan specific or external drivers";
-            this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label23
-            // 
-            this.label23.BackColor = System.Drawing.Color.Transparent;
-            this.label23.Cursor = System.Windows.Forms.Cursors.Default;
-            this.label23.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label23.Location = new System.Drawing.Point(453, 461);
-            this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(220, 40);
-            this.label23.TabIndex = 21;
-            this.label23.Text = "Targeted Scan";
-            this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnTargetedScan
-            // 
-            this.btnTargetedScan.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnTargetedScan.FlatAppearance.BorderSize = 0;
-            this.btnTargetedScan.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(56)))), ((int)(((byte)(77)))));
-            this.btnTargetedScan.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.btnTargetedScan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTargetedScan.Font = new System.Drawing.Font("Trebuchet MS", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTargetedScan.Image = global::Avaxi.Properties.Resources.CustomScan;
-            this.btnTargetedScan.Location = new System.Drawing.Point(496, 338);
-            this.btnTargetedScan.Margin = new System.Windows.Forms.Padding(4);
-            this.btnTargetedScan.Name = "btnTargetedScan";
-            this.btnTargetedScan.Size = new System.Drawing.Size(127, 125);
-            this.btnTargetedScan.TabIndex = 20;
-            this.btnTargetedScan.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.btnTargetedScan.UseVisualStyleBackColor = true;
-            this.btnTargetedScan.Click += new System.EventHandler(this.btnTargetedScan_Click);
-            // 
-            // label21
-            // 
-            this.label21.BackColor = System.Drawing.Color.Transparent;
-            this.label21.Cursor = System.Windows.Forms.Cursors.Default;
-            this.label21.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label21.Location = new System.Drawing.Point(113, 501);
-            this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(223, 40);
-            this.label21.TabIndex = 19;
-            this.label21.Text = "Scan system driver";
-            this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label20
-            // 
-            this.label20.BackColor = System.Drawing.Color.Transparent;
-            this.label20.Cursor = System.Windows.Forms.Cursors.Default;
-            this.label20.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label20.Location = new System.Drawing.Point(145, 461);
-            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(156, 40);
-            this.label20.TabIndex = 18;
-            this.label20.Text = "Quick Scan";
-            this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label19
-            // 
-            this.label19.BackColor = System.Drawing.Color.Transparent;
-            this.label19.Cursor = System.Windows.Forms.Cursors.Default;
-            this.label19.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.Color.Black;
-            this.label19.Location = new System.Drawing.Point(25, 275);
-            this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(156, 40);
-            this.label19.TabIndex = 17;
-            this.label19.Text = "Other scan";
-            this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label18
-            // 
-            this.label18.BackColor = System.Drawing.Color.Transparent;
-            this.label18.Cursor = System.Windows.Forms.Cursors.Default;
-            this.label18.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label18.Location = new System.Drawing.Point(34, 70);
-            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(1029, 69);
-            this.label18.TabIndex = 6;
-            this.label18.Text = "Here you can find several types of search. Smart scan will check your windows and" +
-    " most executables programs for error.";
-            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.roundPanel3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.roundPanel3.Controls.Add(this.label17);
+            this.roundPanel3.Controls.Add(this.label18);
+            this.roundPanel3.Location = new System.Drawing.Point(39, 17);
+            this.roundPanel3.Name = "roundPanel3";
+            this.roundPanel3.Radious = 25;
+            this.roundPanel3.Size = new System.Drawing.Size(1115, 160);
+            this.roundPanel3.TabIndex = 29;
+            this.roundPanel3.TabStop = false;
+            this.roundPanel3.Text = "roundPanel3";
+            this.roundPanel3.TitleBackColor = System.Drawing.Color.WhiteSmoke;
+            this.roundPanel3.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 15.8F, System.Drawing.FontStyle.Bold);
+            this.roundPanel3.TitleForeColor = System.Drawing.Color.White;
+            this.roundPanel3.TitleHatchStyle = System.Drawing.Drawing2D.HatchStyle.Horizontal;
             // 
             // label17
             // 
@@ -862,113 +972,68 @@ namespace Avaxi
             this.label17.Cursor = System.Windows.Forms.Cursors.Default;
             this.label17.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.Black;
-            this.label17.Location = new System.Drawing.Point(17, 15);
+            this.label17.Location = new System.Drawing.Point(15, 15);
             this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(119, 40);
+            this.label17.Size = new System.Drawing.Size(112, 40);
             this.label17.TabIndex = 5;
             this.label17.Text = "Scan";
             this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btnQuickScan
+            // label18
             // 
-            this.btnQuickScan.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnQuickScan.FlatAppearance.BorderSize = 0;
-            this.btnQuickScan.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(56)))), ((int)(((byte)(77)))));
-            this.btnQuickScan.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.btnQuickScan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnQuickScan.Font = new System.Drawing.Font("Trebuchet MS", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQuickScan.ForeColor = System.Drawing.Color.Black;
-            this.btnQuickScan.Image = global::Avaxi.Properties.Resources.QuickScan;
-            this.btnQuickScan.Location = new System.Drawing.Point(157, 338);
-            this.btnQuickScan.Margin = new System.Windows.Forms.Padding(4);
-            this.btnQuickScan.Name = "btnQuickScan";
-            this.btnQuickScan.Size = new System.Drawing.Size(127, 125);
-            this.btnQuickScan.TabIndex = 3;
-            this.btnQuickScan.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnQuickScan.UseVisualStyleBackColor = true;
-            this.btnQuickScan.Click += new System.EventHandler(this.btnScan_Click);
+            this.label18.BackColor = System.Drawing.Color.Transparent;
+            this.label18.Cursor = System.Windows.Forms.Cursors.Default;
+            this.label18.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label18.Location = new System.Drawing.Point(33, 71);
+            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(852, 73);
+            this.label18.TabIndex = 6;
+            this.label18.Text = "Here you can find several types of search. Smart scan will check your windows and" +
+    " most executables programs for error.";
             // 
             // pnlCrypto
             // 
             this.pnlCrypto.BackColor = System.Drawing.Color.Transparent;
-            this.pnlCrypto.Controls.Add(this.panel8);
-            this.pnlCrypto.Controls.Add(this.panel4);
-            this.pnlCrypto.Controls.Add(this.label34);
-            this.pnlCrypto.Controls.Add(this.label33);
-            this.pnlCrypto.Controls.Add(this.label32);
-            this.pnlCrypto.Controls.Add(this.label31);
-            this.pnlCrypto.Controls.Add(this.label30);
-            this.pnlCrypto.Controls.Add(this.labelRansomware);
-            this.pnlCrypto.Controls.Add(this.label28);
-            this.pnlCrypto.Controls.Add(this.label27);
-            this.pnlCrypto.Controls.Add(this.label26);
-            this.pnlCrypto.Location = new System.Drawing.Point(219, 120);
+            this.pnlCrypto.Controls.Add(this.roundPanel2);
+            this.pnlCrypto.Controls.Add(this.foxButton2);
+            this.pnlCrypto.Location = new System.Drawing.Point(173, 80);
             this.pnlCrypto.Name = "pnlCrypto";
-            this.pnlCrypto.Size = new System.Drawing.Size(1100, 603);
+            this.pnlCrypto.Size = new System.Drawing.Size(1196, 713);
             this.pnlCrypto.TabIndex = 16;
             // 
-            // panel8
+            // roundPanel2
             // 
-            this.panel8.BackColor = System.Drawing.Color.White;
-            this.panel8.Controls.Add(this.foxButton2);
-            this.panel8.Location = new System.Drawing.Point(371, 478);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(341, 60);
-            this.panel8.TabIndex = 28;
+            this.roundPanel2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.roundPanel2.Controls.Add(this.panel18);
+            this.roundPanel2.Controls.Add(this.panel17);
+            this.roundPanel2.Controls.Add(this.panel9);
+            this.roundPanel2.Controls.Add(this.panel8);
+            this.roundPanel2.Controls.Add(this.label26);
+            this.roundPanel2.Location = new System.Drawing.Point(39, 47);
+            this.roundPanel2.Name = "roundPanel2";
+            this.roundPanel2.Radious = 25;
+            this.roundPanel2.Size = new System.Drawing.Size(1115, 478);
+            this.roundPanel2.TabIndex = 28;
+            this.roundPanel2.TabStop = false;
+            this.roundPanel2.Text = "roundPanel2";
+            this.roundPanel2.TitleBackColor = System.Drawing.Color.WhiteSmoke;
+            this.roundPanel2.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 15.8F, System.Drawing.FontStyle.Bold);
+            this.roundPanel2.TitleForeColor = System.Drawing.Color.White;
+            this.roundPanel2.TitleHatchStyle = System.Drawing.Drawing2D.HatchStyle.Horizontal;
             // 
-            // foxButton2
+            // panel18
             // 
-            this.foxButton2.BackColor = System.Drawing.Color.White;
-            this.foxButton2.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.foxButton2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.foxButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.foxButton2.DisabledBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
-            this.foxButton2.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(209)))), ((int)(((byte)(209)))));
-            this.foxButton2.DisabledTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(178)))), ((int)(((byte)(190)))));
-            this.foxButton2.DownColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
-            this.foxButton2.EnabledCalc = true;
-            this.foxButton2.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.foxButton2.ForeColor = System.Drawing.Color.White;
-            this.foxButton2.Location = new System.Drawing.Point(1, 1);
-            this.foxButton2.Name = "foxButton2";
-            this.foxButton2.OverColor = System.Drawing.Color.Lime;
-            this.foxButton2.Size = new System.Drawing.Size(334, 54);
-            this.foxButton2.TabIndex = 25;
-            this.foxButton2.Text = "RUN SMART SCAN";
-            this.foxButton2.Click += new ReaLTaiizor.Util.FoxBase.ButtonFoxBase.ClickEventHandler(this.foxButton2_Click);
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.Controls.Add(this.btnRansomware);
-            this.panel4.Controls.Add(this.btnAffiliateOffers);
-            this.panel4.Controls.Add(this.btnPhishing);
-            this.panel4.Controls.Add(this.btnCryptojacking);
-            this.panel4.Location = new System.Drawing.Point(62, 351);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(933, 29);
-            this.panel4.TabIndex = 27;
-            // 
-            // btnRansomware
-            // 
-            this.btnRansomware.BaseColor = System.Drawing.Color.Transparent;
-            this.btnRansomware.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnRansomware.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRansomware.DisabledBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
-            this.btnRansomware.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(209)))), ((int)(((byte)(209)))));
-            this.btnRansomware.DisabledTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(178)))), ((int)(((byte)(190)))));
-            this.btnRansomware.DownColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
-            this.btnRansomware.EnabledCalc = true;
-            this.btnRansomware.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRansomware.ForeColor = System.Drawing.Color.LimeGreen;
-            this.btnRansomware.Location = new System.Drawing.Point(564, 0);
-            this.btnRansomware.Name = "btnRansomware";
-            this.btnRansomware.OverColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnRansomware.Size = new System.Drawing.Size(95, 29);
-            this.btnRansomware.TabIndex = 26;
-            this.btnRansomware.Text = "Enabled";
-            this.btnRansomware.Click += new ReaLTaiizor.Util.FoxBase.ButtonFoxBase.ClickEventHandler(this.btnRansomware_Click);
+            this.panel18.BackColor = System.Drawing.Color.White;
+            this.panel18.Controls.Add(this.btnAffiliateOffers);
+            this.panel18.Controls.Add(this.label30);
+            this.panel18.Controls.Add(this.label34);
+            this.panel18.Location = new System.Drawing.Point(848, 91);
+            this.panel18.Name = "panel18";
+            this.panel18.Size = new System.Drawing.Size(238, 325);
+            this.panel18.TabIndex = 7;
             // 
             // btnAffiliateOffers
             // 
@@ -982,13 +1047,199 @@ namespace Avaxi
             this.btnAffiliateOffers.EnabledCalc = true;
             this.btnAffiliateOffers.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAffiliateOffers.ForeColor = System.Drawing.Color.LimeGreen;
-            this.btnAffiliateOffers.Location = new System.Drawing.Point(838, 0);
+            this.btnAffiliateOffers.Location = new System.Drawing.Point(70, 257);
             this.btnAffiliateOffers.Name = "btnAffiliateOffers";
             this.btnAffiliateOffers.OverColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnAffiliateOffers.Size = new System.Drawing.Size(95, 29);
             this.btnAffiliateOffers.TabIndex = 26;
             this.btnAffiliateOffers.Text = "Enabled";
             this.btnAffiliateOffers.Click += new ReaLTaiizor.Util.FoxBase.ButtonFoxBase.ClickEventHandler(this.btnAffiliateOffers_Click);
+            // 
+            // label30
+            // 
+            this.label30.BackColor = System.Drawing.Color.Transparent;
+            this.label30.Cursor = System.Windows.Forms.Cursors.Default;
+            this.label30.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.ForeColor = System.Drawing.Color.LightGray;
+            this.label30.Image = global::Avaxi.Properties.Resources.AntiAffiliate;
+            this.label30.Location = new System.Drawing.Point(40, 27);
+            this.label30.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(161, 146);
+            this.label30.TabIndex = 10;
+            this.label30.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label34
+            // 
+            this.label34.BackColor = System.Drawing.Color.Transparent;
+            this.label34.Cursor = System.Windows.Forms.Cursors.Default;
+            this.label34.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label34.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label34.Location = new System.Drawing.Point(27, 197);
+            this.label34.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(188, 40);
+            this.label34.TabIndex = 20;
+            this.label34.Text = "Anti Affiliate Offers";
+            this.label34.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel17
+            // 
+            this.panel17.BackColor = System.Drawing.Color.White;
+            this.panel17.Controls.Add(this.btnRansomware);
+            this.panel17.Controls.Add(this.labelRansomware);
+            this.panel17.Controls.Add(this.label33);
+            this.panel17.Location = new System.Drawing.Point(575, 91);
+            this.panel17.Name = "panel17";
+            this.panel17.Size = new System.Drawing.Size(238, 325);
+            this.panel17.TabIndex = 7;
+            // 
+            // btnRansomware
+            // 
+            this.btnRansomware.BaseColor = System.Drawing.Color.Transparent;
+            this.btnRansomware.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnRansomware.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRansomware.DisabledBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
+            this.btnRansomware.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(209)))), ((int)(((byte)(209)))));
+            this.btnRansomware.DisabledTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(178)))), ((int)(((byte)(190)))));
+            this.btnRansomware.DownColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
+            this.btnRansomware.EnabledCalc = true;
+            this.btnRansomware.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRansomware.ForeColor = System.Drawing.Color.LimeGreen;
+            this.btnRansomware.Location = new System.Drawing.Point(70, 257);
+            this.btnRansomware.Name = "btnRansomware";
+            this.btnRansomware.OverColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnRansomware.Size = new System.Drawing.Size(95, 29);
+            this.btnRansomware.TabIndex = 26;
+            this.btnRansomware.Text = "Enabled";
+            this.btnRansomware.Click += new ReaLTaiizor.Util.FoxBase.ButtonFoxBase.ClickEventHandler(this.btnRansomware_Click);
+            // 
+            // labelRansomware
+            // 
+            this.labelRansomware.BackColor = System.Drawing.Color.Transparent;
+            this.labelRansomware.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.labelRansomware.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRansomware.ForeColor = System.Drawing.Color.LightGray;
+            this.labelRansomware.Image = global::Avaxi.Properties.Resources.AntiRansomware;
+            this.labelRansomware.Location = new System.Drawing.Point(39, 31);
+            this.labelRansomware.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelRansomware.Name = "labelRansomware";
+            this.labelRansomware.Size = new System.Drawing.Size(161, 146);
+            this.labelRansomware.TabIndex = 9;
+            this.labelRansomware.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelRansomware.Click += new System.EventHandler(this.labelRansomware_Click);
+            // 
+            // label33
+            // 
+            this.label33.BackColor = System.Drawing.Color.Transparent;
+            this.label33.Cursor = System.Windows.Forms.Cursors.Default;
+            this.label33.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label33.Location = new System.Drawing.Point(25, 194);
+            this.label33.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(188, 40);
+            this.label33.TabIndex = 19;
+            this.label33.Text = "Anti Ransomware";
+            this.label33.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.White;
+            this.panel9.Controls.Add(this.label28);
+            this.panel9.Controls.Add(this.label32);
+            this.panel9.Controls.Add(this.btnCryptojacking);
+            this.panel9.Location = new System.Drawing.Point(301, 91);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(238, 325);
+            this.panel9.TabIndex = 7;
+            // 
+            // label28
+            // 
+            this.label28.BackColor = System.Drawing.Color.Transparent;
+            this.label28.Cursor = System.Windows.Forms.Cursors.Default;
+            this.label28.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.ForeColor = System.Drawing.Color.LightGray;
+            this.label28.Image = global::Avaxi.Properties.Resources.AntiCryptojacking;
+            this.label28.Location = new System.Drawing.Point(37, 38);
+            this.label28.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(161, 146);
+            this.label28.TabIndex = 8;
+            this.label28.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label32
+            // 
+            this.label32.BackColor = System.Drawing.Color.Transparent;
+            this.label32.Cursor = System.Windows.Forms.Cursors.Default;
+            this.label32.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label32.Location = new System.Drawing.Point(23, 194);
+            this.label32.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(188, 40);
+            this.label32.TabIndex = 18;
+            this.label32.Text = "Anti Cryptojacking";
+            this.label32.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnCryptojacking
+            // 
+            this.btnCryptojacking.BaseColor = System.Drawing.Color.Transparent;
+            this.btnCryptojacking.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnCryptojacking.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCryptojacking.DisabledBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
+            this.btnCryptojacking.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(209)))), ((int)(((byte)(209)))));
+            this.btnCryptojacking.DisabledTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(178)))), ((int)(((byte)(190)))));
+            this.btnCryptojacking.DownColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
+            this.btnCryptojacking.EnabledCalc = true;
+            this.btnCryptojacking.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCryptojacking.ForeColor = System.Drawing.Color.LimeGreen;
+            this.btnCryptojacking.Location = new System.Drawing.Point(71, 258);
+            this.btnCryptojacking.Name = "btnCryptojacking";
+            this.btnCryptojacking.OverColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnCryptojacking.Size = new System.Drawing.Size(95, 29);
+            this.btnCryptojacking.TabIndex = 26;
+            this.btnCryptojacking.Text = "Enabled";
+            this.btnCryptojacking.Click += new ReaLTaiizor.Util.FoxBase.ButtonFoxBase.ClickEventHandler(this.btnCryptojacking_Click);
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.White;
+            this.panel8.Controls.Add(this.label27);
+            this.panel8.Controls.Add(this.label31);
+            this.panel8.Controls.Add(this.btnPhishing);
+            this.panel8.Location = new System.Drawing.Point(27, 91);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(238, 325);
+            this.panel8.TabIndex = 6;
+            // 
+            // label27
+            // 
+            this.label27.BackColor = System.Drawing.Color.Transparent;
+            this.label27.Cursor = System.Windows.Forms.Cursors.Default;
+            this.label27.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.ForeColor = System.Drawing.Color.LightGray;
+            this.label27.Image = global::Avaxi.Properties.Resources.AntiPhishing;
+            this.label27.Location = new System.Drawing.Point(37, 37);
+            this.label27.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(161, 146);
+            this.label27.TabIndex = 7;
+            this.label27.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label31
+            // 
+            this.label31.BackColor = System.Drawing.Color.Transparent;
+            this.label31.Cursor = System.Windows.Forms.Cursors.Default;
+            this.label31.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label31.Location = new System.Drawing.Point(26, 194);
+            this.label31.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(188, 40);
+            this.label31.TabIndex = 17;
+            this.label31.Text = "Anti Phishing";
+            this.label31.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnPhishing
             // 
@@ -1003,7 +1254,7 @@ namespace Avaxi
             this.btnPhishing.EnabledCalc = true;
             this.btnPhishing.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPhishing.ForeColor = System.Drawing.Color.LimeGreen;
-            this.btnPhishing.Location = new System.Drawing.Point(24, 0);
+            this.btnPhishing.Location = new System.Drawing.Point(70, 257);
             this.btnPhishing.Name = "btnPhishing";
             this.btnPhishing.OverColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnPhishing.Size = new System.Drawing.Size(95, 29);
@@ -1011,146 +1262,13 @@ namespace Avaxi
             this.btnPhishing.Text = "Enabled";
             this.btnPhishing.Click += new ReaLTaiizor.Util.FoxBase.ButtonFoxBase.ClickEventHandler(this.btnPhishing_Click);
             // 
-            // btnCryptojacking
-            // 
-            this.btnCryptojacking.BaseColor = System.Drawing.Color.Transparent;
-            this.btnCryptojacking.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnCryptojacking.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCryptojacking.DisabledBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
-            this.btnCryptojacking.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(209)))), ((int)(((byte)(209)))));
-            this.btnCryptojacking.DisabledTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(178)))), ((int)(((byte)(190)))));
-            this.btnCryptojacking.DownColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
-            this.btnCryptojacking.EnabledCalc = true;
-            this.btnCryptojacking.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCryptojacking.ForeColor = System.Drawing.Color.LimeGreen;
-            this.btnCryptojacking.Location = new System.Drawing.Point(287, 0);
-            this.btnCryptojacking.Name = "btnCryptojacking";
-            this.btnCryptojacking.OverColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnCryptojacking.Size = new System.Drawing.Size(95, 29);
-            this.btnCryptojacking.TabIndex = 26;
-            this.btnCryptojacking.Text = "Enabled";
-            this.btnCryptojacking.Click += new ReaLTaiizor.Util.FoxBase.ButtonFoxBase.ClickEventHandler(this.btnCryptojacking_Click);
-            // 
-            // label34
-            // 
-            this.label34.BackColor = System.Drawing.Color.Transparent;
-            this.label34.Cursor = System.Windows.Forms.Cursors.Default;
-            this.label34.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label34.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label34.Location = new System.Drawing.Point(851, 308);
-            this.label34.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(188, 40);
-            this.label34.TabIndex = 20;
-            this.label34.Text = "Anti Affiliate Offers";
-            this.label34.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label33
-            // 
-            this.label33.BackColor = System.Drawing.Color.Transparent;
-            this.label33.Cursor = System.Windows.Forms.Cursors.Default;
-            this.label33.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label33.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label33.Location = new System.Drawing.Point(581, 305);
-            this.label33.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(188, 40);
-            this.label33.TabIndex = 19;
-            this.label33.Text = "Anti Ransomware";
-            this.label33.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label32
-            // 
-            this.label32.BackColor = System.Drawing.Color.Transparent;
-            this.label32.Cursor = System.Windows.Forms.Cursors.Default;
-            this.label32.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label32.Location = new System.Drawing.Point(307, 305);
-            this.label32.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(188, 40);
-            this.label32.TabIndex = 18;
-            this.label32.Text = "Anti Cryptojacking";
-            this.label32.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label31
-            // 
-            this.label31.BackColor = System.Drawing.Color.Transparent;
-            this.label31.Cursor = System.Windows.Forms.Cursors.Default;
-            this.label31.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label31.Location = new System.Drawing.Point(44, 305);
-            this.label31.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(188, 40);
-            this.label31.TabIndex = 17;
-            this.label31.Text = "Anti Phishing";
-            this.label31.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label30
-            // 
-            this.label30.BackColor = System.Drawing.Color.Transparent;
-            this.label30.Cursor = System.Windows.Forms.Cursors.Default;
-            this.label30.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.ForeColor = System.Drawing.Color.LightGray;
-            this.label30.Image = global::Avaxi.Properties.Resources.AntiAffiliate_grey;
-            this.label30.Location = new System.Drawing.Point(866, 148);
-            this.label30.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(161, 146);
-            this.label30.TabIndex = 10;
-            this.label30.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelRansomware
-            // 
-            this.labelRansomware.BackColor = System.Drawing.Color.Transparent;
-            this.labelRansomware.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.labelRansomware.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelRansomware.ForeColor = System.Drawing.Color.LightGray;
-            this.labelRansomware.Image = global::Avaxi.Properties.Resources.AntiRansomware_grey;
-            this.labelRansomware.Location = new System.Drawing.Point(594, 148);
-            this.labelRansomware.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelRansomware.Name = "labelRansomware";
-            this.labelRansomware.Size = new System.Drawing.Size(161, 146);
-            this.labelRansomware.TabIndex = 9;
-            this.labelRansomware.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.labelRansomware.Click += new System.EventHandler(this.labelRansomware_Click);
-            // 
-            // label28
-            // 
-            this.label28.BackColor = System.Drawing.Color.Transparent;
-            this.label28.Cursor = System.Windows.Forms.Cursors.Default;
-            this.label28.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.ForeColor = System.Drawing.Color.LightGray;
-            this.label28.Image = global::Avaxi.Properties.Resources.AntiCryptojacking_grey;
-            this.label28.Location = new System.Drawing.Point(324, 148);
-            this.label28.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(161, 146);
-            this.label28.TabIndex = 8;
-            this.label28.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label27
-            // 
-            this.label27.BackColor = System.Drawing.Color.Transparent;
-            this.label27.Cursor = System.Windows.Forms.Cursors.Default;
-            this.label27.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.ForeColor = System.Drawing.Color.LightGray;
-            this.label27.Image = global::Avaxi.Properties.Resources.AntiPhishing_grey;
-            this.label27.Location = new System.Drawing.Point(58, 155);
-            this.label27.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(161, 146);
-            this.label27.TabIndex = 7;
-            this.label27.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // label26
             // 
             this.label26.BackColor = System.Drawing.Color.Transparent;
             this.label26.Cursor = System.Windows.Forms.Cursors.Default;
             this.label26.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label26.ForeColor = System.Drawing.Color.Black;
-            this.label26.Location = new System.Drawing.Point(4, 37);
+            this.label26.Location = new System.Drawing.Point(21, 20);
             this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(234, 40);
@@ -1158,31 +1276,139 @@ namespace Avaxi
             this.label26.Text = "Crypto Security";
             this.label26.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // foxButton2
+            // 
+            this.foxButton2.BackColor = System.Drawing.Color.White;
+            this.foxButton2.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.foxButton2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.foxButton2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.foxButton2.DisabledBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
+            this.foxButton2.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(209)))), ((int)(((byte)(209)))));
+            this.foxButton2.DisabledTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(178)))), ((int)(((byte)(190)))));
+            this.foxButton2.DownColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
+            this.foxButton2.EnabledCalc = true;
+            this.foxButton2.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.foxButton2.ForeColor = System.Drawing.Color.White;
+            this.foxButton2.Location = new System.Drawing.Point(465, 575);
+            this.foxButton2.Name = "foxButton2";
+            this.foxButton2.OverColor = System.Drawing.Color.Lime;
+            this.foxButton2.Size = new System.Drawing.Size(269, 54);
+            this.foxButton2.TabIndex = 25;
+            this.foxButton2.Text = "RUN SMART SCAN";
+            this.foxButton2.Click += new ReaLTaiizor.Util.FoxBase.ButtonFoxBase.ClickEventHandler(this.foxButton2_Click);
+            // 
             // pnlOptimize
             // 
             this.pnlOptimize.BackColor = System.Drawing.Color.Transparent;
-            this.pnlOptimize.Controls.Add(this.panel7);
-            this.pnlOptimize.Controls.Add(this.panel6);
-            this.pnlOptimize.Controls.Add(this.panel5);
-            this.pnlOptimize.Controls.Add(this.lstPrograms);
-            this.pnlOptimize.Controls.Add(this.circularProgressBar1);
-            this.pnlOptimize.Controls.Add(this.label37);
-            this.pnlOptimize.Controls.Add(this.checkClearCache);
-            this.pnlOptimize.Controls.Add(this.checkClearMemory);
-            this.pnlOptimize.Controls.Add(this.label36);
-            this.pnlOptimize.Location = new System.Drawing.Point(207, 144);
+            this.pnlOptimize.Controls.Add(this.roundPanel7);
+            this.pnlOptimize.Controls.Add(this.roundPanel6);
+            this.pnlOptimize.Controls.Add(this.roundPanel5);
+            this.pnlOptimize.Location = new System.Drawing.Point(173, 80);
             this.pnlOptimize.Name = "pnlOptimize";
-            this.pnlOptimize.Size = new System.Drawing.Size(1131, 622);
+            this.pnlOptimize.Size = new System.Drawing.Size(1196, 713);
             this.pnlOptimize.TabIndex = 0;
             // 
-            // panel7
+            // roundPanel5
             // 
-            this.panel7.BackColor = System.Drawing.Color.White;
-            this.panel7.Controls.Add(this.btnOptimize);
-            this.panel7.Location = new System.Drawing.Point(7, 510);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(418, 77);
-            this.panel7.TabIndex = 36;
+            this.roundPanel5.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.roundPanel5.Controls.Add(this.label29);
+            this.roundPanel5.Controls.Add(this.panel5);
+            this.roundPanel5.Controls.Add(this.btnOptimize);
+            this.roundPanel5.Location = new System.Drawing.Point(39, 30);
+            this.roundPanel5.Name = "roundPanel5";
+            this.roundPanel5.Radious = 25;
+            this.roundPanel5.Size = new System.Drawing.Size(364, 563);
+            this.roundPanel5.TabIndex = 34;
+            this.roundPanel5.TabStop = false;
+            this.roundPanel5.Text = "roundPanel5";
+            this.roundPanel5.TitleBackColor = System.Drawing.Color.WhiteSmoke;
+            this.roundPanel5.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 15.8F, System.Drawing.FontStyle.Bold);
+            this.roundPanel5.TitleForeColor = System.Drawing.Color.White;
+            this.roundPanel5.TitleHatchStyle = System.Drawing.Drawing2D.HatchStyle.Horizontal;
+            // 
+            // btnClearMemory
+            // 
+            this.btnClearMemory.BackColor = System.Drawing.Color.White;
+            this.btnClearMemory.BaseColor = System.Drawing.Color.AliceBlue;
+            this.btnClearMemory.BorderColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnClearMemory.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClearMemory.DisabledBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
+            this.btnClearMemory.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(209)))), ((int)(((byte)(209)))));
+            this.btnClearMemory.DisabledTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(178)))), ((int)(((byte)(190)))));
+            this.btnClearMemory.DownColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
+            this.btnClearMemory.EnabledCalc = true;
+            this.btnClearMemory.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClearMemory.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnClearMemory.Location = new System.Drawing.Point(36, 230);
+            this.btnClearMemory.Name = "btnClearMemory";
+            this.btnClearMemory.OverColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.btnClearMemory.Size = new System.Drawing.Size(221, 66);
+            this.btnClearMemory.TabIndex = 29;
+            this.btnClearMemory.Text = "Clear memory";
+            this.btnClearMemory.Click += new ReaLTaiizor.Util.FoxBase.ButtonFoxBase.ClickEventHandler(this.btnClearMemory_Click);
+            // 
+            // btnRegistry
+            // 
+            this.btnRegistry.BackColor = System.Drawing.Color.White;
+            this.btnRegistry.BaseColor = System.Drawing.Color.AliceBlue;
+            this.btnRegistry.BorderColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnRegistry.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRegistry.DisabledBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
+            this.btnRegistry.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(209)))), ((int)(((byte)(209)))));
+            this.btnRegistry.DisabledTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(178)))), ((int)(((byte)(190)))));
+            this.btnRegistry.DownColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
+            this.btnRegistry.EnabledCalc = true;
+            this.btnRegistry.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistry.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnRegistry.Location = new System.Drawing.Point(488, 103);
+            this.btnRegistry.Name = "btnRegistry";
+            this.btnRegistry.OverColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.btnRegistry.Size = new System.Drawing.Size(218, 68);
+            this.btnRegistry.TabIndex = 32;
+            this.btnRegistry.Text = "Registry";
+            this.btnRegistry.Click += new ReaLTaiizor.Util.FoxBase.ButtonFoxBase.ClickEventHandler(this.btnRegistry_Click);
+            // 
+            // btnTemporary
+            // 
+            this.btnTemporary.BackColor = System.Drawing.Color.White;
+            this.btnTemporary.BaseColor = System.Drawing.Color.AliceBlue;
+            this.btnTemporary.BorderColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnTemporary.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTemporary.DisabledBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
+            this.btnTemporary.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(209)))), ((int)(((byte)(209)))));
+            this.btnTemporary.DisabledTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(178)))), ((int)(((byte)(190)))));
+            this.btnTemporary.DownColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
+            this.btnTemporary.EnabledCalc = true;
+            this.btnTemporary.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTemporary.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnTemporary.Location = new System.Drawing.Point(263, 103);
+            this.btnTemporary.Name = "btnTemporary";
+            this.btnTemporary.OverColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.btnTemporary.Size = new System.Drawing.Size(212, 68);
+            this.btnTemporary.TabIndex = 31;
+            this.btnTemporary.Text = "Temporary";
+            this.btnTemporary.Click += new ReaLTaiizor.Util.FoxBase.ButtonFoxBase.ClickEventHandler(this.btnTemporary_Click);
+            // 
+            // btnCleaner
+            // 
+            this.btnCleaner.BackColor = System.Drawing.Color.White;
+            this.btnCleaner.BaseColor = System.Drawing.Color.AliceBlue;
+            this.btnCleaner.BorderColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnCleaner.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCleaner.DisabledBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
+            this.btnCleaner.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(209)))), ((int)(((byte)(209)))));
+            this.btnCleaner.DisabledTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(178)))), ((int)(((byte)(190)))));
+            this.btnCleaner.DownColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
+            this.btnCleaner.EnabledCalc = true;
+            this.btnCleaner.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCleaner.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnCleaner.Location = new System.Drawing.Point(28, 103);
+            this.btnCleaner.Name = "btnCleaner";
+            this.btnCleaner.OverColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.btnCleaner.Size = new System.Drawing.Size(221, 68);
+            this.btnCleaner.TabIndex = 30;
+            this.btnCleaner.Text = "Cleaner";
+            this.btnCleaner.Click += new ReaLTaiizor.Util.FoxBase.ButtonFoxBase.ClickEventHandler(this.btnCleaner_Click);
             // 
             // btnOptimize
             // 
@@ -1196,143 +1422,14 @@ namespace Avaxi
             this.btnOptimize.DownColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
             this.btnOptimize.EnabledCalc = true;
             this.btnOptimize.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOptimize.ForeColor = System.Drawing.Color.Black;
-            this.btnOptimize.Location = new System.Drawing.Point(24, 6);
+            this.btnOptimize.ForeColor = System.Drawing.Color.LightGray;
+            this.btnOptimize.Location = new System.Drawing.Point(31, 462);
             this.btnOptimize.Name = "btnOptimize";
             this.btnOptimize.OverColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.btnOptimize.Size = new System.Drawing.Size(377, 67);
+            this.btnOptimize.Size = new System.Drawing.Size(299, 63);
             this.btnOptimize.TabIndex = 33;
             this.btnOptimize.Text = "Optimize PC";
             this.btnOptimize.Click += new ReaLTaiizor.Util.FoxBase.ButtonFoxBase.ClickEventHandler(this.btnOptimize_Click);
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.White;
-            this.panel6.Controls.Add(this.btnCleaner);
-            this.panel6.Controls.Add(this.btnTemporary);
-            this.panel6.Controls.Add(this.btnRegistry);
-            this.panel6.Location = new System.Drawing.Point(425, 434);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(683, 68);
-            this.panel6.TabIndex = 35;
-            // 
-            // btnCleaner
-            // 
-            this.btnCleaner.BackColor = System.Drawing.Color.White;
-            this.btnCleaner.BaseColor = System.Drawing.Color.Transparent;
-            this.btnCleaner.BorderColor = System.Drawing.Color.Silver;
-            this.btnCleaner.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCleaner.DisabledBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
-            this.btnCleaner.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(209)))), ((int)(((byte)(209)))));
-            this.btnCleaner.DisabledTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(178)))), ((int)(((byte)(190)))));
-            this.btnCleaner.DownColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
-            this.btnCleaner.EnabledCalc = true;
-            this.btnCleaner.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCleaner.ForeColor = System.Drawing.Color.Black;
-            this.btnCleaner.Location = new System.Drawing.Point(27, 0);
-            this.btnCleaner.Name = "btnCleaner";
-            this.btnCleaner.OverColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.btnCleaner.Size = new System.Drawing.Size(221, 68);
-            this.btnCleaner.TabIndex = 30;
-            this.btnCleaner.Text = "Cleaner";
-            this.btnCleaner.Click += new ReaLTaiizor.Util.FoxBase.ButtonFoxBase.ClickEventHandler(this.btnCleaner_Click);
-            // 
-            // btnTemporary
-            // 
-            this.btnTemporary.BackColor = System.Drawing.Color.White;
-            this.btnTemporary.BaseColor = System.Drawing.Color.Transparent;
-            this.btnTemporary.BorderColor = System.Drawing.Color.Silver;
-            this.btnTemporary.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnTemporary.DisabledBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
-            this.btnTemporary.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(209)))), ((int)(((byte)(209)))));
-            this.btnTemporary.DisabledTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(178)))), ((int)(((byte)(190)))));
-            this.btnTemporary.DownColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
-            this.btnTemporary.EnabledCalc = true;
-            this.btnTemporary.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTemporary.ForeColor = System.Drawing.Color.Black;
-            this.btnTemporary.Location = new System.Drawing.Point(250, 0);
-            this.btnTemporary.Name = "btnTemporary";
-            this.btnTemporary.OverColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.btnTemporary.Size = new System.Drawing.Size(212, 68);
-            this.btnTemporary.TabIndex = 31;
-            this.btnTemporary.Text = "Temporary";
-            this.btnTemporary.Click += new ReaLTaiizor.Util.FoxBase.ButtonFoxBase.ClickEventHandler(this.btnTemporary_Click);
-            // 
-            // btnRegistry
-            // 
-            this.btnRegistry.BackColor = System.Drawing.Color.White;
-            this.btnRegistry.BaseColor = System.Drawing.Color.Transparent;
-            this.btnRegistry.BorderColor = System.Drawing.Color.Silver;
-            this.btnRegistry.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRegistry.DisabledBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
-            this.btnRegistry.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(209)))), ((int)(((byte)(209)))));
-            this.btnRegistry.DisabledTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(178)))), ((int)(((byte)(190)))));
-            this.btnRegistry.DownColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
-            this.btnRegistry.EnabledCalc = true;
-            this.btnRegistry.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistry.ForeColor = System.Drawing.Color.Black;
-            this.btnRegistry.Location = new System.Drawing.Point(464, 0);
-            this.btnRegistry.Name = "btnRegistry";
-            this.btnRegistry.OverColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.btnRegistry.Size = new System.Drawing.Size(218, 68);
-            this.btnRegistry.TabIndex = 32;
-            this.btnRegistry.Text = "Registry";
-            this.btnRegistry.Click += new ReaLTaiizor.Util.FoxBase.ButtonFoxBase.ClickEventHandler(this.btnRegistry_Click);
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.White;
-            this.panel5.Controls.Add(this.btnClearMemory);
-            this.panel5.Location = new System.Drawing.Point(450, 231);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(228, 72);
-            this.panel5.TabIndex = 34;
-            // 
-            // btnClearMemory
-            // 
-            this.btnClearMemory.BackColor = System.Drawing.Color.White;
-            this.btnClearMemory.BaseColor = System.Drawing.Color.Transparent;
-            this.btnClearMemory.BorderColor = System.Drawing.Color.Silver;
-            this.btnClearMemory.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnClearMemory.DisabledBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
-            this.btnClearMemory.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(209)))), ((int)(((byte)(209)))));
-            this.btnClearMemory.DisabledTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(178)))), ((int)(((byte)(190)))));
-            this.btnClearMemory.DownColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
-            this.btnClearMemory.EnabledCalc = true;
-            this.btnClearMemory.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClearMemory.ForeColor = System.Drawing.Color.Black;
-            this.btnClearMemory.Location = new System.Drawing.Point(1, 1);
-            this.btnClearMemory.Name = "btnClearMemory";
-            this.btnClearMemory.OverColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.btnClearMemory.Size = new System.Drawing.Size(221, 66);
-            this.btnClearMemory.TabIndex = 29;
-            this.btnClearMemory.Text = "Clear memory";
-            this.btnClearMemory.Click += new ReaLTaiizor.Util.FoxBase.ButtonFoxBase.ClickEventHandler(this.btnClearMemory_Click);
-            // 
-            // lstPrograms
-            // 
-            this.lstPrograms.BackColor = System.Drawing.Color.White;
-            this.lstPrograms.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lstPrograms.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader2});
-            this.lstPrograms.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lstPrograms.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lstPrograms.FullRowSelect = true;
-            this.lstPrograms.HideSelection = false;
-            this.lstPrograms.Location = new System.Drawing.Point(31, 74);
-            this.lstPrograms.MultiSelect = false;
-            this.lstPrograms.Name = "lstPrograms";
-            this.lstPrograms.ShowGroups = false;
-            this.lstPrograms.ShowItemToolTips = true;
-            this.lstPrograms.Size = new System.Drawing.Size(377, 429);
-            this.lstPrograms.TabIndex = 28;
-            this.lstPrograms.UseCompatibleStateImageBehavior = false;
-            this.lstPrograms.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Process Name";
-            this.columnHeader2.Width = 341;
             // 
             // circularProgressBar1
             // 
@@ -1344,7 +1441,7 @@ namespace Avaxi
             this.circularProgressBar1.InnerColor = System.Drawing.Color.Transparent;
             this.circularProgressBar1.InnerMargin = 2;
             this.circularProgressBar1.InnerWidth = -1;
-            this.circularProgressBar1.Location = new System.Drawing.Point(781, 104);
+            this.circularProgressBar1.Location = new System.Drawing.Point(394, 35);
             this.circularProgressBar1.MarqueeAnimationSpeed = 2000;
             this.circularProgressBar1.Name = "circularProgressBar1";
             this.circularProgressBar1.OuterColor = System.Drawing.Color.WhiteSmoke;
@@ -1353,7 +1450,7 @@ namespace Avaxi
             this.circularProgressBar1.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.circularProgressBar1.ProgressWidth = 5;
             this.circularProgressBar1.SecondaryFont = new System.Drawing.Font("Microsoft Sans Serif", 36F);
-            this.circularProgressBar1.Size = new System.Drawing.Size(224, 215);
+            this.circularProgressBar1.Size = new System.Drawing.Size(258, 246);
             this.circularProgressBar1.StartAngle = 270;
             this.circularProgressBar1.Step = 1;
             this.circularProgressBar1.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
@@ -1374,7 +1471,7 @@ namespace Avaxi
             this.label37.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label37.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label37.ForeColor = System.Drawing.Color.Black;
-            this.label37.Location = new System.Drawing.Point(447, 391);
+            this.label37.Location = new System.Drawing.Point(25, 18);
             this.label37.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(162, 40);
@@ -1389,7 +1486,7 @@ namespace Avaxi
             this.checkClearCache.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkClearCache.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkClearCache.ForeColor = System.Drawing.Color.Black;
-            this.checkClearCache.Location = new System.Drawing.Point(452, 148);
+            this.checkClearCache.Location = new System.Drawing.Point(36, 76);
             this.checkClearCache.Name = "checkClearCache";
             this.checkClearCache.Size = new System.Drawing.Size(133, 29);
             this.checkClearCache.TabIndex = 23;
@@ -1403,66 +1500,23 @@ namespace Avaxi
             this.checkClearMemory.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkClearMemory.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkClearMemory.ForeColor = System.Drawing.Color.Black;
-            this.checkClearMemory.Location = new System.Drawing.Point(452, 104);
+            this.checkClearMemory.Location = new System.Drawing.Point(36, 32);
             this.checkClearMemory.Name = "checkClearMemory";
             this.checkClearMemory.Size = new System.Drawing.Size(159, 29);
             this.checkClearMemory.TabIndex = 22;
             this.checkClearMemory.Text = "Clear memory";
             this.checkClearMemory.UseVisualStyleBackColor = true;
             // 
-            // label36
-            // 
-            this.label36.BackColor = System.Drawing.Color.Transparent;
-            this.label36.Cursor = System.Windows.Forms.Cursors.Default;
-            this.label36.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label36.ForeColor = System.Drawing.Color.Black;
-            this.label36.Location = new System.Drawing.Point(33, 7);
-            this.label36.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(162, 40);
-            this.label36.TabIndex = 6;
-            this.label36.Text = "Optimize";
-            this.label36.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // pnlTuneUp
             // 
             this.pnlTuneUp.BackColor = System.Drawing.Color.Transparent;
-            this.pnlTuneUp.Controls.Add(this.panel13);
+            this.pnlTuneUp.Controls.Add(this.btnTuneUp);
             this.pnlTuneUp.Controls.Add(this.panel11);
             this.pnlTuneUp.Controls.Add(this.label38);
-            this.pnlTuneUp.Location = new System.Drawing.Point(187, 133);
+            this.pnlTuneUp.Location = new System.Drawing.Point(173, 80);
             this.pnlTuneUp.Name = "pnlTuneUp";
-            this.pnlTuneUp.Size = new System.Drawing.Size(1135, 609);
+            this.pnlTuneUp.Size = new System.Drawing.Size(1196, 713);
             this.pnlTuneUp.TabIndex = 0;
-            // 
-            // panel13
-            // 
-            this.panel13.BackColor = System.Drawing.Color.White;
-            this.panel13.Controls.Add(this.btnTuneUp);
-            this.panel13.Location = new System.Drawing.Point(354, 478);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(340, 55);
-            this.panel13.TabIndex = 16;
-            // 
-            // btnTuneUp
-            // 
-            this.btnTuneUp.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnTuneUp.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(193)))), ((int)(((byte)(193)))));
-            this.btnTuneUp.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnTuneUp.DisabledBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
-            this.btnTuneUp.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(209)))), ((int)(((byte)(209)))));
-            this.btnTuneUp.DisabledTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(178)))), ((int)(((byte)(190)))));
-            this.btnTuneUp.DownColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
-            this.btnTuneUp.EnabledCalc = true;
-            this.btnTuneUp.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTuneUp.ForeColor = System.Drawing.Color.White;
-            this.btnTuneUp.Location = new System.Drawing.Point(56, 0);
-            this.btnTuneUp.Name = "btnTuneUp";
-            this.btnTuneUp.OverColor = System.Drawing.Color.Gray;
-            this.btnTuneUp.Size = new System.Drawing.Size(284, 55);
-            this.btnTuneUp.TabIndex = 0;
-            this.btnTuneUp.Text = "Tune Up";
-            this.btnTuneUp.Click += new ReaLTaiizor.Util.FoxBase.ButtonFoxBase.ClickEventHandler(this.btnTuneUp_Click);
             // 
             // panel11
             // 
@@ -1641,32 +1695,18 @@ namespace Avaxi
             // pnlSetting
             // 
             this.pnlSetting.BackColor = System.Drawing.Color.Transparent;
-            this.pnlSetting.Controls.Add(this.panel12);
-            this.pnlSetting.Controls.Add(this.label39);
-            this.pnlSetting.Location = new System.Drawing.Point(207, 120);
+            this.pnlSetting.Controls.Add(this.roundPanel9);
+            this.pnlSetting.Controls.Add(this.roundPanel8);
+            this.pnlSetting.Location = new System.Drawing.Point(173, 81);
             this.pnlSetting.Name = "pnlSetting";
-            this.pnlSetting.Size = new System.Drawing.Size(1090, 581);
+            this.pnlSetting.Size = new System.Drawing.Size(1196, 712);
             this.pnlSetting.TabIndex = 0;
-            // 
-            // panel12
-            // 
-            this.panel12.BackColor = System.Drawing.Color.White;
-            this.panel12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel12.Controls.Add(this.btnUSBVaccination);
-            this.panel12.Controls.Add(this.switchFireWall);
-            this.panel12.Controls.Add(this.btnSystemInfo);
-            this.panel12.Controls.Add(this.switchAutoScanUSB);
-            this.panel12.Controls.Add(this.switchRealTimeProtection);
-            this.panel12.Location = new System.Drawing.Point(152, 160);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(744, 221);
-            this.panel12.TabIndex = 20;
             // 
             // btnUSBVaccination
             // 
             this.btnUSBVaccination.BackColor = System.Drawing.Color.White;
-            this.btnUSBVaccination.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnUSBVaccination.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(193)))), ((int)(((byte)(193)))));
+            this.btnUSBVaccination.BaseColor = System.Drawing.Color.AliceBlue;
+            this.btnUSBVaccination.BorderColor = System.Drawing.Color.DeepSkyBlue;
             this.btnUSBVaccination.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnUSBVaccination.DisabledBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
             this.btnUSBVaccination.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(209)))), ((int)(((byte)(209)))));
@@ -1674,11 +1714,11 @@ namespace Avaxi
             this.btnUSBVaccination.DownColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
             this.btnUSBVaccination.EnabledCalc = true;
             this.btnUSBVaccination.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUSBVaccination.ForeColor = System.Drawing.Color.White;
-            this.btnUSBVaccination.Location = new System.Drawing.Point(518, 37);
+            this.btnUSBVaccination.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnUSBVaccination.Location = new System.Drawing.Point(146, 62);
             this.btnUSBVaccination.Name = "btnUSBVaccination";
             this.btnUSBVaccination.OverColor = System.Drawing.Color.Gray;
-            this.btnUSBVaccination.Size = new System.Drawing.Size(188, 36);
+            this.btnUSBVaccination.Size = new System.Drawing.Size(243, 54);
             this.btnUSBVaccination.TabIndex = 18;
             this.btnUSBVaccination.Text = "USB Vaccination";
             this.btnUSBVaccination.Click += new ReaLTaiizor.Util.FoxBase.ButtonFoxBase.ClickEventHandler(this.btnUSBVaccination_Click);
@@ -1687,7 +1727,7 @@ namespace Avaxi
             // 
             this.switchFireWall.AutoSize = true;
             this.switchFireWall.Depth = 0;
-            this.switchFireWall.Location = new System.Drawing.Point(26, 155);
+            this.switchFireWall.Location = new System.Drawing.Point(38, 198);
             this.switchFireWall.Margin = new System.Windows.Forms.Padding(0);
             this.switchFireWall.MouseLocation = new System.Drawing.Point(-1, -1);
             this.switchFireWall.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
@@ -1702,8 +1742,8 @@ namespace Avaxi
             // 
             // btnSystemInfo
             // 
-            this.btnSystemInfo.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnSystemInfo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(193)))), ((int)(((byte)(193)))));
+            this.btnSystemInfo.BaseColor = System.Drawing.Color.AliceBlue;
+            this.btnSystemInfo.BorderColor = System.Drawing.Color.DeepSkyBlue;
             this.btnSystemInfo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSystemInfo.DisabledBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
             this.btnSystemInfo.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(209)))), ((int)(((byte)(209)))));
@@ -1711,11 +1751,11 @@ namespace Avaxi
             this.btnSystemInfo.DownColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
             this.btnSystemInfo.EnabledCalc = true;
             this.btnSystemInfo.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSystemInfo.ForeColor = System.Drawing.Color.White;
-            this.btnSystemInfo.Location = new System.Drawing.Point(518, 149);
+            this.btnSystemInfo.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnSystemInfo.Location = new System.Drawing.Point(146, 160);
             this.btnSystemInfo.Name = "btnSystemInfo";
             this.btnSystemInfo.OverColor = System.Drawing.Color.Gray;
-            this.btnSystemInfo.Size = new System.Drawing.Size(188, 36);
+            this.btnSystemInfo.Size = new System.Drawing.Size(243, 50);
             this.btnSystemInfo.TabIndex = 19;
             this.btnSystemInfo.Text = "SystemInfo";
             this.btnSystemInfo.Click += new ReaLTaiizor.Util.FoxBase.ButtonFoxBase.ClickEventHandler(this.btnSystemInfo_Click);
@@ -1724,7 +1764,7 @@ namespace Avaxi
             // 
             this.switchAutoScanUSB.AutoSize = true;
             this.switchAutoScanUSB.Depth = 0;
-            this.switchAutoScanUSB.Location = new System.Drawing.Point(26, 96);
+            this.switchAutoScanUSB.Location = new System.Drawing.Point(38, 139);
             this.switchAutoScanUSB.Margin = new System.Windows.Forms.Padding(0);
             this.switchAutoScanUSB.MouseLocation = new System.Drawing.Point(-1, -1);
             this.switchAutoScanUSB.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
@@ -1740,7 +1780,7 @@ namespace Avaxi
             // 
             this.switchRealTimeProtection.AutoSize = true;
             this.switchRealTimeProtection.Depth = 0;
-            this.switchRealTimeProtection.Location = new System.Drawing.Point(26, 36);
+            this.switchRealTimeProtection.Location = new System.Drawing.Point(38, 79);
             this.switchRealTimeProtection.Margin = new System.Windows.Forms.Padding(0);
             this.switchRealTimeProtection.MouseLocation = new System.Drawing.Point(-1, -1);
             this.switchRealTimeProtection.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
@@ -1757,14 +1797,14 @@ namespace Avaxi
             // 
             this.label39.BackColor = System.Drawing.Color.Transparent;
             this.label39.Cursor = System.Windows.Forms.Cursors.Default;
-            this.label39.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label39.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label39.ForeColor = System.Drawing.Color.Black;
-            this.label39.Location = new System.Drawing.Point(22, 52);
+            this.label39.Location = new System.Drawing.Point(19, 18);
             this.label39.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label39.Name = "label39";
             this.label39.Size = new System.Drawing.Size(146, 40);
             this.label39.TabIndex = 8;
-            this.label39.Text = "Setting";
+            this.label39.Text = "Settings";
             this.label39.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // launcherMenu
@@ -1853,9 +1893,9 @@ namespace Avaxi
             this.pnlFormScan.Controls.Add(this.label41);
             this.pnlFormScan.Controls.Add(this.hopeProgressBar1);
             this.pnlFormScan.Controls.Add(this.label40);
-            this.pnlFormScan.Location = new System.Drawing.Point(216, 103);
+            this.pnlFormScan.Location = new System.Drawing.Point(173, 81);
             this.pnlFormScan.Name = "pnlFormScan";
-            this.pnlFormScan.Size = new System.Drawing.Size(1117, 598);
+            this.pnlFormScan.Size = new System.Drawing.Size(1196, 712);
             this.pnlFormScan.TabIndex = 17;
             // 
             // label50
@@ -1864,7 +1904,7 @@ namespace Avaxi
             this.label50.Cursor = System.Windows.Forms.Cursors.Default;
             this.label50.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label50.ForeColor = System.Drawing.Color.LimeGreen;
-            this.label50.Location = new System.Drawing.Point(283, 345);
+            this.label50.Location = new System.Drawing.Point(353, 372);
             this.label50.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label50.Name = "label50";
             this.label50.Size = new System.Drawing.Size(441, 40);
@@ -1879,7 +1919,7 @@ namespace Avaxi
             this.label49.Cursor = System.Windows.Forms.Cursors.Default;
             this.label49.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label49.ForeColor = System.Drawing.Color.Black;
-            this.label49.Location = new System.Drawing.Point(265, 303);
+            this.label49.Location = new System.Drawing.Point(335, 330);
             this.label49.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label49.Name = "label49";
             this.label49.Size = new System.Drawing.Size(478, 40);
@@ -1894,8 +1934,7 @@ namespace Avaxi
             this.label44.Cursor = System.Windows.Forms.Cursors.Default;
             this.label44.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label44.ForeColor = System.Drawing.Color.LightGray;
-            this.label44.Image = global::Avaxi.Properties.Resources.notice;
-            this.label44.Location = new System.Drawing.Point(428, 130);
+            this.label44.Location = new System.Drawing.Point(498, 157);
             this.label44.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label44.Name = "label44";
             this.label44.Size = new System.Drawing.Size(139, 122);
@@ -1909,7 +1948,7 @@ namespace Avaxi
             this.label43.Cursor = System.Windows.Forms.Cursors.Default;
             this.label43.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label43.ForeColor = System.Drawing.Color.Black;
-            this.label43.Location = new System.Drawing.Point(283, 254);
+            this.label43.Location = new System.Drawing.Point(353, 281);
             this.label43.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label43.Name = "label43";
             this.label43.Size = new System.Drawing.Size(445, 40);
@@ -1926,7 +1965,7 @@ namespace Avaxi
             this.btnStopScan.DrawShadows = true;
             this.btnStopScan.HighEmphasis = true;
             this.btnStopScan.Icon = null;
-            this.btnStopScan.Location = new System.Drawing.Point(433, 548);
+            this.btnStopScan.Location = new System.Drawing.Point(520, 605);
             this.btnStopScan.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnStopScan.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             this.btnStopScan.Name = "btnStopScan";
@@ -1945,7 +1984,7 @@ namespace Avaxi
             this.curr_File.Cursor = System.Windows.Forms.Cursors.Default;
             this.curr_File.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.curr_File.ForeColor = System.Drawing.Color.Black;
-            this.curr_File.Location = new System.Drawing.Point(14, 293);
+            this.curr_File.Location = new System.Drawing.Point(84, 320);
             this.curr_File.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.curr_File.Name = "curr_File";
             this.curr_File.Size = new System.Drawing.Size(968, 71);
@@ -1958,8 +1997,7 @@ namespace Avaxi
             this.label42.Cursor = System.Windows.Forms.Cursors.Default;
             this.label42.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label42.ForeColor = System.Drawing.Color.LightGray;
-            this.label42.Image = global::Avaxi.Properties.Resources.check;
-            this.label42.Location = new System.Drawing.Point(468, 21);
+            this.label42.Location = new System.Drawing.Point(539, 17);
             this.label42.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label42.Name = "label42";
             this.label42.Size = new System.Drawing.Size(58, 47);
@@ -1972,7 +2010,7 @@ namespace Avaxi
             this.label41.Cursor = System.Windows.Forms.Cursors.Default;
             this.label41.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label41.ForeColor = System.Drawing.Color.Black;
-            this.label41.Location = new System.Drawing.Point(7, 226);
+            this.label41.Location = new System.Drawing.Point(77, 253);
             this.label41.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(157, 40);
@@ -1991,7 +2029,7 @@ namespace Avaxi
             this.hopeProgressBar1.FullBallonText = "Ok!";
             this.hopeProgressBar1.FullBarColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(194)))), ((int)(((byte)(58)))));
             this.hopeProgressBar1.IsError = false;
-            this.hopeProgressBar1.Location = new System.Drawing.Point(23, 276);
+            this.hopeProgressBar1.Location = new System.Drawing.Point(93, 303);
             this.hopeProgressBar1.Name = "hopeProgressBar1";
             this.hopeProgressBar1.ProgressBarStyle = ReaLTaiizor.Controls.HopeProgressBar.Style.ValueOutSide;
             this.hopeProgressBar1.Size = new System.Drawing.Size(1016, 14);
@@ -2005,7 +2043,7 @@ namespace Avaxi
             this.label40.Cursor = System.Windows.Forms.Cursors.Default;
             this.label40.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label40.ForeColor = System.Drawing.Color.Black;
-            this.label40.Location = new System.Drawing.Point(383, 68);
+            this.label40.Location = new System.Drawing.Point(454, 64);
             this.label40.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(233, 40);
@@ -2022,9 +2060,9 @@ namespace Avaxi
             this.pnlDelete.Controls.Add(this.btnCancel);
             this.pnlDelete.Controls.Add(this.btnDelete);
             this.pnlDelete.Controls.Add(this.objectListView1);
-            this.pnlDelete.Location = new System.Drawing.Point(188, 88);
+            this.pnlDelete.Location = new System.Drawing.Point(173, 81);
             this.pnlDelete.Name = "pnlDelete";
-            this.pnlDelete.Size = new System.Drawing.Size(1150, 659);
+            this.pnlDelete.Size = new System.Drawing.Size(1196, 712);
             this.pnlDelete.TabIndex = 18;
             // 
             // label48
@@ -2033,7 +2071,7 @@ namespace Avaxi
             this.label48.Cursor = System.Windows.Forms.Cursors.Default;
             this.label48.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label48.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label48.Location = new System.Drawing.Point(365, 268);
+            this.label48.Location = new System.Drawing.Point(434, 261);
             this.label48.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label48.Name = "label48";
             this.label48.Size = new System.Drawing.Size(332, 40);
@@ -2048,7 +2086,7 @@ namespace Avaxi
             this.label47.Cursor = System.Windows.Forms.Cursors.Default;
             this.label47.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label47.ForeColor = System.Drawing.Color.Black;
-            this.label47.Location = new System.Drawing.Point(406, 317);
+            this.label47.Location = new System.Drawing.Point(475, 310);
             this.label47.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label47.Name = "label47";
             this.label47.Size = new System.Drawing.Size(233, 40);
@@ -2063,8 +2101,7 @@ namespace Avaxi
             this.label45.Cursor = System.Windows.Forms.Cursors.Default;
             this.label45.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label45.ForeColor = System.Drawing.Color.LightGray;
-            this.label45.Image = global::Avaxi.Properties.Resources.check;
-            this.label45.Location = new System.Drawing.Point(494, 50);
+            this.label45.Location = new System.Drawing.Point(563, 43);
             this.label45.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label45.Name = "label45";
             this.label45.Size = new System.Drawing.Size(58, 47);
@@ -2077,7 +2114,7 @@ namespace Avaxi
             this.label46.Cursor = System.Windows.Forms.Cursors.Default;
             this.label46.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label46.ForeColor = System.Drawing.Color.Black;
-            this.label46.Location = new System.Drawing.Point(409, 97);
+            this.label46.Location = new System.Drawing.Point(478, 90);
             this.label46.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label46.Name = "label46";
             this.label46.Size = new System.Drawing.Size(233, 40);
@@ -2092,7 +2129,7 @@ namespace Avaxi
             this.btnCancel.DrawShadows = true;
             this.btnCancel.HighEmphasis = true;
             this.btnCancel.Icon = null;
-            this.btnCancel.Location = new System.Drawing.Point(529, 598);
+            this.btnCancel.Location = new System.Drawing.Point(598, 591);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnCancel.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             this.btnCancel.Name = "btnCancel";
@@ -2112,7 +2149,7 @@ namespace Avaxi
             this.btnDelete.DrawShadows = true;
             this.btnDelete.HighEmphasis = true;
             this.btnDelete.Icon = null;
-            this.btnDelete.Location = new System.Drawing.Point(416, 598);
+            this.btnDelete.Location = new System.Drawing.Point(485, 591);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnDelete.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             this.btnDelete.Name = "btnDelete";
@@ -2140,7 +2177,7 @@ namespace Avaxi
             this.objectListView1.FullRowSelect = true;
             this.objectListView1.HideSelection = false;
             this.objectListView1.HighlightForegroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.objectListView1.Location = new System.Drawing.Point(31, 211);
+            this.objectListView1.Location = new System.Drawing.Point(100, 204);
             this.objectListView1.Margin = new System.Windows.Forms.Padding(4);
             this.objectListView1.MultiSelect = false;
             this.objectListView1.Name = "objectListView1";
@@ -2173,25 +2210,140 @@ namespace Avaxi
             this.launcherIcon.Visible = true;
             this.launcherIcon.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.launcherIcon_MouseDoubleClick);
             // 
+            // panel5
+            // 
+            this.panel5.BackgroundImage = global::Avaxi.Properties.Resources.saly;
+            this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.panel5.Location = new System.Drawing.Point(31, 112);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(299, 311);
+            this.panel5.TabIndex = 0;
+            // 
+            // label29
+            // 
+            this.label29.BackColor = System.Drawing.Color.Transparent;
+            this.label29.Cursor = System.Windows.Forms.Cursors.Default;
+            this.label29.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.ForeColor = System.Drawing.Color.Black;
+            this.label29.Location = new System.Drawing.Point(27, 11);
+            this.label29.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(277, 40);
+            this.label29.TabIndex = 35;
+            this.label29.Text = "Crypto Security";
+            // 
+            // roundPanel6
+            // 
+            this.roundPanel6.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.roundPanel6.Controls.Add(this.checkClearMemory);
+            this.roundPanel6.Controls.Add(this.checkClearCache);
+            this.roundPanel6.Controls.Add(this.btnClearMemory);
+            this.roundPanel6.Controls.Add(this.circularProgressBar1);
+            this.roundPanel6.Location = new System.Drawing.Point(430, 32);
+            this.roundPanel6.Name = "roundPanel6";
+            this.roundPanel6.Radious = 25;
+            this.roundPanel6.Size = new System.Drawing.Size(727, 327);
+            this.roundPanel6.TabIndex = 36;
+            this.roundPanel6.TabStop = false;
+            this.roundPanel6.Text = "roundPanel6";
+            this.roundPanel6.TitleBackColor = System.Drawing.Color.WhiteSmoke;
+            this.roundPanel6.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 15.8F, System.Drawing.FontStyle.Bold);
+            this.roundPanel6.TitleForeColor = System.Drawing.Color.White;
+            this.roundPanel6.TitleHatchStyle = System.Drawing.Drawing2D.HatchStyle.Horizontal;
+            // 
+            // roundPanel7
+            // 
+            this.roundPanel7.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.roundPanel7.Controls.Add(this.label37);
+            this.roundPanel7.Controls.Add(this.btnTemporary);
+            this.roundPanel7.Controls.Add(this.btnCleaner);
+            this.roundPanel7.Controls.Add(this.btnRegistry);
+            this.roundPanel7.Location = new System.Drawing.Point(430, 384);
+            this.roundPanel7.Name = "roundPanel7";
+            this.roundPanel7.Radious = 25;
+            this.roundPanel7.Size = new System.Drawing.Size(727, 209);
+            this.roundPanel7.TabIndex = 37;
+            this.roundPanel7.TabStop = false;
+            this.roundPanel7.Text = "roundPanel7";
+            this.roundPanel7.TitleBackColor = System.Drawing.Color.WhiteSmoke;
+            this.roundPanel7.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 15.8F, System.Drawing.FontStyle.Bold);
+            this.roundPanel7.TitleForeColor = System.Drawing.Color.White;
+            this.roundPanel7.TitleHatchStyle = System.Drawing.Drawing2D.HatchStyle.Horizontal;
+            // 
+            // btnTuneUp
+            // 
+            this.btnTuneUp.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnTuneUp.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(193)))), ((int)(((byte)(193)))));
+            this.btnTuneUp.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTuneUp.DisabledBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
+            this.btnTuneUp.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(209)))), ((int)(((byte)(209)))));
+            this.btnTuneUp.DisabledTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(178)))), ((int)(((byte)(190)))));
+            this.btnTuneUp.DownColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
+            this.btnTuneUp.EnabledCalc = true;
+            this.btnTuneUp.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTuneUp.ForeColor = System.Drawing.Color.White;
+            this.btnTuneUp.Location = new System.Drawing.Point(61, 492);
+            this.btnTuneUp.Name = "btnTuneUp";
+            this.btnTuneUp.OverColor = System.Drawing.Color.Gray;
+            this.btnTuneUp.Size = new System.Drawing.Size(284, 55);
+            this.btnTuneUp.TabIndex = 0;
+            this.btnTuneUp.Text = "Tune Up";
+            this.btnTuneUp.Click += new ReaLTaiizor.Util.FoxBase.ButtonFoxBase.ClickEventHandler(this.btnTuneUp_Click);
+            // 
+            // roundPanel8
+            // 
+            this.roundPanel8.BackColor = System.Drawing.Color.White;
+            this.roundPanel8.Controls.Add(this.label39);
+            this.roundPanel8.Controls.Add(this.switchFireWall);
+            this.roundPanel8.Controls.Add(this.switchRealTimeProtection);
+            this.roundPanel8.Controls.Add(this.switchAutoScanUSB);
+            this.roundPanel8.Location = new System.Drawing.Point(39, 20);
+            this.roundPanel8.Name = "roundPanel8";
+            this.roundPanel8.Radious = 25;
+            this.roundPanel8.Size = new System.Drawing.Size(598, 262);
+            this.roundPanel8.TabIndex = 21;
+            this.roundPanel8.TabStop = false;
+            this.roundPanel8.Text = "roundPanel8";
+            this.roundPanel8.TitleBackColor = System.Drawing.Color.White;
+            this.roundPanel8.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 15.8F, System.Drawing.FontStyle.Bold);
+            this.roundPanel8.TitleForeColor = System.Drawing.Color.White;
+            this.roundPanel8.TitleHatchStyle = System.Drawing.Drawing2D.HatchStyle.Horizontal;
+            // 
+            // roundPanel9
+            // 
+            this.roundPanel9.BackColor = System.Drawing.Color.White;
+            this.roundPanel9.Controls.Add(this.btnUSBVaccination);
+            this.roundPanel9.Controls.Add(this.btnSystemInfo);
+            this.roundPanel9.Location = new System.Drawing.Point(653, 20);
+            this.roundPanel9.Name = "roundPanel9";
+            this.roundPanel9.Radious = 25;
+            this.roundPanel9.Size = new System.Drawing.Size(504, 262);
+            this.roundPanel9.TabIndex = 22;
+            this.roundPanel9.TabStop = false;
+            this.roundPanel9.Text = "roundPanel9";
+            this.roundPanel9.TitleBackColor = System.Drawing.Color.White;
+            this.roundPanel9.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 15.8F, System.Drawing.FontStyle.Bold);
+            this.roundPanel9.TitleForeColor = System.Drawing.Color.White;
+            this.roundPanel9.TitleHatchStyle = System.Drawing.Drawing2D.HatchStyle.Horizontal;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.BackgroundImage = global::Avaxi.Properties.Resources.background;
+            this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(1369, 793);
             this.ControlBox = false;
-            this.Controls.Add(this.label35);
             this.Controls.Add(this.pnlDelete);
             this.Controls.Add(this.pnlFormScan);
             this.Controls.Add(this.pnlSetting);
             this.Controls.Add(this.pnlTuneUp);
             this.Controls.Add(this.pnlOptimize);
+            this.Controls.Add(this.pnlScan);
             this.Controls.Add(this.pnlCrypto);
             this.Controls.Add(this.pnlShield);
+            this.Controls.Add(this.label35);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.pnlScan);
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -2210,30 +2362,40 @@ namespace Avaxi
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.pnlShield.ResumeLayout(false);
-            this.panel9.ResumeLayout(false);
+            this.roundPanel1.ResumeLayout(false);
+            this.panel16.ResumeLayout(false);
+            this.panel15.ResumeLayout(false);
+            this.panel14.ResumeLayout(false);
             this.pnlScan.ResumeLayout(false);
+            this.roundPanel4.ResumeLayout(false);
+            this.panel19.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
-            this.pnlCrypto.ResumeLayout(false);
-            this.panel8.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
+            this.roundPanel3.ResumeLayout(false);
+            this.pnlCrypto.ResumeLayout(false);
+            this.roundPanel2.ResumeLayout(false);
+            this.panel18.ResumeLayout(false);
+            this.panel17.ResumeLayout(false);
+            this.panel9.ResumeLayout(false);
+            this.panel8.ResumeLayout(false);
             this.pnlOptimize.ResumeLayout(false);
-            this.pnlOptimize.PerformLayout();
-            this.panel7.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
+            this.roundPanel5.ResumeLayout(false);
             this.pnlTuneUp.ResumeLayout(false);
-            this.panel13.ResumeLayout(false);
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
             this.pnlSetting.ResumeLayout(false);
-            this.panel12.ResumeLayout(false);
-            this.panel12.PerformLayout();
             this.launcherMenu.ResumeLayout(false);
             this.pnlFormScan.ResumeLayout(false);
             this.pnlFormScan.PerformLayout();
             this.pnlDelete.ResumeLayout(false);
             this.pnlDelete.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.objectListView1)).EndInit();
+            this.roundPanel6.ResumeLayout(false);
+            this.roundPanel6.PerformLayout();
+            this.roundPanel7.ResumeLayout(false);
+            this.roundPanel8.ResumeLayout(false);
+            this.roundPanel8.PerformLayout();
+            this.roundPanel9.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -2294,7 +2456,6 @@ namespace Avaxi
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.Panel pnlOptimize;
-        private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.CheckBox checkClearCache;
         private System.Windows.Forms.CheckBox checkClearMemory;
@@ -2313,8 +2474,6 @@ namespace Avaxi
         private System.Windows.Forms.ToolStripMenuItem closeItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripMenuItem openItem;
-        private System.Windows.Forms.ListView lstPrograms;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.Panel pnlFormScan;
         private System.Windows.Forms.Label label41;
         private ReaLTaiizor.Controls.HopeProgressBar hopeProgressBar1;
@@ -2338,25 +2497,12 @@ namespace Avaxi
         private ReaLTaiizor.Controls.FoxButton btnUSBVaccination;
         private ReaLTaiizor.Controls.FoxButton btnSystemInfo;
         private System.Windows.Forms.NotifyIcon launcherIcon;
-        private ReaLTaiizor.Controls.FoxButton foxButton1;
-        private ReaLTaiizor.Controls.FoxButton btnPhishing;
-        private ReaLTaiizor.Controls.FoxButton foxButton2;
-        private ReaLTaiizor.Controls.FoxButton btnAffiliateOffers;
-        private ReaLTaiizor.Controls.FoxButton btnRansomware;
-        private ReaLTaiizor.Controls.FoxButton btnCryptojacking;
         private ReaLTaiizor.Controls.FoxButton button2;
         private ReaLTaiizor.Controls.FoxButton btnClearMemory;
         private ReaLTaiizor.Controls.FoxButton btnRegistry;
         private ReaLTaiizor.Controls.FoxButton btnTemporary;
         private ReaLTaiizor.Controls.FoxButton btnCleaner;
         private ReaLTaiizor.Controls.FoxButton btnOptimize;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.Panel panel8;
         private ReaLTaiizor.Controls.ProgressIndicator progressIndicatorTuneUp;
         private ReaLTaiizor.Controls.MaterialSwitch switchFeatureUpdates;
         private ReaLTaiizor.Controls.MaterialSwitch switchAppearanceInPerformance;
@@ -2369,9 +2515,34 @@ namespace Avaxi
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Label label50;
         private System.Windows.Forms.Label label49;
-        private System.Windows.Forms.Panel panel13;
+        private RoundPanel roundPanel1;
+        private ReaLTaiizor.Controls.FoxButton foxButton1;
+        private System.Windows.Forms.Panel panel16;
+        private System.Windows.Forms.Panel panel15;
+        private System.Windows.Forms.Panel panel14;
+        private RoundPanel roundPanel2;
+        private ReaLTaiizor.Controls.FoxButton foxButton2;
+        private System.Windows.Forms.Panel panel18;
+        private System.Windows.Forms.Panel panel17;
+        private ReaLTaiizor.Controls.FoxButton btnRansomware;
+        private System.Windows.Forms.Panel panel9;
+        private ReaLTaiizor.Controls.FoxButton btnCryptojacking;
+        private System.Windows.Forms.Panel panel8;
+        private ReaLTaiizor.Controls.FoxButton btnPhishing;
+        private ReaLTaiizor.Controls.FoxButton btnAffiliateOffers;
+        private RoundPanel roundPanel4;
+        private System.Windows.Forms.Panel panel19;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Panel panel4;
+        private RoundPanel roundPanel3;
+        private RoundPanel roundPanel5;
+        private RoundPanel roundPanel7;
+        private RoundPanel roundPanel6;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Panel panel5;
         private ReaLTaiizor.Controls.FoxButton btnTuneUp;
-        private System.Windows.Forms.Panel panel12;
+        private RoundPanel roundPanel9;
+        private RoundPanel roundPanel8;
         //private System.Windows.Forms.NotifyIcon notifyIcon1;
     }
 }

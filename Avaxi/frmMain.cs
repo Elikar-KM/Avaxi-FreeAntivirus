@@ -104,19 +104,19 @@ namespace Avaxi
         }
 
         // start up code
-        public static void AddToRegistry()
-        {
-            try
-            {
-                RegistryKey localMachine64 = RegistryKey.OpenBaseKey(RegistryHive.LocalMachine, RegistryView.Registry64);
-                RegistryKey RegStartUp = localMachine64.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
-                RegStartUp.SetValue("Avaxi", System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location) + "\\Avaxi.exe");
-
-                //RegistryKey RegStartUp32 = Microsoft.Win32.Registry.LocalMachine.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
-                //RegStartUp32.SetValue("Avaxi", System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location) + "\\Avaxi.exe");
-            }
-            catch { }
-        }
+        //public static void AddToRegistry()
+        //{
+        //    try
+        //    {
+        //        RegistryKey localMachine64 = RegistryKey.OpenBaseKey(RegistryHive.LocalMachine, RegistryView.Registry64);
+        //        RegistryKey RegStartUp = localMachine64.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
+        //        RegStartUp.SetValue("Avaxi", System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location) + "\\Avaxi.exe");
+        //
+        //        //RegistryKey RegStartUp32 = Microsoft.Win32.Registry.LocalMachine.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
+        //        //RegStartUp32.SetValue("Avaxi", System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location) + "\\Avaxi.exe");
+        //    }
+        //    catch { }
+        //}
 
         //setup the scanner engine
         private void SetupScannerEngine()
@@ -263,7 +263,7 @@ namespace Avaxi
         Settings ProgramSettings = new Settings() { MonitorStartup=false,TotalSaved = 0, AutoClean = false, CloseAfterClean = false, ShutdownAfterClean = false, LaunchInStartup = false, LastScan = null };
         private void frmMain_Load(object sender, EventArgs e)
         {
-            AddToRegistry();
+            //AddToRegistry();
             this.switchAppearanceInPerformance.Checked = Program.tuneAppearanceInPerformance;
             this.switchAutomaticUpdates.Checked = Program.tuneAutomaticUpdates;
             this.switchDesktopCleanUpWizard.Checked = Program.tuneDesktopCleanUpWizard;
@@ -414,7 +414,7 @@ namespace Avaxi
             Task.Run(delegate ()
             {
                 Thread.Sleep(1000);
-                opt = new Optimize(this.lstPrograms, this.circularProgressBar1);
+                opt = new Optimize(this.circularProgressBar1);
             });
 
         }
@@ -472,7 +472,7 @@ namespace Avaxi
             pnlFormScan.Visible = false;
             pnlDelete.Visible = false;
             label35.Visible = false;
-            this.BackgroundImage = global::Avaxi.Properties.Resources.background;
+            this.BackgroundImage = null;
             hopeProgressBar1.ValueNumber = 0;
 
             panel.Visible = true;
@@ -486,18 +486,18 @@ namespace Avaxi
             toolStripButton5.BackColor = Color.Transparent;
             toolStripButton6.BackColor = Color.Transparent;
 
-            toolStripButton1.ForeColor = Color.White;
-            toolStripButton3.ForeColor = Color.White;
-            toolStripButton4.ForeColor = Color.White;
-            toolStripButton5.ForeColor = Color.White;
-            toolStripButton6.ForeColor = Color.White;
+            toolStripButton1.ForeColor = Color.Gray;
+            toolStripButton3.ForeColor = Color.Gray;
+            toolStripButton4.ForeColor = Color.Gray;
+            toolStripButton5.ForeColor = Color.Gray;
+            toolStripButton6.ForeColor = Color.Gray;
         }
 
         void  StripButtonColor(ToolStripButton tb)
         {
             FormatButtonColor();
-            tb.BackColor = Color.LightGray;
-            tb.ForeColor = Color.Black;
+            tb.BackColor = Color.WhiteSmoke;
+            tb.ForeColor = Color.DodgerBlue;
         }
         private void toolStripButton1_Click(object sender, EventArgs e)
         {

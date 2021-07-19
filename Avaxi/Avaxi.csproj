@@ -137,6 +137,9 @@
     <Compile Include="RAM\RamOptimizer.cs" />
     <Compile Include="RAM\RamUsage.cs" />
     <Compile Include="RestartManager.cs" />
+    <Compile Include="RoundPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="SpeedUp\CleanHelper.cs" />
     <Compile Include="SpeedUp\Enums.cs" />
     <Compile Include="SpeedUp\OptimizeSpeedUp.cs" />
@@ -188,6 +191,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="com.aiofast.cleaner-logo.ico" />
+    <None Include="Resources\saly.png" />
     <None Include="Resources\background.png" />
     <None Include="Resources\AntiAffiliate_grey.png" />
     <None Include="Resources\AntiRansomware_grey.png" />
