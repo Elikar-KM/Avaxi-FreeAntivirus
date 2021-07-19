@@ -245,8 +245,8 @@ namespace Avaxi
                     {
                         scanType = 4;
                         ShowPanel(pnlFormScan);
-                        this.BackgroundImage = null;
-                        this.BackgroundImage = null;
+                        //this.BackgroundImage = null;
+                        this.BackColor = Color.WhiteSmoke;
                         toolStrip1.Visible = false;
                         loc_to_search = e.Disk.Name;
                         this.Show();
@@ -456,6 +456,7 @@ namespace Avaxi
             loc_to_search = System.IO.Path.GetPathRoot(Environment.SystemDirectory);
             ShowPanel(pnlFormScan);
             this.BackgroundImage = null;
+            this.BackColor = Color.WhiteSmoke;
             toolStrip1.Visible = false;
             search = new Thread(new ThreadStart(ScanFolder));
             search.Start();
@@ -473,6 +474,7 @@ namespace Avaxi
             pnlDelete.Visible = false;
             label35.Visible = false;
             this.BackgroundImage = null;
+            this.BackColor = Color.Gainsboro;
             hopeProgressBar1.ValueNumber = 0;
 
             panel.Visible = true;
@@ -744,6 +746,7 @@ namespace Avaxi
                 loc_to_search = folderBrowserDialog1.SelectedPath;
                 ShowPanel(pnlFormScan);
                 this.BackgroundImage = null;
+                this.BackColor = Color.WhiteSmoke;
                 toolStrip1.Visible = false;
                 search = new Thread(new ThreadStart(ScanFolder));
                 search.Start();
@@ -755,6 +758,7 @@ namespace Avaxi
             scanType = 3;
             ShowPanel(pnlFormScan);
             this.BackgroundImage = null;
+            this.BackColor = Color.WhiteSmoke;
             toolStrip1.Visible = false;
             search = new Thread(new ThreadStart(ScanFolder));
             search.Start();
@@ -1285,7 +1289,9 @@ namespace Avaxi
                     flagScanStatus = 0;
                     toolStrip1.Visible = false;
                     ShowPanel(pnlDelete);
+                    btnCancel.Enabled = true;
                     this.BackgroundImage = null;
+                    this.BackColor = Color.WhiteSmoke;
                     infected = 0;
                     break;
                 case 3: //ok
@@ -1319,6 +1325,7 @@ namespace Avaxi
                     }
                     objectListView1.Items.Clear();
                     btnDelete.Text = "        DONE        ";
+                    btnCancel.Enabled = false;
                     label47.Visible = true;
                     label48.Visible = true;
                     objectListView1.Visible = false;
@@ -1330,6 +1337,10 @@ namespace Avaxi
             {
                 flagDeleteStatus = 0;
                 toolStrip1.Visible = true;
+                btnDelete.Text = "      DELETE      ";
+                label47.Visible = false;
+                label48.Visible = false;
+                objectListView1.Visible = true;
                 ShowPanel(pnlShield);
                 StripButtonColor(toolStripButton1);
             }
@@ -1359,6 +1370,7 @@ namespace Avaxi
             scanType = 0;
             ShowPanel(pnlFormScan);
             this.BackgroundImage = null;
+            this.BackColor = Color.WhiteSmoke;
             toolStrip1.Visible = false;
             search = new Thread(new ThreadStart(ScanFolder));
             search.Start();
@@ -1603,6 +1615,7 @@ namespace Avaxi
             loc_to_search = System.IO.Path.GetPathRoot(Environment.SystemDirectory);
             ShowPanel(pnlFormScan);
             this.BackgroundImage = null;
+            this.BackColor = Color.WhiteSmoke;
             toolStrip1.Visible = false;
             search = new Thread(new ThreadStart(ScanFolder));
             search.Start();
