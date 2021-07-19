@@ -41,13 +41,13 @@ namespace Avaxi
         private void label4_MouseHover(object sender, EventArgs e)
         {
             Label l = (Label)sender;
-            l.BackColor = ColorTranslator.FromHtml("#333333");
+            l.BackColor = ColorTranslator.FromHtml("#F4F4F4");
         }
 
         private void label4_MouseMove(object sender, MouseEventArgs e)
         {
             Label l = (Label)sender;
-            l.BackColor = ColorTranslator.FromHtml("#333333");
+            l.BackColor = ColorTranslator.FromHtml("#F4F4F4");
         }
 
         private void label4_MouseLeave(object sender, EventArgs e)

@@ -507,7 +507,7 @@ namespace Avaxi
             this.roundPanel1.TabIndex = 26;
             this.roundPanel1.TabStop = false;
             this.roundPanel1.Text = "The live protection is enabled";
-            this.roundPanel1.TitleBackColor = System.Drawing.Color.ForestGreen;
+            this.roundPanel1.TitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(190)))), ((int)(((byte)(170)))));
             this.roundPanel1.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 15.8F, System.Drawing.FontStyle.Bold);
             this.roundPanel1.TitleForeColor = System.Drawing.Color.Black;
             this.roundPanel1.TitleHatchStyle = System.Drawing.Drawing2D.HatchStyle.Percent90;
@@ -675,12 +675,12 @@ namespace Avaxi
             // 
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Cursor = System.Windows.Forms.Cursors.Default;
-            this.label13.Font = new System.Drawing.Font("Segoe UI", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.label13.Location = new System.Drawing.Point(296, 0);
+            this.label13.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.Location = new System.Drawing.Point(388, 8);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(660, 53);
+            this.label13.Size = new System.Drawing.Size(503, 43);
             this.label13.TabIndex = 5;
             this.label13.Text = "The live protection is enabled";
             // 
@@ -691,7 +691,7 @@ namespace Avaxi
             this.label6.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.LightGray;
             this.label6.Image = global::Avaxi.Properties.Resources.check;
-            this.label6.Location = new System.Drawing.Point(233, 4);
+            this.label6.Location = new System.Drawing.Point(324, 7);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(58, 47);
@@ -2115,7 +2115,7 @@ namespace Avaxi
             this.label42.Cursor = System.Windows.Forms.Cursors.Default;
             this.label42.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label42.ForeColor = System.Drawing.Color.LightGray;
-            this.label42.Image = global::Avaxi.Properties.Resources.check;
+            this.label42.Image = global::Avaxi.Properties.Resources.check1;
             this.label42.Location = new System.Drawing.Point(467, 17);
             this.label42.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label42.Name = "label42";
@@ -2220,7 +2220,7 @@ namespace Avaxi
             this.label45.Cursor = System.Windows.Forms.Cursors.Default;
             this.label45.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label45.ForeColor = System.Drawing.Color.LightGray;
-            this.label45.Image = global::Avaxi.Properties.Resources.check;
+            this.label45.Image = global::Avaxi.Properties.Resources.check1;
             this.label45.Location = new System.Drawing.Point(479, 40);
             this.label45.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label45.Name = "label45";
@@ -2297,12 +2297,12 @@ namespace Avaxi
             this.objectListView1.FullRowSelect = true;
             this.objectListView1.HideSelection = false;
             this.objectListView1.HighlightForegroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.objectListView1.Location = new System.Drawing.Point(16, 201);
+            this.objectListView1.Location = new System.Drawing.Point(8, 201);
             this.objectListView1.Margin = new System.Windows.Forms.Padding(4);
             this.objectListView1.MultiSelect = false;
             this.objectListView1.Name = "objectListView1";
             this.objectListView1.ShowGroups = false;
-            this.objectListView1.Size = new System.Drawing.Size(985, 326);
+            this.objectListView1.Size = new System.Drawing.Size(1018, 326);
             this.objectListView1.TabIndex = 912;
             this.objectListView1.UseCompatibleStateImageBehavior = false;
             this.objectListView1.View = System.Windows.Forms.View.Details;
@@ -2337,6 +2337,7 @@ namespace Avaxi
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(1369, 793);
             this.ControlBox = false;
+            this.Controls.Add(this.pnlShield);
             this.Controls.Add(this.pnlDelete);
             this.Controls.Add(this.pnlFormScan);
             this.Controls.Add(this.pnlSetting);
@@ -2344,7 +2345,6 @@ namespace Avaxi
             this.Controls.Add(this.pnlOptimize);
             this.Controls.Add(this.pnlScan);
             this.Controls.Add(this.pnlCrypto);
-            this.Controls.Add(this.pnlShield);
             this.Controls.Add(this.label35);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);

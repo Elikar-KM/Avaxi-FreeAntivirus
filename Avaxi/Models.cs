@@ -114,10 +114,10 @@ namespace Avaxi
          ColorTranslator.FromHtml("#302b63"));
 
                 ColorBlend cblend = new ColorBlend(3);
-                var colors = new Color[3] { ColorTranslator.FromHtml("#333333"),
-                ColorTranslator.FromHtml("#333333"),
+                var colors = new Color[3] { ColorTranslator.FromHtml("#F4F4F4"),
+                ColorTranslator.FromHtml("#F4F4F4"),
                 //ColorTranslator.FromHtml("#2f364f"),
-                ColorTranslator.FromHtml("#333333") };
+                ColorTranslator.FromHtml("#F4F4F4") };
                 cblend.Colors = colors;
                 cblend.Positions = new float[3] { 0f, 0.5f, 1f };
 
@@ -139,9 +139,9 @@ namespace Avaxi
          ColorTranslator.FromHtml("#302b63"));
 
             ColorBlend cblend = new ColorBlend(3);
-            var colors = new Color[3] { ColorTranslator.FromHtml("#333333"),
+            var colors = new Color[3] { ColorTranslator.FromHtml("#F4F4F4"),
                 ColorTranslator.FromHtml("#313a52"),
-                ColorTranslator.FromHtml("#333333") };
+                ColorTranslator.FromHtml("#F4F4F4") };
             cblend.Colors = colors;
             cblend.Positions = new float[3] { 0f, 0.5f, 1f };
 

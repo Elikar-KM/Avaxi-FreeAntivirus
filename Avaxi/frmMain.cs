@@ -88,13 +88,13 @@ namespace Avaxi
         private void label4_MouseHover(object sender, EventArgs e)
         {
             Label l = (Label)sender;
-            l.BackColor = ColorTranslator.FromHtml("#333333");
+            l.BackColor = ColorTranslator.FromHtml("#F4F4F4");
         }
 
         private void label4_MouseMove(object sender, MouseEventArgs e)
         {
             Label l = (Label)sender;
-            l.BackColor = ColorTranslator.FromHtml("#333333");
+            l.BackColor = ColorTranslator.FromHtml("#F4F4F4");
         }
 
         private void label4_MouseLeave(object sender, EventArgs e)
@@ -355,7 +355,7 @@ namespace Avaxi
             {
                 label6.Image = global::Avaxi.Properties.Resources.check;
                 label13.Text = "The live protection is enabled";
-                label13.ForeColor = Color.DeepSkyBlue;
+                label13.ForeColor = Color.White;
             }
             else
             {
@@ -498,7 +498,7 @@ namespace Avaxi
         void  StripButtonColor(ToolStripButton tb)
         {
             FormatButtonColor();
-            tb.BackColor = Color.WhiteSmoke;
+            tb.BackColor = Color.Gainsboro;
             tb.ForeColor = Color.DodgerBlue;
         }
         private void toolStripButton1_Click(object sender, EventArgs e)
@@ -1597,7 +1597,7 @@ namespace Avaxi
                 launcherIcon.ShowBalloonTip(5, "Avaxi", "The live protection is enabled", ToolTipIcon.Info);
                 label6.Image = global::Avaxi.Properties.Resources.check;
                 label13.Text = "The live protection is enabled";
-                label13.ForeColor = Color.DeepSkyBlue;
+                label13.ForeColor = Color.White;
             }
             else
             {
@@ -1632,7 +1632,7 @@ namespace Avaxi
             {
                 label6.Image = global::Avaxi.Properties.Resources.check;
                     label13.Text = "Silent mode is enabled. Enjoy!";
-                label13.ForeColor = Color.DeepSkyBlue;
+                label13.ForeColor = Color.White;
                 flagSilent = true;
                 silentModeItem.Text = "Disable Silent Mode";
             }
@@ -1642,7 +1642,7 @@ namespace Avaxi
                 {
                     label6.Image = global::Avaxi.Properties.Resources.check;
                     label13.Text = "The live protection is enabled";
-                    label13.ForeColor = Color.DeepSkyBlue;
+                    label13.ForeColor = Color.White;
                 }
                 else
                 {
