@@ -257,6 +257,14 @@ namespace Avaxi
             }
         }
 
+        private void SetSwitch(Label label, bool flag)
+        {
+            if (flag)
+                label.Image = Avaxi.Properties.Resources.on;
+            else
+                label.Image = Avaxi.Properties.Resources.off;
+        }
+
         List<Section> AllSections = new List<Section>();
         List<Registry> AllSectionsRegistry = new List<Registry>();
         List<StartupManager> MonitorStartup = new List<StartupManager>();
@@ -288,6 +296,16 @@ namespace Avaxi
             this.flagCryptojacking = Program.flagCryptojacking;
             this.flagRansomware = Program.flagRansomware;
             this.flagAffiliateOffers = Program.flagAffiliateOffers;
+
+            // Tune Up page : switch format
+            SetSwitch(this.switchLabelAppearanceInPerformance, this.flagAppearanceInPerformance);
+            SetSwitch(this.switchLabelAutomaticUpdates, this.flagAutomaticUpdates);
+            SetSwitch(this.switchLabelDesktopCleanUpWizard, this.flagDesktopCleanUpWizard);
+            SetSwitch(this.switchLabelFeatureUpdates, this.flagFeatureUpdates);
+            SetSwitch(this.switchLabelQuickAccessHistory, this.flagQuickAccessHistory);
+            SetSwitch(this.switchLabelSensorService, this.flagSensorService);
+            SetSwitch(this.switchLabelSpeedUpMenuShowDelay, this.flagSpeedUpMenuShowDelay);
+            SetSwitch(this.switchLabelStartMenuAds, this.flagStartMenuAds);
 
             // Protection Status view (anti-phishing, anti-cryptojacking, anti-ransomware, anti-affiliate offers)
             if (flagPhishing)
