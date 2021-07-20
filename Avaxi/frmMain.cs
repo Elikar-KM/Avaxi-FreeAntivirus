@@ -275,6 +275,15 @@ namespace Avaxi
             this.switchRealTimeProtection.Checked = Program.RealTimeProtection;
             this.switchAutoScanUSB.Checked = Program.AutoUSBScanner;
 
+            this.flagFeatureUpdates = Program.tuneFeatureUpdates;
+            this.flagAppearanceInPerformance = Program.tuneAppearanceInPerformance;
+            this.flagSensorService = Program.tuneSensorService;
+            this.flagSpeedUpMenuShowDelay = Program.tuneMenuShowDelay;
+            this.flagStartMenuAds = Program.tuneStartMenuAds;
+            this.flagDesktopCleanUpWizard = Program.tuneDesktopCleanUpWizard;
+            this.flagQuickAccessHistory = Program.tuneQuickAccessHistory;
+            this.flagAutomaticUpdates = Program.tuneAutomaticUpdates;
+
             this.flagPhishing = Program.flagPhishing;
             this.flagCryptojacking = Program.flagCryptojacking;
             this.flagRansomware = Program.flagRansomware;
@@ -814,14 +823,14 @@ namespace Avaxi
 
         private void closeItem_Click(object sender, EventArgs e)
         {
-            Program.tuneAppearanceInPerformance = this.switchAppearanceInPerformance.Checked;
-            Program.tuneAutomaticUpdates = this.switchAutomaticUpdates.Checked;
-            Program.tuneDesktopCleanUpWizard = this.switchDesktopCleanUpWizard.Checked;
-            Program.tuneFeatureUpdates = this.switchFeatureUpdates.Checked;
-            Program.tuneMenuShowDelay = this.switchSpeedUpMenuShowDelay.Checked;
-            Program.tuneQuickAccessHistory = this.switchQuickAccessHistory.Checked;
-            Program.tuneSensorService = this.switchSensorService.Checked;
-            Program.tuneStartMenuAds = this.switchStartMenuAds.Checked;
+            Program.tuneAppearanceInPerformance = this.flagAppearanceInPerformance;
+            Program.tuneAutomaticUpdates = this.flagAutomaticUpdates;
+            Program.tuneDesktopCleanUpWizard = this.flagDesktopCleanUpWizard;
+            Program.tuneFeatureUpdates = this.flagFeatureUpdates;
+            Program.tuneMenuShowDelay = this.flagSpeedUpMenuShowDelay;
+            Program.tuneQuickAccessHistory = this.flagQuickAccessHistory;
+            Program.tuneSensorService = this.flagSensorService;
+            Program.tuneStartMenuAds = this.flagStartMenuAds;
             Program.optClearCache = this.checkClearCache.Checked;
             Program.optClearMemory = this.checkClearMemory.Checked;
             Program.RealTimeProtection = this.switchRealTimeProtection.Checked;
@@ -892,94 +901,6 @@ namespace Avaxi
                 frmMain.PushLog("MainForm.CleanPC" + ex.Message + ex.StackTrace);
             }
             this.btnTemporary.Enabled = true;
-        }
-
-        private void btnTuneUp_Click(object sender, EventArgs e)
-        {
-            Computer regedit = new Computer();
-        
-            this.progressIndicatorTuneUp.Visible = true;
-        
-            if (switchAutomaticUpdates.Checked == true)
-            {
-                OptimizeSpeedUp.DisableAutomaticUpdates();
-            }
-            else
-            {
-                OptimizeSpeedUp.EnableAutomaticUpdates();
-            }
-        
-            if (switchDesktopCleanUpWizard.Checked == true)
-            {
-                MainMethods.FixedInvalidRegistryKey(regedit.Registry.CurrentUser, @"Software\Microsoft\Windows\CurrentVersion\Explorer\Desktop\CleanupWiz");
-                regedit.Registry.CurrentUser.OpenSubKey(@"Software\Microsoft\Windows\CurrentVersion\Explorer\Desktop\CleanupWiz", true).SetValue("NoRun", 1, RegistryValueKind.DWord);
-            }
-            else
-            {
-            }
-        
-            if (switchSpeedUpMenuShowDelay.Checked == true)
-            {
-                MainMethods.FixedInvalidRegistryKey(regedit.Registry.CurrentUser, @"Control Panel\Desktop");
-                MainMethods.FixedInvalidRegistryKey(regedit.Registry.CurrentUser, @"Control Panel\Desktop\WindowMetrics");
-                regedit.Registry.CurrentUser.OpenSubKey(@"Control Panel\Desktop", true).SetValue("MenuShowDelay", "50");
-                regedit.Registry.CurrentUser.OpenSubKey(@"Control Panel\Desktop\WindowMetrics", true).SetValue("MinAnimate", "50");
-            }
-            else
-            {
-            }
-        
-            if (switchAppearanceInPerformance.Checked == true)
-            {
-                OptimizeSpeedUp.EnableDarkTheme();
-            }
-            else
-            {
-                OptimizeSpeedUp.EnableLightTheme();
-            }
-        
-            if (switchQuickAccessHistory.Checked == true)
-            {
-                OptimizeSpeedUp.DisableQuickAccessHistory();
-            }
-            else
-            {
-                OptimizeSpeedUp.EnableQuickAccessHistory();
-            }
-        
-            if (switchStartMenuAds.Checked == true)
-            {
-                OptimizeSpeedUp.DisableStartMenuAds();
-            }
-            else
-            {
-                OptimizeSpeedUp.EnableStartMenuAds();
-            }
-        
-            if (switchSensorService.Checked == true)
-            {
-                OptimizeSpeedUp.DisableSensorServices();
-            }
-            else
-            {
-                OptimizeSpeedUp.EnableSensorServices();
-            }
-        
-            if (switchFeatureUpdates.Checked == true)
-            {
-                OptimizeSpeedUp.DisableForcedFeatureUpdates();
-            }
-            else
-            {
-                OptimizeSpeedUp.EnableForcedFeatureUpdates();
-            }
-        
-            DialogResult result = System.Windows.Forms.MessageBox.Show("Restart you computer?", "SpeedUp", System.Windows.Forms.MessageBoxButtons.YesNo);
-            if (result == DialogResult.Yes)
-            {
-                Utilities.Reboot();
-            }
-            this.progressIndicatorTuneUp.Visible = false;
         }
 
         private List<string> GetAllRunningProcesses()
@@ -1669,6 +1590,209 @@ namespace Avaxi
                 await Optimize.ClearMemory(2);
             }
             this.btnOptimizePC.Enabled = true;
+        }
+
+        private void btnTune_Click(object sender, EventArgs e)
+        {
+            Computer regedit = new Computer();
+
+            this.progressIndicatorTuneUp.Visible = true;
+
+            if (this.flagAutomaticUpdates == true)
+            {
+                OptimizeSpeedUp.DisableAutomaticUpdates();
+            }
+            else
+            {
+                OptimizeSpeedUp.EnableAutomaticUpdates();
+            }
+
+            if (this.flagDesktopCleanUpWizard == true)
+            {
+                MainMethods.FixedInvalidRegistryKey(regedit.Registry.CurrentUser, @"Software\Microsoft\Windows\CurrentVersion\Explorer\Desktop\CleanupWiz");
+                regedit.Registry.CurrentUser.OpenSubKey(@"Software\Microsoft\Windows\CurrentVersion\Explorer\Desktop\CleanupWiz", true).SetValue("NoRun", 1, RegistryValueKind.DWord);
+            }
+            else
+            {
+            }
+
+            if (this.flagSpeedUpMenuShowDelay == true)
+            {
+                MainMethods.FixedInvalidRegistryKey(regedit.Registry.CurrentUser, @"Control Panel\Desktop");
+                MainMethods.FixedInvalidRegistryKey(regedit.Registry.CurrentUser, @"Control Panel\Desktop\WindowMetrics");
+                regedit.Registry.CurrentUser.OpenSubKey(@"Control Panel\Desktop", true).SetValue("MenuShowDelay", "50");
+                regedit.Registry.CurrentUser.OpenSubKey(@"Control Panel\Desktop\WindowMetrics", true).SetValue("MinAnimate", "50");
+            }
+            else
+            {
+            }
+
+            if (this.flagAppearanceInPerformance == true)
+            {
+                OptimizeSpeedUp.EnableDarkTheme();
+            }
+            else
+            {
+                OptimizeSpeedUp.EnableLightTheme();
+            }
+
+            if (this.flagQuickAccessHistory == true)
+            {
+                OptimizeSpeedUp.DisableQuickAccessHistory();
+            }
+            else
+            {
+                OptimizeSpeedUp.EnableQuickAccessHistory();
+            }
+
+            if (this.flagStartMenuAds == true)
+            {
+                OptimizeSpeedUp.DisableStartMenuAds();
+            }
+            else
+            {
+                OptimizeSpeedUp.EnableStartMenuAds();
+            }
+
+            if (this.flagSensorService == true)
+            {
+                OptimizeSpeedUp.DisableSensorServices();
+            }
+            else
+            {
+                OptimizeSpeedUp.EnableSensorServices();
+            }
+
+            if (this.flagFeatureUpdates == true)
+            {
+                OptimizeSpeedUp.DisableForcedFeatureUpdates();
+            }
+            else
+            {
+                OptimizeSpeedUp.EnableForcedFeatureUpdates();
+            }
+
+            DialogResult result = System.Windows.Forms.MessageBox.Show("Restart you computer?", "SpeedUp", System.Windows.Forms.MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                Utilities.Reboot();
+            }
+            this.progressIndicatorTuneUp.Visible = false;
+        }
+
+        /*
+         * Tune Up : switch setting
+         * */
+        private void switchLabelAutomaticUpdates_Click(object sender, EventArgs e)
+        {
+            if(this.flagAutomaticUpdates)
+            {
+                this.flagAutomaticUpdates = false;
+                this.switchLabelAutomaticUpdates.Image = Avaxi.Properties.Resources.off;
+            }
+            else
+            {
+                this.flagAutomaticUpdates = true;
+                this.switchLabelAutomaticUpdates.Image = Avaxi.Properties.Resources.on;
+            }
+        }
+
+        private void switchLabelDesktopCleanUpWizard_Click(object sender, EventArgs e)
+        {
+            if (this.flagDesktopCleanUpWizard)
+            {
+                this.flagDesktopCleanUpWizard = false;
+                this.switchLabelDesktopCleanUpWizard.Image = Avaxi.Properties.Resources.off;
+            }
+            else
+            {
+                this.flagDesktopCleanUpWizard = true;
+                this.switchLabelDesktopCleanUpWizard.Image = Avaxi.Properties.Resources.on;
+            }
+        }
+
+        private void switchLabelSpeedUpMenuShowDelay_Click(object sender, EventArgs e)
+        {
+            if (this.flagSpeedUpMenuShowDelay)
+            {
+                this.flagSpeedUpMenuShowDelay = false;
+                this.switchLabelSpeedUpMenuShowDelay.Image = Avaxi.Properties.Resources.off;
+            }
+            else
+            {
+                this.flagSpeedUpMenuShowDelay = true;
+                this.switchLabelSpeedUpMenuShowDelay.Image = Avaxi.Properties.Resources.on;
+            }
+        }
+
+        private void switchLabelAppearanceInPerformance_Click(object sender, EventArgs e)
+        {
+            if (this.flagAppearanceInPerformance)
+            {
+                this.flagAppearanceInPerformance = false;
+                this.switchLabelAppearanceInPerformance.Image = Avaxi.Properties.Resources.off;
+            }
+            else
+            {
+                this.flagAppearanceInPerformance = true;
+                this.switchLabelAppearanceInPerformance.Image = Avaxi.Properties.Resources.on;
+            }
+        }
+
+        private void switchLabelQuickAccessHistory_Click(object sender, EventArgs e)
+        {
+            if (this.flagQuickAccessHistory)
+            {
+                this.flagQuickAccessHistory = false;
+                this.switchLabelQuickAccessHistory.Image = Avaxi.Properties.Resources.off;
+            }
+            else
+            {
+                this.flagQuickAccessHistory = true;
+                this.switchLabelQuickAccessHistory.Image = Avaxi.Properties.Resources.on;
+            }
+        }
+
+        private void switchLabelStartMenuAds_Click(object sender, EventArgs e)
+        {
+            if (this.flagStartMenuAds)
+            {
+                this.flagStartMenuAds = false;
+                this.switchLabelStartMenuAds.Image = Avaxi.Properties.Resources.off;
+            }
+            else
+            {
+                this.flagStartMenuAds = true;
+                this.switchLabelStartMenuAds.Image = Avaxi.Properties.Resources.on;
+            }
+        }
+
+        private void switchLabelSensorService_Click(object sender, EventArgs e)
+        {
+            if (this.flagSensorService)
+            {
+                this.flagSensorService = false;
+                this.switchLabelSensorService.Image = Avaxi.Properties.Resources.off;
+            }
+            else
+            {
+                this.flagSensorService = true;
+                this.switchLabelSensorService.Image = Avaxi.Properties.Resources.on;
+            }
+        }
+
+        private void switchLabelFeatureUpdates_Click(object sender, EventArgs e)
+        {
+            if (this.flagFeatureUpdates)
+            {
+                this.flagFeatureUpdates = false;
+                this.switchLabelFeatureUpdates.Image = Avaxi.Properties.Resources.off;
+            }
+            else
+            {
+                this.flagFeatureUpdates = true;
+                this.switchLabelFeatureUpdates.Image = Avaxi.Properties.Resources.on;
+            }
         }
 
         private void labelRansomware_Click(object sender, EventArgs e)
