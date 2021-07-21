@@ -228,7 +228,7 @@ namespace Avaxi
             if (exclusion.isExclusion(e.FullPath))
                 return;
 
-            if (switchRealTimeProtection.Checked)
+            if (this.flagRealTimeProtection)
             {
                 frmMain.PushLog("Real-time scan : " + e.FullPath);
                 ScanFile(e.FullPath, true);
@@ -390,7 +390,7 @@ namespace Avaxi
             }
 
             // RealTime status view
-            if (switchRealTimeProtection.Checked)
+            if (this.flagRealTimeProtection)
             {
                 label6.Image = global::Avaxi.Properties.Resources.check;
                 label13.Text = "The live protection is enabled";
@@ -455,7 +455,7 @@ namespace Avaxi
             Task.Run(delegate ()
             {
                 Thread.Sleep(1000);
-                opt = new Optimize(this.circularProgressBar1);
+                opt = new Optimize(this.lstPrograms, this.circularProgressBar1);
             });
 
         }
@@ -817,29 +817,6 @@ namespace Avaxi
             }
         }
 
-        private void switchFireWall_CheckedChanged(object sender, EventArgs e)
-        {
-            //reflect firewall settings
-            if (this.switchFireWall.Checked)
-            {
-                launcherIcon.ShowBalloonTip(5, "Avaxi", "Firewall is turned on successfully", ToolTipIcon.Info);
-                Task.Run(delegate ()
-                {
-                    firewall.FirewallStart(true);
-                    PushLog("Firewall is turned on sucessfully.");
-                });
-            }
-            else
-            {
-                launcherIcon.ShowBalloonTip(5, "Avaxi", "Firewall is turned off successfully", ToolTipIcon.Info);
-                Task.Run(delegate ()
-                {
-                    shell.RunExternalExe("netsh.exe", "Firewall set opmode disable");
-                    PushLog("Firewall is turned off sucessfully.");
-                });
-            }
-        }
-
         private void openItem_Click(object sender, EventArgs e)
         {
             this.Show();
@@ -878,6 +855,7 @@ namespace Avaxi
         {
             this.btnClearMemory.Enabled = false;
             await Optimize.ClearMemory(1);
+            MessageBox.Show("Memory cleaned");
             this.btnClearMemory.Enabled = true;
         }
 
@@ -891,6 +869,7 @@ namespace Avaxi
             Utilities.EnableContextMenu();
             Utilities.EnableTaskManager();
             Utilities.EnableRegistryEditor();
+            MessageBox.Show("Registry cleaned");
             this.btnRegistry.Enabled = true;
         }
 
@@ -910,6 +889,7 @@ namespace Avaxi
             {
                 frmMain.PushLog("MainForm.CleanPC" + ex.Message + ex.StackTrace);
             }
+            MessageBox.Show("Cleaned");
             this.btnCleaner.Enabled = true;
         }
 
@@ -924,6 +904,8 @@ namespace Avaxi
             {
                 frmMain.PushLog("MainForm.CleanPC" + ex.Message + ex.StackTrace);
             }
+            
+            MessageBox.Show("Temporary cleaned");
             this.btnTemporary.Enabled = true;
         }
 
@@ -1522,24 +1504,6 @@ namespace Avaxi
             }
         }
 
-        private void switchRealTimeProtection_CheckedChanged(object sender, EventArgs e)
-        {
-            if(switchRealTimeProtection.Checked)
-            {
-                launcherIcon.ShowBalloonTip(5, "Avaxi", "The live protection is enabled", ToolTipIcon.Info);
-                label6.Image = global::Avaxi.Properties.Resources.check;
-                label13.Text = "The live protection is enabled";
-                label13.ForeColor = Color.White;
-            }
-            else
-            {
-                launcherIcon.ShowBalloonTip(5, "Avaxi", "The live protection is disabled", ToolTipIcon.Info);
-                label6.Image = global::Avaxi.Properties.Resources.cross;
-                label13.Text = "The live protection is disabled";
-                label13.ForeColor = Color.Gray;
-            }
-        }
-
         private void quickScanItem_Click(object sender, EventArgs e)    // launcher menu quick scan
         {
             this.Show();
@@ -1570,7 +1534,7 @@ namespace Avaxi
             }
             else
             {
-                if (switchRealTimeProtection.Checked)
+                if (this.flagRealTimeProtection)
                 {
                     label6.Image = global::Avaxi.Properties.Resources.check;
                     label13.Text = "The live protection is enabled";

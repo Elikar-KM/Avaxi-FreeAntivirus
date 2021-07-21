@@ -191,6 +191,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="com.aiofast.cleaner-logo.ico" />
+    <None Include="Resources\close.png" />
+    <None Include="Resources\minimize.png" />
     <None Include="Resources\set_yes.png" />
     <None Include="Resources\set_no.png" />
     <None Include="Resources\on.png" />

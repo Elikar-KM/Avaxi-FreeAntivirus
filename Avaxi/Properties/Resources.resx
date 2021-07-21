@@ -127,8 +127,14 @@
   <data name="set_no" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\set_no.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="minimize" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\minimize.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="604a0cadf94914c7ee6c6e552e9b4487-curved-check-mark-circle-icon-by-vexels" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\604a0cadf94914c7ee6c6e552e9b4487-curved-check-mark-circle-icon-by-vexels.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="set_yes" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\set_yes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="AntiCryptojacking_grey" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AntiCryptojacking_grey.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -223,7 +229,7 @@
   <data name="AntiCryptojacking" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AntiCryptojacking.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="set_yes" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\set_yes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="close" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\close.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

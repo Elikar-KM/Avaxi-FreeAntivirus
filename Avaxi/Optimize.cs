@@ -18,12 +18,12 @@ namespace Avaxi
            UInt32 arraySizeBytes,
            [MarshalAs(UnmanagedType.U4)] out UInt32 bytesCopied);
 
-        public Optimize(CircularProgressBar.CircularProgressBar oLabel)
+        public Optimize(System.Windows.Forms.ListView origin, CircularProgressBar.CircularProgressBar oLabel)
         {
             try
             {
                 Thread enumProcessThread = new Thread(EnumProcesses);
-                //pList = origin;
+                pList = origin;
                 pProcess = oLabel;
                 //pTotalRamSpace = oTotalRam;
                 //pUsedRamSpace = oUsedRam;
