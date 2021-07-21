@@ -57,16 +57,6 @@ namespace Avaxi
             this.pnlOptimize = new System.Windows.Forms.Panel();
             this.pnlTuneUp = new System.Windows.Forms.Panel();
             this.btnTuneUp = new ReaLTaiizor.Controls.RibbonButtonLeft();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.switchAutomaticUpdates = new ReaLTaiizor.Controls.MaterialSwitch();
-            this.progressIndicatorTuneUp = new ReaLTaiizor.Controls.ProgressIndicator();
-            this.switchDesktopCleanUpWizard = new ReaLTaiizor.Controls.MaterialSwitch();
-            this.switchFeatureUpdates = new ReaLTaiizor.Controls.MaterialSwitch();
-            this.switchSpeedUpMenuShowDelay = new ReaLTaiizor.Controls.MaterialSwitch();
-            this.switchSensorService = new ReaLTaiizor.Controls.MaterialSwitch();
-            this.switchAppearanceInPerformance = new ReaLTaiizor.Controls.MaterialSwitch();
-            this.switchStartMenuAds = new ReaLTaiizor.Controls.MaterialSwitch();
-            this.switchQuickAccessHistory = new ReaLTaiizor.Controls.MaterialSwitch();
             this.pnlSetting = new System.Windows.Forms.Panel();
             this.launcherMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.openItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -98,8 +88,23 @@ namespace Avaxi
             this.olvColumn1 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.olvColumn2 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.launcherIcon = new System.Windows.Forms.NotifyIcon(this.components);
+            this.roundPanel9 = new Avaxi.RoundPanel();
+            this.btnUSBVaccination = new ReaLTaiizor.Controls.FoxButton();
+            this.btnSystemInfo = new ReaLTaiizor.Controls.FoxButton();
+            this.roundPanel8 = new Avaxi.RoundPanel();
+            this.switchLabelFireWall = new System.Windows.Forms.Label();
+            this.label63 = new System.Windows.Forms.Label();
+            this.switchLabelAutoScanUSB = new System.Windows.Forms.Label();
+            this.label61 = new System.Windows.Forms.Label();
+            this.switchLabelRealTimeProtection = new System.Windows.Forms.Label();
+            this.label39 = new System.Windows.Forms.Label();
+            this.label59 = new System.Windows.Forms.Label();
+            this.switchFireWall = new ReaLTaiizor.Controls.MaterialSwitch();
+            this.switchRealTimeProtection = new ReaLTaiizor.Controls.MaterialSwitch();
+            this.switchAutoScanUSB = new ReaLTaiizor.Controls.MaterialSwitch();
             this.roundPanel10 = new Avaxi.RoundPanel();
             this.switchLabelFeatureUpdates = new System.Windows.Forms.Label();
+            this.progressIndicatorTuneUp = new ReaLTaiizor.Controls.ProgressIndicator();
             this.switchLabelSensorService = new System.Windows.Forms.Label();
             this.switchLabelStartMenuAds = new System.Windows.Forms.Label();
             this.switchLabelQuickAccessHistory = new System.Windows.Forms.Label();
@@ -180,14 +185,6 @@ namespace Avaxi
             this.label31 = new System.Windows.Forms.Label();
             this.btnPhishing = new ReaLTaiizor.Controls.FoxButton();
             this.label26 = new System.Windows.Forms.Label();
-            this.roundPanel9 = new Avaxi.RoundPanel();
-            this.btnUSBVaccination = new ReaLTaiizor.Controls.FoxButton();
-            this.btnSystemInfo = new ReaLTaiizor.Controls.FoxButton();
-            this.roundPanel8 = new Avaxi.RoundPanel();
-            this.label39 = new System.Windows.Forms.Label();
-            this.switchFireWall = new ReaLTaiizor.Controls.MaterialSwitch();
-            this.switchRealTimeProtection = new ReaLTaiizor.Controls.MaterialSwitch();
-            this.switchAutoScanUSB = new ReaLTaiizor.Controls.MaterialSwitch();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -197,12 +194,13 @@ namespace Avaxi
             this.pnlCrypto.SuspendLayout();
             this.pnlOptimize.SuspendLayout();
             this.pnlTuneUp.SuspendLayout();
-            this.panel11.SuspendLayout();
             this.pnlSetting.SuspendLayout();
             this.launcherMenu.SuspendLayout();
             this.pnlFormScan.SuspendLayout();
             this.pnlDelete.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.objectListView1)).BeginInit();
+            this.roundPanel9.SuspendLayout();
+            this.roundPanel8.SuspendLayout();
             this.roundPanel10.SuspendLayout();
             this.roundPanel1.SuspendLayout();
             this.panel16.SuspendLayout();
@@ -221,8 +219,6 @@ namespace Avaxi
             this.panel17.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel8.SuspendLayout();
-            this.roundPanel9.SuspendLayout();
-            this.roundPanel8.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -232,10 +228,10 @@ namespace Avaxi
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Location = new System.Drawing.Point(170, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1369, 81);
+            this.panel1.Size = new System.Drawing.Size(1199, 81);
             this.panel1.TabIndex = 0;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
@@ -247,7 +243,7 @@ namespace Avaxi
             this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(964, 20);
+            this.label3.Location = new System.Drawing.Point(797, 21);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(119, 40);
@@ -265,7 +261,7 @@ namespace Avaxi
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(1102, 0);
+            this.panel2.Location = new System.Drawing.Point(932, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(267, 81);
@@ -359,7 +355,7 @@ namespace Avaxi
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.toolStrip1.Size = new System.Drawing.Size(170, 712);
+            this.toolStrip1.Size = new System.Drawing.Size(170, 793);
             this.toolStrip1.TabIndex = 1;
             // 
             // toolStripButton1
@@ -460,10 +456,10 @@ namespace Avaxi
             // 
             this.panel3.Controls.Add(this.toolStrip1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel3.Location = new System.Drawing.Point(0, 81);
+            this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(170, 712);
+            this.panel3.Size = new System.Drawing.Size(170, 793);
             this.panel3.TabIndex = 2;
             // 
             // timer1
@@ -618,7 +614,6 @@ namespace Avaxi
             this.pnlTuneUp.BackColor = System.Drawing.Color.Transparent;
             this.pnlTuneUp.Controls.Add(this.btnTuneUp);
             this.pnlTuneUp.Controls.Add(this.roundPanel10);
-            this.pnlTuneUp.Controls.Add(this.panel11);
             this.pnlTuneUp.Location = new System.Drawing.Point(173, 80);
             this.pnlTuneUp.Name = "pnlTuneUp";
             this.pnlTuneUp.Size = new System.Drawing.Size(1196, 713);
@@ -649,166 +644,6 @@ namespace Avaxi
             this.btnTuneUp.TabIndex = 32;
             this.btnTuneUp.Text = "Tune Up";
             this.btnTuneUp.Click += new System.EventHandler(this.btnTune_Click);
-            // 
-            // panel11
-            // 
-            this.panel11.BackColor = System.Drawing.Color.White;
-            this.panel11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel11.Controls.Add(this.switchAutomaticUpdates);
-            this.panel11.Controls.Add(this.progressIndicatorTuneUp);
-            this.panel11.Controls.Add(this.switchDesktopCleanUpWizard);
-            this.panel11.Controls.Add(this.switchFeatureUpdates);
-            this.panel11.Controls.Add(this.switchSpeedUpMenuShowDelay);
-            this.panel11.Controls.Add(this.switchSensorService);
-            this.panel11.Controls.Add(this.switchAppearanceInPerformance);
-            this.panel11.Controls.Add(this.switchStartMenuAds);
-            this.panel11.Controls.Add(this.switchQuickAccessHistory);
-            this.panel11.Location = new System.Drawing.Point(46, 433);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(1058, 270);
-            this.panel11.TabIndex = 15;
-            // 
-            // switchAutomaticUpdates
-            // 
-            this.switchAutomaticUpdates.AutoSize = true;
-            this.switchAutomaticUpdates.Depth = 0;
-            this.switchAutomaticUpdates.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.switchAutomaticUpdates.ForeColor = System.Drawing.Color.White;
-            this.switchAutomaticUpdates.Location = new System.Drawing.Point(87, 32);
-            this.switchAutomaticUpdates.Margin = new System.Windows.Forms.Padding(0);
-            this.switchAutomaticUpdates.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.switchAutomaticUpdates.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
-            this.switchAutomaticUpdates.Name = "switchAutomaticUpdates";
-            this.switchAutomaticUpdates.Ripple = true;
-            this.switchAutomaticUpdates.Size = new System.Drawing.Size(250, 37);
-            this.switchAutomaticUpdates.TabIndex = 10;
-            this.switchAutomaticUpdates.Text = "Disable Automatic Updates";
-            this.switchAutomaticUpdates.UseAccentColor = false;
-            this.switchAutomaticUpdates.UseVisualStyleBackColor = true;
-            // 
-            // progressIndicatorTuneUp
-            // 
-            this.progressIndicatorTuneUp.Location = new System.Drawing.Point(449, 109);
-            this.progressIndicatorTuneUp.MinimumSize = new System.Drawing.Size(50, 50);
-            this.progressIndicatorTuneUp.Name = "progressIndicatorTuneUp";
-            this.progressIndicatorTuneUp.P_AnimationColor = System.Drawing.Color.DimGray;
-            this.progressIndicatorTuneUp.P_AnimationSpeed = 100;
-            this.progressIndicatorTuneUp.P_BaseColor = System.Drawing.Color.DarkGray;
-            this.progressIndicatorTuneUp.Size = new System.Drawing.Size(80, 80);
-            this.progressIndicatorTuneUp.TabIndex = 14;
-            this.progressIndicatorTuneUp.Text = "progressIndicatorTuneUp";
-            // 
-            // switchDesktopCleanUpWizard
-            // 
-            this.switchDesktopCleanUpWizard.AutoSize = true;
-            this.switchDesktopCleanUpWizard.Depth = 0;
-            this.switchDesktopCleanUpWizard.Location = new System.Drawing.Point(87, 98);
-            this.switchDesktopCleanUpWizard.Margin = new System.Windows.Forms.Padding(0);
-            this.switchDesktopCleanUpWizard.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.switchDesktopCleanUpWizard.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
-            this.switchDesktopCleanUpWizard.Name = "switchDesktopCleanUpWizard";
-            this.switchDesktopCleanUpWizard.Ripple = true;
-            this.switchDesktopCleanUpWizard.Size = new System.Drawing.Size(289, 37);
-            this.switchDesktopCleanUpWizard.TabIndex = 11;
-            this.switchDesktopCleanUpWizard.Text = "Disable Desktop CleanUp Wizard";
-            this.switchDesktopCleanUpWizard.UseAccentColor = false;
-            this.switchDesktopCleanUpWizard.UseVisualStyleBackColor = true;
-            // 
-            // switchFeatureUpdates
-            // 
-            this.switchFeatureUpdates.AutoSize = true;
-            this.switchFeatureUpdates.Depth = 0;
-            this.switchFeatureUpdates.Location = new System.Drawing.Point(614, 230);
-            this.switchFeatureUpdates.Margin = new System.Windows.Forms.Padding(0);
-            this.switchFeatureUpdates.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.switchFeatureUpdates.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
-            this.switchFeatureUpdates.Name = "switchFeatureUpdates";
-            this.switchFeatureUpdates.Ripple = true;
-            this.switchFeatureUpdates.Size = new System.Drawing.Size(230, 37);
-            this.switchFeatureUpdates.TabIndex = 13;
-            this.switchFeatureUpdates.Text = "Disable Feature Updates";
-            this.switchFeatureUpdates.UseAccentColor = false;
-            this.switchFeatureUpdates.UseVisualStyleBackColor = true;
-            // 
-            // switchSpeedUpMenuShowDelay
-            // 
-            this.switchSpeedUpMenuShowDelay.AutoSize = true;
-            this.switchSpeedUpMenuShowDelay.Depth = 0;
-            this.switchSpeedUpMenuShowDelay.Location = new System.Drawing.Point(87, 163);
-            this.switchSpeedUpMenuShowDelay.Margin = new System.Windows.Forms.Padding(0);
-            this.switchSpeedUpMenuShowDelay.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.switchSpeedUpMenuShowDelay.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
-            this.switchSpeedUpMenuShowDelay.Name = "switchSpeedUpMenuShowDelay";
-            this.switchSpeedUpMenuShowDelay.Ripple = true;
-            this.switchSpeedUpMenuShowDelay.Size = new System.Drawing.Size(257, 37);
-            this.switchSpeedUpMenuShowDelay.TabIndex = 12;
-            this.switchSpeedUpMenuShowDelay.Text = "Speed Up Menu Show Delay";
-            this.switchSpeedUpMenuShowDelay.UseAccentColor = false;
-            this.switchSpeedUpMenuShowDelay.UseVisualStyleBackColor = true;
-            // 
-            // switchSensorService
-            // 
-            this.switchSensorService.AutoSize = true;
-            this.switchSensorService.Depth = 0;
-            this.switchSensorService.Location = new System.Drawing.Point(614, 162);
-            this.switchSensorService.Margin = new System.Windows.Forms.Padding(0);
-            this.switchSensorService.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.switchSensorService.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
-            this.switchSensorService.Name = "switchSensorService";
-            this.switchSensorService.Ripple = true;
-            this.switchSensorService.Size = new System.Drawing.Size(219, 37);
-            this.switchSensorService.TabIndex = 12;
-            this.switchSensorService.Text = "Disable Sensor Service";
-            this.switchSensorService.UseAccentColor = false;
-            this.switchSensorService.UseVisualStyleBackColor = true;
-            // 
-            // switchAppearanceInPerformance
-            // 
-            this.switchAppearanceInPerformance.AutoSize = true;
-            this.switchAppearanceInPerformance.Depth = 0;
-            this.switchAppearanceInPerformance.Location = new System.Drawing.Point(87, 231);
-            this.switchAppearanceInPerformance.Margin = new System.Windows.Forms.Padding(0);
-            this.switchAppearanceInPerformance.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.switchAppearanceInPerformance.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
-            this.switchAppearanceInPerformance.Name = "switchAppearanceInPerformance";
-            this.switchAppearanceInPerformance.Ripple = true;
-            this.switchAppearanceInPerformance.Size = new System.Drawing.Size(254, 37);
-            this.switchAppearanceInPerformance.TabIndex = 13;
-            this.switchAppearanceInPerformance.Text = "Appearance in Performance";
-            this.switchAppearanceInPerformance.UseAccentColor = false;
-            this.switchAppearanceInPerformance.UseVisualStyleBackColor = true;
-            // 
-            // switchStartMenuAds
-            // 
-            this.switchStartMenuAds.AutoSize = true;
-            this.switchStartMenuAds.Depth = 0;
-            this.switchStartMenuAds.Location = new System.Drawing.Point(614, 97);
-            this.switchStartMenuAds.Margin = new System.Windows.Forms.Padding(0);
-            this.switchStartMenuAds.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.switchStartMenuAds.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
-            this.switchStartMenuAds.Name = "switchStartMenuAds";
-            this.switchStartMenuAds.Ripple = true;
-            this.switchStartMenuAds.Size = new System.Drawing.Size(224, 37);
-            this.switchStartMenuAds.TabIndex = 11;
-            this.switchStartMenuAds.Text = "Disable Start Menu Ads";
-            this.switchStartMenuAds.UseAccentColor = false;
-            this.switchStartMenuAds.UseVisualStyleBackColor = true;
-            // 
-            // switchQuickAccessHistory
-            // 
-            this.switchQuickAccessHistory.AutoSize = true;
-            this.switchQuickAccessHistory.Depth = 0;
-            this.switchQuickAccessHistory.Location = new System.Drawing.Point(614, 31);
-            this.switchQuickAccessHistory.Margin = new System.Windows.Forms.Padding(0);
-            this.switchQuickAccessHistory.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.switchQuickAccessHistory.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
-            this.switchQuickAccessHistory.Name = "switchQuickAccessHistory";
-            this.switchQuickAccessHistory.Ripple = true;
-            this.switchQuickAccessHistory.Size = new System.Drawing.Size(263, 37);
-            this.switchQuickAccessHistory.TabIndex = 10;
-            this.switchQuickAccessHistory.Text = "Disable Quick Access History";
-            this.switchQuickAccessHistory.UseAccentColor = false;
-            this.switchQuickAccessHistory.UseVisualStyleBackColor = true;
             // 
             // pnlSetting
             // 
@@ -1227,10 +1062,248 @@ namespace Avaxi
             this.launcherIcon.Visible = true;
             this.launcherIcon.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.launcherIcon_MouseDoubleClick);
             // 
+            // roundPanel9
+            // 
+            this.roundPanel9.BackColor = System.Drawing.Color.White;
+            this.roundPanel9.Controls.Add(this.btnUSBVaccination);
+            this.roundPanel9.Controls.Add(this.btnSystemInfo);
+            this.roundPanel9.Location = new System.Drawing.Point(653, 20);
+            this.roundPanel9.Name = "roundPanel9";
+            this.roundPanel9.Radious = 25;
+            this.roundPanel9.Size = new System.Drawing.Size(504, 262);
+            this.roundPanel9.TabIndex = 22;
+            this.roundPanel9.TabStop = false;
+            this.roundPanel9.Text = "roundPanel9";
+            this.roundPanel9.TitleBackColor = System.Drawing.Color.White;
+            this.roundPanel9.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 15.8F, System.Drawing.FontStyle.Bold);
+            this.roundPanel9.TitleForeColor = System.Drawing.Color.White;
+            this.roundPanel9.TitleHatchStyle = System.Drawing.Drawing2D.HatchStyle.Horizontal;
+            // 
+            // btnUSBVaccination
+            // 
+            this.btnUSBVaccination.BackColor = System.Drawing.Color.White;
+            this.btnUSBVaccination.BaseColor = System.Drawing.Color.AliceBlue;
+            this.btnUSBVaccination.BorderColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnUSBVaccination.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnUSBVaccination.DisabledBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
+            this.btnUSBVaccination.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(209)))), ((int)(((byte)(209)))));
+            this.btnUSBVaccination.DisabledTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(178)))), ((int)(((byte)(190)))));
+            this.btnUSBVaccination.DownColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
+            this.btnUSBVaccination.EnabledCalc = true;
+            this.btnUSBVaccination.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUSBVaccination.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnUSBVaccination.Location = new System.Drawing.Point(146, 62);
+            this.btnUSBVaccination.Name = "btnUSBVaccination";
+            this.btnUSBVaccination.OverColor = System.Drawing.Color.White;
+            this.btnUSBVaccination.Size = new System.Drawing.Size(243, 54);
+            this.btnUSBVaccination.TabIndex = 18;
+            this.btnUSBVaccination.Text = "USB Vaccination";
+            this.btnUSBVaccination.Click += new ReaLTaiizor.Util.FoxBase.ButtonFoxBase.ClickEventHandler(this.btnUSBVaccination_Click);
+            // 
+            // btnSystemInfo
+            // 
+            this.btnSystemInfo.BaseColor = System.Drawing.Color.AliceBlue;
+            this.btnSystemInfo.BorderColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnSystemInfo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSystemInfo.DisabledBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
+            this.btnSystemInfo.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(209)))), ((int)(((byte)(209)))));
+            this.btnSystemInfo.DisabledTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(178)))), ((int)(((byte)(190)))));
+            this.btnSystemInfo.DownColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
+            this.btnSystemInfo.EnabledCalc = true;
+            this.btnSystemInfo.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSystemInfo.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnSystemInfo.Location = new System.Drawing.Point(146, 160);
+            this.btnSystemInfo.Name = "btnSystemInfo";
+            this.btnSystemInfo.OverColor = System.Drawing.Color.White;
+            this.btnSystemInfo.Size = new System.Drawing.Size(243, 50);
+            this.btnSystemInfo.TabIndex = 19;
+            this.btnSystemInfo.Text = "SystemInfo";
+            this.btnSystemInfo.Click += new ReaLTaiizor.Util.FoxBase.ButtonFoxBase.ClickEventHandler(this.btnSystemInfo_Click);
+            // 
+            // roundPanel8
+            // 
+            this.roundPanel8.BackColor = System.Drawing.Color.White;
+            this.roundPanel8.Controls.Add(this.switchFireWall);
+            this.roundPanel8.Controls.Add(this.switchLabelFireWall);
+            this.roundPanel8.Controls.Add(this.label63);
+            this.roundPanel8.Controls.Add(this.switchLabelAutoScanUSB);
+            this.roundPanel8.Controls.Add(this.label61);
+            this.roundPanel8.Controls.Add(this.switchLabelRealTimeProtection);
+            this.roundPanel8.Controls.Add(this.label39);
+            this.roundPanel8.Controls.Add(this.label59);
+            this.roundPanel8.Controls.Add(this.switchRealTimeProtection);
+            this.roundPanel8.Controls.Add(this.switchAutoScanUSB);
+            this.roundPanel8.Location = new System.Drawing.Point(39, 20);
+            this.roundPanel8.Name = "roundPanel8";
+            this.roundPanel8.Radious = 25;
+            this.roundPanel8.Size = new System.Drawing.Size(598, 262);
+            this.roundPanel8.TabIndex = 21;
+            this.roundPanel8.TabStop = false;
+            this.roundPanel8.Text = "roundPanel8";
+            this.roundPanel8.TitleBackColor = System.Drawing.Color.White;
+            this.roundPanel8.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 15.8F, System.Drawing.FontStyle.Bold);
+            this.roundPanel8.TitleForeColor = System.Drawing.Color.White;
+            this.roundPanel8.TitleHatchStyle = System.Drawing.Drawing2D.HatchStyle.Horizontal;
+            // 
+            // switchLabelFireWall
+            // 
+            this.switchLabelFireWall.BackColor = System.Drawing.Color.Transparent;
+            this.switchLabelFireWall.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.switchLabelFireWall.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.switchLabelFireWall.ForeColor = System.Drawing.Color.Black;
+            this.switchLabelFireWall.Image = global::Avaxi.Properties.Resources.set_yes;
+            this.switchLabelFireWall.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.switchLabelFireWall.Location = new System.Drawing.Point(270, 118);
+            this.switchLabelFireWall.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.switchLabelFireWall.Name = "switchLabelFireWall";
+            this.switchLabelFireWall.Size = new System.Drawing.Size(47, 40);
+            this.switchLabelFireWall.TabIndex = 30;
+            this.switchLabelFireWall.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.switchLabelFireWall.Click += new System.EventHandler(this.switchLabelFireWall_Click);
+            // 
+            // label63
+            // 
+            this.label63.BackColor = System.Drawing.Color.Transparent;
+            this.label63.Cursor = System.Windows.Forms.Cursors.Default;
+            this.label63.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label63.ForeColor = System.Drawing.Color.Black;
+            this.label63.Location = new System.Drawing.Point(317, 118);
+            this.label63.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label63.Name = "label63";
+            this.label63.Size = new System.Drawing.Size(261, 40);
+            this.label63.TabIndex = 29;
+            this.label63.Text = "FireWall";
+            this.label63.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // switchLabelAutoScanUSB
+            // 
+            this.switchLabelAutoScanUSB.BackColor = System.Drawing.Color.Transparent;
+            this.switchLabelAutoScanUSB.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.switchLabelAutoScanUSB.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.switchLabelAutoScanUSB.ForeColor = System.Drawing.Color.Black;
+            this.switchLabelAutoScanUSB.Image = global::Avaxi.Properties.Resources.set_yes;
+            this.switchLabelAutoScanUSB.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.switchLabelAutoScanUSB.Location = new System.Drawing.Point(270, 71);
+            this.switchLabelAutoScanUSB.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.switchLabelAutoScanUSB.Name = "switchLabelAutoScanUSB";
+            this.switchLabelAutoScanUSB.Size = new System.Drawing.Size(47, 40);
+            this.switchLabelAutoScanUSB.TabIndex = 28;
+            this.switchLabelAutoScanUSB.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.switchLabelAutoScanUSB.Click += new System.EventHandler(this.switchLabelAutoScanUSB_Click);
+            // 
+            // label61
+            // 
+            this.label61.BackColor = System.Drawing.Color.Transparent;
+            this.label61.Cursor = System.Windows.Forms.Cursors.Default;
+            this.label61.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label61.ForeColor = System.Drawing.Color.Black;
+            this.label61.Location = new System.Drawing.Point(317, 71);
+            this.label61.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label61.Name = "label61";
+            this.label61.Size = new System.Drawing.Size(261, 40);
+            this.label61.TabIndex = 27;
+            this.label61.Text = "AutoScan USB";
+            this.label61.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // switchLabelRealTimeProtection
+            // 
+            this.switchLabelRealTimeProtection.BackColor = System.Drawing.Color.Transparent;
+            this.switchLabelRealTimeProtection.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.switchLabelRealTimeProtection.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.switchLabelRealTimeProtection.ForeColor = System.Drawing.Color.Black;
+            this.switchLabelRealTimeProtection.Image = global::Avaxi.Properties.Resources.set_yes;
+            this.switchLabelRealTimeProtection.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.switchLabelRealTimeProtection.Location = new System.Drawing.Point(270, 23);
+            this.switchLabelRealTimeProtection.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.switchLabelRealTimeProtection.Name = "switchLabelRealTimeProtection";
+            this.switchLabelRealTimeProtection.Size = new System.Drawing.Size(47, 40);
+            this.switchLabelRealTimeProtection.TabIndex = 26;
+            this.switchLabelRealTimeProtection.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.switchLabelRealTimeProtection.Click += new System.EventHandler(this.switchLabelRealTimeProtection_Click);
+            // 
+            // label39
+            // 
+            this.label39.BackColor = System.Drawing.Color.Transparent;
+            this.label39.Cursor = System.Windows.Forms.Cursors.Default;
+            this.label39.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label39.ForeColor = System.Drawing.Color.Black;
+            this.label39.Location = new System.Drawing.Point(19, 18);
+            this.label39.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(146, 40);
+            this.label39.TabIndex = 8;
+            this.label39.Text = "Settings";
+            this.label39.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label59
+            // 
+            this.label59.BackColor = System.Drawing.Color.Transparent;
+            this.label59.Cursor = System.Windows.Forms.Cursors.Default;
+            this.label59.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label59.ForeColor = System.Drawing.Color.Black;
+            this.label59.Location = new System.Drawing.Point(317, 23);
+            this.label59.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label59.Name = "label59";
+            this.label59.Size = new System.Drawing.Size(261, 40);
+            this.label59.TabIndex = 25;
+            this.label59.Text = "Real-Time Protection";
+            this.label59.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // switchFireWall
+            // 
+            this.switchFireWall.AutoSize = true;
+            this.switchFireWall.Depth = 0;
+            this.switchFireWall.Location = new System.Drawing.Point(51, 191);
+            this.switchFireWall.Margin = new System.Windows.Forms.Padding(0);
+            this.switchFireWall.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.switchFireWall.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
+            this.switchFireWall.Name = "switchFireWall";
+            this.switchFireWall.Ripple = true;
+            this.switchFireWall.Size = new System.Drawing.Size(115, 37);
+            this.switchFireWall.TabIndex = 13;
+            this.switchFireWall.Text = "FireWall";
+            this.switchFireWall.UseAccentColor = false;
+            this.switchFireWall.UseVisualStyleBackColor = true;
+            this.switchFireWall.CheckedChanged += new System.EventHandler(this.switchFireWall_CheckedChanged);
+            // 
+            // switchRealTimeProtection
+            // 
+            this.switchRealTimeProtection.AutoSize = true;
+            this.switchRealTimeProtection.Depth = 0;
+            this.switchRealTimeProtection.Location = new System.Drawing.Point(38, 79);
+            this.switchRealTimeProtection.Margin = new System.Windows.Forms.Padding(0);
+            this.switchRealTimeProtection.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.switchRealTimeProtection.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
+            this.switchRealTimeProtection.Name = "switchRealTimeProtection";
+            this.switchRealTimeProtection.Ripple = true;
+            this.switchRealTimeProtection.Size = new System.Drawing.Size(205, 37);
+            this.switchRealTimeProtection.TabIndex = 11;
+            this.switchRealTimeProtection.Text = "Real-Time Protection";
+            this.switchRealTimeProtection.UseAccentColor = false;
+            this.switchRealTimeProtection.UseVisualStyleBackColor = true;
+            this.switchRealTimeProtection.CheckedChanged += new System.EventHandler(this.switchRealTimeProtection_CheckedChanged);
+            // 
+            // switchAutoScanUSB
+            // 
+            this.switchAutoScanUSB.AutoSize = true;
+            this.switchAutoScanUSB.Depth = 0;
+            this.switchAutoScanUSB.Location = new System.Drawing.Point(38, 139);
+            this.switchAutoScanUSB.Margin = new System.Windows.Forms.Padding(0);
+            this.switchAutoScanUSB.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.switchAutoScanUSB.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
+            this.switchAutoScanUSB.Name = "switchAutoScanUSB";
+            this.switchAutoScanUSB.Ripple = true;
+            this.switchAutoScanUSB.Size = new System.Drawing.Size(161, 37);
+            this.switchAutoScanUSB.TabIndex = 12;
+            this.switchAutoScanUSB.Text = "AutoScan USB";
+            this.switchAutoScanUSB.UseAccentColor = false;
+            this.switchAutoScanUSB.UseVisualStyleBackColor = true;
+            // 
             // roundPanel10
             // 
             this.roundPanel10.BackColor = System.Drawing.Color.White;
             this.roundPanel10.Controls.Add(this.switchLabelFeatureUpdates);
+            this.roundPanel10.Controls.Add(this.progressIndicatorTuneUp);
             this.roundPanel10.Controls.Add(this.switchLabelSensorService);
             this.roundPanel10.Controls.Add(this.switchLabelStartMenuAds);
             this.roundPanel10.Controls.Add(this.switchLabelQuickAccessHistory);
@@ -1274,6 +1347,18 @@ namespace Avaxi
             this.switchLabelFeatureUpdates.TabIndex = 31;
             this.switchLabelFeatureUpdates.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.switchLabelFeatureUpdates.Click += new System.EventHandler(this.switchLabelFeatureUpdates_Click);
+            // 
+            // progressIndicatorTuneUp
+            // 
+            this.progressIndicatorTuneUp.Location = new System.Drawing.Point(447, 130);
+            this.progressIndicatorTuneUp.MinimumSize = new System.Drawing.Size(50, 50);
+            this.progressIndicatorTuneUp.Name = "progressIndicatorTuneUp";
+            this.progressIndicatorTuneUp.P_AnimationColor = System.Drawing.Color.DimGray;
+            this.progressIndicatorTuneUp.P_AnimationSpeed = 100;
+            this.progressIndicatorTuneUp.P_BaseColor = System.Drawing.Color.DarkGray;
+            this.progressIndicatorTuneUp.Size = new System.Drawing.Size(80, 80);
+            this.progressIndicatorTuneUp.TabIndex = 14;
+            this.progressIndicatorTuneUp.Text = "progressIndicatorTuneUp";
             // 
             // switchLabelSensorService
             // 
@@ -1722,7 +1807,7 @@ namespace Avaxi
             // 
             // roundPanel7
             // 
-            this.roundPanel7.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.roundPanel7.BackColor = System.Drawing.Color.White;
             this.roundPanel7.Controls.Add(this.label37);
             this.roundPanel7.Controls.Add(this.btnTemporary);
             this.roundPanel7.Controls.Add(this.btnCleaner);
@@ -1734,7 +1819,7 @@ namespace Avaxi
             this.roundPanel7.TabIndex = 37;
             this.roundPanel7.TabStop = false;
             this.roundPanel7.Text = "roundPanel7";
-            this.roundPanel7.TitleBackColor = System.Drawing.Color.WhiteSmoke;
+            this.roundPanel7.TitleBackColor = System.Drawing.Color.White;
             this.roundPanel7.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 15.8F, System.Drawing.FontStyle.Bold);
             this.roundPanel7.TitleForeColor = System.Drawing.Color.White;
             this.roundPanel7.TitleHatchStyle = System.Drawing.Drawing2D.HatchStyle.Horizontal;
@@ -1768,7 +1853,7 @@ namespace Avaxi
             this.btnTemporary.ForeColor = System.Drawing.Color.DeepSkyBlue;
             this.btnTemporary.Location = new System.Drawing.Point(263, 103);
             this.btnTemporary.Name = "btnTemporary";
-            this.btnTemporary.OverColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.btnTemporary.OverColor = System.Drawing.Color.White;
             this.btnTemporary.Size = new System.Drawing.Size(212, 68);
             this.btnTemporary.TabIndex = 31;
             this.btnTemporary.Text = "Temporary";
@@ -1789,7 +1874,7 @@ namespace Avaxi
             this.btnCleaner.ForeColor = System.Drawing.Color.DeepSkyBlue;
             this.btnCleaner.Location = new System.Drawing.Point(28, 103);
             this.btnCleaner.Name = "btnCleaner";
-            this.btnCleaner.OverColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.btnCleaner.OverColor = System.Drawing.Color.White;
             this.btnCleaner.Size = new System.Drawing.Size(221, 68);
             this.btnCleaner.TabIndex = 30;
             this.btnCleaner.Text = "Cleaner";
@@ -1810,7 +1895,7 @@ namespace Avaxi
             this.btnRegistry.ForeColor = System.Drawing.Color.DeepSkyBlue;
             this.btnRegistry.Location = new System.Drawing.Point(488, 103);
             this.btnRegistry.Name = "btnRegistry";
-            this.btnRegistry.OverColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.btnRegistry.OverColor = System.Drawing.Color.White;
             this.btnRegistry.Size = new System.Drawing.Size(218, 68);
             this.btnRegistry.TabIndex = 32;
             this.btnRegistry.Text = "Registry";
@@ -1818,19 +1903,19 @@ namespace Avaxi
             // 
             // roundPanel6
             // 
-            this.roundPanel6.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.roundPanel6.BackColor = System.Drawing.Color.White;
             this.roundPanel6.Controls.Add(this.checkClearMemory);
             this.roundPanel6.Controls.Add(this.checkClearCache);
             this.roundPanel6.Controls.Add(this.btnClearMemory);
             this.roundPanel6.Controls.Add(this.circularProgressBar1);
-            this.roundPanel6.Location = new System.Drawing.Point(430, 32);
+            this.roundPanel6.Location = new System.Drawing.Point(431, 32);
             this.roundPanel6.Name = "roundPanel6";
             this.roundPanel6.Radious = 25;
-            this.roundPanel6.Size = new System.Drawing.Size(727, 327);
+            this.roundPanel6.Size = new System.Drawing.Size(724, 326);
             this.roundPanel6.TabIndex = 36;
             this.roundPanel6.TabStop = false;
             this.roundPanel6.Text = "roundPanel6";
-            this.roundPanel6.TitleBackColor = System.Drawing.Color.WhiteSmoke;
+            this.roundPanel6.TitleBackColor = System.Drawing.Color.White;
             this.roundPanel6.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 15.8F, System.Drawing.FontStyle.Bold);
             this.roundPanel6.TitleForeColor = System.Drawing.Color.White;
             this.roundPanel6.TitleHatchStyle = System.Drawing.Drawing2D.HatchStyle.Horizontal;
@@ -1878,7 +1963,7 @@ namespace Avaxi
             this.btnClearMemory.ForeColor = System.Drawing.Color.DeepSkyBlue;
             this.btnClearMemory.Location = new System.Drawing.Point(28, 230);
             this.btnClearMemory.Name = "btnClearMemory";
-            this.btnClearMemory.OverColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.btnClearMemory.OverColor = System.Drawing.Color.White;
             this.btnClearMemory.Size = new System.Drawing.Size(221, 66);
             this.btnClearMemory.TabIndex = 29;
             this.btnClearMemory.Text = "Clear memory";
@@ -1920,7 +2005,7 @@ namespace Avaxi
             // 
             // roundPanel5
             // 
-            this.roundPanel5.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.roundPanel5.BackColor = System.Drawing.Color.White;
             this.roundPanel5.Controls.Add(this.btnOptimizePC);
             this.roundPanel5.Controls.Add(this.label29);
             this.roundPanel5.Controls.Add(this.panel5);
@@ -1931,7 +2016,7 @@ namespace Avaxi
             this.roundPanel5.TabIndex = 34;
             this.roundPanel5.TabStop = false;
             this.roundPanel5.Text = "roundPanel5";
-            this.roundPanel5.TitleBackColor = System.Drawing.Color.WhiteSmoke;
+            this.roundPanel5.TitleBackColor = System.Drawing.Color.White;
             this.roundPanel5.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 15.8F, System.Drawing.FontStyle.Bold);
             this.roundPanel5.TitleForeColor = System.Drawing.Color.White;
             this.roundPanel5.TitleHatchStyle = System.Drawing.Drawing2D.HatchStyle.Horizontal;
@@ -2506,147 +2591,6 @@ namespace Avaxi
             this.label26.Text = "Crypto Security";
             this.label26.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // roundPanel9
-            // 
-            this.roundPanel9.BackColor = System.Drawing.Color.White;
-            this.roundPanel9.Controls.Add(this.btnUSBVaccination);
-            this.roundPanel9.Controls.Add(this.btnSystemInfo);
-            this.roundPanel9.Location = new System.Drawing.Point(653, 20);
-            this.roundPanel9.Name = "roundPanel9";
-            this.roundPanel9.Radious = 25;
-            this.roundPanel9.Size = new System.Drawing.Size(504, 262);
-            this.roundPanel9.TabIndex = 22;
-            this.roundPanel9.TabStop = false;
-            this.roundPanel9.Text = "roundPanel9";
-            this.roundPanel9.TitleBackColor = System.Drawing.Color.White;
-            this.roundPanel9.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 15.8F, System.Drawing.FontStyle.Bold);
-            this.roundPanel9.TitleForeColor = System.Drawing.Color.White;
-            this.roundPanel9.TitleHatchStyle = System.Drawing.Drawing2D.HatchStyle.Horizontal;
-            // 
-            // btnUSBVaccination
-            // 
-            this.btnUSBVaccination.BackColor = System.Drawing.Color.White;
-            this.btnUSBVaccination.BaseColor = System.Drawing.Color.AliceBlue;
-            this.btnUSBVaccination.BorderColor = System.Drawing.Color.DeepSkyBlue;
-            this.btnUSBVaccination.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnUSBVaccination.DisabledBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
-            this.btnUSBVaccination.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(209)))), ((int)(((byte)(209)))));
-            this.btnUSBVaccination.DisabledTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(178)))), ((int)(((byte)(190)))));
-            this.btnUSBVaccination.DownColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
-            this.btnUSBVaccination.EnabledCalc = true;
-            this.btnUSBVaccination.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUSBVaccination.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.btnUSBVaccination.Location = new System.Drawing.Point(146, 62);
-            this.btnUSBVaccination.Name = "btnUSBVaccination";
-            this.btnUSBVaccination.OverColor = System.Drawing.Color.Gray;
-            this.btnUSBVaccination.Size = new System.Drawing.Size(243, 54);
-            this.btnUSBVaccination.TabIndex = 18;
-            this.btnUSBVaccination.Text = "USB Vaccination";
-            this.btnUSBVaccination.Click += new ReaLTaiizor.Util.FoxBase.ButtonFoxBase.ClickEventHandler(this.btnUSBVaccination_Click);
-            // 
-            // btnSystemInfo
-            // 
-            this.btnSystemInfo.BaseColor = System.Drawing.Color.AliceBlue;
-            this.btnSystemInfo.BorderColor = System.Drawing.Color.DeepSkyBlue;
-            this.btnSystemInfo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSystemInfo.DisabledBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
-            this.btnSystemInfo.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(209)))), ((int)(((byte)(209)))));
-            this.btnSystemInfo.DisabledTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(178)))), ((int)(((byte)(190)))));
-            this.btnSystemInfo.DownColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
-            this.btnSystemInfo.EnabledCalc = true;
-            this.btnSystemInfo.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSystemInfo.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.btnSystemInfo.Location = new System.Drawing.Point(146, 160);
-            this.btnSystemInfo.Name = "btnSystemInfo";
-            this.btnSystemInfo.OverColor = System.Drawing.Color.Gray;
-            this.btnSystemInfo.Size = new System.Drawing.Size(243, 50);
-            this.btnSystemInfo.TabIndex = 19;
-            this.btnSystemInfo.Text = "SystemInfo";
-            this.btnSystemInfo.Click += new ReaLTaiizor.Util.FoxBase.ButtonFoxBase.ClickEventHandler(this.btnSystemInfo_Click);
-            // 
-            // roundPanel8
-            // 
-            this.roundPanel8.BackColor = System.Drawing.Color.White;
-            this.roundPanel8.Controls.Add(this.label39);
-            this.roundPanel8.Controls.Add(this.switchFireWall);
-            this.roundPanel8.Controls.Add(this.switchRealTimeProtection);
-            this.roundPanel8.Controls.Add(this.switchAutoScanUSB);
-            this.roundPanel8.Location = new System.Drawing.Point(39, 20);
-            this.roundPanel8.Name = "roundPanel8";
-            this.roundPanel8.Radious = 25;
-            this.roundPanel8.Size = new System.Drawing.Size(598, 262);
-            this.roundPanel8.TabIndex = 21;
-            this.roundPanel8.TabStop = false;
-            this.roundPanel8.Text = "roundPanel8";
-            this.roundPanel8.TitleBackColor = System.Drawing.Color.White;
-            this.roundPanel8.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 15.8F, System.Drawing.FontStyle.Bold);
-            this.roundPanel8.TitleForeColor = System.Drawing.Color.White;
-            this.roundPanel8.TitleHatchStyle = System.Drawing.Drawing2D.HatchStyle.Horizontal;
-            // 
-            // label39
-            // 
-            this.label39.BackColor = System.Drawing.Color.Transparent;
-            this.label39.Cursor = System.Windows.Forms.Cursors.Default;
-            this.label39.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label39.ForeColor = System.Drawing.Color.Black;
-            this.label39.Location = new System.Drawing.Point(19, 18);
-            this.label39.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(146, 40);
-            this.label39.TabIndex = 8;
-            this.label39.Text = "Settings";
-            this.label39.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // switchFireWall
-            // 
-            this.switchFireWall.AutoSize = true;
-            this.switchFireWall.Depth = 0;
-            this.switchFireWall.Location = new System.Drawing.Point(38, 198);
-            this.switchFireWall.Margin = new System.Windows.Forms.Padding(0);
-            this.switchFireWall.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.switchFireWall.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
-            this.switchFireWall.Name = "switchFireWall";
-            this.switchFireWall.Ripple = true;
-            this.switchFireWall.Size = new System.Drawing.Size(115, 37);
-            this.switchFireWall.TabIndex = 13;
-            this.switchFireWall.Text = "FireWall";
-            this.switchFireWall.UseAccentColor = false;
-            this.switchFireWall.UseVisualStyleBackColor = true;
-            this.switchFireWall.CheckedChanged += new System.EventHandler(this.switchFireWall_CheckedChanged);
-            // 
-            // switchRealTimeProtection
-            // 
-            this.switchRealTimeProtection.AutoSize = true;
-            this.switchRealTimeProtection.Depth = 0;
-            this.switchRealTimeProtection.Location = new System.Drawing.Point(38, 79);
-            this.switchRealTimeProtection.Margin = new System.Windows.Forms.Padding(0);
-            this.switchRealTimeProtection.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.switchRealTimeProtection.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
-            this.switchRealTimeProtection.Name = "switchRealTimeProtection";
-            this.switchRealTimeProtection.Ripple = true;
-            this.switchRealTimeProtection.Size = new System.Drawing.Size(205, 37);
-            this.switchRealTimeProtection.TabIndex = 11;
-            this.switchRealTimeProtection.Text = "Real-Time Protection";
-            this.switchRealTimeProtection.UseAccentColor = false;
-            this.switchRealTimeProtection.UseVisualStyleBackColor = true;
-            this.switchRealTimeProtection.CheckedChanged += new System.EventHandler(this.switchRealTimeProtection_CheckedChanged);
-            // 
-            // switchAutoScanUSB
-            // 
-            this.switchAutoScanUSB.AutoSize = true;
-            this.switchAutoScanUSB.Depth = 0;
-            this.switchAutoScanUSB.Location = new System.Drawing.Point(38, 139);
-            this.switchAutoScanUSB.Margin = new System.Windows.Forms.Padding(0);
-            this.switchAutoScanUSB.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.switchAutoScanUSB.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
-            this.switchAutoScanUSB.Name = "switchAutoScanUSB";
-            this.switchAutoScanUSB.Ripple = true;
-            this.switchAutoScanUSB.Size = new System.Drawing.Size(161, 37);
-            this.switchAutoScanUSB.TabIndex = 12;
-            this.switchAutoScanUSB.Text = "AutoScan USB";
-            this.switchAutoScanUSB.UseAccentColor = false;
-            this.switchAutoScanUSB.UseVisualStyleBackColor = true;
-            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -2654,16 +2598,16 @@ namespace Avaxi
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(1369, 793);
             this.ControlBox = false;
-            this.Controls.Add(this.pnlTuneUp);
-            this.Controls.Add(this.pnlShield);
+            this.Controls.Add(this.pnlSetting);
             this.Controls.Add(this.pnlOptimize);
+            this.Controls.Add(this.pnlTuneUp);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlShield);
             this.Controls.Add(this.pnlScan);
             this.Controls.Add(this.pnlCrypto);
             this.Controls.Add(this.pnlDelete);
             this.Controls.Add(this.pnlFormScan);
-            this.Controls.Add(this.pnlSetting);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -2686,8 +2630,6 @@ namespace Avaxi
             this.pnlCrypto.ResumeLayout(false);
             this.pnlOptimize.ResumeLayout(false);
             this.pnlTuneUp.ResumeLayout(false);
-            this.panel11.ResumeLayout(false);
-            this.panel11.PerformLayout();
             this.pnlSetting.ResumeLayout(false);
             this.launcherMenu.ResumeLayout(false);
             this.pnlFormScan.ResumeLayout(false);
@@ -2695,6 +2637,9 @@ namespace Avaxi
             this.pnlDelete.ResumeLayout(false);
             this.pnlDelete.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.objectListView1)).EndInit();
+            this.roundPanel9.ResumeLayout(false);
+            this.roundPanel8.ResumeLayout(false);
+            this.roundPanel8.PerformLayout();
             this.roundPanel10.ResumeLayout(false);
             this.roundPanel1.ResumeLayout(false);
             this.panel16.ResumeLayout(false);
@@ -2714,9 +2659,6 @@ namespace Avaxi
             this.panel17.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
-            this.roundPanel9.ResumeLayout(false);
-            this.roundPanel8.ResumeLayout(false);
-            this.roundPanel8.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2823,14 +2765,6 @@ namespace Avaxi
         private ReaLTaiizor.Controls.FoxButton btnTemporary;
         private ReaLTaiizor.Controls.FoxButton btnCleaner;
         private ReaLTaiizor.Controls.ProgressIndicator progressIndicatorTuneUp;
-        private ReaLTaiizor.Controls.MaterialSwitch switchFeatureUpdates;
-        private ReaLTaiizor.Controls.MaterialSwitch switchAppearanceInPerformance;
-        private ReaLTaiizor.Controls.MaterialSwitch switchSensorService;
-        private ReaLTaiizor.Controls.MaterialSwitch switchSpeedUpMenuShowDelay;
-        private ReaLTaiizor.Controls.MaterialSwitch switchStartMenuAds;
-        private ReaLTaiizor.Controls.MaterialSwitch switchDesktopCleanUpWizard;
-        private ReaLTaiizor.Controls.MaterialSwitch switchQuickAccessHistory;
-        private ReaLTaiizor.Controls.MaterialSwitch switchAutomaticUpdates;
 
         private bool flagFeatureUpdates;
         private bool flagAppearanceInPerformance;
@@ -2841,7 +2775,10 @@ namespace Avaxi
         private bool flagQuickAccessHistory;
         private bool flagAutomaticUpdates;
 
-        private System.Windows.Forms.Panel panel11;
+        private bool flagRealTimeProtection;
+        private bool flagAutoScanUSB;
+        private bool flagFireWall;
+
         private System.Windows.Forms.Label label50;
         private System.Windows.Forms.Label label49;
         private RoundPanel roundPanel1;
@@ -2891,6 +2828,12 @@ namespace Avaxi
         private System.Windows.Forms.Label switchLabelAppearanceInPerformance;
         private System.Windows.Forms.Label switchLabelSpeedUpMenuShowDelay;
         private System.Windows.Forms.Label switchLabelDesktopCleanUpWizard;
+        private System.Windows.Forms.Label switchLabelRealTimeProtection;
+        private System.Windows.Forms.Label label59;
+        private System.Windows.Forms.Label switchLabelFireWall;
+        private System.Windows.Forms.Label label63;
+        private System.Windows.Forms.Label switchLabelAutoScanUSB;
+        private System.Windows.Forms.Label label61;
         //private System.Windows.Forms.NotifyIcon notifyIcon1;
     }
 }

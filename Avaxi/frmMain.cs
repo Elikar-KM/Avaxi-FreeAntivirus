@@ -239,7 +239,7 @@ namespace Avaxi
         {
             if (e.State == UsbStateChange.Added)
             {
-                if (switchAutoScanUSB.Checked)
+                if (this.flagAutoScanUSB)
                 {
                     if(scanType == -1)
                     {
@@ -265,6 +265,14 @@ namespace Avaxi
                 label.Image = Avaxi.Properties.Resources.off;
         }
 
+        private void SetYesNo(Label label, bool flag)
+        {
+            if (flag)
+                label.Image = Avaxi.Properties.Resources.set_yes;
+            else
+                label.Image = Avaxi.Properties.Resources.set_no;
+        }
+
         List<Section> AllSections = new List<Section>();
         List<Registry> AllSectionsRegistry = new List<Registry>();
         List<StartupManager> MonitorStartup = new List<StartupManager>();
@@ -272,16 +280,9 @@ namespace Avaxi
         private void frmMain_Load(object sender, EventArgs e)
         {
             //AddToRegistry();
-            this.switchAppearanceInPerformance.Checked = Program.tuneAppearanceInPerformance;
-            this.switchAutomaticUpdates.Checked = Program.tuneAutomaticUpdates;
-            this.switchDesktopCleanUpWizard.Checked = Program.tuneDesktopCleanUpWizard;
-            this.switchFeatureUpdates.Checked = Program.tuneFeatureUpdates;
-            this.switchSpeedUpMenuShowDelay.Checked = Program.tuneMenuShowDelay;
-            this.switchQuickAccessHistory.Checked = Program.tuneQuickAccessHistory;
-            this.switchSensorService.Checked = Program.tuneSensorService;
-            this.switchStartMenuAds.Checked = Program.tuneStartMenuAds;
-            this.switchRealTimeProtection.Checked = Program.RealTimeProtection;
-            this.switchAutoScanUSB.Checked = Program.AutoUSBScanner;
+            
+            this.flagRealTimeProtection = Program.RealTimeProtection;
+            this.flagAutoScanUSB = Program.AutoUSBScanner;
 
             this.flagFeatureUpdates = Program.tuneFeatureUpdates;
             this.flagAppearanceInPerformance = Program.tuneAppearanceInPerformance;
@@ -306,6 +307,9 @@ namespace Avaxi
             SetSwitch(this.switchLabelSensorService, this.flagSensorService);
             SetSwitch(this.switchLabelSpeedUpMenuShowDelay, this.flagSpeedUpMenuShowDelay);
             SetSwitch(this.switchLabelStartMenuAds, this.flagStartMenuAds);
+            // Settings page : format
+            SetYesNo(this.switchLabelRealTimeProtection, this.flagRealTimeProtection);
+            SetYesNo(this.switchLabelAutoScanUSB, this.flagAutoScanUSB);
 
             // Protection Status view (anti-phishing, anti-cryptojacking, anti-ransomware, anti-affiliate offers)
             if (flagPhishing)
@@ -433,12 +437,14 @@ namespace Avaxi
             //firewall setting
             if (firewall.firewallOn)
             {
-                this.switchFireWall.Checked = true;
+                //this.switchFireWall.Checked = true;
+                this.flagFireWall = true;
                 //Avaxi.PushLog("Firewall is on.");
             }
             else
             {
-                this.switchFireWall.Checked = false;
+                //this.switchFireWall.Checked = false;
+                this.flagFireWall = false;
                 //Avaxi.PushLog("Firewall is off.");
             }
 
@@ -851,8 +857,8 @@ namespace Avaxi
             Program.tuneStartMenuAds = this.flagStartMenuAds;
             Program.optClearCache = this.checkClearCache.Checked;
             Program.optClearMemory = this.checkClearMemory.Checked;
-            Program.RealTimeProtection = this.switchRealTimeProtection.Checked;
-            Program.AutoUSBScanner = this.switchAutoScanUSB.Checked;
+            Program.RealTimeProtection = this.flagRealTimeProtection;
+            Program.AutoUSBScanner = this.flagAutoScanUSB;
             Program.flagPhishing = this.flagPhishing;
             Program.flagCryptojacking = this.flagCryptojacking;
             Program.flagRansomware = this.flagRansomware;
@@ -1810,6 +1816,71 @@ namespace Avaxi
             {
                 this.flagFeatureUpdates = true;
                 this.switchLabelFeatureUpdates.Image = Avaxi.Properties.Resources.on;
+            }
+        }
+
+        private void switchLabelRealTimeProtection_Click(object sender, EventArgs e)
+        {
+            if (!this.flagRealTimeProtection)
+            {
+                this.flagRealTimeProtection = true;
+                this.switchLabelRealTimeProtection.Image = Avaxi.Properties.Resources.set_yes;
+                launcherIcon.ShowBalloonTip(5, "Avaxi", "The live protection is enabled", ToolTipIcon.Info);
+                label6.Image = global::Avaxi.Properties.Resources.check;
+                label13.Text = "The live protection is enabled";
+                label13.ForeColor = Color.White;
+            }
+            else
+            {
+                this.flagRealTimeProtection = false;
+                this.switchLabelRealTimeProtection.Image = Avaxi.Properties.Resources.set_no;
+                launcherIcon.ShowBalloonTip(5, "Avaxi", "The live protection is disabled", ToolTipIcon.Info);
+                label6.Image = global::Avaxi.Properties.Resources.cross;
+                label13.Text = "The live protection is disabled";
+                label13.ForeColor = Color.Gray;
+            }
+        }
+
+        private void switchLabelFireWall_Click(object sender, EventArgs e)
+        {
+            //reflect firewall settings
+            if (!this.flagFireWall)
+            {
+                this.flagFireWall = true;
+                this.switchLabelFireWall.Image = Avaxi.Properties.Resources.set_yes;
+                launcherIcon.ShowBalloonTip(5, "Avaxi", "Firewall is turned on successfully", ToolTipIcon.Info);
+                Task.Run(delegate ()
+                {
+                    firewall.FirewallStart(true);
+                    PushLog("Firewall is turned on sucessfully.");
+                });
+            }
+            else
+            {
+                this.flagFireWall = false;
+                this.switchLabelFireWall.Image = Avaxi.Properties.Resources.set_no;
+                launcherIcon.ShowBalloonTip(5, "Avaxi", "Firewall is turned off successfully", ToolTipIcon.Info);
+                Task.Run(delegate ()
+                {
+                    shell.RunExternalExe("netsh.exe", "Firewall set opmode disable");
+                    PushLog("Firewall is turned off sucessfully.");
+                });
+            }
+        }
+
+        private void switchLabelAutoScanUSB_Click(object sender, EventArgs e)
+        {
+            if (this.flagAutoScanUSB)
+            {
+                this.flagAutoScanUSB = false;
+                this.switchLabelAutoScanUSB.Image = Avaxi.Properties.Resources.set_no;
+                launcherIcon.ShowBalloonTip(5, "Avaxi", "AutoScan USB is disabled", ToolTipIcon.Info);
+            }
+            else
+            {
+                this.flagAutoScanUSB = true;
+                this.switchLabelAutoScanUSB.Image = Avaxi.Properties.Resources.set_yes;
+                launcherIcon.ShowBalloonTip(5, "Avaxi", "AutoScan USB is enabled", ToolTipIcon.Info);
             }
         }
 
