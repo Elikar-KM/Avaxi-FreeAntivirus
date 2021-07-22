@@ -295,7 +295,8 @@ namespace Avaxi
 
             this.flagPhishing = Program.flagPhishing;
             this.flagCryptojacking = Program.flagCryptojacking;
-            this.flagRansomware = Program.flagRansomware;
+            //this.flagRansomware = Program.flagRansomware;
+            this.flagRansomware = false;
             this.flagAffiliateOffers = Program.flagAffiliateOffers;
 
             // Tune Up page : switch format
@@ -363,6 +364,7 @@ namespace Avaxi
                 labelRansomware.Image = global::Avaxi.Properties.Resources.AntiRansomware;
                 label10.Visible = true;
                 label14.ForeColor = Color.DeepSkyBlue;
+                //RunRansomwareProtection();
             }
             else
             {
@@ -1312,7 +1314,7 @@ namespace Avaxi
                     throw new Exception("Could not register resources");
                 }
             }
-            
+
             procIds = new HashSet<int>();
             newProcIds = new HashSet<int>();
             runThread = new Thread(Loop);
@@ -1465,6 +1467,12 @@ namespace Avaxi
             else
             {
                 // Ransomware enable code
+                if(strArray == null)
+                {
+                    MessageBox.Show("Please select files to protect.");
+                    return;
+                }
+
                 RunRansomwareProtection();
                 // Status page view
                 btnRansomware.ForeColor = Color.White;

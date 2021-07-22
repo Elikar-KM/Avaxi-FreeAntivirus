@@ -83,6 +83,7 @@ E:\workstatation\AnitVirus\Workstaion\Phase2\Avaxi-FreeAntivirus\Avaxi\bin\Debug
 E:\workstatation\AnitVirus\Workstaion\Phase2\Avaxi-FreeAntivirus\Avaxi\bin\Debug\WinFormAnimation.dll
 E:\workstatation\AnitVirus\Workstaion\Phase2\Avaxi-FreeAntivirus\Avaxi\bin\Debug\CircularProgressBar.xml
 E:\workstatation\AnitVirus\Workstaion\Phase2\Avaxi-FreeAntivirus\Avaxi\bin\Debug\ReaLTaiizor.xml
+E:\workstatation\AnitVirus\Workstaion\Phase2\Avaxi-FreeAntivirus\Avaxi\obj\Debug\Avaxi.csprojAssemblyReference.cache
 E:\workstatation\AnitVirus\Workstaion\Phase2\Avaxi-FreeAntivirus\Avaxi\obj\Debug\Interop.IWshRuntimeLibrary.dll
 E:\workstatation\AnitVirus\Workstaion\Phase2\Avaxi-FreeAntivirus\Avaxi\obj\Debug\Interop.NetFwTypeLib.dll
 E:\workstatation\AnitVirus\Workstaion\Phase2\Avaxi-FreeAntivirus\Avaxi\obj\Debug\Interop.Shell32.dll
@@ -97,4 +98,3 @@ E:\workstatation\AnitVirus\Workstaion\Phase2\Avaxi-FreeAntivirus\Avaxi\obj\Debug
 E:\workstatation\AnitVirus\Workstaion\Phase2\Avaxi-FreeAntivirus\Avaxi\obj\Debug\Avaxi.csproj.CopyComplete
 E:\workstatation\AnitVirus\Workstaion\Phase2\Avaxi-FreeAntivirus\Avaxi\obj\Debug\Avaxi.exe
 E:\workstatation\AnitVirus\Workstaion\Phase2\Avaxi-FreeAntivirus\Avaxi\obj\Debug\Avaxi.pdb
-E:\workstatation\AnitVirus\Workstaion\Phase2\Avaxi-FreeAntivirus\Avaxi\obj\Debug\Avaxi.csprojAssemblyReference.cache
