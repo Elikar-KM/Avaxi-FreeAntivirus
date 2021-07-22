@@ -490,7 +490,7 @@ namespace Avaxi
         private void frmMain_Resize(object sender, EventArgs e)
         {
 
-            pnlShield.Left = (this.Width / 2) - (pnlShield.Width / 2) + (toolStrip1.Width / 2);
+            //pnlShield.Left = (this.Width / 2) - (pnlShield.Width / 2) + (toolStrip1.Width / 2);
         }
 
         private void btnScan_Click(object sender, EventArgs e)  // QuickScan
