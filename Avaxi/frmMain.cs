@@ -64,11 +64,35 @@ namespace Avaxi
         private uint pnProcInfo;
         private uint lpdwRebootReasons = RestartManager.RmRebootReasonNone;
         private RmProcesInfo[] processInfo;
+        private int xloc;
+        private int yloc;
+
+        enum WindowsState
+        {
+            Hide,
+            Show,
+            Minimize
+        }
+
+        enum PanelState
+        {
+            NONE,
+            SHIELD,
+            CRYPTO,
+            SCAN,
+            OPTIMIZE,
+            TUNEUP
+        }
+        private WindowsState _curWindowState;
+        private Panel _animcurpanel;
+        private Panel _curpanel;
 
         public frmMain()
         {
             InitializeComponent();
-            toolStrip1.Renderer = new MyRenderer();
+
+            //for animation
+            _curWindowState = WindowsState.Show;
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -80,24 +104,34 @@ namespace Avaxi
             System.Windows.Forms.MessageBox.Show("Sign up");
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void func_labelCloseClick(object sender, EventArgs e)
         {
-            this.Hide();
+            this.hideAntiVirus();
         }
 
-        private void label4_MouseHover(object sender, EventArgs e)
+        private void func_labelMoveHover(object sender, EventArgs e)
+        {
+            Label l = (Label)sender;
+            l.BackColor = ColorTranslator.FromHtml("#F4F4F4");
+        }
+        private void func_labelMoveHover_Close(object sender, EventArgs e)
+        {
+            Label l = (Label)sender;
+            l.BackColor = ColorTranslator.FromHtml("#B72828");
+        }
+        private void func_labelMoveMove_Close(object sender, EventArgs e)
+        {
+            Label l = (Label)sender;
+            l.BackColor = ColorTranslator.FromHtml("#B72828");
+        }
+
+        private void func_labelMoveMove(object sender, MouseEventArgs e)
         {
             Label l = (Label)sender;
             l.BackColor = ColorTranslator.FromHtml("#F4F4F4");
         }
 
-        private void label4_MouseMove(object sender, MouseEventArgs e)
-        {
-            Label l = (Label)sender;
-            l.BackColor = ColorTranslator.FromHtml("#F4F4F4");
-        }
-
-        private void label4_MouseLeave(object sender, EventArgs e)
+        private void func_labelMoveLeave(object sender, EventArgs e)
         {
             Label l = (Label)sender;
             l.BackColor = Color.Transparent;
@@ -247,9 +281,9 @@ namespace Avaxi
                         ShowPanel(pnlFormScan);
                         //this.BackgroundImage = null;
                         this.BackColor = Color.WhiteSmoke;
-                        toolStrip1.Visible = false;
+                        panelLeftbar.Visible = false;
                         loc_to_search = e.Disk.Name;
-                        this.Show();
+                        this.showAntiVirus();
                         search = new Thread(new ThreadStart(ScanFolder));
                         search.Start();
                     }
@@ -284,14 +318,16 @@ namespace Avaxi
             this.flagRealTimeProtection = Program.RealTimeProtection;
             this.flagAutoScanUSB = Program.AutoUSBScanner;
 
-            this.flagFeatureUpdates = Program.tuneFeatureUpdates;
-            this.flagAppearanceInPerformance = Program.tuneAppearanceInPerformance;
-            this.flagSensorService = Program.tuneSensorService;
-            this.flagSpeedUpMenuShowDelay = Program.tuneMenuShowDelay;
-            this.flagStartMenuAds = Program.tuneStartMenuAds;
-            this.flagDesktopCleanUpWizard = Program.tuneDesktopCleanUpWizard;
-            this.flagQuickAccessHistory = Program.tuneQuickAccessHistory;
-            this.flagAutomaticUpdates = Program.tuneAutomaticUpdates;
+            this.flagFeatureUpdates = true;
+            this.flagAppearanceInPerformance = true;
+            this.flagSensorService = true;
+            this.flagSpeedUpMenuShowDelay = true;
+            this.flagStartMenuAds = true;
+            this.flagDesktopCleanUpWizard = true;
+            this.flagQuickAccessHistory = true;
+            this.flagAutomaticUpdates = true;
+            this.materialCheckBoxClearCache.Checked = true;
+            this.materialCheckBoxClearMemory.Checked = true;
 
             this.flagPhishing = Program.flagPhishing;
             this.flagCryptojacking = Program.flagCryptojacking;
@@ -300,14 +336,17 @@ namespace Avaxi
             this.flagAffiliateOffers = Program.flagAffiliateOffers;
 
             // Tune Up page : switch format
-            SetSwitch(this.switchLabelAppearanceInPerformance, this.flagAppearanceInPerformance);
-            SetSwitch(this.switchLabelAutomaticUpdates, this.flagAutomaticUpdates);
-            SetSwitch(this.switchLabelDesktopCleanUpWizard, this.flagDesktopCleanUpWizard);
-            SetSwitch(this.switchLabelFeatureUpdates, this.flagFeatureUpdates);
-            SetSwitch(this.switchLabelQuickAccessHistory, this.flagQuickAccessHistory);
-            SetSwitch(this.switchLabelSensorService, this.flagSensorService);
-            SetSwitch(this.switchLabelSpeedUpMenuShowDelay, this.flagSpeedUpMenuShowDelay);
-            SetSwitch(this.switchLabelStartMenuAds, this.flagStartMenuAds);
+            this.materialCheckBoxClearCache.Checked = Program.optClearCache;
+            this.materialCheckBoxClearMemory.Checked = Program.optClearMemory;
+            switchAutomaticUpdates.Checked = Program.tuneAutomaticUpdates;
+            switchDisableDesktop.Checked = Program.tuneDesktopCleanUpWizard;
+            switchSpeedUpMenu.Checked = Program.tuneMenuShowDelay;
+            switchDisableQuickAccess.Checked = Program.tuneQuickAccessHistory;
+            switchDisalbeStartMenuAds.Checked = Program.tuneStartMenuAds;
+            switchDisableSensorService.Checked = Program.tuneSensorService;
+            switchDisableFeatureUpdates.Checked = Program.tuneFeatureUpdates;
+            switchAppearanceInPerformance.Checked = Program.tuneAppearanceInPerformance;
+
             // Settings page : format
             SetYesNo(this.switchLabelRealTimeProtection, this.flagRealTimeProtection);
             SetYesNo(this.switchLabelAutoScanUSB, this.flagAutoScanUSB);
@@ -318,20 +357,24 @@ namespace Avaxi
                 btnPhishing.ForeColor = Color.White;
                 btnPhishing.Text = "Enabled";
                 btnPhishing.BaseColor = Color.FromArgb(15, 220, 200);
-                label9.Image = global::Avaxi.Properties.Resources.websec_status;
-                label27.Image = global::Avaxi.Properties.Resources.AntiPhishing;
-                label16.Visible = true;
-                label15.ForeColor = Color.DeepSkyBlue;
+                btnPhishing.OverColor = Color.FromArgb(15, 220, 200);
+                btnPhishing.DownColor = Color.FromArgb(15, 220, 200);
+                labelWebsecGrey.Image = global::Avaxi.Properties.Resources.websec_status;
+                materialButtonAntiPishing.Icon = global::Avaxi.Properties.Resources.AntiPhishing;
+                labelCheckTick1.Visible = true;
+                labelTextWebProtection.ForeColor = Color.DeepSkyBlue;
             }
             else
             {
                 btnPhishing.ForeColor = Color.Gray;
                 btnPhishing.Text = "Disabled";
                 btnPhishing.BaseColor = Color.FromArgb(209, 209, 209);
-                label9.Image = global::Avaxi.Properties.Resources.websec_status_grey;
-                label27.Image = global::Avaxi.Properties.Resources.AntiPhishing_grey;
-                label16.Visible = false;
-                label15.ForeColor = Color.Gray;
+                btnPhishing.OverColor = Color.FromArgb(209, 209, 209);
+                btnPhishing.DownColor = Color.FromArgb(209, 209, 209);
+                labelWebsecGrey.Image = global::Avaxi.Properties.Resources.websec_status_grey;
+                materialButtonAntiPishing.Icon = global::Avaxi.Properties.Resources.AntiPhishing_grey;
+                labelCheckTick1.Visible = false;
+                labelTextWebProtection.ForeColor = Color.Gray;
             }
 
             if (flagCryptojacking)
@@ -339,41 +382,49 @@ namespace Avaxi
                 btnCryptojacking.ForeColor = Color.White;
                 btnCryptojacking.Text = "Enabled";
                 btnCryptojacking.BaseColor = Color.FromArgb(15, 220, 200);
-                label8.Image = global::Avaxi.Properties.Resources.crypto;
-                label28.Image = global::Avaxi.Properties.Resources.AntiCryptojacking;
-                label12.Visible = true;
-                label11.ForeColor = Color.DeepSkyBlue;
+                btnCryptojacking.OverColor = Color.FromArgb(15, 220, 200);
+                btnCryptojacking.DownColor = Color.FromArgb(15, 220, 200);
+                labelCryptoGrey.Image = global::Avaxi.Properties.Resources.crypto;
+                materialButtonAntiCrypto.Icon = global::Avaxi.Properties.Resources.AntiCryptojacking;
+                labelCheckTick2.Visible = true;
+                lableTextCryptoProtection.ForeColor = Color.DeepSkyBlue;
             }
             else
             {
                 btnCryptojacking.ForeColor = Color.Gray;
                 btnCryptojacking.Text = "Disabled";
-                btnRansomware.BaseColor = Color.FromArgb(209, 209, 209);
                 btnCryptojacking.BaseColor = Color.FromArgb(209, 209, 209);
-                label8.Image = global::Avaxi.Properties.Resources.crypto_grey;
-                label28.Image = global::Avaxi.Properties.Resources.AntiCryptojacking_grey;
-                label12.Visible = false;
-                label11.ForeColor = Color.Gray;
+                btnCryptojacking.OverColor = Color.FromArgb(209, 209, 209);
+                btnCryptojacking.DownColor = Color.FromArgb(209, 209, 209);
+                labelCryptoGrey.Image = global::Avaxi.Properties.Resources.crypto_grey;
+                materialButtonAntiCrypto.Icon = global::Avaxi.Properties.Resources.AntiCryptojacking_grey;
+                labelCheckTick2.Visible = false;
+                lableTextCryptoProtection.ForeColor = Color.Gray;
             }
             if (flagRansomware)
             {
                 btnRansomware.ForeColor = Color.White;
                 btnRansomware.Text = "Enabled";
                 btnRansomware.BaseColor = Color.FromArgb(15, 220, 200);
-                label7.Image = global::Avaxi.Properties.Resources.shield_status;
-                labelRansomware.Image = global::Avaxi.Properties.Resources.AntiRansomware;
-                label10.Visible = true;
-                label14.ForeColor = Color.DeepSkyBlue;
+                btnRansomware.OverColor = Color.FromArgb(15, 220, 200);
+                btnRansomware.DownColor = Color.FromArgb(15, 220, 200);
+                labelShieldGrey.Image = global::Avaxi.Properties.Resources.shield_status;
+                materialButtonAntiRansomware.Icon = global::Avaxi.Properties.Resources.AntiRansomware;
+                labelCheckTick.Visible = true;
+                labelTextLiveProtectionEnabled.ForeColor = Color.DeepSkyBlue;
                 //RunRansomwareProtection();
             }
             else
             {
                 btnRansomware.ForeColor = Color.Gray;
                 btnRansomware.Text = "Disabled";
-                label7.Image = global::Avaxi.Properties.Resources.shield_status_grey;
-                labelRansomware.Image = global::Avaxi.Properties.Resources.AntiRansomware_grey;
-                label10.Visible = false;
-                label14.ForeColor = Color.Gray;
+                btnRansomware.BaseColor = Color.FromArgb(209, 209, 209);
+                btnRansomware.OverColor = Color.FromArgb(209, 209, 209);
+                btnRansomware.DownColor = Color.FromArgb(209, 209, 209);
+                labelShieldGrey.Image = global::Avaxi.Properties.Resources.shield_status_grey;
+                materialButtonAntiRansomware.Icon = global::Avaxi.Properties.Resources.AntiRansomware_grey;
+                labelCheckTick.Visible = false;
+                labelTextLiveProtectionEnabled.ForeColor = Color.Gray;
             }
 
             if (flagAffiliateOffers)
@@ -381,28 +432,32 @@ namespace Avaxi
                 btnAffiliateOffers.ForeColor = Color.White;
                 btnAffiliateOffers.Text = "Enabled";
                 btnAffiliateOffers.BaseColor = Color.FromArgb(15, 220, 200);
-                label30.Image = global::Avaxi.Properties.Resources.AntiAffiliate;
+                btnAffiliateOffers.OverColor = Color.FromArgb(15, 220, 200);
+                btnAffiliateOffers.DownColor = Color.FromArgb(15, 220, 200);
+                materialButtonAntiAffilate.Icon = global::Avaxi.Properties.Resources.AntiAffiliate;
             }
             else
             {
                 btnAffiliateOffers.ForeColor = Color.Gray;
                 btnAffiliateOffers.Text = "Disabled";
                 btnAffiliateOffers.BaseColor = Color.FromArgb(209, 209, 209);
-                label30.Image = global::Avaxi.Properties.Resources.AntiAffiliate_grey;
+                btnAffiliateOffers.OverColor = Color.FromArgb(209, 209, 209);
+                btnAffiliateOffers.DownColor = Color.FromArgb(209, 209, 209);
+                materialButtonAntiAffilate.Icon = global::Avaxi.Properties.Resources.AntiAffiliate_grey;
             }
 
             // RealTime status view
             if (this.flagRealTimeProtection)
             {
-                label6.Image = global::Avaxi.Properties.Resources.check;
-                label13.Text = "The live protection is enabled";
-                label13.ForeColor = Color.White;
+                labelCheck.Image = global::Avaxi.Properties.Resources.check;
+                labelTextOtherScans.Text = "The live protection is enabled";
+                labelTextOtherScans.ForeColor = Color.White;
             }
             else
             {
-                label6.Image = global::Avaxi.Properties.Resources.cross;
-                label13.Text = "The live protection is disabled";
-                label13.ForeColor = Color.Gray;
+                labelCheck.Image = global::Avaxi.Properties.Resources.cross;
+                labelTextOtherScans.Text = "The live protection is disabled";
+                labelTextOtherScans.ForeColor = Color.Gray;
             }
 
             this.progressIndicatorTuneUp.Visible = false;
@@ -450,14 +505,16 @@ namespace Avaxi
                 //Avaxi.PushLog("Firewall is off.");
             }
 
+            xloc = panelLeftbar.Width;
+            yloc = panelLeftbar.Height;
+            _curpanel = pnlShield;
             ShowPanel(pnlShield);
-            label35.Visible = true;
-            StripButtonColor(toolStripButton1);
+            //StripButtonColor(panel3);
 
             Task.Run(delegate ()
             {
                 Thread.Sleep(1000);
-                opt = new Optimize(this.lstPrograms, this.circularProgressBar1);
+                opt = new Optimize(this.lstPrograms, this.circleProgressBar1);
             });
 
         }
@@ -467,6 +524,53 @@ namespace Avaxi
             //Gradient.FillGradient(this.Width, this.Height, e);
         }
 
+        private void materialBtn_MouseLeave(object sender, EventArgs e)
+        {
+            ReaLTaiizor.Controls.MaterialButton temp = (ReaLTaiizor.Controls.MaterialButton)sender;
+            System.Drawing.Size tempsize = temp.Size;
+            System.Drawing.Point temploc = temp.Location;
+            temploc.X += 1;
+            temploc.Y += 1;
+            tempsize.Width -= 2;
+            tempsize.Height -= 2;
+
+            temp.Location = temploc;
+            temp.Size = tempsize;
+            temp.DrawShadows = false;
+            Invalidate();
+
+        }
+        private void materialBtn_MouseEnter(object sender, EventArgs e)
+        {
+            ReaLTaiizor.Controls.MaterialButton temp = (ReaLTaiizor.Controls.MaterialButton)sender;
+            System.Drawing.Size tempsize = temp.Size;
+            System.Drawing.Point temploc = temp.Location;
+
+            temploc.X -= 1;
+            temploc.Y -= 1;
+
+            tempsize.Width += 2;
+            tempsize.Height += 2;
+
+            temp.Location = temploc;
+            temp.Size = tempsize;
+            temp.DrawShadows = true;
+            Invalidate();
+        }
+
+        private void materialBtn_MouseLeave1(object sender, EventArgs e)
+        {
+            ReaLTaiizor.Controls.MaterialButton temp = (ReaLTaiizor.Controls.MaterialButton)sender;
+            temp.DrawShadows = false;
+            Invalidate();
+
+        }
+        private void materialBtn_MouseEnter1(object sender, EventArgs e)
+        {
+            ReaLTaiizor.Controls.MaterialButton temp = (ReaLTaiizor.Controls.MaterialButton)sender;
+            temp.DrawShadows = true;
+            Invalidate();
+        }
         private void toolStripButton1_MouseHover(object sender, EventArgs e)
         {
             Cursor = Cursors.Hand;
@@ -500,13 +604,15 @@ namespace Avaxi
             ShowPanel(pnlFormScan);
             this.BackgroundImage = null;
             this.BackColor = Color.WhiteSmoke;
-            toolStrip1.Visible = false;
+            panelLeftbar.Visible = false;
             search = new Thread(new ThreadStart(ScanFolder));
             search.Start();
         }
 
         void ShowPanel(Panel panel)
         {
+            if (panel == _animcurpanel) return;
+
             pnlShield.Visible = false;
             pnlScan.Visible = false;
             pnlCrypto.Visible = false;
@@ -515,48 +621,28 @@ namespace Avaxi
             pnlSetting.Visible = false;
             pnlFormScan.Visible = false;
             pnlDelete.Visible = false;
-            label35.Visible = false;
             this.BackgroundImage = null;
-            this.BackColor = Color.Gainsboro;
+            //this.BackColor = Color.Gainsboro;
             hopeProgressBar1.ValueNumber = 0;
 
+            //panel.Dock = System.Windows.Forms.DockStyle.None;
+            System.Drawing.Point loc = panel.Location;
+            System.Drawing.Size sz = panel.Size;
+            loc.X += sz.Width;
+            sz.Height = 80;
+            panel.Location = loc;
+            panel.Size = sz;
+            //panel.BackColor = Color.FromArgb(0);
+
+            _animcurpanel = panel;
+
+            PanelTimer.Enabled = true;
             panel.Visible = true;
         }
 
         void FormatButtonColor()
         {
-            toolStripButton1.BackColor = Color.Transparent;
-            toolStripButton3.BackColor = Color.Transparent;
-            toolStripButton4.BackColor = Color.Transparent;
-            toolStripButton5.BackColor = Color.Transparent;
-            toolStripButton6.BackColor = Color.Transparent;
 
-            toolStripButton1.ForeColor = Color.Gray;
-            toolStripButton3.ForeColor = Color.Gray;
-            toolStripButton4.ForeColor = Color.Gray;
-            toolStripButton5.ForeColor = Color.Gray;
-            toolStripButton6.ForeColor = Color.Gray;
-        }
-
-        void  StripButtonColor(ToolStripButton tb)
-        {
-            FormatButtonColor();
-            tb.BackColor = Color.Gainsboro;
-            tb.ForeColor = Color.DodgerBlue;
-        }
-        private void toolStripButton1_Click(object sender, EventArgs e)
-        {
-            ShowPanel(pnlShield);
-            label35.Visible = true;
-            ToolStripButton tb = (ToolStripButton)sender;
-            StripButtonColor(tb);
-        }
-
-        private void toolStripButton4_Click(object sender, EventArgs e)
-        {
-            ShowPanel(pnlCrypto);
-            ToolStripButton tb = (ToolStripButton)sender;
-            StripButtonColor(tb);
         }
 
         private void ckWindowsExplorer_CheckedChanged(object sender, EventArgs e)
@@ -723,28 +809,79 @@ namespace Avaxi
             MainMethods.SaveRegistrySettins(AllSectionsRegistry);
         }
 
-        private void toolStripButton3_Click(object sender, EventArgs e)
+        private void timer_HideOrShowAV(object sender, EventArgs e)
         {
-            ShowPanel(pnlScan);
-            ToolStripButton tb = (ToolStripButton)sender;
-            StripButtonColor(tb);
-        }
+            if(_curWindowState == WindowsState.Show)
+            {
+                //show animation
+                if (Opacity < 1 )
+                {
+                    if(Opacity < 1)
+                        Opacity += .1;
+                }
+                else
+                {
+                    timerHideOrShowAV.Enabled = false;
+                }
 
-        private void toolStripButton5_Click(object sender, EventArgs e)
-        {
-            ShowPanel(pnlOptimize);
-            ToolStripButton tb = (ToolStripButton)sender;
-            StripButtonColor(tb);
-        }
-
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            if (Opacity < 1)
-                Opacity += .1;
+            }
+            else if (_curWindowState == WindowsState.Hide)
+            {
+                //hide animation
+                if (Opacity > 0)
+                    Opacity -= .1;
+                else
+                {
+                    timerHideOrShowAV.Enabled = false;
+                    this.Hide();
+                }
+            }
             else
-                timer1.Enabled = false;
+            {
+                //minimize animation
+                if (Opacity > 0)
+                    Opacity -= .1;
+                else
+                {
+                    timerHideOrShowAV.Enabled = false;
+                    this.Hide();
+                }
+            }
+        }
+        private void timer_PanelAnimation(object sender, EventArgs e)
+        {
+            //panel Y position xloc height yloc
+            //panel x location
+            System.Drawing.Point loc = _animcurpanel.Location;
+            System.Drawing.Size sz = _animcurpanel.Size;
+
+            if (loc.X > xloc + 50 || sz.Height < yloc - 20 )
+            {
+                if (loc.X > xloc + 50)
+                {
+                    loc.X -= 50;
+                    _animcurpanel.Location = loc;
+                }
+                else if(sz.Height < yloc - 20)
+                {
+                    loc.X = xloc;
+                    _animcurpanel.Location = loc;
+                    sz.Height += 20;
+                    _animcurpanel.Size = sz;
+                }
+            }
+            else
+            {
+                loc.X = xloc;
+                sz.Height = yloc;
+                _animcurpanel.Location = loc;
+                _animcurpanel.Size = sz;
+                //_curPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+                PanelTimer.Enabled = false;
+            }
         }
 
+        
         bool IsMoving = false;
         Point LastPos = new Point();
         private void panel1_MouseMove(object sender, MouseEventArgs e)
@@ -767,13 +904,6 @@ namespace Avaxi
             IsMoving = false;
         }
 
-        private void toolStripButton6_Click(object sender, EventArgs e)
-        {
-            ShowPanel(pnlTuneUp);
-            ToolStripButton tb = (ToolStripButton)sender;
-            StripButtonColor(tb);
-        }
-
         private void label5_Click(object sender, EventArgs e)
         {
             ShowPanel(pnlSetting);
@@ -790,7 +920,7 @@ namespace Avaxi
                 ShowPanel(pnlFormScan);
                 this.BackgroundImage = null;
                 this.BackColor = Color.WhiteSmoke;
-                toolStrip1.Visible = false;
+                panelLeftbar.Visible = false;
                 search = new Thread(new ThreadStart(ScanFolder));
                 search.Start();
             }
@@ -802,7 +932,7 @@ namespace Avaxi
             ShowPanel(pnlFormScan);
             this.BackgroundImage = null;
             this.BackColor = Color.WhiteSmoke;
-            toolStrip1.Visible = false;
+            panelLeftbar.Visible = false;
             search = new Thread(new ThreadStart(ScanFolder));
             search.Start();
         }
@@ -811,19 +941,41 @@ namespace Avaxi
             if (this.Visible)
             {
                 if (this.WindowState == FormWindowState.Minimized) this.WindowState = FormWindowState.Normal;
-                this.Hide();
+                this.hideAntiVirus();
             }
             else
             {
-                this.Show();
+                this.showAntiVirus();
             }
         }
 
         private void openItem_Click(object sender, EventArgs e)
         {
-            this.Show();
+            this.showAntiVirus();
         }
 
+        private void hideAntiVirus()
+        {
+            this._curWindowState = WindowsState.Hide;
+            this.Opacity = 1;
+            timerHideOrShowAV.Enabled = true;
+        }
+        private void showAntiVirus()
+        {
+            this._curWindowState = WindowsState.Show;
+            this.Opacity = 0D;
+            timerHideOrShowAV.Enabled = true;
+
+            this.ActiveControl = null;
+
+            this.Show();
+        }
+        private void minimizeAntiVirus()
+        {
+            this._curWindowState = WindowsState.Minimize;
+            this.Opacity = 1;
+            timerHideOrShowAV.Enabled = true;
+        }
         private void closeItem_Click(object sender, EventArgs e)
         {
             Program.tuneAppearanceInPerformance = this.flagAppearanceInPerformance;
@@ -834,8 +986,8 @@ namespace Avaxi
             Program.tuneQuickAccessHistory = this.flagQuickAccessHistory;
             Program.tuneSensorService = this.flagSensorService;
             Program.tuneStartMenuAds = this.flagStartMenuAds;
-            Program.optClearCache = this.checkClearCache.Checked;
-            Program.optClearMemory = this.checkClearMemory.Checked;
+            Program.optClearCache = this.materialCheckBoxClearCache.Checked;
+            Program.optClearMemory = this.materialCheckBoxClearMemory.Checked;
             Program.RealTimeProtection = this.flagRealTimeProtection;
             Program.AutoUSBScanner = this.flagAutoScanUSB;
             Program.flagPhishing = this.flagPhishing;
@@ -861,53 +1013,55 @@ namespace Avaxi
             this.btnClearMemory.Enabled = true;
         }
 
-        private void btnRegistry_Click(object sender, EventArgs e)
+        private async void btnRegistry_Click(object sender, EventArgs e)
         {
             this.btnRegistry.Enabled = false;
-            Utilities.EnableCommandPrompt();
-            Utilities.EnableControlPanel();
-            Utilities.EnableFolderOptions();
-            Utilities.EnableRunDialog();
-            Utilities.EnableContextMenu();
-            Utilities.EnableTaskManager();
-            Utilities.EnableRegistryEditor();
-            MessageBox.Show("Registry cleaned");
+            await Task.Run(delegate () 
+            {
+                try
+                {
+                    Utilities.EnableCommandPrompt();
+                    Utilities.EnableControlPanel();
+                    Utilities.EnableFolderOptions();
+                    Utilities.EnableRunDialog();
+                    Utilities.EnableContextMenu();
+                    Utilities.EnableTaskManager();
+                    Utilities.EnableRegistryEditor();
+                    MessageBox.Show("Registry cleaned");
+                }
+                catch (Exception ex)
+                {
+                    frmMain.PushLog("MainForm.CleanPC" + ex.Message + ex.StackTrace);
+                }
+
+            });
             this.btnRegistry.Enabled = true;
         }
 
-        private void btnCleaner_Click(object sender, EventArgs e)
+        private async void btnCleaner_Click(object sender, EventArgs e)
         {
             this.btnCleaner.Enabled = false;
-            try
-            {
-                CleanHelper.CleanTemporaries();
-                CleanHelper.CleanMiniDumps();
-                CleanHelper.CleanMediaPlayersCache();
-                CleanHelper.CleanLogs();
-                CleanHelper.CleanErrorReports();
-                CleanHelper.EmptyRecycleBin();
-            }
-            catch (Exception ex)
-            {
-                frmMain.PushLog("MainForm.CleanPC" + ex.Message + ex.StackTrace);
-            }
+            await CleanHelper.Cleaner();
             MessageBox.Show("Cleaned");
             this.btnCleaner.Enabled = true;
         }
 
-        private void btnTemporary_Click(object sender, EventArgs e)
+        private async void btnTemporary_Click(object sender, EventArgs e)
         {
             this.btnTemporary.Enabled = false;
-            try
+            await Task.Run(delegate  () 
             {
-                CleanHelper.CleanTemporaries();
-            }
-            catch (Exception ex)
-            {
-                frmMain.PushLog("MainForm.CleanPC" + ex.Message + ex.StackTrace);
-            }
-            
-            MessageBox.Show("Temporary cleaned");
+                try
+                {
+                    CleanHelper.CleanTemporaries();
+                }
+                catch (Exception ex)
+                {
+                    frmMain.PushLog("MainForm.CleanPC" + ex.Message + ex.StackTrace);
+                }
+
+                MessageBox.Show("Temporary cleaned");
+            });
             this.btnTemporary.Enabled = true;
         }
 
@@ -1020,8 +1174,6 @@ namespace Avaxi
                     {
                         try
                         {
-                            var clam = new ClamClient("localhost", 3310);
-                            var scanResult = clam.ScanFileOnServer(proc);
                             Invoke(new Action(delegate
                             {
                                 try
@@ -1030,6 +1182,8 @@ namespace Avaxi
                                 }
                                 catch { }
                             }));
+                            var clam = new ClamClient("localhost", 3310);
+                            var scanResult = clam.ScanFileOnServer(proc);
 
                             switch (scanResult.Result)
                             {
@@ -1098,8 +1252,6 @@ namespace Avaxi
                 {
                     try
                     {
-                        var clam = new ClamClient("localhost", 3310);
-                        var scanResult = clam.ScanFileOnServer(file);
                         Invoke(new Action(delegate
                         {
                             try
@@ -1108,6 +1260,8 @@ namespace Avaxi
                             }
                             catch { }
                         }));
+                        var clam = new ClamClient("localhost", 3310);
+                        var scanResult = clam.ScanFileOnServer(file);
 
                         /* clamAV engine */
                         switch (scanResult.Result)
@@ -1148,13 +1302,13 @@ namespace Avaxi
             {
                 try
                 {
-                    this.label41.Visible = false;
+                    this.labelTestScanning.Visible = false;
                     if(infected == 0)
                     {
                         //curr_File.Text = "Scan finished!\nYour computer is now safer";
                         curr_File.Visible = false;
-                        label49.Visible = true;
-                        label50.Visible = true;
+                        labelTextScanFinished.Visible = true;
+                        labelTextYourComputer.Visible = true;
                         btnStopScan.Text = "           DONE           ";
                         flagScanStatus = 1;
                     }
@@ -1173,12 +1327,12 @@ namespace Avaxi
         private void FormatScan()
         {
             hopeProgressBar1.Visible = true;
-            label41.Visible = true;
-            label42.Visible = true;
-            label43.Visible = false;
-            label44.Visible = false;
-            label49.Visible = false;
-            label50.Visible = false;
+            labelTestScanning.Visible = true;
+            labelCheckTick3.Visible = true;
+            labelTextScanStopped.Visible = false;
+            labelNotice.Visible = false;
+            labelTextScanFinished.Visible = false;
+            labelTextYourComputer.Visible = false;
             curr_File.Visible = true;
         }
 
@@ -1189,10 +1343,10 @@ namespace Avaxi
                 case 0: //stop
                     search.Abort();
                     hopeProgressBar1.Visible = false;
-                    label41.Visible = false;
-                    label42.Visible = false;
-                    label43.Visible = true;
-                    label44.Visible = true;
+                    labelTestScanning.Visible = false;
+                    labelCheckTick3.Visible = false;
+                    labelTextScanStopped.Visible = true;
+                    labelNotice.Visible = true;
                     curr_File.Text = "You stopped the scan before we could find any hidden threats.";
                     btnStopScan.Text = "              OK              ";
                     flagScanStatus = 3;
@@ -1201,16 +1355,17 @@ namespace Avaxi
                     FormatScan();
                     btnStopScan.Text = "STOP SCAN";
                     flagScanStatus = 0;
-                    toolStrip1.Visible = true;
-                    ShowPanel(pnlShield);
-                    StripButtonColor(toolStripButton1);
+                    panelLeftbar.Visible = true;
+                    materialButtonSetting.Enabled = true;
+                    ShowPanel(_curpanel);
+                    //StripButtonColor(panel3);
                     scanType = -1;
                     break;
                 case 2: //next
                     FormatScan();
                     btnStopScan.Text = "STOP SCAN";
                     flagScanStatus = 0;
-                    toolStrip1.Visible = false;
+                    panelLeftbar.Visible = false;
                     ShowPanel(pnlDelete);
                     btnCancel.Enabled = true;
                     this.BackgroundImage = null;
@@ -1221,9 +1376,10 @@ namespace Avaxi
                     FormatScan();
                     btnStopScan.Text = "STOP SCAN";
                     flagScanStatus = 0;
-                    toolStrip1.Visible = true;
-                    ShowPanel(pnlShield);
-                    StripButtonColor(toolStripButton1);
+                    panelLeftbar.Visible = true;
+                    materialButtonSetting.Enabled = true;
+                    ShowPanel(_curpanel);
+                    //StripButtonColor(panel3);
                     scanType = -1;
                     break;
             }
@@ -1249,8 +1405,8 @@ namespace Avaxi
                     objectListView1.Items.Clear();
                     btnDelete.Text = "        DONE        ";
                     btnCancel.Enabled = false;
-                    label47.Visible = true;
-                    label48.Visible = true;
+                    labelTextGoodForYou.Visible = true;
+                    labelThreatsRevomed.Visible = true;
                     objectListView1.Visible = false;
                     flagDeleteStatus = 1;
                 }
@@ -1259,21 +1415,21 @@ namespace Avaxi
             else
             {
                 flagDeleteStatus = 0;
-                toolStrip1.Visible = true;
+                panelLeftbar.Visible = true;
                 btnDelete.Text = "      DELETE      ";
-                label47.Visible = false;
-                label48.Visible = false;
+                labelTextGoodForYou.Visible = false;
+                labelThreatsRevomed.Visible = false;
                 objectListView1.Visible = true;
                 ShowPanel(pnlShield);
-                StripButtonColor(toolStripButton1);
+                //StripButtonColor(panel3);
             }
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            toolStrip1.Visible = true;
+            panelLeftbar.Visible = true;
             ShowPanel(pnlShield);
-            StripButtonColor(toolStripButton1);
+            //StripButtonColor(panel3);
         }
 
         private void btnUSBVaccination_Click(object sender, EventArgs e)
@@ -1294,7 +1450,8 @@ namespace Avaxi
             ShowPanel(pnlFormScan);
             this.BackgroundImage = null;
             this.BackColor = Color.WhiteSmoke;
-            toolStrip1.Visible = false;
+            panelLeftbar.Visible = false;
+            materialButtonSetting.Enabled = false;
             search = new Thread(new ThreadStart(ScanFolder));
             search.Start();
         }
@@ -1383,144 +1540,15 @@ namespace Avaxi
             newProcIds = temp;
         }
 
-        private void btnPhishing_Click(object sender, EventArgs e)
-        {
-            if (flagPhishing)
-            {
-                // Phishing disable code
-
-                // Status page view
-                btnPhishing.ForeColor = Color.Gray;
-                btnPhishing.Text = "Disabled";
-                btnPhishing.BaseColor = Color.FromArgb(209, 209, 209);
-                label9.Image = global::Avaxi.Properties.Resources.websec_status_grey;
-                label27.Image = global::Avaxi.Properties.Resources.AntiPhishing_grey;
-                label16.Visible = false;
-                label15.ForeColor = Color.Gray;
-                flagPhishing = false;
-            }
-            else
-            {
-                // Phishing enable code
-
-                // Status page view
-                btnPhishing.ForeColor = Color.White;
-                btnPhishing.Text = "Enabled";
-                btnPhishing.BaseColor = Color.FromArgb(15, 220, 200);
-                label9.Image = global::Avaxi.Properties.Resources.websec_status;
-                label27.Image = global::Avaxi.Properties.Resources.AntiPhishing;
-                label16.Visible = true;
-                label15.ForeColor = Color.DeepSkyBlue;
-                flagPhishing = true;
-            }
-        }
-
-        private void btnCryptojacking_Click(object sender, EventArgs e)
-        {
-            if (flagCryptojacking)
-            {
-                // Crytojacking disable code
-
-                // Status page view
-                btnCryptojacking.ForeColor = Color.Gray;
-                btnCryptojacking.Text = "Disabled";
-                btnCryptojacking.BaseColor = Color.FromArgb(209, 209, 209);
-                label8.Image = global::Avaxi.Properties.Resources.crypto_grey;
-                label28.Image = global::Avaxi.Properties.Resources.AntiCryptojacking_grey;
-                label12.Visible = false;
-                label11.ForeColor = Color.Gray;
-                flagCryptojacking = false;
-            }
-            else
-            {
-                // Crytojacking enable code
-
-                // Status page view
-                btnCryptojacking.ForeColor = Color.White;
-                btnCryptojacking.Text = "Enabled";
-                btnCryptojacking.BaseColor = Color.FromArgb(15, 220, 200);
-                label8.Image = global::Avaxi.Properties.Resources.crypto;
-                label28.Image = global::Avaxi.Properties.Resources.AntiCryptojacking;
-                label12.Visible = true;
-                label11.ForeColor = Color.DeepSkyBlue;
-                flagCryptojacking = true;
-            }
-        }
-
-        private void btnRansomware_Click(object sender, EventArgs e)
-        {
-            if (flagRansomware)
-            {
-                // Ransomware disable code
-                runThread.Abort();
-                
-                // Status page view
-                btnRansomware.ForeColor = Color.Gray;
-                btnRansomware.Text = "Disabled";
-                btnRansomware.BaseColor = Color.FromArgb(209, 209, 209);
-                label7.Image = global::Avaxi.Properties.Resources.shield_status_grey;
-                labelRansomware.Image = global::Avaxi.Properties.Resources.AntiRansomware_grey;
-                label10.Visible = false;
-                label14.ForeColor = Color.Gray;
-                flagRansomware = false;
-            }
-            else
-            {
-                // Ransomware enable code
-                if(strArray == null)
-                {
-                    MessageBox.Show("Please select files to protect.");
-                    return;
-                }
-
-                RunRansomwareProtection();
-                // Status page view
-                btnRansomware.ForeColor = Color.White;
-                btnRansomware.Text = "Enabled";
-                btnRansomware.BaseColor = Color.FromArgb(15, 220, 200);
-                label7.Image = global::Avaxi.Properties.Resources.shield_status;
-                labelRansomware.Image = global::Avaxi.Properties.Resources.AntiRansomware;
-                label10.Visible = true;
-                label14.ForeColor = Color.DeepSkyBlue;
-                flagRansomware = true;
-            }
-        }
-
-        private void btnAffiliateOffers_Click(object sender, EventArgs e)
-        {
-            if (flagAffiliateOffers)
-            {
-                // Affiliate Offers disable code
-
-                // status view
-                btnAffiliateOffers.ForeColor = Color.Gray;
-                btnAffiliateOffers.Text = "Disabled";
-                btnAffiliateOffers.BaseColor = Color.FromArgb(209, 209, 209);
-                label30.Image = global::Avaxi.Properties.Resources.AntiAffiliate_grey;
-                flagAffiliateOffers = false;
-            }
-            else
-            {
-                // Affiliate Offers enable code
-
-                // status view
-                btnAffiliateOffers.ForeColor = Color.White;
-                btnAffiliateOffers.Text = "Enabled";
-                btnAffiliateOffers.BaseColor = Color.FromArgb(15, 220, 200);
-                label30.Image = global::Avaxi.Properties.Resources.AntiAffiliate;
-                flagAffiliateOffers = true;
-            }
-        }
-
         private void quickScanItem_Click(object sender, EventArgs e)    // launcher menu quick scan
         {
-            this.Show();
+            this.showAntiVirus();
             scanType = 1;
             loc_to_search = System.IO.Path.GetPathRoot(Environment.SystemDirectory);
             ShowPanel(pnlFormScan);
             this.BackgroundImage = null;
             this.BackColor = Color.WhiteSmoke;
-            toolStrip1.Visible = false;
+            panelLeftbar.Visible = false;
             search = new Thread(new ThreadStart(ScanFolder));
             search.Start();
         }
@@ -1534,9 +1562,9 @@ namespace Avaxi
         {
             if (!flagSilent)
             {
-                label6.Image = global::Avaxi.Properties.Resources.check;
-                    label13.Text = "Silent mode is enabled. Enjoy!";
-                label13.ForeColor = Color.White;
+                labelCheck.Image = global::Avaxi.Properties.Resources.check;
+                    labelTextOtherScans.Text = "Silent mode is enabled. Enjoy!";
+                labelTextOtherScans.ForeColor = Color.White;
                 flagSilent = true;
                 silentModeItem.Text = "Disable Silent Mode";
             }
@@ -1544,15 +1572,15 @@ namespace Avaxi
             {
                 if (this.flagRealTimeProtection)
                 {
-                    label6.Image = global::Avaxi.Properties.Resources.check;
-                    label13.Text = "The live protection is enabled";
-                    label13.ForeColor = Color.White;
+                    labelCheck.Image = global::Avaxi.Properties.Resources.check;
+                    labelTextOtherScans.Text = "The live protection is enabled";
+                    labelTextOtherScans.ForeColor = Color.White;
                 }
                 else
                 {
-                    label6.Image = global::Avaxi.Properties.Resources.cross;
-                    label13.Text = "The live protection is disabled";
-                    label13.ForeColor = Color.Gray;
+                    labelCheck.Image = global::Avaxi.Properties.Resources.cross;
+                    labelTextOtherScans.Text = "The live protection is disabled";
+                    labelTextOtherScans.ForeColor = Color.Gray;
                 }
                 flagSilent = false;
                 silentModeItem.Text = "Enable Silent Mode";
@@ -1561,8 +1589,8 @@ namespace Avaxi
 
         private void btnRunSmartScan1_Click(object sender, EventArgs e)
         {
-            RunSmartScan();
-        }
+            //RunSmartScan();
+        }    
 
         private void btnRunSmartScan2_Click(object sender, EventArgs e)
         {
@@ -1576,16 +1604,16 @@ namespace Avaxi
 
         private async void btnOptimizePC_Click(object sender, EventArgs e)
         {
-            this.btnOptimizePC.Enabled = false;
-            if (checkClearMemory.Checked)
+            this.materialButtonOptimize.Enabled = false;
+            if (materialCheckBoxClearMemory.Checked)
             {
                 await Optimize.ClearMemory(1);
             }
-            if (checkClearCache.Checked)
+            if (materialCheckBoxClearCache.Checked)
             {
                 await Optimize.ClearMemory(2);
             }
-            this.btnOptimizePC.Enabled = true;
+            this.materialButtonOptimize.Enabled = true;
         }
 
         private void btnTune_Click(object sender, EventArgs e)
@@ -1681,114 +1709,42 @@ namespace Avaxi
          * */
         private void switchLabelAutomaticUpdates_Click(object sender, EventArgs e)
         {
-            if(this.flagAutomaticUpdates)
-            {
-                this.flagAutomaticUpdates = false;
-                this.switchLabelAutomaticUpdates.Image = Avaxi.Properties.Resources.off;
-            }
-            else
-            {
-                this.flagAutomaticUpdates = true;
-                this.switchLabelAutomaticUpdates.Image = Avaxi.Properties.Resources.on;
-            }
+
         }
 
         private void switchLabelDesktopCleanUpWizard_Click(object sender, EventArgs e)
         {
-            if (this.flagDesktopCleanUpWizard)
-            {
-                this.flagDesktopCleanUpWizard = false;
-                this.switchLabelDesktopCleanUpWizard.Image = Avaxi.Properties.Resources.off;
-            }
-            else
-            {
-                this.flagDesktopCleanUpWizard = true;
-                this.switchLabelDesktopCleanUpWizard.Image = Avaxi.Properties.Resources.on;
-            }
+
         }
 
         private void switchLabelSpeedUpMenuShowDelay_Click(object sender, EventArgs e)
         {
-            if (this.flagSpeedUpMenuShowDelay)
-            {
-                this.flagSpeedUpMenuShowDelay = false;
-                this.switchLabelSpeedUpMenuShowDelay.Image = Avaxi.Properties.Resources.off;
-            }
-            else
-            {
-                this.flagSpeedUpMenuShowDelay = true;
-                this.switchLabelSpeedUpMenuShowDelay.Image = Avaxi.Properties.Resources.on;
-            }
+
         }
 
         private void switchLabelAppearanceInPerformance_Click(object sender, EventArgs e)
         {
-            if (this.flagAppearanceInPerformance)
-            {
-                this.flagAppearanceInPerformance = false;
-                this.switchLabelAppearanceInPerformance.Image = Avaxi.Properties.Resources.off;
-            }
-            else
-            {
-                this.flagAppearanceInPerformance = true;
-                this.switchLabelAppearanceInPerformance.Image = Avaxi.Properties.Resources.on;
-            }
+
         }
 
         private void switchLabelQuickAccessHistory_Click(object sender, EventArgs e)
         {
-            if (this.flagQuickAccessHistory)
-            {
-                this.flagQuickAccessHistory = false;
-                this.switchLabelQuickAccessHistory.Image = Avaxi.Properties.Resources.off;
-            }
-            else
-            {
-                this.flagQuickAccessHistory = true;
-                this.switchLabelQuickAccessHistory.Image = Avaxi.Properties.Resources.on;
-            }
+
         }
 
         private void switchLabelStartMenuAds_Click(object sender, EventArgs e)
         {
-            if (this.flagStartMenuAds)
-            {
-                this.flagStartMenuAds = false;
-                this.switchLabelStartMenuAds.Image = Avaxi.Properties.Resources.off;
-            }
-            else
-            {
-                this.flagStartMenuAds = true;
-                this.switchLabelStartMenuAds.Image = Avaxi.Properties.Resources.on;
-            }
+
         }
 
         private void switchLabelSensorService_Click(object sender, EventArgs e)
         {
-            if (this.flagSensorService)
-            {
-                this.flagSensorService = false;
-                this.switchLabelSensorService.Image = Avaxi.Properties.Resources.off;
-            }
-            else
-            {
-                this.flagSensorService = true;
-                this.switchLabelSensorService.Image = Avaxi.Properties.Resources.on;
-            }
+
         }
 
         private void switchLabelFeatureUpdates_Click(object sender, EventArgs e)
         {
-            if (this.flagFeatureUpdates)
-            {
-                this.flagFeatureUpdates = false;
-                this.switchLabelFeatureUpdates.Image = Avaxi.Properties.Resources.off;
-            }
-            else
-            {
-                this.flagFeatureUpdates = true;
-                this.switchLabelFeatureUpdates.Image = Avaxi.Properties.Resources.on;
-            }
+
         }
 
         private void switchLabelRealTimeProtection_Click(object sender, EventArgs e)
@@ -1798,18 +1754,18 @@ namespace Avaxi
                 this.flagRealTimeProtection = true;
                 this.switchLabelRealTimeProtection.Image = Avaxi.Properties.Resources.set_yes;
                 launcherIcon.ShowBalloonTip(5, "Avaxi", "The live protection is enabled", ToolTipIcon.Info);
-                label6.Image = global::Avaxi.Properties.Resources.check;
-                label13.Text = "The live protection is enabled";
-                label13.ForeColor = Color.White;
+                labelCheck.Image = global::Avaxi.Properties.Resources.check;
+                labelTextOtherScans.Text = "The live protection is enabled";
+                labelTextOtherScans.ForeColor = Color.White;
             }
             else
             {
                 this.flagRealTimeProtection = false;
                 this.switchLabelRealTimeProtection.Image = Avaxi.Properties.Resources.set_no;
                 launcherIcon.ShowBalloonTip(5, "Avaxi", "The live protection is disabled", ToolTipIcon.Info);
-                label6.Image = global::Avaxi.Properties.Resources.cross;
-                label13.Text = "The live protection is disabled";
-                label13.ForeColor = Color.Gray;
+                labelCheck.Image = global::Avaxi.Properties.Resources.cross;
+                labelTextOtherScans.Text = "The live protection is disabled";
+                labelTextOtherScans.ForeColor = Color.Gray;
             }
         }
 
@@ -1853,6 +1809,495 @@ namespace Avaxi
                 this.flagAutoScanUSB = true;
                 this.switchLabelAutoScanUSB.Image = Avaxi.Properties.Resources.set_yes;
                 launcherIcon.ShowBalloonTip(5, "Avaxi", "AutoScan USB is enabled", ToolTipIcon.Info);
+            }
+        }
+
+        private void func_labelMoveMove_Close(object sender, MouseEventArgs e)
+        {
+            Label l = (Label)sender;
+            l.BackColor = ColorTranslator.FromHtml("#B72828");
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void materialButtonClose_Click(object sender, EventArgs e)
+        {
+            //Task.Run(delegate ()
+            //{
+            //    Thread.Sleep(100);
+                this.hideAntiVirus();
+            //});
+        }
+
+        private void materialButtonMinimize_Click(object sender, EventArgs e)
+        {
+            //this.WindowState = FormWindowState.Minimized;
+
+            this.minimizeAntiVirus();
+        }
+
+        private void materialButtonSetting_Click(object sender, EventArgs e)
+        {
+            ShowPanel(pnlSetting);
+            FormatButtonColor();
+        }
+
+        private void materialButtonSignUp_Click(object sender, EventArgs e)
+        {
+            //System.Windows.Forms.MessageBox.Show("Sign up");
+        }
+
+        private void materialButton1_Click(object sender, EventArgs e)
+        {
+            RunSmartScan();
+        }
+
+        private void materialBtnRunSmartScan_Click(object sender, EventArgs e)
+        {
+            RunSmartScan();
+        }
+
+        private void materialButton4_Click(object sender, EventArgs e)
+        {
+            Computer regedit = new Computer();
+
+            this.progressIndicatorTuneUp.Visible = true;
+
+            if (this.flagAutomaticUpdates == true)
+            {
+                OptimizeSpeedUp.DisableAutomaticUpdates();
+            }
+            else
+            {
+                OptimizeSpeedUp.EnableAutomaticUpdates();
+            }
+
+            if (this.flagDesktopCleanUpWizard == true)
+            {
+                MainMethods.FixedInvalidRegistryKey(regedit.Registry.CurrentUser, @"Software\Microsoft\Windows\CurrentVersion\Explorer\Desktop\CleanupWiz");
+                regedit.Registry.CurrentUser.OpenSubKey(@"Software\Microsoft\Windows\CurrentVersion\Explorer\Desktop\CleanupWiz", true).SetValue("NoRun", 1, RegistryValueKind.DWord);
+            }
+            else
+            {
+            }
+
+            if (this.flagSpeedUpMenuShowDelay == true)
+            {
+                MainMethods.FixedInvalidRegistryKey(regedit.Registry.CurrentUser, @"Control Panel\Desktop");
+                MainMethods.FixedInvalidRegistryKey(regedit.Registry.CurrentUser, @"Control Panel\Desktop\WindowMetrics");
+                regedit.Registry.CurrentUser.OpenSubKey(@"Control Panel\Desktop", true).SetValue("MenuShowDelay", "50");
+                regedit.Registry.CurrentUser.OpenSubKey(@"Control Panel\Desktop\WindowMetrics", true).SetValue("MinAnimate", "50");
+            }
+            else
+            {
+            }
+
+            if (this.flagAppearanceInPerformance == true)
+            {
+                OptimizeSpeedUp.EnableDarkTheme();
+            }
+            else
+            {
+                OptimizeSpeedUp.EnableLightTheme();
+            }
+
+            if (this.flagQuickAccessHistory == true)
+            {
+                OptimizeSpeedUp.DisableQuickAccessHistory();
+            }
+            else
+            {
+                OptimizeSpeedUp.EnableQuickAccessHistory();
+            }
+
+            if (this.flagStartMenuAds == true)
+            {
+                OptimizeSpeedUp.DisableStartMenuAds();
+            }
+            else
+            {
+                OptimizeSpeedUp.EnableStartMenuAds();
+            }
+
+            if (this.flagSensorService == true)
+            {
+                OptimizeSpeedUp.DisableSensorServices();
+            }
+            else
+            {
+                OptimizeSpeedUp.EnableSensorServices();
+            }
+
+            if (this.flagFeatureUpdates == true)
+            {
+                OptimizeSpeedUp.DisableForcedFeatureUpdates();
+            }
+            else
+            {
+                OptimizeSpeedUp.EnableForcedFeatureUpdates();
+            }
+
+            DialogResult result = System.Windows.Forms.MessageBox.Show("Restart you computer?", "SpeedUp", System.Windows.Forms.MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                Utilities.Reboot();
+            }
+            this.progressIndicatorTuneUp.Visible = false;
+        }
+
+        private void materialBtnRunSmartScan_MoseEnter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialBtnRunSmartScan_MoseLeave(object sender, EventArgs e)
+        {
+
+        }
+
+        async private void materialButtonOptimize_Click(object sender, EventArgs e)
+        {
+            this.materialButtonOptimize.Enabled = false;
+            if (materialCheckBoxClearMemory.Checked)
+            {
+                await Optimize.ClearMemory(1);
+            }
+            if (materialCheckBoxClearCache.Checked)
+            {
+                ///await Optimize.ClearMemory(0);
+            }
+            this.materialButtonOptimize.Enabled = true;
+        }
+
+        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void materialButtonShield_Click(object sender, EventArgs e)
+        {
+            _curpanel = pnlShield;
+            ShowPanel(pnlShield);
+        }
+
+        private void materialButtonCrypto_Click(object sender, EventArgs e)
+        {
+            _curpanel = pnlCrypto;
+            ShowPanel(pnlCrypto);
+        }
+
+        private void materialButtonScan_Click(object sender, EventArgs e)
+        {
+            _curpanel = pnlScan;
+            ShowPanel(pnlScan);
+        }
+
+        private void materialBtnOptimaize_Click(object sender, EventArgs e)
+        {
+            _curpanel = pnlOptimize;
+            ShowPanel(pnlOptimize);
+        }
+
+        private void materialBtnTuneUp_Click(object sender, EventArgs e)
+        {
+            _curpanel = pnlTuneUp;
+            ShowPanel(pnlTuneUp);
+        }
+
+        private void materialButtonAntiPishing_Click(object sender, EventArgs e)
+        {
+
+            if (flagPhishing)
+            {
+                // Phishing disable code
+
+                // Status page view
+                btnPhishing.ForeColor = Color.Gray;
+                btnPhishing.Text = "Disabled";
+                btnPhishing.BaseColor = Color.FromArgb(209, 209, 209);
+                btnPhishing.OverColor = Color.FromArgb(209, 209, 209);
+                btnPhishing.DownColor = Color.FromArgb(209, 209, 209);
+                labelWebsecGrey.Image = global::Avaxi.Properties.Resources.websec_status_grey;
+                materialButtonAntiPishing.Icon = global::Avaxi.Properties.Resources.AntiPhishing_grey;
+                labelCheckTick1.Visible = false;
+                labelTextWebProtection.ForeColor = Color.Gray;
+                flagPhishing = false;
+            }
+            else
+            {
+                // Phishing enable code
+
+                // Status page view
+                btnPhishing.ForeColor = Color.White;
+                btnPhishing.Text = "Enabled";
+                btnPhishing.BaseColor = Color.FromArgb(15, 220, 200);
+                btnPhishing.OverColor = Color.FromArgb(15, 220, 200);
+                btnPhishing.DownColor = Color.FromArgb(15, 220, 200);
+                labelWebsecGrey.Image = global::Avaxi.Properties.Resources.websec_status;
+                materialButtonAntiPishing.Icon = global::Avaxi.Properties.Resources.AntiPhishing;
+                labelCheckTick1.Visible = true;
+                labelTextWebProtection.ForeColor = Color.DeepSkyBlue;
+                flagPhishing = true;
+            }
+        }
+
+        private void materialButton1_Click_1(object sender, EventArgs e)
+        {
+
+            if (flagCryptojacking)
+            {
+                // Crytojacking disable code
+
+                // Status page view
+                btnCryptojacking.ForeColor = Color.Gray;
+                btnCryptojacking.Text = "Disabled";
+                btnCryptojacking.BaseColor = Color.FromArgb(209, 209, 209);
+                btnCryptojacking.OverColor = Color.FromArgb(209, 209, 209);
+                btnCryptojacking.DownColor = Color.FromArgb(209, 209, 209);
+                labelCryptoGrey.Image = global::Avaxi.Properties.Resources.crypto_grey;
+                materialButtonAntiCrypto.Icon = global::Avaxi.Properties.Resources.AntiCryptojacking_grey;
+                labelCheckTick2.Visible = false;
+                lableTextCryptoProtection.ForeColor = Color.Gray;
+                flagCryptojacking = false;
+            }
+            else
+            {
+                // Crytojacking enable code
+
+                // Status page view
+                btnCryptojacking.ForeColor = Color.White;
+                btnCryptojacking.Text = "Enabled";
+                btnCryptojacking.BaseColor = Color.FromArgb(15, 220, 200);
+                btnCryptojacking.OverColor = Color.FromArgb(15, 220, 200);
+                btnCryptojacking.DownColor = Color.FromArgb(15, 220, 200);
+                labelCryptoGrey.Image = global::Avaxi.Properties.Resources.crypto;
+                materialButtonAntiCrypto.Icon = global::Avaxi.Properties.Resources.AntiCryptojacking;
+                labelCheckTick2.Visible = true;
+                lableTextCryptoProtection.ForeColor = Color.DeepSkyBlue;
+                flagCryptojacking = true;
+            }
+        }
+
+        private void materialButton3_Click(object sender, EventArgs e)
+        {
+            if (flagAffiliateOffers)
+            {
+                // Affiliate Offers disable code
+
+                // status view
+                btnAffiliateOffers.ForeColor = Color.Gray;
+                btnAffiliateOffers.Text = "Disabled";
+                btnAffiliateOffers.BaseColor = Color.FromArgb(209, 209, 209);
+                btnAffiliateOffers.OverColor = Color.FromArgb(209, 209, 209);
+                btnAffiliateOffers.DownColor = Color.FromArgb(209, 209, 209);
+                materialButtonAntiAffilate.Icon = global::Avaxi.Properties.Resources.AntiAffiliate_grey;
+                flagAffiliateOffers = false;
+            }
+            else
+            {
+                // Affiliate Offers enable code
+
+                // status view
+                btnAffiliateOffers.ForeColor = Color.White;
+                btnAffiliateOffers.Text = "Enabled";
+                btnAffiliateOffers.BaseColor = Color.FromArgb(15, 220, 200);
+                btnAffiliateOffers.OverColor = Color.FromArgb(15, 220, 200);
+                btnAffiliateOffers.DownColor = Color.FromArgb(15, 220, 200);
+                materialButtonAntiAffilate.Icon = global::Avaxi.Properties.Resources.AntiAffiliate;
+                flagAffiliateOffers = true;
+            }
+        }
+
+        private void materialButtonAntiRansomware_Click(object sender, EventArgs e)
+        {
+            if (flagRansomware)
+            {
+                // Ransomware disable code
+                runThread.Abort();
+
+                // Status page view
+                btnRansomware.ForeColor = Color.Gray;
+                btnRansomware.Text = "Disabled";
+                btnRansomware.BaseColor = Color.FromArgb(209, 209, 209);
+                btnRansomware.OverColor = Color.FromArgb(209, 209, 209);
+                btnRansomware.DownColor = Color.FromArgb(209, 209, 209);
+                labelShieldGrey.Image = global::Avaxi.Properties.Resources.shield_status_grey;
+                materialButtonAntiRansomware.Icon = global::Avaxi.Properties.Resources.AntiRansomware_grey;
+                labelCheckTick.Visible = false;
+                labelTextLiveProtectionEnabled.ForeColor = Color.Gray;
+                flagRansomware = false;
+            }
+            else
+            {
+                frmRansomware dlg = new frmRansomware();
+                dlg.ShowDialog();
+
+                // Ransomware enable code
+                if (strArray == null)
+                {
+                    MessageBox.Show("Please select files to protect.");
+                    return;
+                }
+
+                RunRansomwareProtection();
+                // Status page view
+                btnRansomware.ForeColor = Color.White;
+                btnRansomware.Text = "Enabled";
+                btnRansomware.BaseColor = Color.FromArgb(15, 220, 200);
+                btnRansomware.OverColor = Color.FromArgb(15, 220, 200);
+                btnRansomware.DownColor = Color.FromArgb(15, 220, 200);
+                labelShieldGrey.Image = global::Avaxi.Properties.Resources.shield_status;
+                materialButtonAntiRansomware.Icon = global::Avaxi.Properties.Resources.AntiRansomware;
+                labelCheckTick.Visible = true;
+                labelTextLiveProtectionEnabled.ForeColor = Color.DeepSkyBlue;
+                flagRansomware = true;
+            }
+        }
+
+        private void materialButtonSmartScan1_Click(object sender, EventArgs e)
+        {
+            _curpanel = pnlScan;
+            RunSmartScan();
+        }
+
+        private void materialButton1_Click_2(object sender, EventArgs e)
+        {
+            scanType = 1;
+            loc_to_search = System.IO.Path.GetPathRoot(Environment.SystemDirectory);
+            ShowPanel(pnlFormScan);
+            this.BackgroundImage = null;
+            this.BackColor = Color.WhiteSmoke;
+            panelLeftbar.Visible = false;
+            materialButtonSetting.Enabled = false;
+            search = new Thread(new ThreadStart(ScanFolder));
+            search.Start();
+        }
+
+        private void materialButton2_Click(object sender, EventArgs e)
+        {
+            scanType = 2;
+            folderBrowserDialog1.Description = "Select your folder or drive";
+            if (folderBrowserDialog1.ShowDialog() == DialogResult.OK)
+            {
+                loc_to_search = folderBrowserDialog1.SelectedPath;
+                ShowPanel(pnlFormScan);
+                this.BackgroundImage = null;
+                this.BackColor = Color.WhiteSmoke;
+                panelLeftbar.Visible = false;
+                materialButtonSetting.Enabled = false;
+                search = new Thread(new ThreadStart(ScanFolder));
+                search.Start();
+            }
+        }
+
+        private void materialButton3_Click_1(object sender, EventArgs e)
+        {
+            scanType = 3;
+            ShowPanel(pnlFormScan);
+            this.BackgroundImage = null;
+            this.BackColor = Color.WhiteSmoke;
+            panelLeftbar.Visible = false;
+            materialButtonSetting.Enabled = false;
+            search = new Thread(new ThreadStart(ScanFolder));
+            search.Start();
+        }
+
+        private void switchAutomaticUpdates_CheckedChanged(object sender, EventArgs e)
+        {
+            if (this.flagAutomaticUpdates)
+            {
+                this.flagAutomaticUpdates = false;
+            }
+            else
+            {
+                this.flagAutomaticUpdates = true;
+            }
+        }
+
+        private void switchDisableDesktop_CheckedChanged(object sender, EventArgs e)
+        {
+            if (this.flagDesktopCleanUpWizard)
+            {
+                this.flagDesktopCleanUpWizard = false;
+            }
+            else
+            {
+                this.flagDesktopCleanUpWizard = true;
+            }
+        }
+
+        private void switchSpeedUpMenu_CheckedChanged(object sender, EventArgs e)
+        {
+            if (this.flagSpeedUpMenuShowDelay)
+            {
+                this.flagSpeedUpMenuShowDelay = false;
+            }
+            else
+            {
+                this.flagSpeedUpMenuShowDelay = true;
+            }
+        }
+
+        private void switchAppearanceInPerformance_CheckedChanged(object sender, EventArgs e)
+        {
+            if (this.flagAppearanceInPerformance)
+            {
+                this.flagAppearanceInPerformance = false;
+            }
+            else
+            {
+                this.flagAppearanceInPerformance = true;
+            }
+        }
+
+        private void switchDisableQuickAccess_CheckedChanged(object sender, EventArgs e)
+        {
+            if (this.flagQuickAccessHistory)
+            {
+                this.flagQuickAccessHistory = false;
+            }
+            else
+            {
+                this.flagQuickAccessHistory = true;
+            }
+        }
+
+        private void switchDisalbeStartMenuAds_CheckedChanged(object sender, EventArgs e)
+        {
+            if (this.flagStartMenuAds)
+            {
+                this.flagStartMenuAds = false;
+            }
+            else
+            {
+                this.flagStartMenuAds = true;
+            }
+        }
+
+        private void switchDisableSensorService_CheckedChanged(object sender, EventArgs e)
+        {
+            if (this.flagSensorService)
+            {
+                this.flagSensorService = false;
+            }
+            else
+            {
+                this.flagSensorService = true;
+            }
+        }
+
+        private void switchDisableFeatureUpdates_CheckedChanged(object sender, EventArgs e)
+        {
+            if (this.flagFeatureUpdates)
+            {
+                this.flagFeatureUpdates = false;
+            }
+            else
+            {
+                this.flagFeatureUpdates = true;
             }
         }
 

@@ -23,25 +23,50 @@ namespace Avaxi
 
         private static void ReadConfigs()
         {
-            tuneAutomaticUpdates = (bool)Properties.Settings.Default["tuneAutomaticUpdates"];
-            tuneDesktopCleanUpWizard = (bool)Properties.Settings.Default["tuneDesktopCleanUpWizard"];
-            tuneMenuShowDelay = (bool)Properties.Settings.Default["tuneMenuShowDelay"];
-            tuneAppearanceInPerformance = (bool)Properties.Settings.Default["tuneAppearanceInPerformance"];
-            tuneQuickAccessHistory = (bool)Properties.Settings.Default["tuneQuickAccessHistory"];
-            tuneStartMenuAds = (bool)Properties.Settings.Default["tuneStartMenuAds"];
-            tuneSensorService = (bool)Properties.Settings.Default["tuneSensorService"];
-            tuneFeatureUpdates = (bool)Properties.Settings.Default["tuneFeatureUpdates"];
+            try
+            {
+                tuneAutomaticUpdates = (bool)Properties.Settings.Default["tuneAutomaticUpdates"];
+                tuneDesktopCleanUpWizard = (bool)Properties.Settings.Default["tuneDesktopCleanUpWizard"];
+                tuneMenuShowDelay = (bool)Properties.Settings.Default["tuneMenuShowDelay"];
+                tuneAppearanceInPerformance = (bool)Properties.Settings.Default["tuneAppearanceInPerformance"];
+                tuneQuickAccessHistory = (bool)Properties.Settings.Default["tuneQuickAccessHistory"];
+                tuneStartMenuAds = (bool)Properties.Settings.Default["tuneStartMenuAds"];
+                tuneSensorService = (bool)Properties.Settings.Default["tuneSensorService"];
+                tuneFeatureUpdates = (bool)Properties.Settings.Default["tuneFeatureUpdates"];
 
-            optClearMemory = (bool)Properties.Settings.Default["optClearMemory"];
-            optClearCache = (bool)Properties.Settings.Default["optClearCache"];
+                optClearMemory = (bool)Properties.Settings.Default["optClearMemory"];
+                optClearCache = (bool)Properties.Settings.Default["optClearCache"];
 
-            RealTimeProtection = (bool)Properties.Settings.Default["RealTimeProtection"];
-            AutoUSBScanner = (bool)Properties.Settings.Default["AutoUSBScanner"];
+                RealTimeProtection = (bool)Properties.Settings.Default["RealTimeProtection"];
+                AutoUSBScanner = (bool)Properties.Settings.Default["AutoUSBScanner"];
 
-            flagPhishing = (bool)Properties.Settings.Default["flagPhishing"];
-            flagCryptojacking = (bool)Properties.Settings.Default["flagCryptojacking"];
-            flagRansomware = (bool)Properties.Settings.Default["flagRansomware"];
-            flagAffiliateOffers = (bool)Properties.Settings.Default["flagAffiliateOffers"];
+                flagPhishing = (bool)Properties.Settings.Default["flagPhishing"];
+                flagCryptojacking = (bool)Properties.Settings.Default["flagCryptojacking"];
+                flagRansomware = (bool)Properties.Settings.Default["flagRansomware"];
+                flagAffiliateOffers = (bool)Properties.Settings.Default["flagAffiliateOffers"];
+            }
+            catch(Exception e)
+            {
+                tuneAutomaticUpdates = true;
+                tuneDesktopCleanUpWizard = true;
+                tuneMenuShowDelay = true;
+                tuneAppearanceInPerformance = true;
+                tuneQuickAccessHistory = true;
+                tuneStartMenuAds = true;
+                tuneSensorService = true;
+                tuneFeatureUpdates = true;
+
+                optClearMemory = true;
+                optClearCache = true;
+
+                RealTimeProtection = true;
+                AutoUSBScanner = true;
+
+                flagPhishing = true;
+                flagCryptojacking = true;
+                flagRansomware = true;
+                flagAffiliateOffers = true;
+            }
         }
 
         public static void SaveConfigs()

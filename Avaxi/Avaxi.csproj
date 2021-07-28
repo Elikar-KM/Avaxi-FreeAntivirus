@@ -69,7 +69,8 @@
       <HintPath>..\packages\ObjectListView.2.7.1.5\lib\ObjectListView.dll</HintPath>
     </Reference>
     <Reference Include="ReaLTaiizor, Version=3.7.8.4, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\ReaLTaiizor.3.7.8.4\lib\net472\ReaLTaiizor.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\ReaLTaiizor.dll</HintPath>
     </Reference>
     <Reference Include="SparkleLibrary, Version=2.7.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\ObjectListView.2.7.1.5\lib\SparkleLibrary.dll</HintPath>
@@ -191,6 +192,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="com.aiofast.cleaner-logo.ico" />
+    <Content Include="Resources\background %282%29.png" />
+    <Content Include="Resources\plus.png" />
     <None Include="Resources\close.png" />
     <None Include="Resources\minimize.png" />
     <None Include="Resources\set_yes.png" />

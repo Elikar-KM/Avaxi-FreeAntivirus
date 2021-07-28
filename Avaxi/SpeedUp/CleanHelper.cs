@@ -2,6 +2,7 @@
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
+using System.Threading.Tasks;
 
 namespace Avaxi.SpeedUp
 {
@@ -91,6 +92,26 @@ namespace Avaxi.SpeedUp
         {
             EmptyFolder(System32Folder + "\\LogFiles");
             EmptyFolder(OSDrive + "\\inetpub\\logs\\LogFiles");
+        }
+
+        public async static Task Cleaner()
+        {
+            await Task.Run(() =>
+            {
+                try
+                {
+                    CleanHelper.CleanTemporaries();
+                    CleanHelper.CleanMiniDumps();
+                    CleanHelper.CleanMediaPlayersCache();
+                    CleanHelper.CleanLogs();
+                    CleanHelper.CleanErrorReports();
+                    CleanHelper.EmptyRecycleBin();
+                }
+                catch (Exception ex)
+                {
+                    frmMain.PushLog("MainForm.CleanPC" + ex.Message + ex.StackTrace);
+                }
+            });
         }
 
         // only for TEMP folder

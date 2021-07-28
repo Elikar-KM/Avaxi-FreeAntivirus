@@ -640,6 +640,8 @@ namespace Avaxi.SpeedUp
             Microsoft.Win32.Registry.SetValue(@"HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsStore", "AutoDownload", "2", RegistryValueKind.DWord);
 
             Utilities.StopService("DoSvc");
+            Utilities.StopService("wuauserv");
+
         }
 
         internal static void EnableAutomaticUpdates()
@@ -658,6 +660,9 @@ namespace Avaxi.SpeedUp
             Microsoft.Win32.Registry.SetValue(@"HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\CloudContent", "DisableWindowsConsumerFeatures", "0", RegistryValueKind.DWord);
             Microsoft.Win32.Registry.SetValue(@"HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager", "OemPreInstalledAppsEnabled", "1", RegistryValueKind.DWord);
             Microsoft.Win32.Registry.SetValue(@"HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsStore", "AutoDownload", "4", RegistryValueKind.DWord);
+
+            Utilities.StartService("wuauserv");
+            Utilities.StartService("DoSvc");
         }
 
         // no longer useful

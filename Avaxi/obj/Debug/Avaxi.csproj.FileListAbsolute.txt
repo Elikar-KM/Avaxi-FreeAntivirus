@@ -97,3 +97,29 @@ E:\workstatation\AnitVirus\Workstaion\Phase2\Avaxi-FreeAntivirus\Avaxi\obj\Debug
 E:\workstatation\AnitVirus\Workstaion\Phase2\Avaxi-FreeAntivirus\Avaxi\obj\Debug\Avaxi.csproj.CopyComplete
 E:\workstatation\AnitVirus\Workstaion\Phase2\Avaxi-FreeAntivirus\Avaxi\obj\Debug\Avaxi.exe
 E:\workstatation\AnitVirus\Workstaion\Phase2\Avaxi-FreeAntivirus\Avaxi\obj\Debug\Avaxi.pdb
+E:\WorkStation\In Progress\AntiVirus\Workstation\Avaxi-FreeAntivirus\Avaxi\bin\Debug\Avaxi.exe.config
+E:\WorkStation\In Progress\AntiVirus\Workstation\Avaxi-FreeAntivirus\Avaxi\bin\Debug\Avaxi.exe
+E:\WorkStation\In Progress\AntiVirus\Workstation\Avaxi-FreeAntivirus\Avaxi\bin\Debug\Avaxi.pdb
+E:\WorkStation\In Progress\AntiVirus\Workstation\Avaxi-FreeAntivirus\Avaxi\bin\Debug\CircularProgressBar.dll
+E:\WorkStation\In Progress\AntiVirus\Workstation\Avaxi-FreeAntivirus\Avaxi\bin\Debug\ListViewPrinter.dll
+E:\WorkStation\In Progress\AntiVirus\Workstation\Avaxi-FreeAntivirus\Avaxi\bin\Debug\ObjectListView.dll
+E:\WorkStation\In Progress\AntiVirus\Workstation\Avaxi-FreeAntivirus\Avaxi\bin\Debug\SparkleLibrary.dll
+E:\WorkStation\In Progress\AntiVirus\Workstation\Avaxi-FreeAntivirus\Avaxi\bin\Debug\System.Management.Automation.dll
+E:\WorkStation\In Progress\AntiVirus\Workstation\Avaxi-FreeAntivirus\Avaxi\bin\Debug\WinFormAnimation.dll
+E:\WorkStation\In Progress\AntiVirus\Workstation\Avaxi-FreeAntivirus\Avaxi\bin\Debug\CircularProgressBar.xml
+E:\WorkStation\In Progress\AntiVirus\Workstation\Avaxi-FreeAntivirus\Avaxi\obj\Debug\Interop.IWshRuntimeLibrary.dll
+E:\WorkStation\In Progress\AntiVirus\Workstation\Avaxi-FreeAntivirus\Avaxi\obj\Debug\Interop.NetFwTypeLib.dll
+E:\WorkStation\In Progress\AntiVirus\Workstation\Avaxi-FreeAntivirus\Avaxi\obj\Debug\Interop.Shell32.dll
+E:\WorkStation\In Progress\AntiVirus\Workstation\Avaxi-FreeAntivirus\Avaxi\obj\Debug\Avaxi.csproj.ResolveComReference.cache
+E:\WorkStation\In Progress\AntiVirus\Workstation\Avaxi-FreeAntivirus\Avaxi\obj\Debug\Avaxi.frmMain.resources
+E:\WorkStation\In Progress\AntiVirus\Workstation\Avaxi-FreeAntivirus\Avaxi\obj\Debug\Avaxi.frmRansomware.resources
+E:\WorkStation\In Progress\AntiVirus\Workstation\Avaxi-FreeAntivirus\Avaxi\obj\Debug\Avaxi.frmSysInfo.resources
+E:\WorkStation\In Progress\AntiVirus\Workstation\Avaxi-FreeAntivirus\Avaxi\obj\Debug\Avaxi.frmUSB.resources
+E:\WorkStation\In Progress\AntiVirus\Workstation\Avaxi-FreeAntivirus\Avaxi\obj\Debug\Avaxi.Properties.Resources.resources
+E:\WorkStation\In Progress\AntiVirus\Workstation\Avaxi-FreeAntivirus\Avaxi\obj\Debug\Avaxi.csproj.GenerateResource.cache
+E:\WorkStation\In Progress\AntiVirus\Workstation\Avaxi-FreeAntivirus\Avaxi\obj\Debug\Avaxi.csproj.CoreCompileInputs.cache
+E:\WorkStation\In Progress\AntiVirus\Workstation\Avaxi-FreeAntivirus\Avaxi\obj\Debug\Avaxi.csproj.CopyComplete
+E:\WorkStation\In Progress\AntiVirus\Workstation\Avaxi-FreeAntivirus\Avaxi\obj\Debug\Avaxi.exe
+E:\WorkStation\In Progress\AntiVirus\Workstation\Avaxi-FreeAntivirus\Avaxi\obj\Debug\Avaxi.pdb
+E:\WorkStation\In Progress\AntiVirus\Workstation\Avaxi-FreeAntivirus\Avaxi\bin\Debug\ReaLTaiizor.dll
+E:\WorkStation\In Progress\AntiVirus\Workstation\Avaxi-FreeAntivirus\Avaxi\obj\Debug\Avaxi.csprojAssemblyReference.cache

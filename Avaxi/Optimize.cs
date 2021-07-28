@@ -18,7 +18,7 @@ namespace Avaxi
            UInt32 arraySizeBytes,
            [MarshalAs(UnmanagedType.U4)] out UInt32 bytesCopied);
 
-        public Optimize(System.Windows.Forms.ListView origin, CircularProgressBar.CircularProgressBar oLabel)
+        public Optimize(System.Windows.Forms.ListView origin, ReaLTaiizor.Controls.CircleProgressBar oLabel)
         {
             try
             {
@@ -194,7 +194,7 @@ namespace Avaxi
         private static System.Windows.Forms.ListView pList;
         //private static ReaLTaiizor.Controls.MaterialLabel pTotalRamSpace;
         //private static ReaLTaiizor.Controls.MaterialLabel pUsedRamSpace;
-        private static CircularProgressBar.CircularProgressBar pProcess;
+        private static ReaLTaiizor.Controls.CircleProgressBar pProcess;
         private static List<string> ProcessNames = new List<string>();
 
         private static bool _clearingMemory;
