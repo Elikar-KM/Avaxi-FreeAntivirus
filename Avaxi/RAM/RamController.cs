@@ -338,7 +338,6 @@ namespace Avaxi
                 _ramOptimizer.ClearClipboard();
             }
 
-            System.Windows.Forms.MessageBox.Show("Freed");
             RamClearingCompletedEvent?.Invoke();
 
             frmMain.PushLog("Done clearing RAM memory");
@@ -374,7 +373,6 @@ namespace Avaxi
                 }
             });
 
-            System.Windows.Forms.MessageBox.Show("Freed");
             RamClearingCompletedEvent?.Invoke();
 
             frmMain.PushLog("Done filling RAM");
@@ -447,7 +445,6 @@ namespace Avaxi
                 }
             });
 
-            System.Windows.Forms.MessageBox.Show("Freed");
             RamClearingCompletedEvent?.Invoke();
 
             frmMain.PushLog("Done clearing FileSystem cache");

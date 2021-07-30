@@ -102,6 +102,12 @@
     <Compile Include="ConsoleSetups.cs" />
     <Compile Include="Exclusion.cs" />
     <Compile Include="FileObject.cs" />
+    <Compile Include="frmCleaner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCleaner.Designer.cs">
+      <DependentUpon>frmCleaner.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -153,6 +159,9 @@
     <Compile Include="USB\UsbStateChange.cs" />
     <Compile Include="USB\UsbStateChangedEventArgs.cs" />
     <Compile Include="USB\WmiExtensions.cs" />
+    <EmbeddedResource Include="frmCleaner.resx">
+      <DependentUpon>frmCleaner.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>

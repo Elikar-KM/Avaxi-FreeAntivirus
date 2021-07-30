@@ -75,8 +75,6 @@ namespace Avaxi
                 frmMain.PushLog("RAM usage decrease: " + ramSavings.ToString("F2") + " MB");
                 message = string.Format("RamUsageSaved: {0}MB", ramSavings.ToString("F2"));
             }
-
-            //System.Windows.Forms.MessageBox.Show(message, "MemPlus");
         }
 
         public static void Dispose()
@@ -145,7 +143,6 @@ namespace Avaxi
             }
             catch (Exception ex)
             {
-                //get component again
                 frmMain.PushLog(ex.Message);
             }
         }
@@ -160,9 +157,6 @@ namespace Avaxi
 
             try
             {
-                //BtnClearMemory.IsEnabled = false;
-
-                // ReSharper disable once SwitchStatementMissingSomeCases
                 switch (index)
                 {
                     case 0:
@@ -182,21 +176,16 @@ namespace Avaxi
             catch (Exception ex)
             {
                 frmMain.PushLog(ex.Message);
-                //MessageBox.Show(ex.Message, "MemPlus", MessageBoxButton.OK, MessageBoxImage.Error);
             }
 
-            //BtnClearMemory.IsEnabled = true;
             _clearingMemory = false;
 
             frmMain.PushLog("Done clearing RAM memory");
         }
 
         private static System.Windows.Forms.ListView pList;
-        //private static ReaLTaiizor.Controls.MaterialLabel pTotalRamSpace;
-        //private static ReaLTaiizor.Controls.MaterialLabel pUsedRamSpace;
         private static ReaLTaiizor.Controls.CircleProgressBar pProcess;
         private static List<string> ProcessNames = new List<string>();
-
         private static bool _clearingMemory;
         private static RamController _ramController;
     }

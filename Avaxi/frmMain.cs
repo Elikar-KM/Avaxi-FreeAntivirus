@@ -10,10 +10,12 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Management;
+using System.Security;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.ConstrainedExecution;
 using System.Runtime.InteropServices;
 using TejashPlayer;
 using nClam;
@@ -87,10 +89,85 @@ namespace Avaxi
         private Panel _animcurpanel;
         private Panel _curpanel;
 
+        // start up code
+        [DllImport("kernel32.dll", CharSet = CharSet.Auto, SetLastError = true)]
+        internal static extern IntPtr GetCurrentProcess();
+
+        [DllImport("kernel32.dll", CharSet = CharSet.Ansi, SetLastError = true, ExactSpelling = true)]
+        private static extern IntPtr GetProcAddress(IntPtr hModule, string methodName);
+
+        [ReliabilityContract(Consistency.WillNotCorruptState, Cer.MayFail), DllImport("kernel32.dll", CharSet = CharSet.Auto, SetLastError = true)]
+        private static extern IntPtr GetModuleHandle(string moduleName);
+
+        [SecurityCritical]
+        internal static bool DoesWin32MethodExist(string moduleName, string methodName)
+        {
+            IntPtr moduleHandle = GetModuleHandle(moduleName);
+            if (moduleHandle == IntPtr.Zero)
+            {
+                return false;
+            }
+            return (GetProcAddress(moduleHandle, methodName) != IntPtr.Zero);
+        }
+
+        [return: MarshalAs(UnmanagedType.Bool)]
+        [DllImport("kernel32.dll", SetLastError = true)]
+        internal static extern bool IsWow64Process([In] IntPtr hSourceProcessHandle, [MarshalAs(UnmanagedType.Bool)] out bool isWow64);
+
+        [SecuritySafeCritical]
+        public static bool get_Is64BitOperatingSystem()
+        {
+            bool flag;
+            return (IntPtr.Size == 8) ||
+                ((DoesWin32MethodExist("kernel32.dll", "IsWow64Process") &&
+                IsWow64Process(GetCurrentProcess(), out flag)) && flag);
+        }
+
+        public static void AddToRegistry()
+        {
+            try
+            {
+                Microsoft.Win32.RegistryKey key;
+
+                key = Microsoft.Win32.Registry.LocalMachine.OpenSubKey("Software\\Microsoft\\Avaxi", true);
+                if (key == null)
+                {
+                    Microsoft.Win32.Registry.LocalMachine.CreateSubKey("Software\\Microsoft\\Avaxi");
+                    key = Microsoft.Win32.Registry.LocalMachine.OpenSubKey("Software\\Microsoft\\Avaxi", true);
+                }
+                key.Close();
+                if (get_Is64BitOperatingSystem())
+                {
+                    try
+                    {
+                        key = Microsoft.Win32.Registry.LocalMachine.OpenSubKey("SOFTWARE\\WOW6432Node\\Microsoft\\Windows\\CurrentVersion\\Run", true);
+                        key.SetValue("Avaxi", "\"" + Application.ExecutablePath + "\"");
+                        key.Close();
+                    }
+                    catch { }
+                }
+                else
+                {
+                    try
+                    {
+                        key = Microsoft.Win32.Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
+                        key.SetValue("Avaxi", "\"" + Application.ExecutablePath + "\"");
+                        key.Close();
+                    }
+                    catch { }
+                }
+            }
+            catch { }
+        }
+
         public frmMain()
         {
             InitializeComponent();
-
+            if (Process.GetProcessesByName("Avaxi").Length > 1)
+            {
+                Environment.Exit(0);
+            }
+            AddToRegistry();
             //for animation
             _curWindowState = WindowsState.Show;
         }
@@ -136,21 +213,6 @@ namespace Avaxi
             Label l = (Label)sender;
             l.BackColor = Color.Transparent;
         }
-
-        // start up code
-        //public static void AddToRegistry()
-        //{
-        //    try
-        //    {
-        //        RegistryKey localMachine64 = RegistryKey.OpenBaseKey(RegistryHive.LocalMachine, RegistryView.Registry64);
-        //        RegistryKey RegStartUp = localMachine64.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
-        //        RegStartUp.SetValue("Avaxi", System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location) + "\\Avaxi.exe");
-        //
-        //        //RegistryKey RegStartUp32 = Microsoft.Win32.Registry.LocalMachine.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
-        //        //RegStartUp32.SetValue("Avaxi", System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location) + "\\Avaxi.exe");
-        //    }
-        //    catch { }
-        //}
 
         //setup the scanner engine
         private void SetupScannerEngine()
@@ -313,8 +375,6 @@ namespace Avaxi
         Settings ProgramSettings = new Settings() { MonitorStartup=false,TotalSaved = 0, AutoClean = false, CloseAfterClean = false, ShutdownAfterClean = false, LaunchInStartup = false, LastScan = null };
         private void frmMain_Load(object sender, EventArgs e)
         {
-            //AddToRegistry();
-            
             this.flagRealTimeProtection = Program.RealTimeProtection;
             this.flagAutoScanUSB = Program.AutoUSBScanner;
 
@@ -331,7 +391,6 @@ namespace Avaxi
 
             this.flagPhishing = Program.flagPhishing;
             this.flagCryptojacking = Program.flagCryptojacking;
-            //this.flagRansomware = Program.flagRansomware;
             this.flagRansomware = false;
             this.flagAffiliateOffers = Program.flagAffiliateOffers;
 
@@ -351,7 +410,12 @@ namespace Avaxi
             SetYesNo(this.switchLabelRealTimeProtection, this.flagRealTimeProtection);
             SetYesNo(this.switchLabelAutoScanUSB, this.flagAutoScanUSB);
 
-            // Protection Status view (anti-phishing, anti-cryptojacking, anti-ransomware, anti-affiliate offers)
+            if(this.flagRealTimeProtection)
+                launcherIcon.ShowBalloonTip(5, "Avaxi", "The live protection is enabled.", ToolTipIcon.Info);
+            else
+                launcherIcon.ShowBalloonTip(5, "Avaxi", "The live protection is disabled.", ToolTipIcon.Info);
+
+            // Protection Status view - anti-phishing, anti-cryptojacking, anti-ransomware, anti-affiliate offers
             if (flagPhishing)
             {
                 btnPhishing.ForeColor = Color.White;
@@ -1008,8 +1072,18 @@ namespace Avaxi
         private async void btnClearMemory_Click(object sender, EventArgs e)
         {
             this.btnClearMemory.Enabled = false;
-            await Optimize.ClearMemory(1);
-            MessageBox.Show("Memory cleaned");
+            if (materialCheckBoxClearMemory.Checked)
+            {
+                if(!flagSilent)
+                    launcherIcon.ShowBalloonTip(5, "Avaxi", "Clear Memory is running! Your PC will be better!", ToolTipIcon.Info);
+                await Optimize.ClearMemory(0);
+            }
+            if (materialCheckBoxClearCache.Checked)
+            {
+                if(!flagSilent)
+                    launcherIcon.ShowBalloonTip(5, "Avaxi", "Clear FileSystem Caches is running! Your PC will be better!", ToolTipIcon.Info);
+                await Optimize.ClearMemory(2);
+            }
             this.btnClearMemory.Enabled = true;
         }
 
@@ -1027,7 +1101,7 @@ namespace Avaxi
                     Utilities.EnableContextMenu();
                     Utilities.EnableTaskManager();
                     Utilities.EnableRegistryEditor();
-                    MessageBox.Show("Registry cleaned");
+                    launcherIcon.ShowBalloonTip(5, "Avaxi", "Registry cleaned", ToolTipIcon.Info);
                 }
                 catch (Exception ex)
                 {
@@ -1040,10 +1114,13 @@ namespace Avaxi
 
         private async void btnCleaner_Click(object sender, EventArgs e)
         {
-            this.btnCleaner.Enabled = false;
-            await CleanHelper.Cleaner();
-            MessageBox.Show("Cleaned");
-            this.btnCleaner.Enabled = true;
+            frmCleaner cleaner = new frmCleaner();
+            cleaner.ShowDialog();
+
+            //this.btnCleaner.Enabled = false;
+            //await CleanHelper.Cleaner();
+            //MessageBox.Show("Cleaned");
+            //this.btnCleaner.Enabled = true;
         }
 
         private async void btnTemporary_Click(object sender, EventArgs e)
@@ -1602,20 +1679,6 @@ namespace Avaxi
             RunSmartScan();
         }
 
-        private async void btnOptimizePC_Click(object sender, EventArgs e)
-        {
-            this.materialButtonOptimize.Enabled = false;
-            if (materialCheckBoxClearMemory.Checked)
-            {
-                await Optimize.ClearMemory(1);
-            }
-            if (materialCheckBoxClearCache.Checked)
-            {
-                await Optimize.ClearMemory(2);
-            }
-            this.materialButtonOptimize.Enabled = true;
-        }
-
         private void btnTune_Click(object sender, EventArgs e)
         {
             Computer regedit = new Computer();
@@ -1753,7 +1816,8 @@ namespace Avaxi
             {
                 this.flagRealTimeProtection = true;
                 this.switchLabelRealTimeProtection.Image = Avaxi.Properties.Resources.set_yes;
-                launcherIcon.ShowBalloonTip(5, "Avaxi", "The live protection is enabled", ToolTipIcon.Info);
+                if(!flagSilent)
+                    launcherIcon.ShowBalloonTip(5, "Avaxi", "The live protection is enabled", ToolTipIcon.Info);
                 labelCheck.Image = global::Avaxi.Properties.Resources.check;
                 labelTextOtherScans.Text = "The live protection is enabled";
                 labelTextOtherScans.ForeColor = Color.White;
@@ -1762,7 +1826,8 @@ namespace Avaxi
             {
                 this.flagRealTimeProtection = false;
                 this.switchLabelRealTimeProtection.Image = Avaxi.Properties.Resources.set_no;
-                launcherIcon.ShowBalloonTip(5, "Avaxi", "The live protection is disabled", ToolTipIcon.Info);
+                if(!flagSilent)
+                    launcherIcon.ShowBalloonTip(5, "Avaxi", "The live protection is disabled", ToolTipIcon.Info);
                 labelCheck.Image = global::Avaxi.Properties.Resources.cross;
                 labelTextOtherScans.Text = "The live protection is disabled";
                 labelTextOtherScans.ForeColor = Color.Gray;
@@ -1776,7 +1841,8 @@ namespace Avaxi
             {
                 this.flagFireWall = true;
                 this.switchLabelFireWall.Image = Avaxi.Properties.Resources.set_yes;
-                launcherIcon.ShowBalloonTip(5, "Avaxi", "Firewall is turned on successfully", ToolTipIcon.Info);
+                if(!flagSilent)
+                    launcherIcon.ShowBalloonTip(5, "Avaxi", "Firewall is turned on successfully", ToolTipIcon.Info);
                 Task.Run(delegate ()
                 {
                     firewall.FirewallStart(true);
@@ -1787,7 +1853,8 @@ namespace Avaxi
             {
                 this.flagFireWall = false;
                 this.switchLabelFireWall.Image = Avaxi.Properties.Resources.set_no;
-                launcherIcon.ShowBalloonTip(5, "Avaxi", "Firewall is turned off successfully", ToolTipIcon.Info);
+                if(!flagSilent)
+                    launcherIcon.ShowBalloonTip(5, "Avaxi", "Firewall is turned off successfully", ToolTipIcon.Info);
                 Task.Run(delegate ()
                 {
                     shell.RunExternalExe("netsh.exe", "Firewall set opmode disable");
@@ -1802,13 +1869,15 @@ namespace Avaxi
             {
                 this.flagAutoScanUSB = false;
                 this.switchLabelAutoScanUSB.Image = Avaxi.Properties.Resources.set_no;
-                launcherIcon.ShowBalloonTip(5, "Avaxi", "AutoScan USB is disabled", ToolTipIcon.Info);
+                if(!flagSilent)
+                    launcherIcon.ShowBalloonTip(5, "Avaxi", "AutoScan USB is disabled", ToolTipIcon.Info);
             }
             else
             {
                 this.flagAutoScanUSB = true;
                 this.switchLabelAutoScanUSB.Image = Avaxi.Properties.Resources.set_yes;
-                launcherIcon.ShowBalloonTip(5, "Avaxi", "AutoScan USB is enabled", ToolTipIcon.Info);
+                if(!flagSilent)
+                    launcherIcon.ShowBalloonTip(5, "Avaxi", "AutoScan USB is enabled", ToolTipIcon.Info);
             }
         }
 
@@ -1948,34 +2017,38 @@ namespace Avaxi
             this.progressIndicatorTuneUp.Visible = false;
         }
 
-        private void materialBtnRunSmartScan_MoseEnter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void materialBtnRunSmartScan_MoseLeave(object sender, EventArgs e)
-        {
-
-        }
+        // private void materialBtnRunSmartScan_MoseEnter(object sender, EventArgs e)
+        // {
+        // 
+        // }
+        // 
+        // private void materialBtnRunSmartScan_MoseLeave(object sender, EventArgs e)
+        // {
+        // 
+        // }
 
         async private void materialButtonOptimize_Click(object sender, EventArgs e)
         {
             this.materialButtonOptimize.Enabled = false;
-            if (materialCheckBoxClearMemory.Checked)
-            {
-                await Optimize.ClearMemory(1);
-            }
-            if (materialCheckBoxClearCache.Checked)
-            {
-                ///await Optimize.ClearMemory(0);
-            }
+            if (!flagSilent)
+                launcherIcon.ShowBalloonTip(5, "Avaxi", "Clear Momery is running! Your PC will be better!", ToolTipIcon.Info);
+            await Optimize.ClearMemory(0);
+            if (!flagSilent)
+                launcherIcon.ShowBalloonTip(5, "Avaxi", "Clear Working Sets is running! Your PC will be better!", ToolTipIcon.Info);
+            await Optimize.ClearMemory(1);
+            if (!flagSilent)
+                launcherIcon.ShowBalloonTip(5, "Avaxi", "Clear FileSystem Caches is running! Your PC will be better!", ToolTipIcon.Info);
+            await Optimize.ClearMemory(2);
+            if (!flagSilent)
+                launcherIcon.ShowBalloonTip(5, "Avaxi", "Fill Ram Data is running! Your PC will be better!", ToolTipIcon.Info);
+            await Optimize.ClearMemory(3);
             this.materialButtonOptimize.Enabled = true;
         }
 
-        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
+        // private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        // {
+        // 
+        // }
 
         private void materialButtonShield_Click(object sender, EventArgs e)
         {
